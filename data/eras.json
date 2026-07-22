@@ -1,0 +1,52 @@
+[
+  {
+    "id": "design",
+    "order": 1,
+    "label": "Design",
+    "years": "2012–2016",
+    "color": "#F5617F",
+    "headline": "Crafting first websites for dentists and food businesses.",
+    "story": "My journey started in visual design and front-end craft — building websites for dental clinics, food brands, and small businesses that needed a professional presence online. Every layout had to feel intentional: typography, color, and structure working together so local clients could trust what they saw on screen.",
+    "projects": ["engrenhamais", "lmsalgados"]
+  },
+  {
+    "id": "hardware",
+    "order": 2,
+    "label": "Hardware / Side",
+    "years": "2016–2019",
+    "color": "#FFD22B",
+    "headline": "Building Magic Globe and robotics at college and SENAI.",
+    "story": "During my bachelor's degree and technical training at SENAI, I went deep into hardware: 3D printing, laser CNC, Arduino IoT, computer vision, and mechatronics. The Magic Globe — a Rubik's Cube solving robot controlled from a web app on an iPad — became the project that proved I could bridge software, electronics, and physical machines.",
+    "projects": ["cubo-magico", "magic-globe"]
+  },
+  {
+    "id": "ideyou",
+    "order": 3,
+    "label": "IdeYou",
+    "years": "2019–2023",
+    "color": "#FF5356",
+    "headline": "Scaling food-tech and enterprise systems for real clients.",
+    "story": "I returned to the food industry with IdeYou — this time building platforms, not just pages. MioDelivery grew into a full delivery and POS stack; Telecom ERP handled billing and operations for a major client; Aurélio brought lesson planning into schools. Complex problems, long-term relationships, systems that had to work every day.",
+    "projects": ["miodelivery", "telecom-erp", "planeja-ideyou"]
+  },
+  {
+    "id": "teaching",
+    "order": 4,
+    "label": "Teaching",
+    "years": "2023–2025",
+    "color": "#9900CC",
+    "headline": "Teaching CS while opening doors to school IT contracts.",
+    "story": "The economy pushed me to rethink income — and the educational system gave me room to teach computer science while building the relationships that led to school contracts: networks, electrical work, custom systems, and IT services. CTI became a hub where students and real projects lived side by side.",
+    "projects": ["cti", "aulas"]
+  },
+  {
+    "id": "platform",
+    "order": 5,
+    "label": "Platform",
+    "years": "2025–now",
+    "color": "#0076F3",
+    "headline": "Unifying everything under the isaque.it platform.",
+    "story": "Everything converged into a cohesive platform: admin SPA, client portal, NestJS API, push notifications, barcode generation — one ecosystem under isaque.it. Built with React, TypeScript, and the same attention to detail I learned designing dentist websites a decade ago.",
+    "projects": ["sistema-isaque", "api-isaque", "cliente-isaque", "notify-it", "barcode-it"]
+  }
+]
