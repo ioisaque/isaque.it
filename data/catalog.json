@@ -10,8 +10,8 @@
       "pt": "sistema.isaque.it"
     },
     "summary": {
-      "en": "Admin SPA — people, invoices, notifications, and internal operations.",
-      "pt": "SPA admin — pessoas, faturas, notificações e operações internas."
+      "en": "Admin SPA — people, invoices, contracts, Asaas/Mercado Pago, and notify.it.",
+      "pt": "SPA admin — pessoas, faturas, contratos, Asaas/Mercado Pago e notify.it."
     },
     "language": "TypeScript",
     "tech": [
@@ -26,13 +26,41 @@
     "media": [
       {
         "type": "image",
+        "src": "assets/img/projects/sistema-isaque/integrations.png",
+        "alt": {
+          "en": "Asaas and Mercado Pago integrations",
+          "pt": "Integrações Asaas e Mercado Pago"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/sistema-isaque/integrations-notify.png",
+        "alt": {
+          "en": "notify.it beside billing providers",
+          "pt": "notify.it ao lado dos provedores de cobrança"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/sistema-isaque/settings-contracts.png",
+        "alt": {
+          "en": "Contract status and payment method settings",
+          "pt": "Settings de status de contrato e métodos de pagamento"
+        }
+      },
+      {
+        "type": "image",
         "src": "assets/img/projects/sistema-isaque/shot-1.png",
         "alt": {
-          "en": "sistema.isaque.it screenshot",
-          "pt": "Print de sistema.isaque.it"
+          "en": "sistema.isaque.it overview",
+          "pt": "Visão geral de sistema.isaque.it"
         }
       }
-    ]
+    ],
+    "detail": {
+      "en": "Internal operations surface for the isaque.it platform: sync payment providers, configure contract states and payment methods, and keep mail/push wired through notify.it — the operator side of the same system clients see in the portal.",
+      "pt": "Superfície de operação interna da plataforma isaque.it: sincronizar provedores de pagamento, configurar estados de contrato e métodos, e manter mail/push via notify.it — o lado do operador do mesmo sistema que o cliente vê no portal."
+    }
   },
   {
     "id": "api-isaque",
@@ -80,8 +108,8 @@
       "pt": "cliente.isaque.it"
     },
     "summary": {
-      "en": "Client portal for profiles, contracts, and invoices.",
-      "pt": "Portal do cliente para perfis, contratos e faturas."
+      "en": "Client portal — services, contracts, invoices, attachments, and on-site presence.",
+      "pt": "Portal do cliente — serviços, contratos, faturas, anexos e presença no local."
     },
     "language": "TypeScript",
     "tech": [
@@ -95,13 +123,57 @@
     "media": [
       {
         "type": "image",
+        "src": "assets/img/projects/cliente-isaque/service-detail.png",
+        "alt": {
+          "en": "Active service and billing progress",
+          "pt": "Serviço ativo e progresso de faturamento"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/cliente-isaque/contract-details.png",
+        "alt": {
+          "en": "Contract details and invoices",
+          "pt": "Detalhes do contrato e faturas"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/cliente-isaque/location-and-home.png",
+        "alt": {
+          "en": "Location permission and client home",
+          "pt": "Permissão de localização e início do cliente"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/cliente-isaque/contrato-pdf.png",
+        "alt": {
+          "en": "Service contract PDF",
+          "pt": "PDF do contrato de serviço"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/cliente-isaque/nfse.png",
+        "alt": {
+          "en": "NFS-e service invoice",
+          "pt": "NFS-e de serviço"
+        }
+      },
+      {
+        "type": "image",
         "src": "assets/img/projects/cliente-isaque/shot-1.png",
         "alt": {
-          "en": "cliente.isaque.it screenshot",
-          "pt": "Print de cliente.isaque.it"
+          "en": "cliente.isaque.it overview",
+          "pt": "Visão geral de cliente.isaque.it"
         }
       }
-    ]
+    ],
+    "detail": {
+      "en": "The client-facing surface of the isaque.it platform: active licenses and services, contract details with PDF attachments, invoice history, and optional location while the app is open so presence can be registered on site.",
+      "pt": "A superfície do cliente na plataforma isaque.it: licenças e serviços ativos, detalhes do contrato com anexos PDF, histórico de faturas e localização opcional com o app aberto para registrar presença no local."
+    }
   },
   {
     "id": "notify-it",
@@ -679,6 +751,67 @@
       "repo": "https://github.com/ioisaque/magic-globe"
     },
     "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/magic-globe/structure-3d.jpg",
+        "alt": {
+          "en": "Magic Globe 3D structure — six steppers on a spherical frame holding the cube",
+          "pt": "Estrutura 3D do Globo Mágico — seis motores numa armação esférica segurando o cubo"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/magic-globe/python-vision.png",
+        "alt": {
+          "en": "Python OpenCV view — dual cameras, cube net, solved in 1.574 s",
+          "pt": "Visão do programa Python/OpenCV — duas câmeras, net do cubo, resolvido em 1,574 s"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/globe-scramble-solve.mp4",
+        "poster": "assets/img/projects/magic-globe/globe-scramble-solve.jpg",
+        "alt": {
+          "en": "Scrambling and solving on the new Magic Globe structure — the machine that earned the name",
+          "pt": "Embaralhando e resolvendo na nova estrutura do Globo Mágico — a máquina que deu nome ao projeto"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/robotics-fair-solve.mp4",
+        "poster": "assets/img/projects/magic-globe/robotics-fair-solve.jpg",
+        "alt": {
+          "en": "Prototype solving the cube at the college robotics fair",
+          "pt": "Protótipo resolvendo o cubo na feira de robótica da faculdade"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/teacher-vs-robot.mp4",
+        "poster": "assets/img/projects/magic-globe/teacher-vs-robot.jpg",
+        "alt": {
+          "en": "Prototype vs teacher Filipe — he “solved” it after a few moves; the robot still won",
+          "pt": "Protótipo vs professor Filipe — ele “resolveu” com poucos movimentos; o robô ainda ganhou"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/defense-day-solve.mp4",
+        "poster": "assets/img/projects/magic-globe/defense-day-solve.jpg",
+        "alt": {
+          "en": "Solving on defense day — after rebuilding the hardware overnight for the CS degree presentation",
+          "pt": "Resolvendo no dia da banca — depois de remontar o hardware a noite inteira para a defesa do TCC"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/ipad-control.mp4",
+        "poster": "assets/img/projects/magic-globe/ipad-control.jpg",
+        "alt": {
+          "en": "Testing the prototype web controls on an iPad",
+          "pt": "Testando os controles web do protótipo num iPad"
+        }
+      },
       {
         "type": "image",
         "src": "assets/img/projects/magic-globe/shot-1.png",

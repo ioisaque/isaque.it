@@ -48,7 +48,9 @@
         "shuffle": "Shuffle",
         "solve": "Solve",
         "chapters": "The story",
-        "gallery": "Evidence"
+        "gallery": "Evidence",
+        "readMore": "Continue the story",
+        "readMoreMeta": "{n} more chapters"
       }
     },
     "catalog": {
@@ -76,7 +78,9 @@
         "tech": "Technologies",
         "chapters": "The story",
         "highlights": "At a glance",
-        "expandMedia": "View larger"
+        "expandMedia": "View larger",
+        "readMore": "Continue the story",
+        "readMoreMeta": "{n} more chapters"
       }
     },
     "principles": {
@@ -411,7 +415,9 @@
         "shuffle": "Embaralhar",
         "solve": "Resolver",
         "chapters": "A história",
-        "gallery": "Evidências"
+        "gallery": "Evidências",
+        "readMore": "Continuar a história",
+        "readMoreMeta": "mais {n} capítulos"
       }
     },
     "catalog": {
@@ -439,7 +445,9 @@
         "tech": "Tecnologias",
         "chapters": "A história",
         "highlights": "Em números",
-        "expandMedia": "Ver maior"
+        "expandMedia": "Ver maior",
+        "readMore": "Continuar a história",
+        "readMoreMeta": "mais {n} capítulos"
       }
     },
     "principles": {

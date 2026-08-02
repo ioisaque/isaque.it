@@ -1,0 +1,121 @@
+---
+description: Magic Globe / Rubik’s Cube solver — chronology and facts for case/catalog copy
+globs: data/catalog.json,data/projects.json,data/copy.json,data/milestones.json
+alwaysApply: false
+---
+
+# Magic Globe (Globo Mágico) — Rubik’s Cube solver
+
+Authoritative brief for the Featured case `cube` / catalog `magic-globe`. Sources: TCC PDF *MAGIC GLOBE - A RUBIK’S CUBE SOLVER MACHINE* (Faculdade Única de Ipatinga, 2019) + defense PPT — **facts and dates only**. Do not invent beyond this and career-context. Media folders under `Documents/_MagicGlobe/media/` (v1.0, v2.0, v2.1) are local archives for enrichment — not yet wired to the site unless copied into `assets/`.
+
+## How to ingest media (non-negotiable — same as MioDelivery / LM)
+
+When the user sends media **with context**, that is a **chapter beat**, not a gallery dump.
+
+1. Encode/copy into `assets/img/projects/magic-globe/` (videos under `videos/`, poster still).
+2. **Create or update a `chapters[]` item** on Featured case `cube`: `title` + `body` from the user’s context (EN + PT), `figure` pointing at that asset (image / video / carousel / compare as fits).
+3. Keep chronology from the table below; insert the new beat where it belongs.
+4. Catalog `magic-globe.media` may hold thumbs for the grid/modal. Featured `cube.media` stays empty once chapters carry the evidence (LM pattern).
+5. Do **not** reply with “wired to media array” only — the story item must exist in `projects.json` in the same turn.
+
+## Story chapters (current map)
+
+| # | Beat | Figure |
+|---|------|--------|
+| 01 | Challenge → first build path | (text) |
+| 02 | Robotics fair — first functional prototype (Jun 2019) | `robotics-fair-solve.mp4` |
+| 03 | Professor Filipe “race” (playful roast) | `teacher-vs-robot.mp4` |
+| 04 | Flatland limits → globe redesign | `structure-3d.jpg` |
+| 05 | Testing the new structure — **hence the name** Magic Globe | `globe-scramble-solve.mp4` |
+| 06 | Full stack — vision + iPad/web UI (~1.574 s) | carousel: `python-vision.png` + `ipad-control.mp4` |
+| 07 | Defense day — board died night before; Red Bull rebuild; solve for judges (10 Dec 2019) | `defense-day-solve.mp4` |
+
+## Defense day (story beat)
+
+Night before the CS degree defense (teachers/judges): the circuit board was damaged. Every minute until presentation went into rebuilding the hardware. Chaos — Red Bulls. Then the machine solved on the day that mattered. Video: `defense-day-solve.mp4`.
+
+## Voice (portfolio — non-negotiable)
+
+- This is **Isaque’s** story and portfolio. Write in first person or “I” / Isaque as sole builder-protagonist.
+- **Never name or allude to** course classmates, family helpers, or “the team” on this project (no Carlos, Kenedy, Robert, Renato, co-authors, “we built,” “my father,” “group TCC,” photo captions that imply a cast).
+- Do **not** write around the omission (“with help,” “and others,” “the group,” empty credit lines). If a beat needs a human subject, it is Isaque — or stay on the machine, the fair, the stack, the solve time.
+- Academic frame is fine as **his** TCC / bachelor’s work at Faculdade Única (defense **10/12/2019**). Skip listing banca/co-authors on the site.
+
+## Identity
+
+- **Public names:** EN “Magic Globe” / PT “Globo Mágico”; site case title often “Rubik’s Cube solver”.
+- **Catalog / GitHub:** `magic-globe` — https://github.com/ioisaque/magic-globe
+- **Live embed / control UI lineage:** Chrome Cube Lab adapted → `isaquecosta.com.br/cubomagico` (era) → https://isaque.it/cubo/
+- **Academic:** TCC, B.Sc. Computer Science, Faculdade Única de Ipatinga · approved **10 Dec 2019**
+- **Challenge spark:** course challenge that became the machine (no need to name the professor on-site unless useful once, without a supporting cast)
+
+## Pipeline (final machine — keep this order in narrative)
+
+1. Cube scrambled (web/iPad UI — manual or random)
+2. Two cameras capture feeds → OpenCV (Python) HSV color detect on 54 cublets
+3. Normalize to **URFDLB** state string
+4. **Kociemba** computes move sequence
+5. Sequence → Arduino MEGA (serial **or** network / ESP WiFi webserver)
+6. Six NEMA 17 steppers (A4988 drivers) execute 90° face turns
+7. Solve time cited: **~1–2 s**; paper highlights **~1.5 s**; PPT shows **1.8 s / 1.5 s**; wired UI example **1.574 s** on `python-vision.png`
+
+Hardware gist: 3D-printed globe frame, 6 steppers + A4988, Arduino MEGA WiFi (RobotDyn / ESP), ATX 200W PSU, dual cameras + LED strips for even light, PC + iPad control.
+
+Software stack (four pieces in the paper):
+
+1. Color detection + Kociemba (Python / OpenCV)
+2. Motor control (C on Arduino)
+3. ESP webserver hosting control app
+4. Web UI (JS/HTML/CSS — adapted from Google Chrome Cube Lab) for 3D cube + scramble/solve UX
+
+## Chronological line (canonical)
+
+Use this arc for chapters / Evolution; prefer *thinking* beats over title lists. Subject = Isaque / the machine.
+
+| Phase | When | What happened |
+|-------|------|----------------|
+| **Challenge** | Pre-build / course | Takes on building a machine that solves any 3×3 scramble |
+| **Research** | Early 2019 | Study similar robots; Flatland (2016) world-record ~0.9 s as structural reference |
+| **Electronics v0** | Early–mid | Single NEMA 17 + A4988 proof → six-motor board; ATX 200W replaces weak PSU; Arduino MEGA WiFi |
+| **Prototype 1 (Flatland-like)** | Spring 2019 | Corel → DXF → Fusion 360 → FFF on Faculdade Única printer; reading base for Intelbras VIP 1120 cam; face-by-face / fixed-base read |
+| **Robotics & AI fair** | **June 2019** | First **functional** prototype on show; stand + visitors; strong reception; spans almost the whole CS curriculum in one build |
+| **Diagnosis** | Post-fair | Flatland-like frame: multi-camera burden, print warp / low print quality limits |
+| **Magic Globe redesign** | Mid–late 2019 | New globe geometry: 6 motors centered on faces, sightlines for **two** cameras / all 54 stickers; stronger prints; LED rings for uniform illumination (shadow fix) |
+| **Full stack** | Concurrent | OpenCV+Kociemba · Arduino motion · ESP web · iPad/web UI; scramble→read→solve loop |
+| **Results** | Late 2019 | Sub-2 s solves; ~1.5 s cited as achieved mark; cost table for **final** build only (~**R$ 5.000** in PPT — ignore discarded prototype spend) |
+| **Defense** | **10 Dec 2019** | TCC approved — B.Sc. Computer Science, Faculdade Única de Ipatinga |
+| **Afterlife** | Post-TCC | Open-source / portfolio embed; local media versions **v1.0 → v2.0 → v2.1**; optional future: quick-release motors for physical scramble |
+
+## Version hints (local media folders — for later site wiring)
+
+- **v1.0** — early / fair-era rich photo+video set (stand, build, solves)
+- **v2.0** — smaller set of later machine photos/video
+- **v2.1** — side-ops tests (slow-mo + normal)
+- Root `media/`: iPad-control, robotics-fair-solve, scrambling-&-solving, slow-solve, etc.
+
+### Wired site assets (`assets/img/projects/magic-globe/`)
+
+| Asset | Path | Role |
+|-------|------|------|
+| 3D structure render | `structure-3d.jpg` | Globe frame + 6 steppers + cube (primary machine still) |
+| Python OpenCV UI | `python-vision.png` | Dual-cam color detect + cube net; on-screen solve **1.574 s** |
+| iPad web controls | `videos/ipad-control.mp4` (+ `ipad-control.jpg` poster) | Testing prototype web UI on iPad |
+| Robotics fair solve | `videos/robotics-fair-solve.mp4` (+ poster) | Prototype solving at college robotics fair (Jun 2019 era) |
+| Globe scramble + solve | `videos/globe-scramble-solve.mp4` (+ poster) | Testing the new globe structure — scramble & solve; this is **the** Magic Globe |
+| Defense day solve | `videos/defense-day-solve.mp4` (+ poster) | Solve on the CS defense day (teachers/judges). Night before: circuit board destroyed; rebuilt hardware until presentation — Red Bull chaos |
+| Teacher vs robot | `videos/teacher-vs-robot.mp4` (+ poster) | Playful race: Filipe “solves” after a few moves; robot still wins |
+| Legacy thumb | `shot-1.png` | Earlier catalog still |
+
+## Story for the site (tone)
+
+- Metaphor already in career-context: **find structure under noise** — the cube is the brand signal.
+- Do **not** claim world-record; paper explicitly says chasing the record would explode cost; the machine got **near** competitive robot times vs humans.
+- Tech for catalog: HTML, JS, Python, C++ (career-context) — align with paper (Python/OpenCV, C/Arduino, JS web); don’t invent stacks.
+- **Fair bit / teacher “race” (playful):** professor **Filipe Costa** “races” the prototype — he only twists a few faces and declares victory (blatant pretend-solve / soft cheat). The robot still finishes for real and wins. Keep it light, funny, affectionate roast — not mean. One named human on-site is fine here; don’t expand into a cast list.
+
+## Do not invent
+
+- Exact month of challenge kickoff (only fair = June 2019 and defense = 10/12/2019 are hard-dated in the paper)
+- World-record claims; named “helpers” or cast lists
+- Post-2019 commercial productization unless user adds facts
+- Any implication that this portfolio piece is a group credit page

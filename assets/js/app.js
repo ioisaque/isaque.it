@@ -68,6 +68,28 @@ function renderDomains() {
   root.innerHTML = `<ul>${domains.map((d) => `<li>${escapeHtml(d)}</li>`).join('')}</ul>`
 }
 
+function highlightLogosMarkup(logos, ddClass) {
+  if (!Array.isArray(logos) || !logos.length) return ''
+  return `
+            <div class="${ddClass}-logos">
+              ${logos
+                .map((logo) => {
+                  const alt = logo.alt?.[locale] || logo.alt?.en || logo.label || ''
+                  const tall = logo.tall ? ` ${ddClass}-logo--tall` : ''
+                  const wide = logo.wide ? ` ${ddClass}-logo--wide` : ''
+                  return `<img class="${ddClass}-logo${tall}${wide}" src="${escapeAttr(localizedSrc(logo.src))}" alt="${escapeAttr(alt)}" loading="lazy">`
+                })
+                .join('')}
+            </div>`
+}
+
+function highlightValueMarkup(h, ddClass) {
+  const logos = highlightLogosMarkup(h.logos, ddClass)
+  if (logos) return logos
+  const value = h.value?.[locale] || h.value?.en || ''
+  return escapeHtml(value)
+}
+
 function caseHighlightsMarkup(project) {
   const items = Array.isArray(project.highlights) ? project.highlights : []
   if (!items.length) return ''
@@ -78,7 +100,7 @@ function caseHighlightsMarkup(project) {
           (h) => `
         <div class="case__highlight">
           <dt>${escapeHtml(h.label[locale])}</dt>
-          <dd>${escapeHtml(h.value[locale])}</dd>
+          <dd>${highlightValueMarkup(h, 'case__highlight')}</dd>
         </div>`,
         )
         .join('')}
@@ -346,6 +368,39 @@ function bindChapterCarousels(root = document) {
   })
 }
 
+function chaptersMoreButtonMarkup(className, moreId, label, meta, extraClass = '') {
+  const classes = ['btn', 'btn--ghost', className, extraClass].filter(Boolean).join(' ')
+  return `
+      <button type="button" class="${classes}" data-chapters-more aria-controls="${moreId}" aria-expanded="false">
+        <span class="${className}-label">${escapeHtml(label)}</span>
+        <span class="${className}-meta">${escapeHtml(meta)}</span>
+        <span class="${className}-icon" aria-hidden="true">↓</span>
+      </button>`
+}
+
+function chaptersMoreMeta(template, count) {
+  const fallback = locale === 'pt' ? `mais ${count} capítulos` : `${count} more chapters`
+  return String(template || fallback).replace('{n}', String(count))
+}
+
+function bindChapterReadMore(root = document) {
+  root.querySelectorAll('[data-chapters-more]').forEach((btn) => {
+    if (btn.dataset.bound === '1') return
+    btn.dataset.bound = '1'
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('aria-controls')
+      const panel = id ? document.getElementById(id) : null
+      if (!panel) return
+      panel.hidden = false
+      btn.setAttribute('aria-expanded', 'true')
+      btn.hidden = true
+      panel.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-visible'))
+      bindChapterCarousels(panel)
+      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+    })
+  })
+}
+
 function mediaItemFromEl(el) {
   return {
     src: el.dataset.mediaSrc || '',
@@ -527,25 +582,43 @@ function chapterStepsMarkup(steps, className) {
   `
 }
 
+function chapterListItemMarkup(ch, liClass, figureClass) {
+  return `
+        <li class="${liClass}">
+          <h4>${escapeHtml(ch.title[locale])}</h4>
+          <p>${escapeHtml(ch.body[locale])}</p>
+          ${chapterFigureMarkup(ch.figure, figureClass)}
+          ${chapterStepsMarkup(ch.steps, liClass.includes('modal') ? 'modal__chapter' : 'case__chapter')}
+        </li>`
+}
+
 function caseChaptersMarkup(project, labels) {
   const chapters = Array.isArray(project.chapters) ? project.chapters : []
   if (!chapters.length) return ''
+  const previewAt = 4
+  const head = chapters.slice(0, previewAt)
+  const rest = chapters.slice(previewAt)
+  const headItems = head
+    .map((ch) => chapterListItemMarkup(ch, 'case__chapter reveal', 'case__chapter-figure'))
+    .join('')
+  let more = ''
+  if (rest.length) {
+    const moreId = `case-chapters-more-${escapeAttr(project.id)}`
+    const label = labels.readMore || 'Continue the story'
+    const meta = chaptersMoreMeta(labels.readMoreMeta, rest.length)
+    more = `
+      ${chaptersMoreButtonMarkup('case__chapters-more', moreId, label, meta, 'reveal')}
+      <ol id="${moreId}" class="case__chapter-list case__chapter-list--more" hidden>
+        ${rest.map((ch) => chapterListItemMarkup(ch, 'case__chapter reveal', 'case__chapter-figure')).join('')}
+      </ol>`
+  }
   return `
     <div class="case__chapters">
       <p class="case__chapters-label reveal">${escapeHtml(labels.chapters || 'The story')}</p>
       <ol class="case__chapter-list">
-        ${chapters
-          .map(
-            (ch) => `
-          <li class="case__chapter reveal">
-            <h4>${escapeHtml(ch.title[locale])}</h4>
-            <p>${escapeHtml(ch.body[locale])}</p>
-            ${chapterFigureMarkup(ch.figure, 'case__chapter-figure')}
-            ${chapterStepsMarkup(ch.steps, 'case__chapter')}
-          </li>`,
-          )
-          .join('')}
+        ${headItems}
       </ol>
+      ${more}
     </div>
   `
 }
@@ -616,7 +689,14 @@ function renderProjects() {
             <header class="case__intro reveal">
               <span class="case__accent bg-accent-${escapeAttr(project.accent)}" aria-hidden="true"></span>
               <p class="case__index">${n} / ${total}</p>
-              <h3 class="case__title">${escapeHtml(project.title[locale])}</h3>
+              ${
+                project.titleLogo?.src
+                  ? `<h3 class="case__title case__title--logo">
+                      <img class="case__title-logo" src="${escapeAttr(localizedSrc(project.titleLogo.src))}" alt="${escapeAttr(project.titleLogo.alt?.[locale] || project.titleLogo.alt?.en || project.title[locale])}" />
+                      <span class="visually-hidden">${escapeHtml(project.title[locale])}</span>
+                    </h3>`
+                  : `<h3 class="case__title">${escapeHtml(project.title[locale])}</h3>`
+              }
               <p class="case__subtitle">${escapeHtml(project.subtitle[locale])}</p>
             </header>
             <div class="case__grid">
@@ -636,6 +716,7 @@ function renderProjects() {
     .join('')
 
   bindChapterCarousels(root)
+  bindChapterReadMore(root)
   mountRubik()
 }
 
@@ -784,7 +865,7 @@ function createProjectModal() {
             (h) => `
           <div class="modal__highlight">
             <dt>${escapeHtml(h.label[locale])}</dt>
-            <dd>${escapeHtml(h.value[locale])}</dd>
+            <dd>${highlightValueMarkup(h, 'modal__highlight')}</dd>
           </div>`,
           )
           .join('')}
@@ -793,23 +874,37 @@ function createProjectModal() {
 
     const chapters =
       isCase && Array.isArray(study.chapters) && study.chapters.length
-        ? `
+        ? (() => {
+            const previewAt = 4
+            const head = study.chapters.slice(0, previewAt)
+            const rest = study.chapters.slice(previewAt)
+            const headItems = head
+              .map((ch) => chapterListItemMarkup(ch, 'modal__chapter', 'modal__chapter-figure'))
+              .join('')
+            let more = ''
+            if (rest.length) {
+              const moreId = `modal-chapters-more-${escapeAttr(item.id)}`
+              const moreLabel =
+                labels.modal.readMore || workLabels.readMore || 'Continue the story'
+              const moreMeta = chaptersMoreMeta(
+                labels.modal.readMoreMeta || workLabels.readMoreMeta,
+                rest.length,
+              )
+              more = `
+          ${chaptersMoreButtonMarkup('modal__chapters-more', moreId, moreLabel, moreMeta)}
+          <ol id="${moreId}" class="modal__chapter-list modal__chapter-list--more" hidden>
+            ${rest.map((ch) => chapterListItemMarkup(ch, 'modal__chapter', 'modal__chapter-figure')).join('')}
+          </ol>`
+            }
+            return `
       <div class="modal__chapters">
         <p class="modal__section-label">${escapeHtml(labels.modal.chapters || workLabels.chapters || 'The story')}</p>
         <ol class="modal__chapter-list">
-          ${study.chapters
-            .map(
-              (ch) => `
-            <li class="modal__chapter">
-              <h4>${escapeHtml(ch.title[locale])}</h4>
-              <p>${escapeHtml(ch.body[locale])}</p>
-              ${chapterFigureMarkup(ch.figure, 'modal__chapter-figure')}
-              ${chapterStepsMarkup(ch.steps, 'modal__chapter')}
-            </li>`,
-            )
-            .join('')}
+          ${headItems}
         </ol>
+        ${more}
       </div>`
+          })()
         : ''
 
     const caseBlocks = isCase
@@ -855,6 +950,7 @@ function createProjectModal() {
       })
     })
     bindChapterCarousels(body)
+    bindChapterReadMore(body)
   }
 
   const open = (id, { skipHash, trigger } = {}) => {

@@ -8,8 +8,8 @@
       "pt": "Resolvedor de Cubo Mágico"
     },
     "subtitle": {
-      "en": "Order inside apparent chaos.",
-      "pt": "Ordem dentro do caos aparente."
+      "en": "From a fair prototype to the machine that earned the degree — and the name.",
+      "pt": "Do protótipo na feira à máquina que fechou o diploma — e ganhou o nome."
     },
     "problem": {
       "en": "A scrambled cube looks random. Solving it by hand is slow, and teaching a machine to do it means bridging vision, kinematics, timing, and a human-facing interface — all at once.",
@@ -30,13 +30,195 @@
     "links": {
       "repo": "https://github.com/ioisaque/magic-globe"
     },
-    "media": [
+    "media": [],
+    "highlights": [
       {
-        "type": "image",
-        "src": "assets/img/projects/magic-globe/shot-1.png",
-        "alt": {
-          "en": "Magic Globe",
-          "pt": "Globo Mágico"
+        "label": {
+          "en": "Fair",
+          "pt": "Feira"
+        },
+        "value": {
+          "en": "June 2019",
+          "pt": "Junho 2019"
+        }
+      },
+      {
+        "label": {
+          "en": "Solve",
+          "pt": "Solve"
+        },
+        "value": {
+          "en": "~1.5 s",
+          "pt": "~1,5 s"
+        }
+      },
+      {
+        "label": {
+          "en": "Defense",
+          "pt": "Banca"
+        },
+        "value": {
+          "en": "10 Dec 2019",
+          "pt": "10 Dez 2019"
+        }
+      },
+      {
+        "label": {
+          "en": "Stack",
+          "pt": "Stack"
+        },
+        "value": {
+          "en": "Vision → Kociemba → motors",
+          "pt": "Visão → Kociemba → motores"
+        }
+      }
+    ],
+    "chapters": [
+      {
+        "title": {
+          "en": "A machine for any scramble",
+          "pt": "Uma máquina para qualquer embaralhamento"
+        },
+        "body": {
+          "en": "The brief was a course challenge that refused to stay theoretical: build something that can take a scrambled 3×3 and finish it — vision, planning, and physical motion in one loop. I studied how other solvers were built, including Flatland’s sub-second reference, then started from one stepper and grew the board until six motors, a serious PSU, and an Arduino MEGA WiFi could hold a full face-turn cycle.",
+          "pt": "O brief era um desafio de curso que se recusou a ficar teórico: construir algo que pegasse um 3×3 embaralhado e terminasse — visão, planejamento e movimento físico num só loop. Estudei como outros resolvedores eram feitos, inclusive a referência sub-segundo do Flatland, e parti de um stepper até a placa aguentar seis motores, uma fonte de verdade e um Arduino MEGA WiFi no ciclo completo de giro de face."
+        }
+      },
+      {
+        "title": {
+          "en": "First working prototype — robotics fair",
+          "pt": "Primeiro protótipo funcional — feira de robótica"
+        },
+        "body": {
+          "en": "June 2019: the first functional build hit the college robotics fair. Flatland-like frame, printed parts, cameras, and a scramble→solve loop that actually ran in front of people. It spanned almost the whole CS curriculum in one stand — and it was loud enough that the room noticed.",
+          "pt": "Junho de 2019: o primeiro build funcional chegou na feira de robótica da faculdade. Estrutura no estilo Flatland, peças impressas, câmeras e um loop embaralhar→resolver que de fato rodava na frente das pessoas. Quase o currículo inteiro de CS num estande — e alto o bastante para a sala perceber."
+        },
+        "figure": {
+          "type": "video",
+          "src": "assets/img/projects/magic-globe/videos/robotics-fair-solve.mp4",
+          "poster": "assets/img/projects/magic-globe/robotics-fair-solve.jpg",
+          "caption": {
+            "en": "Prototype solving on the fair floor — the first time the loop had to perform for strangers.",
+            "pt": "Protótipo resolvendo no chão da feira — a primeira vez que o loop teve que performar para estranhos."
+          }
+        }
+      },
+      {
+        "title": {
+          "en": "Professor Filipe vs the robot",
+          "pt": "Professor Filipe vs o robô"
+        },
+        "body": {
+          "en": "At the stand, professor Filipe Costa “raced” the prototype. A few twists, a victory declaration — soft cheat, full swagger. The robot still finished for real. Affectionate roast, permanent clip.",
+          "pt": "No estande, o professor Filipe Costa “correu” contra o protótipo. Poucos giros, declaração de vitória — trapaça leve, swagger total. O robô ainda terminou de verdade. Roast carinhoso, clipe permanente."
+        },
+        "figure": {
+          "type": "video",
+          "src": "assets/img/projects/magic-globe/videos/teacher-vs-robot.mp4",
+          "poster": "assets/img/projects/magic-globe/teacher-vs-robot.jpg",
+          "caption": {
+            "en": "Filipe pretends the cube is done. The machine disagrees — and wins.",
+            "pt": "Filipe finge que o cubo está pronto. A máquina discorda — e ganha."
+          }
+        }
+      },
+      {
+        "title": {
+          "en": "Flatland limits → redesign the frame",
+          "pt": "Limites do Flatland → redesenhar a estrutura"
+        },
+        "body": {
+          "en": "After the fair, the diagnosis was clear: a Flatland-like base meant camera burden, print warp, and sightlines that fought the read. The next machine had to center six motors on the faces, keep two cameras able to see all 54 stickers, and light the cube evenly. That geometry is what became the globe.",
+          "pt": "Depois da feira, o diagnóstico era claro: base estilo Flatland significava carga de câmeras, empeno de impressão e ângulos que lutavam contra a leitura. A próxima máquina tinha que centrar seis motores nas faces, deixar duas câmeras verem as 54 adesivos e iluminar o cubo de forma uniforme. Essa geometria é o que virou o globo."
+        },
+        "figure": {
+          "type": "image",
+          "src": "assets/img/projects/magic-globe/structure-3d.jpg",
+          "caption": {
+            "en": "3D structure — spherical frame, six steppers, cube locked at the center.",
+            "pt": "Estrutura 3D — armação esférica, seis steppers, cubo travado no centro."
+          }
+        }
+      },
+      {
+        "title": {
+          "en": "This is the Magic Globe — hence the name",
+          "pt": "Este é o Globo Mágico — daí o nome"
+        },
+        "body": {
+          "en": "Scramble and solve on the new structure while testing whether the redesign actually held. Six face-centered motors, room for the dual-camera read, LED rings killing the shadows — this is the machine that earned the name Magic Globe / Globo Mágico.",
+          "pt": "Embaralhar e resolver na estrutura nova, testando se o redesenho realmente sustentava. Seis motores centrados nas faces, espaço para a leitura com duas câmeras, anéis de LED matando sombra — esta é a máquina que ganhou o nome Magic Globe / Globo Mágico."
+        },
+        "figure": {
+          "type": "video",
+          "src": "assets/img/projects/magic-globe/videos/globe-scramble-solve.mp4",
+          "poster": "assets/img/projects/magic-globe/globe-scramble-solve.jpg",
+          "caption": {
+            "en": "Hands on the new globe — scramble, solve, prove the structure.",
+            "pt": "Mãos no globo novo — embaralha, resolve, prova a estrutura."
+          }
+        }
+      },
+      {
+        "title": {
+          "en": "Sense, plan, turn — the full stack",
+          "pt": "Perceber, planejar, girar — o stack completo"
+        },
+        "body": {
+          "en": "Two cameras feed OpenCV; HSV detection builds the URFDLB state; Kociemba returns the move string; Arduino MEGA drives six NEMA 17s through A4988s. On the human side, a web UI (Chrome Cube Lab lineage) on iPad/PC hides the machinery behind scramble and solve. Wired UI mark: solved in 1.574 s.",
+          "pt": "Duas câmeras alimentam o OpenCV; detecção HSV monta o estado URFDLB; Kociemba devolve a string de movimentos; o Arduino MEGA comanda seis NEMA 17 via A4988. Do lado humano, a UI web (linhagem Chrome Cube Lab) no iPad/PC esconde a maquinaria atrás de embaralhar e resolver. Marca na UI: resolvido em 1,574 s."
+        },
+        "figure": {
+          "type": "carousel",
+          "caption": {
+            "en": "Vision console at 1.574 s — and the same control surface on an iPad.",
+            "pt": "Console de visão a 1,574 s — e a mesma superfície de controle num iPad."
+          },
+          "items": [
+            {
+              "src": "assets/img/projects/magic-globe/python-vision.png",
+              "label": {
+                "en": "OpenCV + Kociemba",
+                "pt": "OpenCV + Kociemba"
+              },
+              "alt": {
+                "en": "Python OpenCV dual-camera UI — cube net and solved in 1.574 s",
+                "pt": "UI Python/OpenCV com duas câmeras — net do cubo e resolvido em 1,574 s"
+              }
+            },
+            {
+              "type": "video",
+              "src": "assets/img/projects/magic-globe/videos/ipad-control.mp4",
+              "poster": "assets/img/projects/magic-globe/ipad-control.jpg",
+              "label": {
+                "en": "iPad controls",
+                "pt": "Controles no iPad"
+              },
+              "alt": {
+                "en": "Testing the web scramble/solve controls on an iPad",
+                "pt": "Testando os controles web de embaralhar/resolver num iPad"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "Defense day — rebuilt overnight",
+          "pt": "Dia da banca — remontado na véspera"
+        },
+        "body": {
+          "en": "The night before I presented to the teachers and judges for the Computer Science degree, the circuit board died. Every minute until the presentation went into rebuilding the entire hardware. Chaos. Red Bulls. Breathing red. Then the machine solved on the day that closed the bachelor’s — TCC approved 10 Dec 2019, Faculdade Única de Ipatinga.",
+          "pt": "Na noite anterior à apresentação para professores e banca do bacharelado em Ciência da Computação, a placa de circuito morreu. Cada minuto até a defesa foi remontar o hardware inteiro. Caos. Red Bull. Respirando vermelho. Depois a máquina resolveu no dia que fechou o diploma — TCC aprovado em 10/12/2019, Faculdade Única de Ipatinga."
+        },
+        "figure": {
+          "type": "video",
+          "src": "assets/img/projects/magic-globe/videos/defense-day-solve.mp4",
+          "poster": "assets/img/projects/magic-globe/defense-day-solve.jpg",
+          "caption": {
+            "en": "Solve on defense day — after an all-night hardware rebuild.",
+            "pt": "Solve no dia da banca — depois de remontar o hardware a noite inteira."
+          }
         }
       }
     ]
@@ -570,8 +752,8 @@
     "id": "platform",
     "accent": "coral",
     "title": {
-      "en": "isaque.it platform",
-      "pt": "Plataforma isaque.it"
+      "en": "isaque.it",
+      "pt": "isaque.it"
     },
     "subtitle": {
       "en": "Many tools. One coherent system.",
@@ -596,31 +778,222 @@
     "links": {
       "live": "https://sistema.isaque.it"
     },
-    "media": [
+    "media": [],
+    "highlights": [
       {
-        "type": "image",
-        "src": "assets/img/projects/sistema-isaque/shot-1.png",
-        "alt": {
-          "en": "sistema.isaque.it",
-          "pt": "sistema.isaque.it"
+        "label": {
+          "en": "notify.it",
+          "pt": "notify.it"
+        },
+        "logos": [
+          {
+            "src": "assets/img/logos/platform/notify-it-light.png",
+            "alt": {
+              "en": "notify.it",
+              "pt": "notify.it"
+            }
+          }
+        ]
+      },
+      {
+        "label": {
+          "en": "scan.it",
+          "pt": "scan.it"
+        },
+        "logos": [
+          {
+            "src": "assets/img/logos/platform/scan-it-light.png",
+            "alt": {
+              "en": "scan.it",
+              "pt": "scan.it"
+            }
+          }
+        ]
+      },
+      {
+        "label": {
+          "en": "barcode.it",
+          "pt": "barcode.it"
+        },
+        "logos": [
+          {
+            "src": "assets/img/logos/platform/barcode-it-light.png",
+            "alt": {
+              "en": "barcode.it",
+              "pt": "barcode.it"
+            }
+          }
+        ]
+      },
+      {
+        "label": {
+          "en": "print.it",
+          "pt": "print.it"
+        },
+        "logos": [
+          {
+            "src": "assets/img/logos/platform/print-it-light.png",
+            "alt": {
+              "en": "print.it",
+              "pt": "print.it"
+            }
+          }
+        ]
+      }
+    ],
+    "chapters": [
+      {
+        "title": {
+          "en": "Admin that holds the money path",
+          "pt": "Admin que segura o caminho do dinheiro"
+        },
+        "body": {
+          "en": "sistema.isaque.it is where operators live: people, invoices, contracts, and the providers that collect. Asaas and Mercado Pago sit as first-class integrations — sync status, fees, sandbox vs live — and notify.it carries mail and push when something needs to leave the building. Contract states and payment methods are configured once, then reused across the network.",
+          "pt": "sistema.isaque.it é onde o operador vive: pessoas, faturas, contratos e os provedores que cobram. Asaas e Mercado Pago entram como integrações de primeira classe — sync, taxas, sandbox vs produção — e o notify.it leva mail e push quando algo precisa sair do sistema. Estados de contrato e métodos de pagamento se configuram uma vez e valem na rede."
+        },
+        "figure": {
+          "type": "carousel",
+          "caption": {
+            "en": "Payment rails, notify.it, and the labels that keep contracts readable.",
+            "pt": "Trilhos de pagamento, notify.it e os rótulos que deixam contratos legíveis."
+          },
+          "items": [
+            {
+              "src": "assets/img/projects/sistema-isaque/integrations.png",
+              "label": {
+                "en": "Asaas + Mercado Pago",
+                "pt": "Asaas + Mercado Pago"
+              },
+              "alt": {
+                "en": "Admin integrations — Asaas fees and Mercado Pago sync status",
+                "pt": "Integrações no admin — taxas Asaas e status de sync do Mercado Pago"
+              }
+            },
+            {
+              "src": "assets/img/projects/sistema-isaque/integrations-notify.png",
+              "label": {
+                "en": "notify.it wired in",
+                "pt": "notify.it ligado"
+              },
+              "alt": {
+                "en": "notify.it configured for mail, push, and webhooks beside billing providers",
+                "pt": "notify.it configurado para mail, push e webhooks ao lado dos provedores de cobrança"
+              }
+            },
+            {
+              "src": "assets/img/projects/sistema-isaque/settings-contracts.png",
+              "label": {
+                "en": "Contract states",
+                "pt": "Estados de contrato"
+              },
+              "alt": {
+                "en": "Configurable contract statuses and payment methods in admin settings",
+                "pt": "Status de contrato e métodos de pagamento configuráveis nas settings do admin"
+              }
+            }
+          ]
         }
       },
       {
-        "type": "image",
-        "src": "assets/img/projects/cliente-isaque/shot-1.png",
-        "alt": {
-          "en": "cliente.isaque.it",
-          "pt": "cliente.isaque.it"
+        "title": {
+          "en": "A portal clients can live in",
+          "pt": "Um portal em que o cliente consegue viver"
+        },
+        "body": {
+          "en": "cliente.isaque.it is the calm side of the same platform: active services, contract details, attachments, and invoices in one phone-sized flow. Presence can be registered with location while the app is open — useful when the work happens on site. Same identity language as the admin, without exposing the operator’s complexity.",
+          "pt": "cliente.isaque.it é o lado calmo da mesma plataforma: serviços ativos, detalhes do contrato, anexos e faturas num fluxo que cabe no celular. A presença pode ser registrada com localização enquanto o app está aberto — útil quando o trabalho é no local. A mesma linguagem de identidade do admin, sem a complexidade do operador."
+        },
+        "figure": {
+          "type": "carousel",
+          "caption": {
+            "en": "Service card, billing progress, contract detail, and presence on open.",
+            "pt": "Card do serviço, progresso de faturamento, detalhe do contrato e presença com o app aberto."
+          },
+          "items": [
+            {
+              "src": "assets/img/projects/cliente-isaque/service-detail.png",
+              "label": {
+                "en": "Active service",
+                "pt": "Serviço ativo"
+              },
+              "alt": {
+                "en": "Client portal — institutional website service with billing progress",
+                "pt": "Portal do cliente — serviço de website institucional com progresso de faturamento"
+              }
+            },
+            {
+              "src": "assets/img/projects/cliente-isaque/contract-details.png",
+              "label": {
+                "en": "Contract + invoices",
+                "pt": "Contrato + faturas"
+              },
+              "alt": {
+                "en": "Contract details, PDF attachments, and paid invoices in the client portal",
+                "pt": "Detalhes do contrato, anexos em PDF e faturas pagas no portal do cliente"
+              }
+            },
+            {
+              "src": "assets/img/projects/cliente-isaque/location-and-home.png",
+              "label": {
+                "en": "Presence + home",
+                "pt": "Presença + início"
+              },
+              "alt": {
+                "en": "Location permission for presence and the client home with account summary",
+                "pt": "Permissão de localização para presença e início do cliente com resumo da conta"
+              }
+            }
+          ]
         }
       },
       {
-        "type": "image",
-        "src": "assets/img/projects/api-isaque/shot-1.png",
-        "alt": {
-          "en": "api.isaque.it",
-          "pt": "api.isaque.it"
+        "title": {
+          "en": "Documents where the work already is",
+          "pt": "Documentos onde o trabalho já está"
+        },
+        "body": {
+          "en": "Contracts and NFS-e don’t live in a separate drive hunt. From the portal, the signed agreement and the service invoice open in place — the paper trail follows the same path as the service and the charge.",
+          "pt": "Contratos e NFS-e não moram numa caça em pasta à parte. No portal, o acordo assinado e a nota de serviço abrem no lugar — o rastro de papel segue o mesmo caminho do serviço e da cobrança."
+        },
+        "figure": {
+          "type": "carousel",
+          "caption": {
+            "en": "Contract PDF and NFS-e from the same client surface.",
+            "pt": "PDF do contrato e NFS-e na mesma superfície do cliente."
+          },
+          "items": [
+            {
+              "src": "assets/img/projects/cliente-isaque/contrato-pdf.png",
+              "label": {
+                "en": "Contract",
+                "pt": "Contrato"
+              },
+              "alt": {
+                "en": "isaque.it service contract PDF opened from the client portal",
+                "pt": "PDF do contrato de serviço isaque.it aberto no portal do cliente"
+              }
+            },
+            {
+              "src": "assets/img/projects/cliente-isaque/nfse.png",
+              "label": {
+                "en": "NFS-e",
+                "pt": "NFS-e"
+              },
+              "alt": {
+                "en": "Electronic service invoice (NFS-e) issued for IT consultancy",
+                "pt": "Nota fiscal de serviço eletrônica (NFS-e) emitida para consultoria em TI"
+              }
+            }
+          ]
         }
       }
-    ]
+    ],
+    "titleLogo": {
+      "src": "assets/img/logos/platform/isaque-it-light.png",
+      "alt": {
+        "en": "isaque.it — Complexity, simplified.",
+        "pt": "isaque.it — Complexity, simplified."
+      }
+    }
   }
 ]
