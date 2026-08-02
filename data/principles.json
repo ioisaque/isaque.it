@@ -1,0 +1,57 @@
+[
+  {
+    "id": "complexity",
+    "title": {
+      "en": "Complexity, simplified.",
+      "pt": "Complexidade, simplificada."
+    },
+    "body": {
+      "en": "Difficulty is a starting condition. Clarity is the deliverable.",
+      "pt": "A dificuldade é a condição inicial. A clareza é a entrega."
+    }
+  },
+  {
+    "id": "clarity",
+    "title": {
+      "en": "Clarity over cleverness.",
+      "pt": "Clareza acima de esperteza."
+    },
+    "body": {
+      "en": "If it needs explaining to feel smart, it is not finished.",
+      "pt": "Se precisa de explicação para parecer inteligente, ainda não está pronto."
+    }
+  },
+  {
+    "id": "scale",
+    "title": {
+      "en": "Elegant systems scale.",
+      "pt": "Sistemas elegantes escalam."
+    },
+    "body": {
+      "en": "Structure that stays readable under growth outlasts shortcuts.",
+      "pt": "Estrutura que permanece legível sob crescimento sobrevive aos atalhos."
+    }
+  },
+  {
+    "id": "communication",
+    "title": {
+      "en": "Code is communication.",
+      "pt": "Código é comunicação."
+    },
+    "body": {
+      "en": "People will maintain what you leave behind. Write for them.",
+      "pt": "Pessoas vão manter o que você deixa. Escreva para elas."
+    }
+  },
+  {
+    "id": "simple",
+    "title": {
+      "en": "Simple isn't easy.",
+      "pt": "Simples não é fácil."
+    },
+    "body": {
+      "en": "Simplicity is earned by removing what does not belong.",
+      "pt": "A simplicidade se conquista removendo o que não pertence."
+    }
+  }
+]

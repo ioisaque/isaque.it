@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Isaque Costa">
+
+  <title>Isaque Costa — Software Engineer</title>
+  <meta name="description" content="Portfolio of Isaque Costa — Software Engineer at isaque.it. Accelerating ideas through design, hardware, IdeYou, teaching, and platform engineering.">
+  <meta property="og:title" content="Isaque Costa — Software Engineer">
+  <meta property="og:description" content="isaque.it — Accelerating Ideas! Career timeline from design to platform engineering.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://isaque.it/portifolio/">
+  <meta property="og:image" content="https://cdn.isaque.it/assets/profile/profile-b.avif">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@ioisaque">
+
+  <link rel="apple-touch-icon" href="https://cdn.isaque.it/assets/icons/apple-icon-180.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="https://cdn.isaque.it/assets/icons/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="196x196" href="https://cdn.isaque.it/assets/icons/favicon-196.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/motion.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-nav" role="banner">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="#hero">
+        <img src="https://cdn.isaque.it/assets/icons/icon.svg" alt="" width="28" height="28">
+        <span>isaque.it</span>
+      </a>
+
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="site-nav__links" id="nav-links">
+        <li><a class="nav-link" href="#timeline-spine">Timeline</a></li>
+        <li><a class="nav-link" href="#eras">Story</a></li>
+        <li><a class="nav-link" href="#featured">Work</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" id="lang-en" class="active" aria-pressed="true">EN</button>
+          <button type="button" id="lang-pt" aria-pressed="false">PT</button>
+        </div>
+        <button type="button" class="btn-icon" id="theme-toggle" aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <img class="hero__logo hero__logo--dark" src="https://cdn.isaque.it/assets/logos/logo-b.png" alt="isaque.it" height="40">
+          <img class="hero__logo hero__logo--light" src="https://cdn.isaque.it/assets/logos/logo-w.png" alt="isaque.it" height="40">
+
+          <h1 class="hero__title">Isaque Costa</h1>
+          <p class="hero__role">Software Engineer</p>
+          <p class="hero__tagline">Accelerating Ideas!</p>
+          <p class="hero__bio">
+            With more than 12 years of dedication, I transform complex challenges into web solutions that streamline processes and empower businesses. From dentist websites to Rubik's Cube robots to a full platform under isaque.it.
+          </p>
+
+          <div class="hero__stats">
+            <div>
+              <span class="hero__stat-value" id="stat-repos">72</span>
+              <span class="hero__stat-label">public repos</span>
+            </div>
+            <div>
+              <span class="hero__stat-value">12+</span>
+              <span class="hero__stat-label">years building</span>
+            </div>
+            <div>
+              <span class="hero__stat-value" id="stat-followers">23</span>
+              <span class="hero__stat-label">followers</span>
+            </div>
+            <div>
+              <span class="hero__stat-value">Italy</span>
+              <span class="hero__stat-label">based</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal reveal-delay-1">
+          <div class="hero__photo-wrap">
+            <img class="hero__photo hero__photo--dark" src="https://cdn.isaque.it/assets/profile/profile-b.avif" alt="Isaque Costa" width="320" height="320">
+            <img class="hero__photo hero__photo--light" src="https://cdn.isaque.it/assets/profile/profile-w.avif" alt="Isaque Costa" width="320" height="320">
+          </div>
+          <img class="hero__mark" src="https://cdn.isaque.it/assets/icons/icon.svg" alt="" width="64" height="64">
+        </div>
+      </div>
+    </section>
+
+    <nav class="timeline-spine" id="timeline-spine" aria-label="Career timeline">
+      <div class="container">
+        <div class="timeline-spine__track" id="timeline-track">
+          <div class="timeline-spine__line">
+            <div class="timeline-spine__progress" id="timeline-progress"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="eras" id="eras" aria-label="Career chapters"></div>
+
+    <section class="featured" id="featured">
+      <div class="container">
+        <header class="featured__header reveal">
+          <h2 class="section-title">Featured Work</h2>
+          <p class="section-subtitle">Pinned projects across five career eras — from client websites to the isaque.it platform.</p>
+        </header>
+
+        <div class="era-filter reveal" id="era-filters" role="group" aria-label="Filter by era"></div>
+
+        <div class="featured__grid" id="featured-grid"></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact__grid">
+        <div class="reveal">
+          <h2 class="section-title">Let's connect</h2>
+          <p class="section-subtitle">Open to collaborations, consulting, and interesting problems.</p>
+        </div>
+
+        <div class="social-row reveal reveal-delay-1">
+          <a class="social-link" href="https://github.com/ioisaque" target="_blank" rel="noopener">
+            <img src="https://cdn.isaque.it/assets/socials/icons8-github.png" alt="" width="20" height="20">
+            GitHub
+          </a>
+          <a class="social-link" href="https://linkedin.com/in/ioisaque/" target="_blank" rel="noopener">
+            <img src="https://cdn.isaque.it/assets/socials/icons8-linkedin.gif" alt="" width="20" height="20">
+            LinkedIn
+          </a>
+          <a class="social-link" href="https://instagram.com/ioisaque" target="_blank" rel="noopener">
+            <img src="https://cdn.isaque.it/assets/socials/icons8-instagram.gif" alt="" width="20" height="20">
+            Instagram
+          </a>
+          <a class="social-link" href="https://behance.net/ioisaque" target="_blank" rel="noopener">
+            <img src="https://cdn.isaque.it/assets/socials/behance.png" alt="" width="20" height="20">
+            Behance
+          </a>
+          <a class="social-link" href="mailto:costa@isaque.it">
+            <img src="https://cdn.isaque.it/assets/socials/icons8-email.gif" alt="" width="20" height="20">
+            costa@isaque.it
+          </a>
+          <a class="social-link" href="https://api.whatsapp.com/send?phone=5531990712203&text=Hi%2C+I+came+from+your+portfolio!" target="_blank" rel="noopener">
+            <img src="https://cdn.isaque.it/assets/socials/icons8-whatsapp.gif" alt="" width="20" height="20">
+            WhatsApp
+          </a>
+        </div>
+
+        <img class="footer-badge" src="https://cdn.isaque.it/assets/rights/developed-dark.png" alt="Developed by isaque.it" width="160" height="32">
+        <p class="footer-copy">&copy; <span id="year"></span> Isaque Costa · isaque.it</p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

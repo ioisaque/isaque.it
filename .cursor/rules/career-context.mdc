@@ -1,0 +1,56 @@
+---
+description: Isaque Costa career trajectory for accurate portfolio copy
+alwaysApply: true
+---
+
+# Career context
+
+Use this when writing or editing Evolution, catalog, case studies, or hero stats. Prefer narrative of thinking over job-title lists. Public sources: LinkedIn (`/in/ioisaque`), GitHub (`ioisaque`), isaque.it, IdeYou — consolidate; do not invent.
+
+## Identity
+
+- Name: Isaque Costa · Software Engineer · he/him
+- Brand / company: isaque.it · IdeYou (IT services / products)
+- Based: **Dublin, Ireland** (site truth). Brazilian origin. GitHub may still say Italy — ignore for site copy.
+- Languages: fluent Portuguese and English; studying Spanish and Italian.
+- Scale claims on site: 100+ projects delivered, 12+ years of experience (hero).
+
+## Five eras (canonical ids)
+
+Use these ids everywhere (`milestones`, `catalog`, filters):
+
+| id | Years | Color | Thinking arc |
+|----|-------|-------|--------------|
+| `design` | 2012–2016 | `#F5617F` | Craft and intention — first professional sites for local businesses |
+| `hardware` | 2016–2019 | `#FFD22B` | Chaos → structure — SENAI / degree, mechatronics, Magic Globe robot |
+| `ideyou` | 2019–2023 | `#FF5356` | Real operational noise — IdeYou food-tech, ERP, education products |
+| `teaching` | 2023–2025 | `#9900CC` | Teaching clarified models — CS teaching, school IT, CTI hub |
+| `platform` | 2025–now | `#0076F3` | Fragments → platform — admin, API, client portal under isaque.it |
+
+## Era stories (facts to keep)
+
+**design** — Visual design and front-end for clinics, food brands, small businesses (e.g. ENGRENHA+, LM Salgados). Typography, trust on screen, every pixel earning its place.
+
+**hardware** — Bachelor’s / SENAI: 3D printing, CNC, Arduino, vision, mechatronics. Magic Globe / Globo Mágico: Rubik’s Cube robot, web/iPad control, sub-2s solves; open-source angle via `magic-globe`. Metaphor for the whole career: find structure under noise.
+
+**ideyou** — IdeYou (from ~2019): beyond pages into platforms. MioDelivery grew from the **LM Salgados** partnership (first major software client since 2017 — factory + multi-store system under early placeholder brand Hi sistemas, kitchen production panel from a CorelDRAW sketch, pandemic ordering stages, first production PWA) and still runs for a few hand-picked food clients that prioritize quality over quantity. Telecom ERP (billing, boletos, operations). Aurélio / planeja-ideyou (BNCC lesson plans). LinkedIn: Full Stack at IdeYou; tools that had to work every peak hour.
+
+**teaching** — CS teaching while building school relationships (networks, IT services, custom systems). CTI as student/project hub. Explaining forced clearer design.
+
+**platform** — Convergence under isaque.it: sistema (admin SPA), api (NestJS/Prisma), cliente (portal), notify.it, barcode.it. Same care as early design sites, at platform scale.
+
+## Canonical project map (era → catalog ids)
+
+- **design:** `engrenhamais`, `lmsalgados`, `vipproducoes`, `victoriacosta`, `ensaio-fotografico`, `folhadocomercio`, `metasita`, `lbrecords`, `lagoa-silvana`, `damasceno`, `acdn`, `nina-cordeiro`
+- **hardware:** `magic-globe` (case: `cube`) — single unified entry: EN "Magic Globe", PT "Globo Mágico"; tech HTML, JS, Python, C++
+- **ideyou:** `miodelivery` (case: `miodelivery`), `telecom-erp`, `planeja-ideyou`, `viaprime`
+- **teaching:** `cti` — "CTI Projects" / "Projetos CTI", portfolio of projects from the technical course Isaque coordinated and taught
+- **platform:** `sistema-isaque`, `api-isaque`, `cliente-isaque`, `notify-it`, `barcode-it`, `print-it` (case: `platform`) — listed first in `catalog.json` so they appear together at the top of the Selected projects grid
+
+Case study ids in `projects.json`: `cube`, `miodelivery`, `platform` only.
+
+## Notable public links
+
+- Portfolio / tools: https://isaque.it · https://ideyou.com.br · https://sistema.isaque.it · https://isaque.it/meuaurelio.com.br/
+- GitHub: https://github.com/ioisaque · https://github.com/ioisaque/magic-globe · https://github.com/ioisaque/cti · https://github.com/ioisaque/planeja-ideyou
+- Contact: costa@isaque.it

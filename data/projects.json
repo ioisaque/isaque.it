@@ -1,170 +1,626 @@
 [
   {
-    "slug": "engrenhamais",
-    "title": "ENGRENHA+",
-    "era": "design",
-    "description": "Industrial consultancy website for refractory and energy solutions.",
-    "tech": ["PHP", "HTML", "CSS"],
-    "liveUrl": "https://engrenhamais.com.br",
-    "repoUrl": null,
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "PHP",
-    "featured": true
+    "id": "cube",
+    "accent": "yellow",
+    "embed": "https://isaque.it/cubo/",
+    "title": {
+      "en": "Rubik's Cube solver",
+      "pt": "Resolvedor de Cubo Mágico"
+    },
+    "subtitle": {
+      "en": "Order inside apparent chaos.",
+      "pt": "Ordem dentro do caos aparente."
+    },
+    "problem": {
+      "en": "A scrambled cube looks random. Solving it by hand is slow, and teaching a machine to do it means bridging vision, kinematics, timing, and a human-facing interface — all at once.",
+      "pt": "Um cubo embaralhado parece aleatório. Resolvê-lo à mão é lento, e ensinar uma máquina a fazê-lo exige unir visão, cinemática, timing e uma interface humana — ao mesmo tempo."
+    },
+    "difficulty": {
+      "en": "The hard part was never “turning faces.” It was coordinating software, electronics, and physical motion so the system felt inevitable — a clear path from scrambled state to solved state.",
+      "pt": "O difícil nunca foi “girar faces.” Foi coordenar software, eletrônica e movimento físico para que o sistema parecesse inevitável — um caminho claro do estado embaralhado ao resolvido."
+    },
+    "simplification": {
+      "en": "I treated the cube as a state machine: sense, model, plan, execute. The interface hid the machinery. The robot made the algorithm visible as motion — chaos resolving into structure.",
+      "pt": "Tratei o cubo como uma máquina de estados: perceber, modelar, planejar, executar. A interface escondeu a maquinaria. O robô tornou o algoritmo visível como movimento — caos se resolvendo em estrutura."
+    },
+    "change": {
+      "en": "What looked like a toy became proof of a mindset: find the structure beneath noise, then make that structure simple to act on. That same thinking now runs through products, architecture, and interfaces.",
+      "pt": "O que parecia um brinquedo virou prova de um modo de pensar: encontrar a estrutura sob o ruído e torná-la simples de agir. Esse mesmo pensamento atravessa produtos, arquitetura e interfaces."
+    },
+    "links": {
+      "repo": "https://github.com/ioisaque/magic-globe"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/magic-globe/shot-1.png",
+        "alt": {
+          "en": "Magic Globe",
+          "pt": "Globo Mágico"
+        }
+      }
+    ]
   },
   {
-    "slug": "lmsalgados",
-    "title": "LM Salgados",
-    "era": "design",
-    "description": "Marketing site for a local food business.",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "liveUrl": "https://lmsalgados.com.br",
-    "repoUrl": null,
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "HTML",
-    "featured": true
+    "id": "miodelivery",
+    "accent": "green",
+    "title": {
+      "en": "MioDelivery",
+      "pt": "MioDelivery"
+    },
+    "subtitle": {
+      "en": "A college-era partnership that outgrew one kitchen — years later, still a client.",
+      "pt": "Uma parceria da faculdade que ultrapassou uma cozinha — anos depois, ainda cliente."
+    },
+    "highlights": [
+      {
+        "label": {
+          "en": "Partnership",
+          "pt": "Parceria"
+        },
+        "value": {
+          "en": "2017 → today",
+          "pt": "2017 → hoje"
+        }
+      },
+      {
+        "label": {
+          "en": "Scale",
+          "pt": "Escala"
+        },
+        "value": {
+          "en": "2 → 7 stores",
+          "pt": "2 → 7 lojas"
+        }
+      },
+      {
+        "label": {
+          "en": "Reach",
+          "pt": "Alcance"
+        },
+        "value": {
+          "en": "4 cities",
+          "pt": "4 cidades"
+        }
+      },
+      {
+        "label": {
+          "en": "Milestone",
+          "pt": "Marco"
+        },
+        "value": {
+          "en": "First production PWA",
+          "pt": "Primeiro PWA em produção"
+        }
+      }
+    ],
+    "chapters": [
+      {
+        "title": {
+          "en": "Campus regular → trusted partner",
+          "pt": "Freguês do campus → parceiro de confiança"
+        },
+        "body": {
+          "en": "LM Salgados was my first major software client — and still is, from 2017 to today. I was in college and a frequent customer of the main store next to campus. The owners asked for management software for factory and stores: flexible, multi-unit, matching a very fast food operation. Before any code, I immersed in daily ops, talked to owners and staff, and consulted on process. Partner, not ticket vendor.",
+          "pt": "A LM Salgados foi meu primeiro grande cliente de software — e continua sendo, de 2017 até hoje. Eu estava na faculdade e era freguês frequente da loja principal ao lado do campus. Os donos pediram um sistema de gestão para fábrica e lojas: flexível, multiunidade, à altura de uma operação de comida muito rápida. Antes de qualquer código, me imergi no dia a dia, conversei com donos e equipe e consultei processos. Parceiro, não fornecedor de tickets."
+        }
+      },
+      {
+        "title": {
+          "en": "When the kitchen shouted numbers",
+          "pt": "Quando a cozinha gritava números"
+        },
+        "body": {
+          "en": "At the counter, orders often meant tens or hundreds of salgados prepared in minutes. Coordination was verbal — staff shouted quantities (“50”, “100”, “200”) to the fry line. Information lived in people’s heads, not on a shared screen. That kitchen chaos was the first operational problem the partnership had to solve.",
+          "pt": "No balcão, pedidos costumavam significar dezenas ou centenas de salgados em minutos. A coordenação era verbal — a equipe gritava quantidades (“50”, “100”, “200”) para a fritura. A informação vivia na cabeça das pessoas, não numa tela compartilhada. Esse caos na cozinha foi o primeiro problema operacional que a parceria precisava resolver."
+        }
+      },
+      {
+        "title": {
+          "en": "The board that replaced the shout",
+          "pt": "O painel que substituiu o grito"
+        },
+        "body": {
+          "en": "This is the very sketch I made in CorelDRAW at the time, to propose a way out of the chaos. The board divided store hours into 30-minute squares: salgado quantity on the left, and on the right how many orders of that amount were due in that slot. Scheduled orders — and any new POS order — made the square blink and play a sound so the kitchen was notified and ready to prepare. Inspired by fast-food kitchen screens, but drawn first as a concrete proposal before it became software.",
+          "pt": "Este é exatamente o sketch que fiz no CorelDRAW na época, para propor uma saída do caos. O painel dividia o horário da loja em quadrados de 30 minutos: à esquerda a quantidade de salgados, à direita quantos pedidos daquele montante caíam naquele horário. Pedidos agendados — e qualquer pedido novo no PDV — faziam o quadrado piscar e tocar um alarme para a cozinha ser avisada e preparar. Inspirado em telas de fast-food, mas desenhado primeiro como proposta concreta antes de virar software."
+        },
+        "figure": {
+          "type": "image",
+          "src": "assets/img/projects/miodelivery/painel-producao.png",
+          "caption": {
+            "en": "CorelDRAW sketch — 30-minute slots, quantities, order counts, and blink/alarm for new work.",
+            "pt": "Sketch no CorelDRAW — slots de 30 minutos, quantidades, contagem de pedidos e pisca/alarme para trabalho novo."
+          }
+        }
+      },
+      {
+        "title": {
+          "en": "From basic POS to a multi-unit ERP",
+          "pt": "Do PDV básico a um ERP multiunidade"
+        },
+        "body": {
+          "en": "The first counter tools prioritized function over polish. As needs piled up, the software matured into a full multi-unit system — early brand Hi sistemas, a placeholder name I threw up quickly just to plant a flag. It covered orders, clients, products, stores, and users so factory and shops shared one platform in real time. That same stack kept evolving: today’s home surface is a multi-store dashboard with live metrics and shortcuts into kitchen, queue, tables, and menu; the production board became a filterable station panel for real benches. LM grew from two stores and a factory to seven stores across four cities — including a larger bakery unit — and every expansion brought new ops complexity we turned into software that still fit the floor. Still running for a few hand-picked clients that, like me, prioritize quality over quantity — productized as MioDelivery.",
+          "pt": "As primeiras ferramentas de balcão priorizaram função sobre polish. Conforme as necessidades cresciam, o software amadureceu num sistema multiunidade completo — marca inicial Hi sistemas, um nome placeholder que eu criei no pulo só para demarcar terreno. Cobria pedidos, clientes, produtos, lojas e usuários para fábrica e lojas compartilharem uma plataforma em tempo real. Esse mesmo stack continuou evoluindo: a superfície inicial de hoje é um dashboard multi-loja com métricas ao vivo e atalhos para cozinha, fila, mesas e cardápio; o painel de produção virou um painel filtrável por bancada. A LM saiu de duas lojas e uma fábrica para sete lojas em quatro cidades — inclusive uma unidade maior com padaria — e cada expansão trouxe nova complexidade operacional que transformamos em software que ainda cabia no chão de loja. Ainda roda para poucos clientes selecionados que, como eu, priorizam qualidade sobre quantidade — productizado como MioDelivery."
+        },
+        "figure": {
+          "type": "carousel",
+          "caption": {
+            "en": "Early Hi sistemas → today’s multi-store dashboard — same ops lineage, not product or report screens.",
+            "pt": "Hi sistemas antigo → dashboard multi-loja de hoje — a mesma linhagem operacional, sem telas de produto ou relatório."
+          },
+          "items": [
+            {
+              "src": "assets/img/projects/miodelivery/h-sistemas-erp-hires.png",
+              "label": {
+                "en": "Early ERP",
+                "pt": "ERP antigo"
+              },
+              "alt": {
+                "en": "Early Hi sistemas ERP — orders and kitchen-facing ops for LM Salgados",
+                "pt": "ERP Hi sistemas antigo — pedidos e operação para a LM Salgados"
+              }
+            },
+            {
+              "src": "assets/img/projects/miodelivery/modern-dashboard.png",
+              "label": {
+                "en": "Dashboard",
+                "pt": "Dashboard"
+              },
+              "alt": {
+                "en": "Current multi-store dashboard — live metrics and ops shortcuts",
+                "pt": "Dashboard multi-loja atual — métricas ao vivo e atalhos operacionais"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "Pandemic boom → innovation at every stage",
+          "pt": "Boom da pandemia → inovação em cada etapa"
+        },
+        "body": {
+          "en": "2020 exploded delivery demand and stress-tested the partnership. Each stage forced a different build — starting with online orders, the ops list under fire, and auto-print when the browser said no.",
+          "pt": "2020 explodiu a demanda de delivery e testou a parceria sob pressão. Cada etapa forçou uma entrega diferente — começando pelos pedidos online, a listagem sob fogo e a impressão automática quando o navegador disse não."
+        },
+        "figure": {
+          "type": "compare",
+          "variant": "glue",
+          "arrow": false,
+          "caption": {
+            "en": "Ops under pressure — kitchen board on the monitor, manager view on the laptop.",
+            "pt": "Operação sob pressão — painel da cozinha no monitor, visão do gestor no notebook."
+          },
+          "items": [
+            {
+              "src": "assets/img/projects/miodelivery/ops-dual-screens.jpg",
+              "alt": {
+                "en": "IdeYou on desk — kitchen production board on the monitor and analytics on the laptop",
+                "pt": "IdeYou na mesa — painel de produção no monitor e analytics no notebook"
+              }
+            },
+            {
+              "src": "assets/img/projects/miodelivery/modern-kitchen.png",
+              "alt": {
+                "en": "Kitchen production panel with timed order cards",
+                "pt": "Painel de produção da cozinha com cards por horário"
+              }
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": {
+              "en": "Isolation → online ordering + the order list",
+              "pt": "Isolamento → pedidos online + a listagem"
+            },
+            "body": {
+              "en": "Locked down, delivery was the business. We shipped a consumer ordering app and the first production PWA I had ever put live — installable on phones without app stores — so customers could order and staff could keep the kitchen moving from any device. That boom made the order list the real ops surface: multi-store color tags, status updates, pending prints, customer chat, re-send a charge, and filtering the hell out of orders by category, week, month, or custom range — all in a few clicks. Payment mix and Asaas totals sit in the footer so finance is never a separate mystery. That experience is why suitable web systems I build still default to PWA-ready when it helps UX.",
+              "pt": "No isolamento, delivery era o negócio. Entregamos um app de pedidos para o consumidor e o primeiro PWA em produção que eu tinha colocado no ar — instalável no celular sem lojas de app — para o cliente pedir e a equipe manter a cozinha andando de qualquer dispositivo. Esse boom fez da listagem a superfície real da operação: tags coloridas multi-loja, status, impressões pendentes, conversa com o cliente, reenviar cobrança e filtrar pedidos pra valer por categoria, semana, mês ou período — tudo em poucos cliques. Mix de pagamento e totais Asaas ficam no rodapé para o financeiro não ser mistério à parte. Por isso sistemas web adequados que eu construo ainda nascem PWA-ready quando isso ajuda a UX."
+            },
+            "figure": {
+              "type": "carousel",
+              "caption": {
+                "en": "The order list under pressure — every filter, status, and store view in a few clicks.",
+                "pt": "A listagem sob pressão — cada filtro, status e visão de loja em poucos cliques."
+              },
+              "items": [
+                {
+                  "src": "assets/img/projects/miodelivery/modern-orders-all.png",
+                  "label": {
+                    "en": "All stores",
+                    "pt": "Todas as lojas"
+                  },
+                  "alt": {
+                    "en": "Multi-store order listing — filter, status, print, and finance in one surface",
+                    "pt": "Listagem multi-loja — filtro, status, impressão e financeiro numa superfície"
+                  }
+                },
+                {
+                  "src": "assets/img/projects/miodelivery/modern-orders-fritos.png",
+                  "label": {
+                    "en": "Fried",
+                    "pt": "Fritos"
+                  },
+                  "alt": {
+                    "en": "Order list filtered to fried snacks",
+                    "pt": "Listagem filtrada em salgados fritos"
+                  }
+                },
+                {
+                  "src": "assets/img/projects/miodelivery/modern-orders-combo.png",
+                  "label": {
+                    "en": "Combos",
+                    "pt": "Combos"
+                  },
+                  "alt": {
+                    "en": "Order list filtered to combos",
+                    "pt": "Listagem filtrada em combos"
+                  }
+                },
+                {
+                  "src": "assets/img/projects/miodelivery/modern-orders-doces.png",
+                  "label": {
+                    "en": "Sweets",
+                    "pt": "Doces"
+                  },
+                  "alt": {
+                    "en": "Order list filtered to sweets",
+                    "pt": "Listagem filtrada em doces"
+                  }
+                },
+                {
+                  "src": "assets/img/projects/miodelivery/modern-order-detail.png",
+                  "label": {
+                    "en": "Order detail",
+                    "pt": "Detalhe do pedido"
+                  },
+                  "alt": {
+                    "en": "Order detail with print lifecycle logs",
+                    "pt": "Detalhe do pedido com logs do ciclo de impressão"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "title": {
+              "en": "IdeYouPrint → auto-print without a click",
+              "pt": "IdeYouPrint → impressão automática sem clique"
+            },
+            "body": {
+              "en": "Orders were pouring in from the app. The kitchen already had the panel — what the delivery riders needed was a paper receipt for the sale. Browsers refuse silent printing — someone would have to click every time. So I learned Python and built IdeYouPrint: software on the client laptop beside the printer that connected to my API, watched for new orders, and talked to the thermal printer so receipts came out with nobody clicking anything.",
+              "pt": "Os pedidos vinham do app. A cozinha já tinha o painel — quem precisava de papel era o entregador, como recibo da venda. Navegadores não permitem impressão silenciosa — alguém teria que clicar toda vez. Então aprendi Python e construí o IdeYouPrint: software no notebook do cliente ao lado da impressora, conectado à minha API, que observava pedidos novos e falava com a impressora térmica para o recibo sair sem ninguém clicar em nada."
+            },
+            "figure": {
+              "type": "video",
+              "src": "assets/img/projects/miodelivery/videos/ideyouprint-laptop.mp4",
+              "poster": "assets/img/projects/miodelivery/ideyouprint-laptop.png",
+              "caption": {
+                "en": "IdeYouPrint on the client laptop — API in, delivery receipts out, no browser click.",
+                "pt": "IdeYouPrint no notebook do cliente — API entra, recibo do entregador sai, sem clique no navegador."
+              },
+              "fit": "cover"
+            }
+          },
+          {
+            "title": {
+              "en": "Distancing → animated TV menu",
+              "pt": "Afastamento → cardápio animado na TV"
+            },
+            "body": {
+              "en": "As venues reopened under distancing rules, clustering around a printed board was a problem. We built an animated TV menu — categories and items cycling on screen — so guests could browse from a distance. The same path still runs for LM and for other hand-picked clients with their own branding.",
+              "pt": "Na reabertura com regras de afastamento, aglomerar no quadro impresso era problema. Fizemos um cardápio animado na TV — categorias e itens ciclando na tela — para o cliente ver de longe. O mesmo caminho ainda roda na LM e em outros clientes selecionados com a própria marca."
+            },
+            "figure": {
+              "type": "carousel",
+              "caption": {
+                "en": "TV menu for distancing — categories, live boards, and other clients’ branding.",
+                "pt": "Cardápio TV para afastamento — categorias, telas ao vivo e marca de outros clientes."
+              },
+              "items": [
+                {
+                  "src": "assets/img/projects/miodelivery/modern-menu-tv-categories.png",
+                  "label": {
+                    "en": "TV categories",
+                    "pt": "Categorias na TV"
+                  },
+                  "alt": {
+                    "en": "TV menu category selection",
+                    "pt": "Seleção de categoria no cardápio TV"
+                  }
+                },
+                {
+                  "src": "assets/img/projects/miodelivery/modern-menu-tv.png",
+                  "label": {
+                    "en": "TV menu",
+                    "pt": "Cardápio TV"
+                  },
+                  "alt": {
+                    "en": "Animated TV menu — combo category",
+                    "pt": "Cardápio animado para TV — combos"
+                  }
+                },
+                {
+                  "type": "video",
+                  "src": "assets/img/projects/miodelivery/videos/menu-tv-rochas.mp4",
+                  "poster": "assets/img/projects/miodelivery/modern-menu-tv-rochas.png",
+                  "label": {
+                    "en": "TV live · Rocha's",
+                    "pt": "TV ao vivo · Rocha's"
+                  },
+                  "alt": {
+                    "en": "Animated TV menu at Rocha's — Lanches",
+                    "pt": "Cardápio animado para TV no Rocha's — Lanches"
+                  }
+                },
+                {
+                  "type": "video",
+                  "src": "assets/img/projects/miodelivery/videos/menu-tv-parrilla.mp4",
+                  "poster": "assets/img/projects/miodelivery/modern-menu-tv-parrilla.png",
+                  "label": {
+                    "en": "TV live · Zé Barbudo",
+                    "pt": "TV ao vivo · Zé Barbudo"
+                  },
+                  "alt": {
+                    "en": "Animated TV menu at Zé Barbudo — Parrilla",
+                    "pt": "Cardápio animado para TV no Zé Barbudo — Parrilla"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "title": {
+              "en": "Low contact → RFID cube + QR everywhere",
+              "pt": "Pouco contato → cubo RFID + QR em todo lugar"
+            },
+            "body": {
+              "en": "On the return, fear of contact was still high. We pushed low-touch paths: an RFID table cube — my logo as both brand and hardware — carrying table number, QR, and RFID so the guest opens the ordering app already identified by table, straight into the kitchen flow. And QR codes everywhere: kitchen tickets, the ordering app, TVs, and banners — almost no handoff at the counter.",
+              "pt": "No retorno, o medo do contato ainda era alto. Empurramos caminhos de pouco toque: um cubo de mesa com RFID — minha logo como marca e como hardware — com número da mesa, QR e RFID para o cliente abrir o app de pedidos já identificado pela mesa, direto no fluxo da cozinha. E QR code em todo lugar: comanda, app de pedidos, TVs e banners — quase nenhum handoff no balcão."
+            },
+            "figure": {
+              "type": "carousel",
+              "caption": {
+                "en": "Cube as logo and hardware — plus QR on the ticket path.",
+                "pt": "Cubo como logo e hardware — e QR no caminho da comanda."
+              },
+              "items": [
+                {
+                  "type": "video",
+                  "src": "assets/img/projects/miodelivery/videos/table-totem.mp4",
+                  "poster": "assets/img/projects/miodelivery/modern-table-totem.png",
+                  "label": {
+                    "en": "RFID cube",
+                    "pt": "Cubo RFID"
+                  },
+                  "alt": {
+                    "en": "Table cube with QR and RFID — logo as brand and hardware",
+                    "pt": "Cubo de mesa com QR e RFID — logo como marca e hardware"
+                  }
+                },
+                {
+                  "src": "assets/img/projects/miodelivery/modern-comanda.png",
+                  "label": {
+                    "en": "QR on tickets",
+                    "pt": "QR na comanda"
+                  },
+                  "alt": {
+                    "en": "Thermal kitchen ticket with QR into the ordering flow",
+                    "pt": "Comanda térmica com QR no fluxo de pedidos"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "en": "Products that match how the menu really works",
+          "pt": "Produtos que batem com o cardápio de verdade"
+        },
+        "body": {
+          "en": "Catalog items aren’t one-size-fits-all. Types like simple, combo, multiple sizes, and add-ons carry the extra configuration each flow needs — composition, warnings, tags, pricing. From that same catalog the system also generates a print-ready PDF menu for the counter and kitchen.",
+          "pt": "Itens do catálogo não são todos iguais. Tipos como simples, combo, tamanhos múltiplos e adicional carregam a configuração extra que cada fluxo precisa — composição, avisos, tags, preço. Do mesmo catálogo o sistema também gera cardápio em PDF para impressão no balcão e na cozinha."
+        },
+        "figure": {
+          "type": "carousel",
+          "caption": {
+            "en": "Typed catalog, combo composition, and auto-generated PDF menu.",
+            "pt": "Catálogo tipado, composição de combo e cardápio PDF automático."
+          },
+          "items": [
+            {
+              "src": "assets/img/projects/miodelivery/modern-products-list.png",
+              "label": {
+                "en": "Product listing",
+                "pt": "Listagem de produtos"
+              },
+              "alt": {
+                "en": "Product listing with typed items",
+                "pt": "Listagem de produtos com tipos"
+              }
+            },
+            {
+              "src": "assets/img/projects/miodelivery/modern-product-edit.png",
+              "label": {
+                "en": "Combo edit",
+                "pt": "Edição de combo"
+              },
+              "alt": {
+                "en": "Product edit — combo composition and tags",
+                "pt": "Edição de produto — composição de combo e tags"
+              }
+            },
+            {
+              "src": "assets/img/projects/miodelivery/modern-menu-pdf.png",
+              "label": {
+                "en": "PDF menu",
+                "pt": "Cardápio PDF"
+              },
+              "alt": {
+                "en": "Auto-generated PDF menu for print",
+                "pt": "Cardápio PDF gerado automaticamente"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "Multi-store control and reports for the manager",
+          "pt": "Controle multi-loja e relatórios para o gestor"
+        },
+        "body": {
+          "en": "Stores live in one place — hours, delivery/pickup, integrations, and status per unit. Reports can be read grouped across the network or drilled into a single store, so the manager gets both the wide view and the local one: orders over time, category sales, origin, status, and billing mix.",
+          "pt": "As lojas ficam num só lugar — horários, delivery/retirada, integrações e status por unidade. Os relatórios podem ser lidos agrupados na rede ou filtrados numa loja só, para o gestor ter a visão ampla e a local: pedidos no tempo, vendas por categoria, origem, status e mix de faturamento."
+        },
+        "figure": {
+          "type": "carousel",
+          "caption": {
+            "en": "Active stores, then reports — network-wide or per store — for a diversified managerial view.",
+            "pt": "Lojas ativas e, em seguida, relatórios — na rede ou por loja — para uma visão gerencial diversificada."
+          },
+          "items": [
+            {
+              "src": "assets/img/projects/miodelivery/modern-stores.png",
+              "label": {
+                "en": "Active stores",
+                "pt": "Lojas ativas"
+              },
+              "alt": {
+                "en": "Multi-store listing with hours, delivery/pickup, and integrations",
+                "pt": "Listagem multi-loja com horários, delivery/retirada e integrações"
+              }
+            },
+            {
+              "src": "assets/img/projects/miodelivery/modern-report-orders.png",
+              "label": {
+                "en": "Orders report",
+                "pt": "Relatório de pedidos"
+              },
+              "alt": {
+                "en": "Orders over time with store KPIs",
+                "pt": "Pedidos no tempo com KPIs por loja"
+              }
+            },
+            {
+              "src": "assets/img/projects/miodelivery/modern-report-sales.png",
+              "label": {
+                "en": "Sales by category",
+                "pt": "Vendas por categoria"
+              },
+              "alt": {
+                "en": "Category sales report with cost, sale, and net",
+                "pt": "Relatório de vendas por categoria com custo, venda e líquido"
+              }
+            },
+            {
+              "src": "assets/img/projects/miodelivery/modern-report-overview.png",
+              "label": {
+                "en": "Manager overview",
+                "pt": "Visão do gestor"
+              },
+              "alt": {
+                "en": "Coupons, origin, status, and billing overview",
+                "pt": "Visão de cupons, origem, status e faturamento"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "print.it — the latest print leap",
+          "pt": "print.it — o último salto na impressão"
+        },
+        "body": {
+          "en": "The latest innovation on this line is print.it: a local automatic print server that replaced IdeYouPrint at LM with fewer limits. Built in Go — with help from Cursor — it sits on the network, talks to the printer, and can preview text, files, barcodes, and QR — the same print path other systems can use. What began as a Python workaround beside a laptop is now a product surface of its own.",
+          "pt": "A última inovação nessa linha é o print.it: servidor local de impressão automática que na LM substituiu o IdeYouPrint com menos limites. Feito em Go — com ajuda do Cursor — fica na rede, fala com a impressora e pode pré-visualizar texto, arquivo, código de barras e QR — o mesmo caminho de impressão que outros sistemas podem usar. O que começou como um workaround em Python ao lado de um notebook hoje é uma superfície de produto própria."
+        },
+        "figure": {
+          "type": "image",
+          "src": "assets/img/projects/miodelivery/print-it-ui.png",
+          "caption": {
+            "en": "print.it — local Go server, live printer, and preview for text, files, barcodes, and QR.",
+            "pt": "print.it — servidor local em Go, impressora ao vivo e pré-visualização de texto, arquivo, código de barras e QR."
+          }
+        }
+      }
+    ],
+    "problem": {
+      "en": "LM Salgados needed one system for factory and stores — not scattered tools. At the counter, large orders had to hit the fry line in minutes; the kitchen still ran on shouted quantities. Information lived in people’s heads, not on a shared screen.",
+      "pt": "A LM Salgados precisava de um sistema para fábrica e lojas — não de ferramentas espalhadas. No balcão, pedidos grandes tinham que chegar à fritura em minutos; a cozinha ainda rodava no grito. A informação vivia na cabeça das pessoas, não numa tela compartilhada."
+    },
+    "difficulty": {
+      "en": "It was my first project of that scale, still in college, and the complexity was the business itself: peak-hour food ops, multi-unit reality, and trust that only comes from standing in the store — listening before writing a line of code.",
+      "pt": "Era meu primeiro projeto daquele porte, ainda na faculdade, e a complexidade era o negócio em si: operação de comida no pico, realidade multiunidade e a confiança que só vem de estar na loja — ouvir antes de escrever uma linha de código."
+    },
+    "simplification": {
+      "en": "We built toward one multi-store platform. A kitchen production board — inspired by fast-food screens — showed quantity, timing, and priority instead of verbal chaos. The ERP absorbed orders, clients, and shops. The 2020 delivery boom forced the next wave stage by stage: ordering PWA in isolation, animated TV menus under distancing, then low-contact RFID cubes and QR paths on the return.",
+      "pt": "Construímos em direção a uma plataforma multi-loja. Um painel de produção — inspirado em telas de fast-food — mostrou quantidade, horário e prioridade no lugar do caos verbal. O ERP absorveu pedidos, clientes e lojas. O boom de delivery de 2020 forçou a próxima onda etapa a etapa: PWA de pedidos no isolamento, cardápio animado na TV no afastamento, depois cubos RFID e caminhos QR de pouco contato no retorno."
+    },
+    "change": {
+      "en": "The partnership still runs. LM grew from two stores and a factory to seven stores across four cities — including a larger bakery unit — and the software grew with it into today’s multi-store MioDelivery: dashboard, kitchen panel, order ops, and print.it. It still runs for a few hand-picked clients that prioritize quality over quantity.",
+      "pt": "A parceria continua. A LM saiu de duas lojas e uma fábrica para sete lojas em quatro cidades — inclusive uma unidade maior com padaria — e o software cresceu junto até o MioDelivery multi-loja de hoje: dashboard, painel de cozinha, operação de pedidos e print.it. Ainda roda para poucos clientes selecionados que priorizam qualidade sobre quantidade."
+    }
   },
   {
-    "slug": "cubo-magico",
-    "title": "Globo Mágico",
-    "era": "hardware",
-    "description": "3D Rubik's Cube solver with robot gateway — web-controlled, sub-2s solves.",
-    "tech": ["TypeScript", "Three.js", "Fastify", "Arduino"],
-    "liveUrl": null,
-    "repoUrl": "https://github.com/ioisaque/magic-globe",
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "TypeScript",
-    "featured": true
-  },
-  {
-    "slug": "magic-globe",
-    "title": "Magic Globe",
-    "era": "hardware",
-    "description": "Open-source Rubik's Cube robot solver — 1.5 second solves.",
-    "tech": ["Python", "OpenCV", "Arduino", "IoT"],
-    "liveUrl": null,
-    "repoUrl": "https://github.com/ioisaque/magic-globe",
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "Python",
-    "featured": true
-  },
-  {
-    "slug": "miodelivery",
-    "title": "MioDelivery / IdeYou",
-    "era": "ideyou",
-    "description": "Delivery, POS, and kitchen PWA for food businesses — legacy PHP evolving to React.",
-    "tech": ["PHP", "React", "NestJS", "MySQL"],
-    "liveUrl": "https://ideyou.com.br",
-    "repoUrl": null,
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "PHP",
-    "featured": true
-  },
-  {
-    "slug": "telecom-erp",
-    "title": "Telecom ERP",
-    "era": "ideyou",
-    "description": "Enterprise billing, boletos, and commercial operations for telecom.",
-    "tech": ["PHP", "MySQL", "JavaScript"],
-    "liveUrl": null,
-    "repoUrl": null,
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "PHP",
-    "featured": true
-  },
-  {
-    "slug": "planeja-ideyou",
-    "title": "Aurélio",
-    "era": "ideyou",
-    "description": "BNCC-aligned lesson plan builder with print-ready output for teachers.",
-    "tech": ["PHP", "MySQL"],
-    "liveUrl": "https://meuaurelio.com.br",
-    "repoUrl": "https://github.com/ioisaque/planeja-ideyou",
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "PHP",
-    "featured": true
-  },
-  {
-    "slug": "cti",
-    "title": "CTI Hub",
-    "era": "teaching",
-    "description": "Class portfolio hub for computer science projects and student work.",
-    "tech": ["PHP", "HTML", "CSS"],
-    "liveUrl": "https://isaque.it/cti",
-    "repoUrl": "https://github.com/ioisaque/cti",
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "PHP",
-    "featured": true
-  },
-  {
-    "slug": "aulas",
-    "title": "Class Projects",
-    "era": "teaching",
-    "description": "Teaching demos and student-facing web exercises.",
-    "tech": ["HTML", "CSS", "JavaScript"],
-    "liveUrl": null,
-    "repoUrl": null,
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "JavaScript",
-    "featured": false
-  },
-  {
-    "slug": "sistema-isaque",
-    "title": "sistema.isaque.it",
-    "era": "platform",
-    "description": "Admin SPA — people, invoices, notifications, and internal operations.",
-    "tech": ["React", "Vite", "MUI", "TanStack Query"],
-    "liveUrl": "https://sistema.isaque.it",
-    "repoUrl": null,
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "TypeScript",
-    "featured": true
-  },
-  {
-    "slug": "api-isaque",
-    "title": "api.isaque.it",
-    "era": "platform",
-    "description": "NestJS API with Prisma, JWT, Socket.io, and Swagger docs.",
-    "tech": ["NestJS", "Prisma", "MariaDB", "Socket.io"],
-    "liveUrl": "https://api.isaque.it",
-    "repoUrl": null,
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "TypeScript",
-    "featured": true
-  },
-  {
-    "slug": "cliente-isaque",
-    "title": "cliente.isaque.it",
-    "era": "platform",
-    "description": "Client portal for profiles, contracts, and invoices.",
-    "tech": ["React", "Vite", "MUI"],
-    "liveUrl": "https://cliente.isaque.it",
-    "repoUrl": null,
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "TypeScript",
-    "featured": true
-  },
-  {
-    "slug": "notify-it",
-    "title": "notify.it",
-    "era": "platform",
-    "description": "Push and email microservice — the platform's mail carrier.",
-    "tech": ["NestJS", "web-push", "nodemailer"],
-    "liveUrl": null,
-    "repoUrl": null,
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "TypeScript",
-    "featured": true
-  },
-  {
-    "slug": "barcode-it",
-    "title": "barcode.it",
-    "era": "platform",
-    "description": "QR and linear barcode PNG generation API.",
-    "tech": ["NestJS", "bwip-js", "sharp"],
-    "liveUrl": null,
-    "repoUrl": null,
-    "icon": "https://cdn.isaque.it/assets/icons/icon.svg",
-    "language": "TypeScript",
-    "featured": true
+    "id": "platform",
+    "accent": "coral",
+    "title": {
+      "en": "isaque.it platform",
+      "pt": "Plataforma isaque.it"
+    },
+    "subtitle": {
+      "en": "Many tools. One coherent system.",
+      "pt": "Muitas ferramentas. Um sistema coerente."
+    },
+    "problem": {
+      "en": "Admin work, client access, invoicing, notifications, and utilities lived as separate pieces — useful alone, expensive together. Context switched with every tab.",
+      "pt": "Admin, acesso do cliente, faturamento, notificações e utilitários viviam como peças separadas — úteis sozinhas, caras juntas. O contexto mudava a cada aba."
+    },
+    "difficulty": {
+      "en": "Unifying them without creating a heavier monolith meant designing clear boundaries: one API, distinct surfaces, shared identity, and services that stayed invisible until needed.",
+      "pt": "Unificá-los sem criar um monólito mais pesado exigiu limites claros: uma API, superfícies distintas, identidade compartilhada e serviços invisíveis até serem necessários."
+    },
+    "simplification": {
+      "en": "I shaped a platform: admin SPA, client portal, NestJS API, and focused services for push and barcodes. Each surface does one job. The whole feels like one product.",
+      "pt": "Modelei uma plataforma: SPA admin, portal do cliente, API NestJS e serviços focados para push e códigos de barras. Cada superfície faz um trabalho. O conjunto parece um produto."
+    },
+    "change": {
+      "en": "Operations stopped fragmenting across tools. Clients and operators share one language. Complexity moved behind a calm interface — where it belongs.",
+      "pt": "As operações pararam de se fragmentar entre ferramentas. Clientes e operadores compartilham uma linguagem. A complexidade ficou atrás de uma interface calma — onde deve estar."
+    },
+    "links": {
+      "live": "https://sistema.isaque.it"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/sistema-isaque/shot-1.png",
+        "alt": {
+          "en": "sistema.isaque.it",
+          "pt": "sistema.isaque.it"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/cliente-isaque/shot-1.png",
+        "alt": {
+          "en": "cliente.isaque.it",
+          "pt": "cliente.isaque.it"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/api-isaque/shot-1.png",
+        "alt": {
+          "en": "api.isaque.it",
+          "pt": "api.isaque.it"
+        }
+      }
+    ]
   }
 ]

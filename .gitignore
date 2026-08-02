@@ -1,1 +1,6 @@
 .DS_Store
+node_modules
+_react/node_modules
+_react/dist
+_react/.vite
+*.local

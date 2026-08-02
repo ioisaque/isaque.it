@@ -1,0 +1,46 @@
+---
+description: Portfolio site POV — narrative, brand, and what must not be diluted
+alwaysApply: true
+---
+
+# Site POV (isaque.it /portifolio)
+
+## Core message
+
+- Motto: **Complexity, simplified.**
+- Philosophy: **Simple isn't easy. That's why I love to build it.**
+- Hero identity: name **Isaque Costa** is the primary headline; motto is the tagline under it.
+- Location on the site: **Dublin / Ireland** (do not change without explicit request).
+
+## Structure of meaning
+
+| Surface | Role |
+|---------|------|
+| Hero | Who + credibility signals (stats, languages, CTA) |
+| How I think | Unfolds the motto into domains of practice |
+| Featured work | Deep case studies: problem → difficulty → simplification → change |
+| Selected projects | Catalog grid of career work; visual identity per era |
+| Principles | Engineering standards, not a tech stack |
+| Evolution | Milestones of *thinking* with enough context for a stranger — not a CV of job titles |
+| Tech / Contact | Tools chosen after the problem; clear paths to talk |
+
+## Featured vs catalog
+
+- **Featured work** (`data/projects.json`) = narrative case studies only (`cube`, `miodelivery`, `platform`). Do not flatten these into shallow cards.
+- **Selected projects** (`data/catalog.json`) = browsable archive. Card opens a detail modal (`#project-{id}`); items with `caseId` open a larger case modal (narrative from `projects.json`) instead of scrolling to `#case-{id}`.
+- Never mark the whole catalog as “featured” the way `_legacy` did.
+
+## Brand and visual language
+
+- Brand signal: the cube (hero photo cube + Rubik solver in the cube case).
+- Palette: CSS variables in `assets/css/tokens.css` (`--cube-yellow`, `--cube-red`, `--cube-blue`, `--cube-green`, `--cube-orange`, `--cube-coral`).
+- Type: Newsreader (display) + Instrument Sans (UI). EN/PT via `data/copy.json` and bilingual fields in JSON data.
+- Era accent colors (catalog / timeline): design `#F5617F`, hardware `#FFD22B`, ideyou `#FF5356`, teaching `#9900CC`, platform `#0076F3`.
+
+## Do not
+
+- Turn the hero into a dashboard of pills, badges, or stats-on-cube faces.
+- Default to generic AI aesthetics (purple gradients, cream+terracotta broadsheet, glow pills).
+- Replace Evolution with a list of job titles.
+- Reintroduce runtime machine-translation (legacy MyMemory); keep authored EN/PT.
+- Invent employers, dates, or locations that contradict `career-context.mdc`.

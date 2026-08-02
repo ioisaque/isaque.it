@@ -1,0 +1,131 @@
+[
+  {
+    "id": "design",
+    "era": "design",
+    "years": "2012–2016",
+    "title": {
+      "en": "Craft taught intention",
+      "pt": "O ofício ensinou intenção"
+    },
+    "headline": {
+      "en": "First websites for local businesses.",
+      "pt": "Primeiros sites para negócios locais."
+    },
+    "body": {
+      "en": "Typography, layout, and trust on a screen — the first lesson that every pixel should earn its place.",
+      "pt": "Tipografia, layout e confiança na tela — a primeira lição de que cada pixel precisa merecer seu lugar."
+    },
+    "context": {
+      "en": "I started in visual design and front-end craft: dental clinics, food brands, and small companies that needed a presence people could trust. Every layout had to feel intentional — color, type, and structure working together so a local client could look professional online. That discipline never left; it still shapes how I build products.",
+      "pt": "Comecei no design visual e no front-end: clínicas, marcas de comida e pequenos negócios que precisavam de presença confiável. Cada layout tinha que parecer intencional — cor, tipografia e estrutura juntos para o cliente local parecer profissional. Essa disciplina nunca saiu; ainda molda como construo produtos."
+    },
+    "projects": [
+      "engrenhamais",
+      "lmsalgados"
+    ]
+  },
+  {
+    "id": "hardware",
+    "era": "hardware",
+    "years": "2016–2019",
+    "title": {
+      "en": "Chaos found structure",
+      "pt": "O caos encontrou estrutura"
+    },
+    "headline": {
+      "en": "Robotics, vision, and the Magic Globe.",
+      "pt": "Robótica, visão e o Globo Mágico."
+    },
+    "body": {
+      "en": "Hardware, vision, and a Rubik’s Cube robot. Apparent randomness became a solvable state — the metaphor for everything that followed.",
+      "pt": "Hardware, visão e um robô de Cubo Mágico. A aleatoriedade aparente virou um estado solucionável — a metáfora de tudo o que veio depois."
+    },
+    "context": {
+      "en": "During my degree and technical training at SENAI I went deep into hardware: 3D printing, CNC, Arduino, computer vision, mechatronics. The Magic Globe — a Rubik’s Cube solving robot controlled from the web — proved I could bridge software, electronics, and physical motion. A scrambled cube looks like noise until you model the state; that lesson became how I approach every tangled system.",
+      "pt": "Na graduação e no SENAI fui fundo em hardware: impressão 3D, CNC, Arduino, visão computacional, mecatrônica. O Globo Mágico — um robô de Cubo Mágico controlado pela web — mostrou que eu conseguia unir software, eletrônica e movimento físico. Um cubo embaralhado parece ruído até você modelar o estado; essa lição virou como abordo todo sistema embolado."
+    },
+    "projects": [
+      "magic-globe"
+    ]
+  },
+  {
+    "id": "ideyou",
+    "era": "ideyou",
+    "years": "2019–2023",
+    "title": {
+      "en": "Products absorbed real noise",
+      "pt": "Produtos absorveram o ruído real"
+    },
+    "headline": {
+      "en": "Food-tech and enterprise systems at IdeYou.",
+      "pt": "Food-tech e sistemas empresariais na IdeYou."
+    },
+    "body": {
+      "en": "Complexity stopped being theoretical — it had peak hours, billing deadlines, and consequences for real operators.",
+      "pt": "A complexidade deixou de ser teórica — tinha horário de pico, prazo de boleto e consequência para quem opera de verdade."
+    },
+    "context": {
+      "en": "The seed was earlier: from 2017, LM Salgados — first major client, still a partner — pulled me into real food ops (factory + shops, kitchen boards, then a production PWA). At IdeYou that stack matured into MioDelivery for a few hand-picked food clients that prioritize quality over quantity, alongside a telecom ERP that had to handle boletos every day and Aurélio for BNCC lesson planning. Long-term clients, messy workflows, systems that had to stay calm under pressure — that is where simplification earned its keep.",
+      "pt": "A semente veio antes: desde 2017, a LM Salgados — primeiro grande cliente, ainda parceiro — me puxou para operação real de comida (fábrica + lojas, painéis de cozinha, depois um PWA em produção). Na IdeYou esse stack amadureceu no MioDelivery para poucos clientes food selecionados que priorizam qualidade sobre quantidade, ao lado de um ERP de telecom que precisava bancar boletos todo dia e do Aurélio para planejamento BNCC. Clientes de longo prazo, fluxos bagunçados, sistemas que precisam ficar calmos sob pressão — aí a simplificação mostrou valor."
+    },
+    "projects": [
+      "miodelivery",
+      "lmsalgados",
+      "telecom-erp",
+      "planeja-ideyou"
+    ]
+  },
+  {
+    "id": "teaching",
+    "era": "teaching",
+    "years": "2023–2025",
+    "title": {
+      "en": "Teaching clarified thinking",
+      "pt": "Ensinar esclareceu o pensamento"
+    },
+    "headline": {
+      "en": "Computer science teaching and school IT.",
+      "pt": "Ensino de computação e TI para escolas."
+    },
+    "body": {
+      "en": "If an idea could not be taught clearly, it was not designed clearly.",
+      "pt": "Se uma ideia não dava para ensinar com clareza, não estava desenhada com clareza."
+    },
+    "context": {
+      "en": "Teaching computer science forced sharper models and better language. At the same time, relationships with schools opened work in networks, infrastructure, and custom systems. CTI became a hub where student projects and real delivery lived side by side — proof that clarity scales from classroom to contract.",
+      "pt": "Ensinar ciência da computação exigiu modelos mais nítidos e linguagem melhor. Ao mesmo tempo, relações com escolas abriram trabalho em redes, infraestrutura e sistemas sob medida. O CTI virou um hub onde projetos de alunos e entregas reais conviviam — prova de que clareza escala da sala de aula ao contrato."
+    },
+    "projects": [
+      "cti"
+    ]
+  },
+  {
+    "id": "platform",
+    "era": "platform",
+    "years": "2025–now",
+    "title": {
+      "en": "Fragments became a platform",
+      "pt": "Fragmentos viraram plataforma"
+    },
+    "headline": {
+      "en": "One ecosystem under isaque.it.",
+      "pt": "Um ecossistema sob isaque.it."
+    },
+    "body": {
+      "en": "Separate tools converged: calm surfaces, shared identity, complexity held behind intentional boundaries.",
+      "pt": "Ferramentas separadas convergiram: superfícies calmas, identidade compartilhada, complexidade atrás de limites intencionais."
+    },
+    "context": {
+      "en": "Admin SPA, client portal, NestJS API, push notifications, barcode services — pieces that used to live alone now form one platform. Built with the same attention to detail I learned on dentist websites a decade ago, now applied to architecture that has to stay coherent as it grows. Based in Dublin, still shipping under isaque.it.",
+      "pt": "SPA admin, portal do cliente, API NestJS, notificações push, serviços de código de barras — peças que viviam sozinhas agora formam uma plataforma. Com a mesma atenção ao detalhe que aprendi em sites de dentista há uma década, agora aplicada a uma arquitetura que precisa continuar coerente ao crescer. Em Dublin, seguindo entregando sob isaque.it."
+    },
+    "projects": [
+      "sistema-isaque",
+      "api-isaque",
+      "cliente-isaque",
+      "notify-it",
+      "barcode-it",
+      "print-it"
+    ]
+  }
+]

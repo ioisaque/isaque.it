@@ -1,0 +1,728 @@
+{
+  "en": {
+    "nav": {
+      "think": "How I think",
+      "work": "Work",
+      "principles": "Principles",
+      "timeline": "Evolution",
+      "contact": "Contact"
+    },
+    "hero": {
+      "eyebrow": "Software Engineer",
+      "motto": "Complexity, simplified.",
+      "stats": {
+        "projects": "projects delivered",
+        "years": "years of experience",
+        "base": "based in Ireland"
+      },
+      "languages": "Fluent in Portuguese and English — studying Spanish and Italian.",
+      "cta": "Explore my work"
+    },
+    "think": {
+      "eyebrow": "How I think",
+      "title": "Complexity, simplified.",
+      "lead": "Simple isn't easy. That's why I love to build it.",
+      "body": "I turn complicated systems into simple experiences. Not because complexity looks impressive — because simplicity is valuable.",
+      "domains": [
+        "Architecture",
+        "Products",
+        "Interfaces",
+        "Automation",
+        "Scalability"
+      ],
+      "closing": "The work begins where things feel tangled. It ends when the next step feels inevitable."
+    },
+    "work": {
+      "eyebrow": "Case studies",
+      "title": "Featured work.",
+      "lead": "Each project is a story of difficulty reduced to clarity.",
+      "labels": {
+        "problem": "What was the problem?",
+        "difficulty": "Why was it difficult?",
+        "simplification": "How did I simplify it?",
+        "change": "What changed?",
+        "repo": "View repository",
+        "live": "View live",
+        "rotate": "Rotate",
+        "realign": "Realign",
+        "shuffle": "Shuffle",
+        "solve": "Solve",
+        "chapters": "The story",
+        "gallery": "Evidence"
+      }
+    },
+    "catalog": {
+      "eyebrow": "Archive",
+      "title": "Selected projects.",
+      "lead": "Pinned work across five career eras — from client websites to the isaque.it platform. Deep stories stay above in Featured work.",
+      "caseStudy": "Case study",
+      "viewCase": "Read case study",
+      "live": "Live",
+      "repo": "Repo",
+      "liveSite": "Live site",
+      "docs": "Old receipt (PDF)",
+      "filters": {
+        "all": "All",
+        "design": "Design",
+        "hardware": "Hardware",
+        "ideyou": "IdeYou",
+        "teaching": "Teaching",
+        "platform": "Platform"
+      },
+      "modal": {
+        "close": "Close",
+        "mediaPrev": "Previous media",
+        "mediaNext": "Next media",
+        "tech": "Technologies",
+        "chapters": "The story",
+        "highlights": "At a glance",
+        "expandMedia": "View larger"
+      }
+    },
+    "principles": {
+      "eyebrow": "Engineering",
+      "title": "Principles.",
+      "lead": "Not a stack. A standard for how decisions get made."
+    },
+    "timeline": {
+      "eyebrow": "Path",
+      "title": "Evolution.",
+      "lead": "Milestones of thinking — with enough context to follow the path, not a list of job titles."
+    },
+    "tech": {
+      "eyebrow": "Tools",
+      "title": "Selected technologies.",
+      "lead": "Chosen after the problem is understood — never before.",
+      "groups": [
+        {
+          "label": "Languages & frameworks",
+          "items": [
+            {
+              "name": "TypeScript",
+              "slug": "typescript",
+              "color": "#007ACC"
+            },
+            {
+              "name": "JavaScript",
+              "slug": "javascript",
+              "color": "#323330"
+            },
+            {
+              "name": "Node.js",
+              "slug": "nodedotjs",
+              "color": "#339933"
+            },
+            {
+              "name": "NestJS",
+              "slug": "nestjs",
+              "color": "#E0234E"
+            },
+            {
+              "name": "React",
+              "slug": "react",
+              "color": "#20232A"
+            },
+            {
+              "name": "React Native",
+              "slug": "react",
+              "color": "#20232A"
+            },
+            {
+              "name": "PHP",
+              "slug": "php",
+              "color": "#777BB4"
+            },
+            {
+              "name": "Python",
+              "slug": "python",
+              "color": "#FFD43B",
+              "logo": "3776AB"
+            },
+            {
+              "name": "MySQL",
+              "slug": "mysql",
+              "color": "#005C84"
+            },
+            {
+              "name": "Prisma",
+              "slug": "prisma",
+              "color": "#3982CE"
+            },
+            {
+              "name": "Firebase",
+              "slug": "firebase",
+              "color": "#FFCA28",
+              "logo": "black"
+            },
+            {
+              "name": "Three.js",
+              "slug": "threedotjs",
+              "color": "#000000"
+            },
+            {
+              "name": "C#",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@12/icons/csharp.svg",
+              "color": "#239120"
+            },
+            {
+              "name": "Lua",
+              "slug": "lua",
+              "color": "#000080"
+            },
+            {
+              "name": "Expo",
+              "slug": "expo",
+              "color": "#1C2024"
+            },
+            {
+              "name": "MATLAB",
+              "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-plain.svg",
+              "color": "#E97627"
+            }
+          ]
+        },
+        {
+          "label": "Software",
+          "items": [
+            {
+              "name": "macOS",
+              "slug": "apple",
+              "color": "#000000"
+            },
+            {
+              "name": "Linux",
+              "slug": "linux",
+              "color": "#FCC624",
+              "logo": "black"
+            },
+            {
+              "name": "Windows",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@12/icons/windows.svg",
+              "color": "#0078D6"
+            },
+            {
+              "name": "Safari",
+              "slug": "safari",
+              "color": "#000000"
+            },
+            {
+              "name": "VS Code",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@12/icons/visualstudiocode.svg",
+              "color": "#0078D4"
+            },
+            {
+              "name": "Insomnia",
+              "slug": "insomnia",
+              "color": "#5849BE"
+            },
+            {
+              "name": "cPanel",
+              "slug": "cpanel",
+              "color": "#FF6C2C"
+            },
+            {
+              "name": "WHM",
+              "slug": "cpanel",
+              "color": "#2178B5"
+            },
+            {
+              "name": "Google Apps",
+              "slug": "google",
+              "color": "#4285F4"
+            },
+            {
+              "name": "Trello",
+              "slug": "trello",
+              "color": "#0052CC"
+            },
+            {
+              "name": "Adobe Photoshop",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@9/icons/adobephotoshop.svg",
+              "color": "#31A8FF"
+            },
+            {
+              "name": "Adobe XD",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@9/icons/adobexd.svg",
+              "color": "#470137"
+            },
+            {
+              "name": "CorelDRAW",
+              "slug": "coreldraw",
+              "color": "#00A651"
+            },
+            {
+              "name": "Sony Vegas",
+              "slug": "vegas",
+              "color": "#1A1A1A"
+            },
+            {
+              "name": "CryENGINE",
+              "slug": "cryengine",
+              "color": "#000000"
+            },
+            {
+              "name": "App Store",
+              "slug": "appstore",
+              "color": "#0D96F6"
+            },
+            {
+              "name": "Play Store",
+              "slug": "googleplay",
+              "color": "#414141"
+            },
+            {
+              "name": "Google Cloud",
+              "slug": "googlecloud",
+              "color": "#4285F4"
+            },
+            {
+              "name": "Spotify",
+              "slug": "spotify",
+              "color": "#1ED760",
+              "logo": "black"
+            }
+          ]
+        },
+        {
+          "label": "AI & LLMs",
+          "items": [
+            {
+              "name": "Cursor",
+              "slug": "cursor",
+              "color": "#000000"
+            },
+            {
+              "name": "ChatGPT",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@15/icons/openai.svg",
+              "color": "#10A37F"
+            },
+            {
+              "name": "Gemini",
+              "slug": "googlegemini",
+              "color": "#8E75B2"
+            },
+            {
+              "name": "Claude",
+              "slug": "claude",
+              "color": "#D97757"
+            }
+          ]
+        },
+        {
+          "label": "Hardware",
+          "items": [
+            {
+              "name": "Apple Silicon",
+              "slug": "apple",
+              "color": "#333333"
+            },
+            {
+              "name": "Arduino",
+              "slug": "arduino",
+              "color": "#00979D"
+            },
+            {
+              "name": "Bambu Studio",
+              "slug": "bambulab",
+              "color": "#00AE42"
+            },
+            {
+              "name": "PCB Prototyping",
+              "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/circuit-board.svg",
+              "color": "#006B3C"
+            },
+            {
+              "name": "Mechatronics",
+              "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/bot.svg",
+              "color": "#444444"
+            },
+            {
+              "name": "CNC",
+              "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/cog.svg",
+              "color": "#555555"
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Let's build something meaningful.",
+      "lead": "If the problem is hard and simplicity is the goal, we should talk.",
+      "portfolio": "Portfolio",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "email": "Email"
+    },
+    "a11y": {
+      "skip": "Skip to content",
+      "menuOpen": "Open menu",
+      "menuClose": "Close menu",
+      "lang": "Language",
+      "rubik": "Rubik's Cube solver interface"
+    }
+  },
+  "pt": {
+    "nav": {
+      "think": "Como penso",
+      "work": "Trabalho",
+      "principles": "Princípios",
+      "timeline": "Evolução",
+      "contact": "Contato"
+    },
+    "hero": {
+      "eyebrow": "Engenheiro de Software",
+      "motto": "Complexidade, simplificada.",
+      "stats": {
+        "projects": "projetos entregues",
+        "years": "anos de experiência",
+        "base": "morando na Irlanda"
+      },
+      "languages": "Fluente em português e inglês — estudando espanhol e italiano.",
+      "cta": "Explorar meu trabalho"
+    },
+    "think": {
+      "eyebrow": "Como penso",
+      "title": "Complexidade, simplificada.",
+      "lead": "Simples não é fácil. Por isso eu amo construir.",
+      "body": "Transformo sistemas complicados em experiências simples. Não porque a complexidade impressiona — porque a simplicidade tem valor.",
+      "domains": [
+        "Arquitetura",
+        "Produtos",
+        "Interfaces",
+        "Automação",
+        "Escalabilidade"
+      ],
+      "closing": "O trabalho começa onde as coisas parecem emboladas. Termina quando o próximo passo parece inevitável."
+    },
+    "work": {
+      "eyebrow": "Estudos de caso",
+      "title": "Trabalho em destaque.",
+      "lead": "Cada projeto é uma história de dificuldade reduzida à clareza.",
+      "labels": {
+        "problem": "Qual era o problema?",
+        "difficulty": "Por que era difícil?",
+        "simplification": "Como simplifiquei?",
+        "change": "O que mudou?",
+        "repo": "Ver repositório",
+        "live": "Ver ao vivo",
+        "rotate": "Rotacionar",
+        "realign": "Realinhar",
+        "shuffle": "Embaralhar",
+        "solve": "Resolver",
+        "chapters": "A história",
+        "gallery": "Evidências"
+      }
+    },
+    "catalog": {
+      "eyebrow": "Arquivo",
+      "title": "Projetos selecionados.",
+      "lead": "Trabalho fixado em cinco eras da carreira — de sites de clientes à plataforma isaque.it. As histórias profundas ficam acima, em Trabalho em destaque.",
+      "caseStudy": "Estudo de caso",
+      "viewCase": "Ler estudo de caso",
+      "live": "Ao vivo",
+      "repo": "Repo",
+      "liveSite": "Site ao vivo",
+      "docs": "Recibo antigo (PDF)",
+      "filters": {
+        "all": "Todos",
+        "design": "Design",
+        "hardware": "Hardware",
+        "ideyou": "IdeYou",
+        "teaching": "Ensino",
+        "platform": "Plataforma"
+      },
+      "modal": {
+        "close": "Fechar",
+        "mediaPrev": "Mídia anterior",
+        "mediaNext": "Próxima mídia",
+        "tech": "Tecnologias",
+        "chapters": "A história",
+        "highlights": "Em números",
+        "expandMedia": "Ver maior"
+      }
+    },
+    "principles": {
+      "eyebrow": "Engenharia",
+      "title": "Princípios.",
+      "lead": "Não um stack. Um padrão para como as decisões são tomadas."
+    },
+    "timeline": {
+      "eyebrow": "Trajetória",
+      "title": "Evolução.",
+      "lead": "Marcos de pensamento — com contexto suficiente para acompanhar o caminho, não uma lista de cargos."
+    },
+    "tech": {
+      "eyebrow": "Ferramentas",
+      "title": "Tecnologias selecionadas.",
+      "lead": "Escolhidas depois de entender o problema — nunca antes.",
+      "groups": [
+        {
+          "label": "Linguagens e frameworks",
+          "items": [
+            {
+              "name": "TypeScript",
+              "slug": "typescript",
+              "color": "#007ACC"
+            },
+            {
+              "name": "JavaScript",
+              "slug": "javascript",
+              "color": "#323330"
+            },
+            {
+              "name": "Node.js",
+              "slug": "nodedotjs",
+              "color": "#339933"
+            },
+            {
+              "name": "NestJS",
+              "slug": "nestjs",
+              "color": "#E0234E"
+            },
+            {
+              "name": "React",
+              "slug": "react",
+              "color": "#20232A"
+            },
+            {
+              "name": "React Native",
+              "slug": "react",
+              "color": "#20232A"
+            },
+            {
+              "name": "PHP",
+              "slug": "php",
+              "color": "#777BB4"
+            },
+            {
+              "name": "Python",
+              "slug": "python",
+              "color": "#FFD43B",
+              "logo": "3776AB"
+            },
+            {
+              "name": "MySQL",
+              "slug": "mysql",
+              "color": "#005C84"
+            },
+            {
+              "name": "Prisma",
+              "slug": "prisma",
+              "color": "#3982CE"
+            },
+            {
+              "name": "Firebase",
+              "slug": "firebase",
+              "color": "#FFCA28",
+              "logo": "black"
+            },
+            {
+              "name": "Three.js",
+              "slug": "threedotjs",
+              "color": "#000000"
+            },
+            {
+              "name": "C#",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@12/icons/csharp.svg",
+              "color": "#239120"
+            },
+            {
+              "name": "Lua",
+              "slug": "lua",
+              "color": "#000080"
+            },
+            {
+              "name": "Expo",
+              "slug": "expo",
+              "color": "#1C2024"
+            },
+            {
+              "name": "MATLAB",
+              "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-plain.svg",
+              "color": "#E97627"
+            }
+          ]
+        },
+        {
+          "label": "Software",
+          "items": [
+            {
+              "name": "macOS",
+              "slug": "apple",
+              "color": "#000000"
+            },
+            {
+              "name": "Linux",
+              "slug": "linux",
+              "color": "#FCC624",
+              "logo": "black"
+            },
+            {
+              "name": "Windows",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@12/icons/windows.svg",
+              "color": "#0078D6"
+            },
+            {
+              "name": "Safari",
+              "slug": "safari",
+              "color": "#000000"
+            },
+            {
+              "name": "VS Code",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@12/icons/visualstudiocode.svg",
+              "color": "#0078D4"
+            },
+            {
+              "name": "Insomnia",
+              "slug": "insomnia",
+              "color": "#5849BE"
+            },
+            {
+              "name": "cPanel",
+              "slug": "cpanel",
+              "color": "#FF6C2C"
+            },
+            {
+              "name": "WHM",
+              "slug": "cpanel",
+              "color": "#2178B5"
+            },
+            {
+              "name": "Google Apps",
+              "slug": "google",
+              "color": "#4285F4"
+            },
+            {
+              "name": "Trello",
+              "slug": "trello",
+              "color": "#0052CC"
+            },
+            {
+              "name": "Adobe Photoshop",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@9/icons/adobephotoshop.svg",
+              "color": "#31A8FF"
+            },
+            {
+              "name": "Adobe XD",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@9/icons/adobexd.svg",
+              "color": "#470137"
+            },
+            {
+              "name": "CorelDRAW",
+              "slug": "coreldraw",
+              "color": "#00A651"
+            },
+            {
+              "name": "Sony Vegas",
+              "slug": "vegas",
+              "color": "#1A1A1A"
+            },
+            {
+              "name": "CryENGINE",
+              "slug": "cryengine",
+              "color": "#000000"
+            },
+            {
+              "name": "App Store",
+              "slug": "appstore",
+              "color": "#0D96F6"
+            },
+            {
+              "name": "Play Store",
+              "slug": "googleplay",
+              "color": "#414141"
+            },
+            {
+              "name": "Google Cloud",
+              "slug": "googlecloud",
+              "color": "#4285F4"
+            },
+            {
+              "name": "Spotify",
+              "slug": "spotify",
+              "color": "#1ED760",
+              "logo": "black"
+            }
+          ]
+        },
+        {
+          "label": "IA e LLMs",
+          "items": [
+            {
+              "name": "Cursor",
+              "slug": "cursor",
+              "color": "#000000"
+            },
+            {
+              "name": "ChatGPT",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@15/icons/openai.svg",
+              "color": "#10A37F"
+            },
+            {
+              "name": "Gemini",
+              "slug": "googlegemini",
+              "color": "#8E75B2"
+            },
+            {
+              "name": "Claude",
+              "slug": "claude",
+              "color": "#D97757"
+            }
+          ]
+        },
+        {
+          "label": "Hardware",
+          "items": [
+            {
+              "name": "Apple Silicon",
+              "slug": "apple",
+              "color": "#333333"
+            },
+            {
+              "name": "Arduino",
+              "slug": "arduino",
+              "color": "#00979D"
+            },
+            {
+              "name": "Bambu Studio",
+              "slug": "bambulab",
+              "color": "#00AE42"
+            },
+            {
+              "name": "Prototipagem de PCB",
+              "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/circuit-board.svg",
+              "color": "#006B3C"
+            },
+            {
+              "name": "Mecatrônica",
+              "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/bot.svg",
+              "color": "#444444"
+            },
+            {
+              "name": "CNC",
+              "icon": "https://cdn.jsdelivr.net/npm/lucide-static/icons/cog.svg",
+              "color": "#555555"
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Vamos construir algo com significado.",
+      "lead": "Se o problema é difícil e a simplicidade é o objetivo, vamos conversar.",
+      "portfolio": "Portfólio",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "email": "E-mail"
+    },
+    "a11y": {
+      "skip": "Ir para o conteúdo",
+      "menuOpen": "Abrir menu",
+      "menuClose": "Fechar menu",
+      "lang": "Idioma",
+      "rubik": "Interface do resolvedor de Cubo Mágico"
+    }
+  }
+}

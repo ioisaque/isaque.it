@@ -1,0 +1,89 @@
+---
+description: LM Salgados partnership and MioDelivery origin — facts for case/catalog copy
+globs: data/catalog.json,data/projects.json,data/copy.json,data/milestones.json
+alwaysApply: false
+---
+
+# LM Salgados → MioDelivery
+
+Authoritative brief for the MioDelivery case study and LM Salgados catalog entries. Do not invent beyond this.
+
+## Core message (visitor-facing)
+
+1. **Partner, not vendor** — first major client (2017→today); immersion in ops before code.
+2. **Verbal chaos → shared surface** — shouted “50/100/200” → CorelDRAW production-board sketch (30-min slots, blink/alarm) → live kitchen panel.
+3. **Continuous evolution** — basic POS → multi-unit system (**Hi sistemas**, early placeholder name) → pandemic delivery boom (PWA → TV menu → RFID cube + QR) → scale.
+4. **Software that grows with the business** — 2 stores + factory → 7 stores / 4 cities (incl. bakery).
+5. **Productization** — LM stack → MioDelivery for a **few hand-picked clients** that prioritize quality over quantity; current multi-store UI in the case.
+6. **Printing** — early thermal comanda → clearer modern receipt; **print.it** local print server replaces **IdeYouPrint** at LM (fewer limits; used by MioDelivery and other systems).
+
+Do **not** narrate LM logo construction / monogram in the MioDelivery Featured case. Brand identity belongs only on catalog `lmsalgados`.
+
+## Partnership
+
+- LM Salgados was Isaque’s **first major software client** and remains a client **from 2017 to today**.
+- Relationship started while Isaque was in college and a frequent customer of the main store next to campus.
+- Owners asked for custom management software for **factory + stores** — flexible, multi-unit, matching a very fast food operation.
+- Working style: deep business immersion first; follow daily ops; talk to owners and staff; consult on process, not only ship features. Partner, not ticket vendor.
+
+## Operational pain (before)
+
+- Counter orders often meant tens/hundreds of salgados prepared in minutes.
+- Kitchen coordination was verbal: staff shouted quantities (“50”, “100”, “200”) to the fry line.
+- Needed one integrated multi-store platform with shared real-time information.
+
+## Solutions built over time
+
+- **Multi-unit system** (early brand: **Hi sistemas** — placeholder name thrown up quickly to plant a flag) — orders, clients, products, stores, users; factory + shops on one stack.
+- **Kitchen production panel** — first proposed as a **CorelDRAW sketch**: 30-minute squares across store hours; salgado qty on the left, count of orders of that amount due in the slot on the right; scheduled + new POS orders made the square blink and play an alarm. Inspired by McDonald’s / Burger King boards; later matured into today’s filterable kitchen panel.
+- Early POS prioritized function over polish; UI matured into a full ERP for LM’s reality.
+- **2020 pandemic (delivery boom — stage by stage):**
+  - **Isolation** → consumer ordering app + **first production PWA** + **order listing** as the ops surface (heavy filtering by store/category/range, status, pending prints, chat, re-charge, finance footer) — tell it fully here; do not repeat as a later chapter.
+  - **IdeYouPrint** (right after) → kitchen had the panel; **delivery riders** needed a **paper sale receipt**. Browsers block silent print; learned **Python**; desktop app beside the printer talks to the **API** and thermal printer so receipts print with **no click**. Origin story lives here.
+  - **Distancing / early reopen** → **animated TV menu**.
+  - **Return / low contact** → **RFID table cube** (cube logo as brand and hardware) + **QR everywhere**.
+- **Current MioDelivery UI** (later chapters): multi-store dashboard; kitchen panel; product catalog + PDF menu; multi-store admin; reports. **Order list**, **TV menu**, **RFID/QR**, and **IdeYouPrint origin** are told under pandemic `steps` — do not repeat those origin stories later.
+- **print.it** — final case chapter: local automatic print server UI (Go, built with help from Cursor); at LM replaces IdeYouPrint (origin of IdeYouPrint stays in the pandemic step). No thermal-receipt photo here — UI only.
+
+## Scale
+
+- Start: **2 stores** in one city + factory.
+- Today: **7 stores** across **4 cities**; one unit expanded into a large store including a **bakery**.
+
+## Brand (catalog only)
+
+- Heart mark = L + M + heart; marketing site https://lmsalgados.com.br (`lmsalgados`).
+- Do not explain the mark in Featured MioDelivery.
+
+## Visual supports
+
+Chapters may include `figure` and optional nested `steps[]` (each with title/body/figure) for multi-beat chapters like the pandemic — steps do **not** consume main chapter numbers.
+
+Story order: partnership → kitchen shout → early production board → POS/ERP (dashboard + kitchen evolution + scale woven in) → pandemic chapter (**lead figure**: desk photo of dual screens glued beside kitchen panel landscape — not modern-dashboard cards; then **steps**: isolation + order list · IdeYouPrint · distancing TV · low-contact RFID/QR) → catalog/PDF · multi-store/reports → **print.it** as final chapter (latest print product; IdeYouPrint origin stays in pandemic step).
+
+No diagram SVGs required for MioDelivery at present.
+
+### Asset map
+
+| Asset | Path |
+|-------|------|
+| Early ERP (Hi sistemas) | `h-sistemas-erp.png` / `h-sistemas-erp-hires.png` |
+| Early kitchen panel (CorelDRAW sketch) | `painel-producao.png` |
+| Modern dashboard | `modern-dashboard.png` |
+| Modern kitchen | `modern-kitchen.png` |
+| Order listings | `modern-orders-{all,fritos,combo,doces}.png` |
+| Modern order detail + print logs | `modern-order-detail.png` |
+| Product listing | `modern-products-list.png` |
+| Product edit (combo etc.) | `modern-product-edit.png` |
+| PDF menu (print) | `modern-menu-pdf.png` |
+| TV menu + categories | `modern-menu-tv.png`, `modern-menu-tv-categories.png` |
+| TV menu live (other clients) | `modern-menu-tv-rochas.png`, `modern-menu-tv-parrilla.png` |
+| Modern comanda | `modern-comanda.png` |
+| IdeYouPrint on client laptop | `ideyouprint-laptop.png` |
+| Early comanda (2021) | `comanda-antiga.png` |
+| Old receipt PDF | `recibo-antigo-13738.pdf` |
+
+## Related ids
+
+- Catalog: `lmsalgados`, `miodelivery` (case `miodelivery`), `print-it` (platform; IdeYouPrint → print.it story)
+- Case: `projects.json` → `miodelivery`

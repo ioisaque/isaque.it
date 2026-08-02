@@ -1,0 +1,114 @@
+---
+description: Data contracts for portfolio JSON content
+globs: data/**/*.json
+alwaysApply: false
+---
+
+# Content model
+
+## Files
+
+| File | Role |
+|------|------|
+| `copy.json` | UI chrome strings EN/PT (`nav`, `hero`, `work`, `catalog`, `timeline`, …) |
+| `projects.json` | Featured **case studies** only (deep narrative) |
+| `catalog.json` | Selected projects grid (archive) |
+| `milestones.json` | Evolution timeline |
+| `principles.json` | Principles list |
+
+## Era ids (unified)
+
+`design` | `hardware` | `ideyou` | `teaching` | `platform`
+
+Do not use legacy aliases `craft` or `products` in new data.
+
+## `projects.json` (case study)
+
+```ts
+{
+  id: "cube" | "miodelivery" | "platform"
+  accent: "yellow" | "green" | "coral" | …
+  embed?: string
+  title / subtitle / problem / difficulty / simplification / change: { en, pt }
+  highlights?: { label: {en,pt}; value: {en,pt} }[]  // optional credibility strip
+  chapters?: {
+    title: {en,pt}
+    body: {en,pt}
+    steps?: {
+      title: {en,pt}
+      body: {en,pt}
+      figure?: Figure  // nested beats under one numbered chapter
+    }[]
+    figure?: {
+      type: "diagram" | "image" | "compare" | "carousel" | "photo" | "video"
+      src?: string | { en: string; pt: string }
+      poster?: string | { en: string; pt: string } // optional still for video
+      fit?: "cover" // optional; default is width 100% + height auto (no crop)
+      caption: {en,pt}
+      items?: {
+        src: string | {en,pt}
+        type?: "video"
+        poster?: string | {en,pt}
+        label?: {en,pt}
+        alt?: {en,pt}
+      }[]  // compare (before/after) or carousel (multi-print / mixed media)
+    }
+  }[]
+  links?: { live?: string; repo?: string; docs?: string }
+  media?: { type: "image" | "video" | "diagram"; src: string | {en,pt}; alt?: { en, pt } }[]
+}
+```
+
+Optional `highlights` / `chapters` (with optional `figure`) render in Featured (`#case-{id}`) and in the case modal. Keep the four classic beats as synthesis; chapters deepen the story. Prefer operational diagrams and screenshots as chapter figures — not brand-logo construction.
+
+DOM anchor on Featured work: `#case-{id}` (page section). Catalog navigation uses `#project-{catalogId}` to open the modal.
+
+## `catalog.json` (grid item)
+
+```ts
+{
+  id: string
+  era: EraId
+  title: { en, pt }
+  summary: { en, pt }
+  detail?: { en, pt } // longer body inside the project modal
+  language: string
+  tech?: string[]
+  links?: { live?: string; repo?: string; docs?: string } // docs = extra file/PDF opened from the modal
+  caseId?: "cube" | "miodelivery" | "platform"
+  accent: "yellow" | "green" | "coral" | "red" | "blue" | "orange"
+  logo?: string // project logo/favicon URL; falls back to monogram if missing or broken
+  logoBg?: string // CSS color behind the logo (for light/white logos), e.g. "#0a0a0a"
+  pinnedEnd?: boolean // always rendered last in the grid, regardless of array edits / filters
+  linkLabels?: { live?: {en,pt}; repo?: {en,pt} } // override Live/Repo link text
+  media?: { type: "image" | "video"; src: string; alt?: { en, pt } }[]
+}
+```
+
+Visual identity: era color (CSS) + accent + real project logo (favicon) when available, monogram from title as fallback — not a shared generic CDN icon for every card.
+
+Opening a catalog card sets `#project-{id}` and opens the detail modal. Items with `caseId` get the larger case modal (carousel + narrative from `projects.json`). Card footer Live/Repo remain direct external links.
+
+## `milestones.json`
+
+```ts
+{
+  id: EraId          // same as era
+  era: EraId
+  years: string
+  title: { en, pt }  // short poetic
+  headline: { en, pt } // factual subtitle
+  body: { en, pt }     // short lead
+  context: { en, pt }  // longer visitor context
+  projects: string[]   // catalog ids
+}
+```
+
+## Copy keys for catalog / timeline
+
+- `catalog.eyebrow`, `catalog.title`, `catalog.lead`
+- `catalog.filters.all` + `catalog.filters.{era}`
+- `catalog.caseStudy`, `catalog.viewCase`, `catalog.live`, `catalog.repo`
+- `timeline.lead` may mention thinking milestones with real context
+
+Always author both `en` and `pt`. No machine-translation pipeline.

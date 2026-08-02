@@ -1,0 +1,895 @@
+[
+  {
+    "id": "sistema-isaque",
+    "era": "platform",
+    "accent": "coral",
+    "caseId": "platform",
+    "logo": "assets/img/logos/sistema.png",
+    "title": {
+      "en": "sistema.isaque.it",
+      "pt": "sistema.isaque.it"
+    },
+    "summary": {
+      "en": "Admin SPA — people, invoices, notifications, and internal operations.",
+      "pt": "SPA admin — pessoas, faturas, notificações e operações internas."
+    },
+    "language": "TypeScript",
+    "tech": [
+      "React",
+      "Vite",
+      "MUI",
+      "TanStack Query"
+    ],
+    "links": {
+      "live": "https://sistema.isaque.it"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/sistema-isaque/shot-1.png",
+        "alt": {
+          "en": "sistema.isaque.it screenshot",
+          "pt": "Print de sistema.isaque.it"
+        }
+      }
+    ]
+  },
+  {
+    "id": "api-isaque",
+    "era": "platform",
+    "accent": "blue",
+    "caseId": "platform",
+    "logo": "assets/img/logos/sistema.png",
+    "title": {
+      "en": "api.isaque.it",
+      "pt": "api.isaque.it"
+    },
+    "summary": {
+      "en": "NestJS API with Prisma, JWT, Socket.io, and Swagger docs.",
+      "pt": "API NestJS com Prisma, JWT, Socket.io e documentação Swagger."
+    },
+    "language": "TypeScript",
+    "tech": [
+      "NestJS",
+      "Prisma",
+      "MariaDB",
+      "Socket.io"
+    ],
+    "links": {
+      "live": "https://api.isaque.it"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/api-isaque/shot-1.png",
+        "alt": {
+          "en": "api.isaque.it screenshot",
+          "pt": "Print de api.isaque.it"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cliente-isaque",
+    "era": "platform",
+    "accent": "green",
+    "caseId": "platform",
+    "logo": "assets/img/logos/cliente.png",
+    "title": {
+      "en": "cliente.isaque.it",
+      "pt": "cliente.isaque.it"
+    },
+    "summary": {
+      "en": "Client portal for profiles, contracts, and invoices.",
+      "pt": "Portal do cliente para perfis, contratos e faturas."
+    },
+    "language": "TypeScript",
+    "tech": [
+      "React",
+      "Vite",
+      "MUI"
+    ],
+    "links": {
+      "live": "https://cliente.isaque.it"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/cliente-isaque/shot-1.png",
+        "alt": {
+          "en": "cliente.isaque.it screenshot",
+          "pt": "Print de cliente.isaque.it"
+        }
+      }
+    ]
+  },
+  {
+    "id": "notify-it",
+    "era": "platform",
+    "accent": "yellow",
+    "caseId": "platform",
+    "logo": "assets/img/logos/notify-it.png",
+    "logoBg": "#0a0a0a",
+    "title": {
+      "en": "notify.it",
+      "pt": "notify.it"
+    },
+    "summary": {
+      "en": "Push and email microservice — the platform’s mail carrier.",
+      "pt": "Microserviço de push e e-mail — o carteiro da plataforma."
+    },
+    "language": "TypeScript",
+    "tech": [
+      "NestJS",
+      "web-push",
+      "nodemailer"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/logos/notify-it.png",
+        "alt": {
+          "en": "notify.it logo",
+          "pt": "Logo notify.it"
+        }
+      }
+    ]
+  },
+  {
+    "id": "barcode-it",
+    "era": "platform",
+    "accent": "orange",
+    "caseId": "platform",
+    "logo": "assets/img/logos/barcode-it.png",
+    "logoBg": "#0a0a0a",
+    "title": {
+      "en": "barcode.it",
+      "pt": "barcode.it"
+    },
+    "summary": {
+      "en": "QR and linear barcode PNG generation API.",
+      "pt": "API de geração de QR e códigos de barras lineares em PNG."
+    },
+    "language": "TypeScript",
+    "tech": [
+      "NestJS",
+      "bwip-js",
+      "sharp"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/logos/barcode-it.png",
+        "alt": {
+          "en": "barcode.it logo",
+          "pt": "Logo barcode.it"
+        }
+      }
+    ]
+  },
+  {
+    "id": "print-it",
+    "era": "platform",
+    "accent": "green",
+    "caseId": "platform",
+    "logo": "assets/img/logos/print-it.png",
+    "logoBg": "#0a0a0a",
+    "title": {
+      "en": "print.it",
+      "pt": "print.it"
+    },
+    "summary": {
+      "en": "Local automatic print server for POS and kitchen — at LM it replaces IdeYouPrint.",
+      "pt": "Servidor local de impressão automática para PDV e cozinha — na LM substitui o IdeYouPrint."
+    },
+    "language": "TypeScript",
+    "tech": [
+      "Go",
+      "NestJS"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/miodelivery/print-it-ui.png",
+        "alt": {
+          "en": "print.it interface — printer status and receipt preview",
+          "pt": "Interface do print.it — status da impressora e pré-visualização da comanda"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/miodelivery/ideyouprint-laptop.png",
+        "alt": {
+          "en": "IdeYouPrint on a client laptop",
+          "pt": "IdeYouPrint no notebook do cliente"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/miodelivery/modern-comanda.png",
+        "alt": {
+          "en": "Current receipt printed via print.it path",
+          "pt": "Comanda atual via print.it"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/miodelivery/comanda-antiga.png",
+        "alt": {
+          "en": "Older IdeYouPrint-era receipt",
+          "pt": "Comanda da era IdeYouPrint"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/logos/print-it.png",
+        "alt": {
+          "en": "print.it logo",
+          "pt": "Logo print.it"
+        }
+      }
+    ],
+    "detail": {
+      "en": "print.it is a local microservice for receipt and label printing used by MioDelivery and other systems. For LM Salgados it replaces the older IdeYouPrint, which had tighter limits: scheduled prints, store-side printing, and a cleaner kitchen-ticket layout for kitchen and delivery. See the MioDelivery case for before/after receipts. IdeYouPrint previously ran on the client laptop beside the printer; print.it replaces that path with a local automatic server.",
+      "pt": "O print.it é um microserviço local de impressão de recibos e etiquetas usado pelo MioDelivery e outros sistemas. Na LM Salgados substitui o IdeYouPrint antigo, que tinha mais limites: impressão agendada, impressão na loja e comanda mais clara para cozinha e entrega. O case do MioDelivery mostra a comanda antiga e a atual. O IdeYouPrint antes rodava no notebook do cliente ao lado da impressora; o print.it substitui esse caminho por um servidor local automático."
+    }
+  },
+  {
+    "id": "engrenhamais",
+    "era": "design",
+    "accent": "red",
+    "logo": "https://engrenhamais.com.br/assets/icons/favicon-32.png",
+    "logoBg": "#ffffff",
+    "title": {
+      "en": "ENGRENHA+",
+      "pt": "ENGRENHA+"
+    },
+    "summary": {
+      "en": "Industrial consultancy site for refractory and energy solutions.",
+      "pt": "Site de consultoria industrial para soluções refratárias e de energia."
+    },
+    "language": "PHP",
+    "tech": [
+      "PHP",
+      "HTML",
+      "CSS"
+    ],
+    "links": {
+      "live": "https://engrenhamais.com.br"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/engrenhamais/shot-1.png",
+        "alt": {
+          "en": "ENGRENHA+ screenshot",
+          "pt": "Print de ENGRENHA+"
+        }
+      }
+    ]
+  },
+  {
+    "id": "lmsalgados",
+    "era": "design",
+    "accent": "orange",
+    "logo": "assets/img/logos/lmsalgados.png",
+    "title": {
+      "en": "LM Salgados",
+      "pt": "LM Salgados"
+    },
+    "summary": {
+      "en": "Marketing site for LM Salgados — a long-term food brand client since 2017.",
+      "pt": "Site de marketing da LM Salgados — cliente de marca food desde 2017."
+    },
+    "language": "HTML",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://lmsalgados.com.br"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/lmsalgados/shot-1.png",
+        "alt": {
+          "en": "LM Salgados marketing site",
+          "pt": "Site de marketing LM Salgados"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/lmsalgados/brand-sheet.png",
+        "alt": {
+          "en": "LM Salgados brand sheet",
+          "pt": "Folha de marca LM Salgados"
+        }
+      }
+    ],
+    "logoBg": "#0a0a0a",
+    "detail": {
+      "en": "Public marketing site for the brand. The long operational partnership — kitchen board, multi-unit ERP, PWA, and productization as MioDelivery — is told in the MioDelivery case study.",
+      "pt": "Site público de marketing da marca. A parceria operacional longa — painel de cozinha, ERP multiunidade, PWA e productização como MioDelivery — está no case do MioDelivery."
+    }
+  },
+  {
+    "id": "vipproducoes",
+    "era": "design",
+    "accent": "coral",
+    "logo": "https://isaque.it/vipproducoes.com.br/img/logo_sm.png",
+    "logoBg": "#0a0a0a",
+    "title": {
+      "en": "VIP Produções",
+      "pt": "VIP Produções"
+    },
+    "summary": {
+      "en": "Site for an events company — DJ, stage structure, and photo booth.",
+      "pt": "Site para uma empresa de eventos — DJ, estrutura e cabine fotográfica."
+    },
+    "language": "HTML",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://isaque.it/vipproducoes.com.br/"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/vipproducoes/shot-1.png",
+        "alt": {
+          "en": "VIP Produções screenshot",
+          "pt": "Print de VIP Produções"
+        }
+      }
+    ]
+  },
+  {
+    "id": "victoriacosta",
+    "era": "design",
+    "accent": "green",
+    "logo": "assets/img/logos/victoriacosta.png",
+    "title": {
+      "en": "Jardim da Victória",
+      "pt": "Jardim da Victória"
+    },
+    "summary": {
+      "en": "Digital birthday invitation with RSVP, gift list, and photo album — adaptable to any event.",
+      "pt": "Convite de aniversário digital com RSVP, lista de presentes e álbum de fotos — adaptável a outros eventos."
+    },
+    "language": "HTML",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://isaque.it/victoriacosta.com.br/"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/victoriacosta/shot-1.png",
+        "alt": {
+          "en": "Jardim da Victória screenshot",
+          "pt": "Print de Jardim da Victória"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ensaio-fotografico",
+    "era": "design",
+    "accent": "yellow",
+    "logo": "https://isaque.it/ensaio-fotografico/assets/icon.avif",
+    "title": {
+      "en": "Victória's PhotoShoot",
+      "pt": "Ensaio da Victória"
+    },
+    "summary": {
+      "en": "Web app that plays the debutante's photo shoot on the venue's big screen during the event.",
+      "pt": "App web que exibe o ensaio fotográfico da debutante no telão durante o evento."
+    },
+    "language": "JavaScript",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://isaque.it/ensaio-fotografico/"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/ensaio-fotografico/shot-1.png",
+        "alt": {
+          "en": "Victória's PhotoShoot screenshot",
+          "pt": "Print de Ensaio da Victória"
+        }
+      }
+    ]
+  },
+  {
+    "id": "folhadocomercio",
+    "era": "design",
+    "accent": "red",
+    "logo": "assets/img/logos/folhadocomercio.png",
+    "logoBg": "#ffffff",
+    "title": {
+      "en": "Folha do Comércio",
+      "pt": "Folha do Comércio"
+    },
+    "summary": {
+      "en": "Online newspaper for the Vale do Aço region — built on WordPress in 2018, still in daily use.",
+      "pt": "Jornal online do Vale do Aço — feito em WordPress em 2018, em uso até hoje."
+    },
+    "language": "PHP",
+    "tech": [
+      "WordPress",
+      "PHP",
+      "MySQL"
+    ],
+    "links": {
+      "live": "https://www.folhadocomercio.net.br"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/folhadocomercio/shot-1.png",
+        "alt": {
+          "en": "Folha do Comércio screenshot",
+          "pt": "Print de Folha do Comércio"
+        }
+      }
+    ]
+  },
+  {
+    "id": "metasita",
+    "era": "design",
+    "accent": "orange",
+    "logo": "https://www.metasita.org.br/wp-content/uploads/2023/04/cropped-METASITA.__1_-removebg-preview-192x192.png",
+    "logoBg": "#ffffff",
+    "title": {
+      "en": "Metasita",
+      "pt": "Metasita"
+    },
+    "summary": {
+      "en": "Steelworkers' union site — built on WordPress in 2018 while working at Vale Telecom.",
+      "pt": "Site do sindicato dos metalúrgicos — feito em WordPress em 2018, na época da Vale Telecom."
+    },
+    "language": "PHP",
+    "tech": [
+      "WordPress",
+      "PHP",
+      "MySQL"
+    ],
+    "links": {
+      "live": "https://www.metasita.org.br"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/metasita/shot-1.png",
+        "alt": {
+          "en": "Metasita screenshot",
+          "pt": "Print de Metasita"
+        }
+      }
+    ]
+  },
+  {
+    "id": "lbrecords",
+    "era": "design",
+    "accent": "blue",
+    "logo": "https://isaque.it/lbrecords.com/_img/logo_nova.png",
+    "logoBg": "#0a0a0a",
+    "title": {
+      "en": "Lucas Bitencourt Records",
+      "pt": "Lucas Bitencourt Records"
+    },
+    "summary": {
+      "en": "Music studio site built alongside a friend while teaching him how to create websites.",
+      "pt": "Site de estúdio musical construído junto com um amigo enquanto o ensinava a criar sites."
+    },
+    "language": "HTML",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://isaque.it/lbrecords.com/"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/lbrecords/shot-1.png",
+        "alt": {
+          "en": "Lucas Bitencourt Records screenshot",
+          "pt": "Print de Lucas Bitencourt Records"
+        }
+      }
+    ]
+  },
+  {
+    "id": "lagoa-silvana",
+    "era": "design",
+    "accent": "green",
+    "logo": "assets/img/logos/lagoa-silvana.png",
+    "logoBg": "#f4f1ea",
+    "title": {
+      "en": "Parque Lagoa Silvana",
+      "pt": "Parque Lagoa Silvana"
+    },
+    "summary": {
+      "en": "Marketing site for a high-end condominium by Lagoa Silvana — leisure club, 24h security, and privileged lake views.",
+      "pt": "Site institucional de condomínio de alto padrão na Lagoa Silvana — clube de lazer, segurança 24h e vista privilegiada da lagoa."
+    },
+    "language": "PHP",
+    "tech": [
+      "PHP",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://condominiolagoasilvana.com.br"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/lagoa-silvana/shot-1.png",
+        "alt": {
+          "en": "Parque Lagoa Silvana screenshot",
+          "pt": "Print de Parque Lagoa Silvana"
+        }
+      }
+    ]
+  },
+  {
+    "id": "damasceno",
+    "era": "design",
+    "accent": "yellow",
+    "logo": "assets/img/logos/damasceno.png",
+    "logoBg": "#ffffff",
+    "title": {
+      "en": "Damasceno Imóveis",
+      "pt": "Damasceno Imóveis"
+    },
+    "summary": {
+      "en": "Real estate site for buying and renting properties in Coronel Fabriciano and the surrounding region.",
+      "pt": "Site de imobiliária para compra e aluguel de imóveis em Coronel Fabriciano e região."
+    },
+    "language": "PHP",
+    "tech": [
+      "PHP",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://www.joaodamascenoimoveis.com.br"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/damasceno/shot-1.png",
+        "alt": {
+          "en": "Damasceno Imóveis screenshot",
+          "pt": "Print de Damasceno Imóveis"
+        }
+      }
+    ]
+  },
+  {
+    "id": "acdn",
+    "era": "design",
+    "accent": "blue",
+    "logo": "assets/img/logos/acdn.png",
+    "logoBg": "#ffffff",
+    "title": {
+      "en": "ACDN",
+      "pt": "ACDN"
+    },
+    "summary": {
+      "en": "WordPress site for the Association for Children with Neurological Disorders.",
+      "pt": "Site em WordPress da Associação da Criança com Distúrbios Neurológicos."
+    },
+    "language": "PHP",
+    "tech": [
+      "WordPress",
+      "PHP",
+      "MySQL"
+    ],
+    "links": {
+      "live": "https://www.acdn.net.br"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/acdn/shot-1.png",
+        "alt": {
+          "en": "ACDN screenshot",
+          "pt": "Print de ACDN"
+        }
+      }
+    ]
+  },
+  {
+    "id": "nina-cordeiro",
+    "era": "design",
+    "accent": "coral",
+    "logo": "assets/img/logos/nina-cordeiro.png",
+    "logoBg": "#ffffff",
+    "title": {
+      "en": "Nina Cordeiro Advogados",
+      "pt": "Nina Cordeiro Advogados"
+    },
+    "summary": {
+      "en": "Law firm site specialized in family and succession law — Ipatinga and the Vale do Aço region.",
+      "pt": "Site de escritório de advocacia especializado em família e sucessões — Ipatinga e Vale do Aço."
+    },
+    "language": "PHP",
+    "tech": [
+      "WordPress",
+      "PHP",
+      "MySQL"
+    ],
+    "links": {
+      "live": "https://ninacordeiroadvogados.com.br"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/nina-cordeiro/shot-1.png",
+        "alt": {
+          "en": "Nina Cordeiro Advogados screenshot",
+          "pt": "Print de Nina Cordeiro Advogados"
+        }
+      }
+    ]
+  },
+  {
+    "id": "magic-globe",
+    "era": "hardware",
+    "accent": "yellow",
+    "logo": "https://isaque.it/cubo/assets/media/cubomagico-64.png",
+    "caseId": "cube",
+    "title": {
+      "en": "Magic Globe",
+      "pt": "Globo Mágico"
+    },
+    "summary": {
+      "en": "Open-source Rubik’s Cube robot solver with web control — solves in under 2 seconds.",
+      "pt": "Robô resolvedor de Cubo Mágico open-source com controle web — solves em menos de 2 segundos."
+    },
+    "language": "JavaScript",
+    "tech": [
+      "HTML",
+      "JavaScript",
+      "Python",
+      "C++"
+    ],
+    "links": {
+      "repo": "https://github.com/ioisaque/magic-globe"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/magic-globe/shot-1.png",
+        "alt": {
+          "en": "Magic Globe screenshot",
+          "pt": "Print de Globo Mágico"
+        }
+      }
+    ]
+  },
+  {
+    "id": "miodelivery",
+    "era": "ideyou",
+    "accent": "green",
+    "caseId": "miodelivery",
+    "title": {
+      "en": "MioDelivery",
+      "pt": "MioDelivery"
+    },
+    "summary": {
+      "en": "Born with LM Salgados — now a multi-store MioDelivery with kitchen panel, order ops, and print.it.",
+      "pt": "Nasceu com a LM Salgados — hoje MioDelivery multi-loja com painel de cozinha, operação de pedidos e print.it."
+    },
+    "language": "PHP",
+    "tech": [
+      "PHP",
+      "React",
+      "NestJS",
+      "MySQL"
+    ],
+    "links": {
+      "live": "https://ideyou.com.br"
+    },
+    "detail": {
+      "en": "Long partnership from 2017: shouted kitchen quantities → production board → multi-unit ERP → PWA → today’s dashboard, versatile kitchen panel, filtered order listings, and thermal receipts via print.it (replacing IdeYouPrint at LM). Origin screens and diagrams sit next to current product UI. Product types (simple, combo, sizes, add-ons), auto PDF menus, and animated TV menus are part of the same ops surface. Multi-store setup and reports work grouped or per unit for a diversified managerial view.",
+      "pt": "Parceria longa desde 2017: gritos na cozinha → painel de produção → ERP multiunidade → PWA → dashboard de hoje, painel de cozinha versátil, listagens filtradas e comandas via print.it (no lugar do IdeYouPrint na LM). Telas de origem e diagramas ao lado da UI atual do produto. Tipos de produto (simples, combo, tamanhos, adicional), cardápio PDF automático e cardápio animado para TV fazem parte da mesma superfície operacional. Cadastro multi-loja e relatórios funcionam agrupados ou por unidade para uma visão gerencial diversificada."
+    },
+    "media": [],
+    "logo": "assets/img/logos/lmsalgados.png",
+    "logoBg": "#0a0a0a",
+    "linkLabels": {
+      "live": {
+        "en": "IdeYou",
+        "pt": "IdeYou"
+      }
+    }
+  },
+  {
+    "id": "telecom-erp",
+    "era": "ideyou",
+    "accent": "coral",
+    "title": {
+      "en": "Telecom ERP",
+      "pt": "Telecom ERP"
+    },
+    "summary": {
+      "en": "Enterprise billing, boletos, and commercial operations for telecom.",
+      "pt": "Faturamento empresarial, boletos e operação comercial para telecom."
+    },
+    "language": "PHP",
+    "tech": [
+      "PHP",
+      "MySQL",
+      "JavaScript"
+    ]
+  },
+  {
+    "id": "planeja-ideyou",
+    "era": "ideyou",
+    "accent": "blue",
+    "logo": "https://isaque.it/meuaurelio.com.br/assets/images/aurelio-white.png",
+    "logoBg": "#012060",
+    "title": {
+      "en": "Aurélio",
+      "pt": "Aurélio"
+    },
+    "summary": {
+      "en": "BNCC-aligned lesson plan builder with print-ready output for teachers.",
+      "pt": "Construtor de planos de aula alinhado à BNCC com saída pronta para impressão."
+    },
+    "language": "PHP",
+    "tech": [
+      "PHP",
+      "MySQL"
+    ],
+    "links": {
+      "live": "https://isaque.it/meuaurelio.com.br/",
+      "repo": "https://github.com/ioisaque/planeja-ideyou"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/planeja-ideyou/shot-1.png",
+        "alt": {
+          "en": "Aurélio screenshot",
+          "pt": "Print de Aurélio"
+        }
+      }
+    ]
+  },
+  {
+    "id": "viaprime",
+    "era": "ideyou",
+    "accent": "blue",
+    "logo": "assets/img/logos/viaprime.png",
+    "title": {
+      "en": "Via Prime Fabri",
+      "pt": "Via Prime Fabri"
+    },
+    "summary": {
+      "en": "iOS and Android app for class scheduling and workout tracking.",
+      "pt": "Aplicativo iOS e Android para agendamento de aulas e controle de treinos."
+    },
+    "language": "Mobile",
+    "tech": [
+      "iOS",
+      "Android"
+    ],
+    "links": {
+      "live": "https://www.instagram.com/viaprimefabri/"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/viaprime/shot-1.png",
+        "alt": {
+          "en": "Via Prime Fabri screenshot",
+          "pt": "Print de Via Prime Fabri"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cti",
+    "era": "teaching",
+    "accent": "blue",
+    "logo": "https://isaque.it/cti/logo.png",
+    "title": {
+      "en": "CTI Projects",
+      "pt": "Projetos CTI"
+    },
+    "summary": {
+      "en": "Portfolio of projects built in the technical course I coordinated and taught.",
+      "pt": "Portfólio de projetos desenvolvidos no curso técnico que coordenei e lecionei."
+    },
+    "language": "PHP",
+    "tech": [
+      "PHP",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://isaque.it/cti",
+      "repo": "https://github.com/ioisaque/cti"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/cti/shot-1.png",
+        "alt": {
+          "en": "CTI Projects screenshot",
+          "pt": "Print de Projetos CTI"
+        }
+      }
+    ]
+  },
+  {
+    "id": "block",
+    "era": "platform",
+    "accent": "blue",
+    "pinnedEnd": true,
+    "logo": "assets/img/logos/block.png",
+    "logoBg": "#0a0a0a",
+    "title": {
+      "en": "block",
+      "pt": "block"
+    },
+    "summary": {
+      "en": "Classified.",
+      "pt": "Classificado."
+    },
+    "language": "Z̸k̷-9∕⌀▓",
+    "tech": [
+      " orth█̸∂",
+      "λ::??",
+      "0xDEAD"
+    ],
+    "linkLabels": {
+      "live": {
+        "en": "ǂǂǂ://⌀∇",
+        "pt": "ǂǂǂ://⌀∇"
+      },
+      "repo": {
+        "en": "∎∎∎.???",
+        "pt": "∎∎∎.???"
+      }
+    },
+    "links": {
+      "live": "https://cdn.isaque.it/error/403/",
+      "repo": "https://cdn.isaque.it/error/403/"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/logos/block.png",
+        "alt": {
+          "en": "block logo",
+          "pt": "Logo block"
+        }
+      }
+    ]
+  }
+]
