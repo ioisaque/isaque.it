@@ -1,10 +1,11 @@
 .hero__cube {
   position: absolute;
   z-index: 0;
-  top: 34%;
-  right: clamp(8rem, 22vw, 26rem);
-  width: min(26rem, 54vw);
-  height: min(26rem, 54vw);
+  top: 36%;
+  /* Sit near the container’s right edge — not under the copy, not flush off-screen */
+  right: max(1.25rem, calc((100vw - min(100vw - 2.5rem, var(--container))) / 2));
+  width: min(24rem, 34vw);
+  height: min(24rem, 34vw);
   translate: 0 -50%;
   perspective: 900px;
   cursor: grab;
@@ -85,6 +86,24 @@
   }
   50% {
     transform: translateY(-0.85rem);
+  }
+}
+
+/* iPad / mid widths: smaller cube, inset from the right toward center */
+@media (min-width: 720px) and (max-width: 1099px) {
+  .hero__cube {
+    top: 32%;
+    right: max(3.5rem, calc((100vw - min(100vw - 2.5rem, var(--container))) / 2 + 3.5rem));
+    width: min(17rem, 30vw);
+    height: min(17rem, 30vw);
+  }
+}
+
+@media (min-width: 1100px) {
+  .hero__cube {
+    top: 38%;
+    width: min(26rem, 32vw);
+    height: min(26rem, 32vw);
   }
 }
 
