@@ -1,5 +1,0 @@
-# Optional: when ready to promote portifolio to site root, add to parent .htaccess:
-# RewriteRule ^$ /portifolio/ [L,R=302]
-
-Options -Indexes
-DirectoryIndex index.html
