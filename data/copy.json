@@ -17,6 +17,7 @@
         "base": "based in Ireland"
       },
       "languages": "Fluent in Portuguese and English — studying Spanish and Italian.",
+      "ctaJourney": "See the path",
       "cta": "Explore my work"
     },
     "journey": {
@@ -369,6 +370,8 @@
       "github": "GitHub",
       "linkedin": "LinkedIn",
       "instagram": "Instagram",
+      "whatsapp": "WhatsApp",
+      "whatsappMessage": "Hi Isaque — I saw your portfolio and would like to talk.",
       "email": "Email"
     },
     "a11y": {
@@ -397,6 +400,7 @@
         "base": "morando na Irlanda"
       },
       "languages": "Fluente em português e inglês — estudando espanhol e italiano.",
+      "ctaJourney": "Veja a trajetória",
       "cta": "Explorar meu trabalho"
     },
     "journey": {
@@ -749,6 +753,8 @@
       "github": "GitHub",
       "linkedin": "LinkedIn",
       "instagram": "Instagram",
+      "whatsapp": "WhatsApp",
+      "whatsappMessage": "Oi Isaque — vi seu portfólio e gostaria de conversar.",
       "email": "E-mail"
     },
     "a11y": {

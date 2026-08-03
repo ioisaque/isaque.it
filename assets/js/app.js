@@ -89,6 +89,14 @@ function applyI18n() {
   document.getElementById('lang-en')?.setAttribute('aria-pressed', String(locale === 'en'))
   document.getElementById('lang-pt')?.setAttribute('aria-pressed', String(locale === 'pt'))
 
+  const contactWhatsapp = document.getElementById('contact-whatsapp')
+  if (contactWhatsapp) {
+    const message =
+      copy[locale].contact?.whatsappMessage ||
+      'Hi Isaque — I saw your portfolio and would like to talk.'
+    contactWhatsapp.href = `https://wa.me/5531990712203?text=${encodeURIComponent(message)}`
+  }
+
   if (pageMode === 'case') {
     renderCasePage()
   } else {
@@ -1455,26 +1463,47 @@ function escapeAttr(value) {
 function initNav() {
   const header = document.getElementById('site-header')
   const toggle = document.getElementById('nav-toggle')
-  const links = document.getElementById('nav-links')
+  const drawer = document.getElementById('nav-links')
 
   const onScroll = () => header?.classList.toggle('is-scrolled', window.scrollY > 12)
   onScroll()
   window.addEventListener('scroll', onScroll, { passive: true })
 
-  toggle?.addEventListener('click', () => {
-    const open = links?.classList.toggle('is-open')
-    toggle.setAttribute('aria-expanded', String(Boolean(open)))
-    document.body.style.overflow = open ? 'hidden' : ''
-    const label = open ? copy[locale].a11y.menuClose : copy[locale].a11y.menuOpen
-    toggle.setAttribute('aria-label', label)
+  const isMobileNav = () => window.matchMedia('(max-width: 899px)').matches
+
+  const setDrawerOpen = (open) => {
+    drawer?.classList.toggle('is-open', open)
+    header?.classList.toggle('is-menu-open', open)
+    toggle?.setAttribute('aria-expanded', String(open))
+    document.body.style.overflow = open && isMobileNav() ? 'hidden' : ''
+    if (toggle && copy[locale]?.a11y) {
+      toggle.setAttribute('aria-label', open ? copy[locale].a11y.menuClose : copy[locale].a11y.menuOpen)
+    }
+  }
+
+  toggle?.addEventListener('click', (event) => {
+    event.stopPropagation()
+    setDrawerOpen(!drawer?.classList.contains('is-open'))
   })
 
-  links?.querySelectorAll('a').forEach((a) => {
-    a.addEventListener('click', () => {
-      links.classList.remove('is-open')
-      toggle?.setAttribute('aria-expanded', 'false')
-      document.body.style.overflow = ''
+  drawer?.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => setDrawerOpen(false))
+  })
+
+  drawer?.querySelectorAll('.lang-toggle button').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (!isMobileNav()) setDrawerOpen(false)
     })
+  })
+
+  document.addEventListener('click', (event) => {
+    if (!drawer?.classList.contains('is-open')) return
+    if (drawer.contains(event.target) || toggle?.contains(event.target)) return
+    setDrawerOpen(false)
+  })
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setDrawerOpen(false)
   })
 }
 
