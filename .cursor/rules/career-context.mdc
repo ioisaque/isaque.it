@@ -23,29 +23,29 @@ Use these ids everywhere (`milestones`, `catalog`, filters). Exact year bands ma
 
 | id | Years | Color | Thinking arc |
 |----|-------|-------|--------------|
-| `design` | 2012–2016 | `#F5617F` | Craft and intention — first professional sites for local businesses |
-| `hardware` | 2016–2019 | `#FFD22B` | Chaos → structure — SENAI networks + Faculdade Única / Magic Globe |
-| `ideyou` | 2019–2023 | `#FF5356` | Real operational noise — IdeYou food-tech, logistics, multi-service clients |
-| `teaching` | 2023–2026 | `#9900CC` | Teaching clarified models — CS teaching, school IT, CTI hub + coordination |
+| `design` | 2013–2018 | `#F5617F` | Craft then web — graphic design first (2013), web from 2015, boom in 2018 |
+| `hardware` | 2019 | `#FFD22B` | Chaos → structure — Magic Globe year |
+| `ideyou` | 2020–2023 | `#FF5356` | Real operational noise — IdeYou second boom, food-tech, logistics |
+| `teaching` | 2023–2026 | `#9900CC` | Teaching clarified models — CS teaching, school IT, CTI + coordination |
 | `platform` | 2025–now | `#0076F3` | Fragments → platform — admin, API, client portal under isaque.it |
 
 ## Era stories (facts to keep)
 
-**design** — Visual design and front-end for clinics, food brands, small businesses. **Vale Telecom 2018** cluster (still under design era until years list): Folha do Comércio, Metasita, Lagoa Silvana, Damasceno, ACDN, Nina Cordeiro, Via Prime. Engrenha+ = most recent institutional client (craft bar: SEO, responsive, light/dark). VIP Produções = adolescence client. Jardim da Vitória (Pix/RSVP). Victoria’s Photo Shoot PWA.
+**design** — Started **2013** as graphic designer; **web from 2015**. **SENAI** + **I'm root** in **2014**. **2018** boom: Vale Telecom job + LM Salgados high demand; WordPress factory (30+ sites; Folha do Comércio, Metasita, Lagoa Silvana, ACDN, Nina Cordeiro, Damasceno, Via Prime; ≥8 for Vale group companies). **VIP Produções** = **2018**, own client — not Vale. **block** classified thread begins **2013**. **ENGRENHA+** = **2025** institutional craft (also chip under platform milestone). **Jardim da Victória** built **2019**, used **2026**. **Victória’s PhotoShoot** = **2026**.
 
-**hardware** — SENAI = **Computer Networks** técnico (DNS/DHCP/servers) — mechatronics was interest, not the course. Bachelor’s = **Faculdade Única** / Magic Globe. Magic Globe dates: **Dec 2018** bet → first prototype **May 2019** → final **Nov 2019** → TCC approved **Dec 2019** (PDF in assets). EN "Magic Globe" / PT "Globo Mágico"; Live `https://isaque.it/cubo/`. Metaphor: find structure under noise.
+**hardware** — **2019** = Magic Globe year at Faculdade Única (prototype → final machine → Dec defense). SENAI networks was **2014** (design arc), not this band. EN "Magic Globe" / PT "Globo Mágico"; Live `https://isaque.it/cubo/`. Metaphor: find structure under noise.
 
-**ideyou** — Pandemic 2020 origin with friend **Tainan** (Warface 2013): closed WhatsApp quality group → ~5 → informal company (not incorporated). Multi-service: web, bots, ads, graphic, video, branding. Large client circle includes **Integra Foods** (~2020/2021 SP distributor industry↔restaurants; WhatsApp bot, LPs, e-commerce, ads, graphic, video/explainer, branding; ERP talks as scope grew — founders already clients via Saint Germain / Spa Água Santa circle), **Saint Germain**, **Spa Água Santa**. Partnership ended over quality/reputation vs sales expectations; transitioned brand to **isaque.it** (evolution, not revenge rebrand). Public site: lead with evolution/values — do not put cast drama on the portfolio. MioDelivery (LM Salgados since 2017). Saint Germain delivery control (canhoto/PWA, scan.it lineage). Meu Aurélio (2023, João Paulo II — prefer **teaching** era in catalog).
+**ideyou** — **2020** second boom: MioDelivery expands, Saint Germain, Integra Foods, Spa Água Santa, Lucas Bitencourt Records. **barcode.it** and **IdeYouPrint** (print.it predecessor) start **2020**. Pandemic origin with friend **Tainan** (Warface 2013): closed WhatsApp quality group → informal multi-service team. Transitioned brand to **isaque.it**. Meu Aurélio (2023) → prefer **teaching** in catalog.
 
-**teaching** — CS teaching while building school relationships. **Meu Aurélio** (2023): lesson-plan PDF + QR materials. **CTI**: Coordinator of Technical Computing at Escola João Paulo II **since Feb 2026**, and still teacher. CTI Projects = public hub of student work.
+**teaching** — CS teaching while building school relationships. **Meu Aurélio** (2023). **CTI** + **Victória’s PhotoShoot** in **2026**. Coordinator of Technical Computing at Escola João Paulo II **since Feb 2026**.
 
-**platform** — Convergence under isaque.it: sistema, api, cliente, notify.it, barcode.it, **scan.it**, print.it. Same care as early design sites, at platform scale.
+**platform** — Convergence under isaque.it: sistema, api, cliente, notify.it, barcode.it, **scan.it**, print.it. Same care as early craft sites, at platform scale. **ENGRENHA+** (2025).
 
 ## Canonical project map (era → catalog ids)
 
-- **design:** `im-root`, `engrenhamais`, `lmsalgados`, `vipproducoes`, `victoriacosta`, `ensaio-fotografico`, `folhadocomercio`, `metasita`, `lbrecords`, `lagoa-silvana`, `damasceno`, `acdn`, `nina-cordeiro`
+- **design:** `im-root`, `lmsalgados`, `vipproducoes`, `victoriacosta`, `ensaio-fotografico`, `folhadocomercio`, `metasita`, `lagoa-silvana`, `damasceno`, `acdn`, `nina-cordeiro`, `block` (classified; 2013), `engrenhamais` (2025 craft)
 - **hardware:** `magic-globe` (case: `cube`) — EN "Magic Globe", PT "Globo Mágico"; tech HTML, JS, Python, C++
-- **ideyou:** `miodelivery` (case: `miodelivery`), `saint-germain`, `integra-foods`, `spa-agua-santa`, `viaprime` — **no `telecom-erp`**
+- **ideyou:** `miodelivery` (case: `miodelivery`), `saint-germain`, `integra-foods`, `spa-agua-santa`, `viaprime`, `lbrecords` — **no `telecom-erp`**
 - **teaching:** `planeja-ideyou` (title **Meu Aurélio**), `cti` — "CTI Projects" / "Projetos CTI"
 - **platform:** `sistema-isaque`, `api-isaque`, `cliente-isaque`, `notify-it`, `barcode-it`, `scan-it`, `print-it` (case: `platform`)
 
@@ -57,7 +57,7 @@ Case study ids in `projects.json`: `cube`, `miodelivery`, `platform` only.
 
 | id | Title |
 |----|-------|
-| `victoriacosta` | Jardim da Vitória |
+| `victoriacosta` | Jardim da Victória |
 | `metasita` | Metasita |
 | `planeja-ideyou` | Meu Aurélio |
 | `viaprime` | Via Prime |

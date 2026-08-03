@@ -106,7 +106,7 @@ Opening a catalog card sets `#project-{id}` and opens the detail modal. Items wi
   title: { en, pt }  // short poetic
   headline: { en, pt } // factual subtitle
   body: { en, pt }     // short lead
-  context: { en, pt }  // longer visitor context
+  context: { en: string | string[], pt: string | string[] }  // longer visitor context; prefer short paragraphs (array) for readable air
   projects: string[]   // catalog ids
 }
 ```

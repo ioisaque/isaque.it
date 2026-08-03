@@ -2169,14 +2169,14 @@ a.case__timeline-card:hover .case__timeline-what {
 }
 
 .timeline__context {
-  margin: var(--space-3) 0 0;
+  margin: var(--space-4) 0 0;
   color: var(--ink-secondary);
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .timeline__context + .timeline__context {
-  margin-top: var(--space-4);
+  margin-top: var(--space-5);
 }
 
 .timeline__chips {

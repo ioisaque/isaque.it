@@ -1096,8 +1096,8 @@
     "accent": "green",
     "logo": "assets/img/logos/victoriacosta.png",
     "title": {
-      "en": "Jardim da Vitória",
-      "pt": "Jardim da Vitória"
+      "en": "Jardim da Victória",
+      "pt": "Jardim da Victória"
     },
     "summary": {
       "en": "Reusable digital invite — RSVP, gift list, and Pix — born as a 15th, ready for weddings and more.",
@@ -1117,15 +1117,15 @@
         "type": "image",
         "src": "assets/projects/victoriacosta/shot-1.png",
         "alt": {
-          "en": "Jardim da Vitória screenshot",
-          "pt": "Print de Jardim da Vitória"
+          "en": "Jardim da Victória screenshot",
+          "pt": "Print de Jardim da Victória"
         }
       }
     ]
   },
   {
     "id": "lbrecords",
-    "era": "design",
+    "era": "ideyou",
     "accent": "blue",
     "logo": "https://isaque.it/lbrecords.com/_img/logo_nova.png",
     "logoBg": "#0a0a0a",
@@ -1218,7 +1218,7 @@
   },
   {
     "id": "block",
-    "era": "platform",
+    "era": "design",
     "accent": "blue",
     "pinnedEnd": true,
     "logo": "assets/img/logos/block.png",

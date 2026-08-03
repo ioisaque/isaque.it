@@ -1,50 +1,99 @@
 [
   {
-    "id": "design",
+    "id": "craft",
     "era": "design",
-    "years": "2012–2016",
+    "years": "2013–2014",
     "title": {
-      "en": "Craft taught intention",
-      "pt": "O ofício ensinou intenção"
+      "en": "The eye came before the stack",
+      "pt": "O olho veio antes do stack"
     },
     "headline": {
-      "en": "First websites for local businesses.",
-      "pt": "Primeiros sites para negócios locais."
+      "en": "Graphic design first — intention on the page before code in production.",
+      "pt": "Design gráfico primeiro — intenção na página antes de código em produção."
     },
     "body": {
-      "en": "Typography, layout, and trust on a screen — the first lesson that every pixel should earn its place.",
-      "pt": "Tipografia, layout e confiança na tela — a primeira lição de que cada pixel precisa merecer seu lugar."
+      "en": "I learned to make something look inevitable. That skill never left.",
+      "pt": "Aprendi a fazer algo parecer inevitável. Essa habilidade nunca saiu."
     },
     "context": {
-      "en": "I started in visual design and front-end craft — and by 2013–2014 was already shipping sites and systems (including the I'm root experiments). Local businesses needed presence people could trust. Every layout had to feel intentional. That discipline never left. The Vale Telecom 2018 wave (newspaper, portals, condo, real estate, association sites) still sits in this craft arc until the full year map lands.",
-      "pt": "Comecei no design visual e no front-end — e em 2013–2014 já entregava sites e sistemas (incluindo os experimentos I'm root). Negócios locais precisavam de presença confiável. Cada layout tinha que parecer intencional. Essa disciplina nunca saiu. A onda Vale Telecom 2018 (jornal, portais, condomínio, imobiliária, associação) ainda vive neste arco de ofício até o mapa completo de anos chegar."
+      "en": [
+        "Type, hierarchy, color, trust — from 2013 the brief was always the same: make people believe what they were looking at.",
+        "Design is still the foundation under everything I ship. Matching something visually is part of the craft, not a separate lane — so when a screen or an image needs care, the work can keep moving.",
+        "In 2014, SENAI pulled me into Computer Networks while I'm root put a first public face online. Design taught me taste under constraint. Networks taught me that beautiful work still needs something solid underneath. Together they set the bar I still refuse to lower."
+      ],
+      "pt": [
+        "Tipo, hierarquia, cor, confiança — desde 2013 o brief era sempre o mesmo: fazer a pessoa acreditar no que estava vendo.",
+        "O design ainda é a base sob tudo que eu entrego. Acertar algo visualmente faz parte do ofício, não de uma faixa separada — então quando uma tela ou uma imagem precisa de cuidado, o trabalho segue.",
+        "Em 2014, o SENAI me puxou para Redes de Computadores enquanto o I'm root colocava um primeiro rosto público online. O design me ensinou gosto sob restrição. As redes me ensinaram que trabalho bonito ainda precisa de algo sólido por baixo. Juntos, formaram a bitola que eu ainda me recuso a baixar."
+      ]
     },
     "projects": [
-      "im-root",
-      "engrenhamais",
+      "im-root"
+    ]
+  },
+  {
+    "id": "web",
+    "era": "design",
+    "years": "2015–2018",
+    "title": {
+      "en": "Then the web caught fire",
+      "pt": "Depois a web pegou fogo"
+    },
+    "headline": {
+      "en": "2015: Started web dev. 2018: I couldn't ship fast enough — and I loved it.",
+      "pt": "2015: Comecei web. 2018: não dava conta de entregar — e eu amava isso."
+    },
+    "body": {
+      "en": "Sites that had to look right and work on Monday morning. Pace, craft, and real demand in the same week.",
+      "pt": "Sites que precisavam parecer certos e funcionar na segunda de manhã. Ritmo, ofício e demanda real na mesma semana."
+    },
+    "context": {
+      "en": [
+        "Web wasn't a side skill — it became the job. By 2018 the calendar was a blur of launches: local businesses, portals, brands that needed presence they could trust, sometimes several in a single week.",
+        "I was deep in that growth — telecom ops on one side, a food brand that kept asking for more on the other — and I was hungry for all of it.",
+        "Shipping that hard taught me the rule that still runs everything I build: to ship something great, I have to understand the user's pain and what they expect from the solution. If it doesn't make sense to them, my opinion doesn't matter.",
+        "That stretch forged the habit I still carry — ship, learn, ship again — always striving to look from their side of the screen."
+      ],
+      "pt": [
+        "Web não foi habilidade de canto — virou o trabalho. Em 2018 o calendário era um borrão de lançamentos: negócios locais, portais, marcas que precisavam de presença confiável, às vezes vários na mesma semana.",
+        "Eu estava no meio daquele crescimento — operação de telecom de um lado, uma marca de comida que pedia cada vez mais do outro — e eu queria tudo.",
+        "Entregar naquele ritmo me ensinou a regra que ainda manda em tudo que eu construo: para entregar algo ótimo, preciso entender a dor do usuário e o que ele espera da solução. Se não fizer sentido para ele, a minha opinião não importa.",
+        "Aquele trecho forjou o hábito que ainda carrego — entregar, aprender, entregar de novo — sempre buscando olhar do lado dele da tela."
+      ]
+    },
+    "projects": [
+      "vipproducoes",
       "lmsalgados",
-      "vipproducoes"
+      "folhadocomercio"
     ]
   },
   {
     "id": "hardware",
     "era": "hardware",
-    "years": "2016–2019",
+    "years": "2019",
     "title": {
       "en": "Chaos found structure",
       "pt": "O caos encontrou estrutura"
     },
     "headline": {
-      "en": "Robotics, computer vision, and the Magic Globe.",
-      "pt": "Robótica, visão computacional e o Globo Mágico."
+      "en": "One year. One machine. The metaphor for everything after.",
+      "pt": "Um ano. Uma máquina. A metáfora de tudo depois."
     },
     "body": {
-      "en": "Hardware, computer vision, and a Rubik’s Cube robot. Apparent randomness became a solvable state — the metaphor for everything that followed.",
-      "pt": "Hardware, visão computacional e um robô de Cubo Mágico. A aleatoriedade aparente virou um estado solucionável — a metáfora de tudo o que veio depois."
+      "en": "A scrambled cube looks like noise — until you model the state.",
+      "pt": "Um cubo embaralhado parece ruído — até você modelar o estado."
     },
     "context": {
-      "en": "At SENAI I trained in Computer Networks (DNS, DHCP, servers) — mechatronics stayed a side interest. At Faculdade Única the Magic Globe became the degree project: Feb 2019 start, first prototype by end of May, final machine in November, defense on 10 Dec 2019. A scrambled cube looks like noise until you model the state; that lesson became how I approach every tangled system.",
-      "pt": "No SENAI formei em Redes de Computadores (DNS, DHCP, servidores) — mecatrônica ficou como interesse paralelo. Na Faculdade Única o Globo Mágico virou o TCC: início em fev/2019, primeiro protótipo no fim de maio, máquina final em novembro, banca em 10 dez 2019. Um cubo embaralhado parece ruído até você modelar o estado; essa lição virou como abordo todo sistema embolado."
+      "en": [
+        "2019 belonged to the Magic Globe. Hardware, vision, motion, and software locked in one loop for my degree project — months that asked for patience and precision in equal measure.",
+        "When the robot solved what looked like chaos, it wasn't a party trick. It was proof: under enough care, complexity becomes a path.",
+        "That proof still sits under every hard system I touch."
+      ],
+      "pt": [
+        "2019 foi do Globo Mágico. Hardware, visão, movimento e software num só loop no TCC — meses que pediram paciência e precisão na mesma medida.",
+        "Quando o robô resolveu o que parecia caos, não foi truque de festa. Foi prova: com cuidado suficiente, complexidade vira caminho.",
+        "Essa prova ainda sustenta todo sistema difícil que eu toco."
+      ]
     },
     "projects": [
       "magic-globe"
@@ -53,27 +102,36 @@
   {
     "id": "ideyou",
     "era": "ideyou",
-    "years": "2019–2023",
+    "years": "2020–2023",
     "title": {
       "en": "Products absorbed real noise",
       "pt": "Produtos absorveram o ruído real"
     },
     "headline": {
-      "en": "Real clients, real peak hours — then isaque.it.",
-      "pt": "Clientes reais, horário de pico — depois isaque.it."
+      "en": "2020 lit the second boom — software that had to survive peak hour.",
+      "pt": "2020 acendeu o segundo boom — software que tinha que sobreviver ao horário de pico."
     },
     "body": {
-      "en": "Complexity stopped being theoretical — it had peak hours, billing deadlines, and consequences for real operators.",
-      "pt": "A complexidade deixou de ser teórica — tinha horário de pico, prazo de boleto e consequência para quem opera de verdade."
+      "en": "Not demos. Tools operators leaned on when the line was long and the clock was loud.",
+      "pt": "Não demos. Ferramentas em que a operação se apoiava quando a fila era longa e o relógio gritava."
     },
     "context": {
-      "en": "In the 2020 pandemic a closed WhatsApp group of trusted pros became an informal multi-service team (web, bots, marketing, design). That era absorbed LM Salgados into MioDelivery, Saint Germain logistics canhotos, and other SP-circle clients. IdeYou was formative — and taught that reputation beats overselling. The brand evolved into isaque.it: personal name, IT, and Italian heritage.",
-      "pt": "Na pandemia de 2020 um grupo fechado de profissionais de confiança virou um time multi-serviço informal (web, bots, marketing, design). Essa era absorveu a LM Salgados no MioDelivery, canhotos da Saint Germain e outros clientes do círculo SP. A IdeYou foi formativa — e ensinou que reputação vence overselling. A marca evoluiu para isaque.it: nome, IT e herança italiana."
+      "en": [
+        "IdeYou turned a trusted circle into a multi-service force — and 2020 scaled what already worked under pressure: delivery and kitchen ops, logistics on the floor, brands that needed more than a pretty page.",
+        "We built the unglamorous layer too — barcode generation, thermal print that couldn't fail at dinner rush (IdeYouPrint, before today's print.it). Complexity stopped being a slide deck. It had consequences.",
+        "That era taught the rule I still sell on: reputation outlasts overselling, and the product has to hold when nobody is watching the pitch."
+      ],
+      "pt": [
+        "A IdeYou transformou um círculo de confiança em força multi-serviço — e 2020 escalou o que já aguentava pressão: operação de delivery e cozinha, logística no chão, marcas que precisavam de mais que página bonita.",
+        "A gente construiu a camada sem glamour também — geração de barcode, impressão térmica que não podia falhar no jantar (IdeYouPrint, antes do print.it de hoje). Complexidade deixou de ser slide. Tinha consequência.",
+        "Aquela era ensinou a regra que ainda vendo: reputação dura mais que overselling, e o produto tem que aguentar quando ninguém está olhando o pitch."
+      ]
     },
     "projects": [
       "miodelivery",
       "saint-germain",
-      "spa-agua-santa"
+      "integra-foods",
+      "barcode-it"
     ]
   },
   {
@@ -85,56 +143,33 @@
       "pt": "Ensinar esclareceu o pensamento"
     },
     "headline": {
-      "en": "Computer science teaching and school IT.",
-      "pt": "Ensino de computação e TI para escolas."
+      "en": "If I couldn't explain it clearly, I didn't understand it enough.",
+      "pt": "Se eu não conseguia explicar com clareza, é porque ainda não entendia o bastante."
     },
     "body": {
-      "en": "If an idea could not be taught clearly, it was not designed clearly.",
-      "pt": "Se uma ideia não dava para ensinar com clareza, não estava desenhada com clareza."
+      "en": "A room full of questions leaves nowhere for fuzzy thinking to hide.",
+      "pt": "Uma sala cheia de perguntas não deixa pensamento confuso se esconder."
     },
     "context": {
-      "en": "Teaching computer science forced sharper models. Meu Aurélio (2023) turned lesson plans into school-standard PDFs with QR materials. Since February 2026 I coordinate the Technical Computing course at Escola João Paulo II while still teaching — CTI is the public hub where student projects live.",
-      "pt": "Ensinar ciência da computação exigiu modelos mais nítidos. O Meu Aurélio (2023) transformou planos de aula em PDFs no padrão da escola com materiais em QR. Desde fevereiro de 2026 coordeno o curso técnico de Informática na Escola João Paulo II e continuo lecionando — o CTI é o hub público onde os projetos dos alunos vivem."
+      "en": [
+        "Standing in front of students turned every idea into a live stress test. Vague language got exposed. Half-built models fell apart mid-sentence. I had to meet people where they were — their confusion, their pace, the real need under the question — not where I wished the explanation started.",
+        "That pressure worked on me the way earth works on rock: slow, unavoidable, and not for show. It made me a clearer communicator, and a better listener when someone is trying to say what they need.",
+        "Teaching didn't pause the builder. It raised the bar."
+      ],
+      "pt": [
+        "Ficar na frente dos alunos transformou cada ideia num teste ao vivo. Linguagem vaga se denunciava. Modelos pela metade desmoronavam no meio da frase. Eu tinha que encontrar as pessoas onde elas estavam — a dúvida, o ritmo, a necessidade real por baixo da pergunta — não onde eu gostaria que a explicação começasse.",
+        "Aquela pressão agiu em mim como a terra age na rocha: devagar, inevitável, e sem plateia. Me tornou comunicador mais claro, e melhor ouvinte quando alguém tenta dizer o que precisa.",
+        "Ensinar não pausou o construtor. Subiu a bitola."
+      ]
     },
     "projects": [
-      "planeja-ideyou",
       "cti"
-    ]
-  },
-  {
-    "id": "platform",
-    "era": "platform",
-    "years": "2025–now",
-    "title": {
-      "en": "Fragments became a platform",
-      "pt": "Fragmentos viraram plataforma"
-    },
-    "headline": {
-      "en": "One ecosystem under isaque.it.",
-      "pt": "Um ecossistema sob isaque.it."
-    },
-    "body": {
-      "en": "Separate tools converged: calm surfaces, shared identity, complexity held behind intentional boundaries.",
-      "pt": "Ferramentas separadas convergiram: superfícies calmas, identidade compartilhada, complexidade atrás de limites intencionais."
-    },
-    "context": {
-      "en": "Admin SPA, client portal, NestJS API, push, barcodes, scan.it, print.it — pieces that used to live alone now form one platform under isaque.it. Same attention to detail as early craft sites, now at architecture scale. Based in Dublin.",
-      "pt": "SPA admin, portal do cliente, API NestJS, push, códigos de barras, scan.it, print.it — peças que viviam sozinhas agora formam uma plataforma sob isaque.it. A mesma atenção ao detalhe dos primeiros sites, agora em escala de arquitetura. Em Dublin."
-    },
-    "projects": [
-      "sistema-isaque",
-      "api-isaque",
-      "cliente-isaque",
-      "notify-it",
-      "barcode-it",
-      "scan-it",
-      "print-it"
     ]
   },
   {
     "id": "dublin",
     "era": "platform",
-    "years": "2026",
+    "years": "NOW",
     "title": {
       "en": "New challenges",
       "pt": "Novos desafios"
@@ -149,12 +184,18 @@
     },
     "context": {
       "en": [
-        "For years every trip abroad still came with work — another project, another better version of something already live. I called it drive. At New Year in New York City, turning into 2026, I finally switched everything off. No inbox. No deploy. Just the city — and a question I couldn't dodge: if I already know I want to live closer to the world I've only visited, what am I waiting for? So I'm not waiting. I'm moving to Dublin, Ireland.",
-        "I don't have the next title locked in. I have something better: a foundation solid as a rock. I'm ready to be tested through everything life throws at me. I hunger for the next challenge. If you're looking for someone who shows up with every tool in the belt — I'm your guy."
+        "For years every trip abroad still came with work — another project, another better version of something already live. I called it drive.",
+        "At New Year in New York City, turning into 2026, I finally switched everything off. No inbox. No deploy. Just the city — and a question I couldn't dodge: if I already know I want to live closer to the world I've only visited, what am I waiting for?",
+        "So I'm not waiting. I'm moving to Dublin, Ireland.",
+        "I don't have the next title locked in. I have something better: a foundation solid as a rock. I'm ready to be tested through everything life throws at me. I hunger for the next challenge.",
+        "If you're looking for someone who shows up with every tool in the belt — I'm your guy."
       ],
       "pt": [
-        "Por anos, cada viagem ainda vinha com trabalho — outro projeto, outra versão melhor do que já rodava. Eu chamava isso de fome. No Ano-Novo em Nova York, virando 2026, eu finalmente desliguei tudo. Sem inbox. Sem deploy. Só a cidade — e uma pergunta que não deu para evitar: se eu já sei que quero viver mais perto do mundo que só visitei, o que estou esperando? Então não estou mais esperando. Estou me mudando para Dublin, Irlanda.",
-        "Não tenho o próximo cargo travado. Tenho algo melhor: uma base sólida como pedra. Estou pronto para ser testado por tudo que a vida jogar no caminho. Tenho fome do próximo desafio. Se você procura alguém que chega com todas as ferramentas no cinto — sou eu."
+        "Por anos, cada viagem ainda vinha com trabalho — outro projeto, outra versão melhor do que já rodava. Eu chamava isso de fome.",
+        "No Ano-Novo em Nova York, virando 2026, eu finalmente desliguei tudo. Sem inbox. Sem deploy. Só a cidade — e uma pergunta que não deu para evitar: se eu já sei que quero viver mais perto do mundo que só visitei, o que estou esperando?",
+        "Então não estou mais esperando. Estou me mudando para Dublin, Irlanda.",
+        "Não tenho o próximo cargo travado. Tenho algo melhor: uma base sólida como pedra. Estou pronto para ser testado por tudo que a vida jogar no caminho. Tenho fome do próximo desafio.",
+        "Se você procura alguém que chega com todas as ferramentas no cinto — sou eu."
       ]
     },
     "projects": []

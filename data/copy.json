@@ -102,7 +102,7 @@
     "timeline": {
       "eyebrow": "Path",
       "title": "Evolution.",
-      "lead": "Milestones of thinking — with enough context to follow the path, not a list of job titles.",
+      "lead": "Milestones of thinking — not a list of job titles.",
       "writeStory": "Write the Story",
       "whatsappMessage": "I read your story and I want to talk more"
     },
@@ -482,7 +482,7 @@
     "timeline": {
       "eyebrow": "Trajetória",
       "title": "Evolução.",
-      "lead": "Marcos de pensamento — com contexto suficiente para acompanhar o caminho, não uma lista de cargos.",
+      "lead": "Marcos de pensamento — não uma lista de cargos.",
       "writeStory": "Escreva a História",
       "whatsappMessage": "Li sua história e quero conversar mais"
     },

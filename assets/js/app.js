@@ -1365,7 +1365,6 @@ function renderMilestones() {
   const caseByMilestone = {
     hardware: 'cube',
     ideyou: 'miodelivery',
-    platform: 'platform',
   }
   root.innerHTML = milestones
     .map((item, index) => {
