@@ -241,32 +241,37 @@ button {
   line-height: 0;
 }
 
-.wordmark__light {
+/* Two classes so this beats `.foo img { display: block }` in light mode */
+.wordmark .wordmark__dark {
+  display: block;
+}
+
+.wordmark .wordmark__light {
   display: none;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .wordmark__dark {
+  :root:not([data-theme='light']) .wordmark .wordmark__dark {
     display: none;
   }
 
-  :root:not([data-theme='light']) .wordmark__light {
+  :root:not([data-theme='light']) .wordmark .wordmark__light {
     display: block;
   }
 }
 
-[data-theme='dark'] .wordmark__dark {
+[data-theme='dark'] .wordmark .wordmark__dark {
   display: none;
 }
 
-[data-theme='dark'] .wordmark__light {
+[data-theme='dark'] .wordmark .wordmark__light {
   display: block;
 }
 
-[data-theme='light'] .wordmark__dark {
+[data-theme='light'] .wordmark .wordmark__dark {
   display: block;
 }
 
-[data-theme='light'] .wordmark__light {
+[data-theme='light'] .wordmark .wordmark__light {
   display: none;
 }
