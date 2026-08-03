@@ -103,6 +103,7 @@ function applyI18n() {
     renderMilestones()
     renderStories()
     renderCatalog()
+    renderTech()
   }
   initReveal()
   if (projectModal?.isOpen()) {
@@ -1423,6 +1424,35 @@ function renderMilestones() {
   })
 }
 
+function techIconMarkup(item) {
+  if (item.icon) {
+    return `<img class="tech-badge__icon tech-badge__icon--invert" src="${escapeAttr(item.icon)}" alt="" width="16" height="16" loading="lazy" onerror="this.remove()">`
+  }
+  if (!item.slug) return ''
+
+  // Prefer jsDelivr simple-icons SVGs (monochrome + invert) — more reliable than colored CDN.
+  const fileBySlug = {
+    css: 'css',
+    cursor: 'cursor',
+    claude: 'claude',
+    bambulab: 'bambulab',
+    canva: 'canva',
+    prezi: 'prezi',
+  }
+  const verBySlug = {
+    css: 15,
+    cursor: 15,
+    claude: 15,
+    bambulab: 13,
+    canva: 13,
+    prezi: 13,
+  }
+  const file = fileBySlug[item.slug] || item.slug
+  const ver = verBySlug[item.slug] || 13
+  const src = `https://cdn.jsdelivr.net/npm/simple-icons@${ver}/icons/${file}.svg`
+  return `<img class="tech-badge__icon tech-badge__icon--invert" src="${escapeAttr(src)}" alt="" width="16" height="16" loading="lazy" onerror="this.remove()">`
+}
+
 function renderTech() {
   const root = document.getElementById('tech-list')
   if (!root) return
@@ -1434,11 +1464,7 @@ function renderTech() {
           const color = item.color || '#555555'
           const logo = item.logo || 'white'
           const ink = logo === 'white' ? '#ffffff' : logo === 'black' ? '#000000' : `#${logo.replace(/^#/, '')}`
-          const icon = item.icon
-            ? `<img class="tech-badge__icon tech-badge__icon--invert" src="${escapeAttr(item.icon)}" alt="" width="16" height="16" loading="lazy" onerror="this.remove()">`
-            : item.slug
-              ? `<img class="tech-badge__icon" src="https://cdn.simpleicons.org/${escapeAttr(item.slug)}/${escapeAttr(logo)}" alt="" width="16" height="16" loading="lazy" onerror="this.remove()">`
-              : ''
+          const icon = techIconMarkup(item)
           return `<li class="tech-badge" style="--badge:${escapeAttr(color)};--badge-ink:${escapeAttr(ink)}">${icon}<span>${escapeHtml(item.name)}</span></li>`
         })
         .join('')

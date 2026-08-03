@@ -118,12 +118,13 @@
             {
               "name": "TypeScript",
               "slug": "typescript",
-              "color": "#007ACC"
+              "color": "#3178C6"
             },
             {
               "name": "JavaScript",
               "slug": "javascript",
-              "color": "#323330"
+              "color": "#F7DF1E",
+              "logo": "black"
             },
             {
               "name": "Node.js",
@@ -173,11 +174,6 @@
               "logo": "black"
             },
             {
-              "name": "Three.js",
-              "slug": "threedotjs",
-              "color": "#000000"
-            },
-            {
               "name": "C#",
               "icon": "https://cdn.jsdelivr.net/npm/simple-icons@12/icons/csharp.svg",
               "color": "#239120"
@@ -196,6 +192,66 @@
               "name": "MATLAB",
               "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-plain.svg",
               "color": "#E97627"
+            },
+            {
+              "name": "C++",
+              "slug": "cplusplus",
+              "color": "#00599C",
+              "logo": "white"
+            },
+            {
+              "name": "Go",
+              "slug": "go",
+              "color": "#00ADD8",
+              "logo": "white"
+            },
+            {
+              "name": ".NET",
+              "slug": "dotnet",
+              "color": "#512BD4",
+              "logo": "white"
+            },
+            {
+              "name": "HTML5",
+              "slug": "html5",
+              "color": "#E34F26",
+              "logo": "white"
+            },
+            {
+              "name": "CSS",
+              "slug": "css",
+              "color": "#1572B6",
+              "logo": "white"
+            },
+            {
+              "name": "jQuery",
+              "slug": "jquery",
+              "color": "#0769AD",
+              "logo": "white"
+            },
+            {
+              "name": "JSON",
+              "slug": "json",
+              "color": "#000000",
+              "logo": "white"
+            },
+            {
+              "name": "Bootstrap",
+              "slug": "bootstrap",
+              "color": "#7952B3",
+              "logo": "white"
+            },
+            {
+              "name": "Redux",
+              "slug": "redux",
+              "color": "#764ABC",
+              "logo": "white"
+            },
+            {
+              "name": "PyQt",
+              "slug": "qt",
+              "color": "#41CD52",
+              "logo": "white"
             }
           ]
         },
@@ -217,11 +273,6 @@
               "name": "Windows",
               "icon": "https://cdn.jsdelivr.net/npm/simple-icons@12/icons/windows.svg",
               "color": "#0078D6"
-            },
-            {
-              "name": "Safari",
-              "slug": "safari",
-              "color": "#000000"
             },
             {
               "name": "VS Code",
@@ -294,10 +345,40 @@
               "color": "#4285F4"
             },
             {
-              "name": "Spotify",
-              "slug": "spotify",
-              "color": "#1ED760",
-              "logo": "black"
+              "name": "Unity",
+              "slug": "unity",
+              "color": "#000000",
+              "logo": "white"
+            },
+            {
+              "name": "WordPress",
+              "slug": "wordpress",
+              "color": "#21759B",
+              "logo": "white"
+            },
+            {
+              "name": "Google Analytics",
+              "slug": "googleanalytics",
+              "color": "#E37400",
+              "logo": "white"
+            },
+            {
+              "name": "Prezi",
+              "color": "#3181FF",
+              "logo": "white",
+              "slug": "prezi"
+            },
+            {
+              "name": "Canva",
+              "slug": "canva",
+              "color": "#00C4CC",
+              "logo": "white"
+            },
+            {
+              "name": "Dreamweaver",
+              "color": "#4BC2C8",
+              "logo": "white",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11/icons/adobedreamweaver.svg"
             }
           ]
         },
@@ -501,12 +582,13 @@
             {
               "name": "TypeScript",
               "slug": "typescript",
-              "color": "#007ACC"
+              "color": "#3178C6"
             },
             {
               "name": "JavaScript",
               "slug": "javascript",
-              "color": "#323330"
+              "color": "#F7DF1E",
+              "logo": "black"
             },
             {
               "name": "Node.js",
@@ -556,11 +638,6 @@
               "logo": "black"
             },
             {
-              "name": "Three.js",
-              "slug": "threedotjs",
-              "color": "#000000"
-            },
-            {
               "name": "C#",
               "icon": "https://cdn.jsdelivr.net/npm/simple-icons@12/icons/csharp.svg",
               "color": "#239120"
@@ -579,6 +656,66 @@
               "name": "MATLAB",
               "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-plain.svg",
               "color": "#E97627"
+            },
+            {
+              "name": "C++",
+              "slug": "cplusplus",
+              "color": "#00599C",
+              "logo": "white"
+            },
+            {
+              "name": "Go",
+              "slug": "go",
+              "color": "#00ADD8",
+              "logo": "white"
+            },
+            {
+              "name": ".NET",
+              "slug": "dotnet",
+              "color": "#512BD4",
+              "logo": "white"
+            },
+            {
+              "name": "HTML5",
+              "slug": "html5",
+              "color": "#E34F26",
+              "logo": "white"
+            },
+            {
+              "name": "CSS",
+              "slug": "css",
+              "color": "#1572B6",
+              "logo": "white"
+            },
+            {
+              "name": "jQuery",
+              "slug": "jquery",
+              "color": "#0769AD",
+              "logo": "white"
+            },
+            {
+              "name": "JSON",
+              "slug": "json",
+              "color": "#000000",
+              "logo": "white"
+            },
+            {
+              "name": "Bootstrap",
+              "slug": "bootstrap",
+              "color": "#7952B3",
+              "logo": "white"
+            },
+            {
+              "name": "Redux",
+              "slug": "redux",
+              "color": "#764ABC",
+              "logo": "white"
+            },
+            {
+              "name": "PyQt",
+              "slug": "qt",
+              "color": "#41CD52",
+              "logo": "white"
             }
           ]
         },
@@ -600,11 +737,6 @@
               "name": "Windows",
               "icon": "https://cdn.jsdelivr.net/npm/simple-icons@12/icons/windows.svg",
               "color": "#0078D6"
-            },
-            {
-              "name": "Safari",
-              "slug": "safari",
-              "color": "#000000"
             },
             {
               "name": "VS Code",
@@ -677,10 +809,40 @@
               "color": "#4285F4"
             },
             {
-              "name": "Spotify",
-              "slug": "spotify",
-              "color": "#1ED760",
-              "logo": "black"
+              "name": "Unity",
+              "slug": "unity",
+              "color": "#000000",
+              "logo": "white"
+            },
+            {
+              "name": "WordPress",
+              "slug": "wordpress",
+              "color": "#21759B",
+              "logo": "white"
+            },
+            {
+              "name": "Google Analytics",
+              "slug": "googleanalytics",
+              "color": "#E37400",
+              "logo": "white"
+            },
+            {
+              "name": "Prezi",
+              "color": "#3181FF",
+              "logo": "white",
+              "slug": "prezi"
+            },
+            {
+              "name": "Canva",
+              "slug": "canva",
+              "color": "#00C4CC",
+              "logo": "white"
+            },
+            {
+              "name": "Dreamweaver",
+              "color": "#4BC2C8",
+              "logo": "white",
+              "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11/icons/adobedreamweaver.svg"
             }
           ]
         },
