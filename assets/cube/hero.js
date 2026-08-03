@@ -27,8 +27,15 @@ window.IsaqueCube.mountHero = function (container, options) {
     var face = document.createElement('div')
     face.className = 'hero__cube-face hero__cube-face--' + name
     face.style.backgroundColor = faces[name]
-    // Photo only on the green face (front).
-    if (name === 'front') face.style.backgroundImage = 'url("' + photo + '")'
+    // Photo only on the green face (front), clipped to that face.
+    if (name === 'front') {
+      var img = document.createElement('img')
+      img.className = 'hero__cube-face-photo'
+      img.src = photo
+      img.alt = ''
+      img.draggable = false
+      face.appendChild(img)
+    }
     inner.appendChild(face)
   })
 

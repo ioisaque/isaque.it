@@ -62,8 +62,6 @@
       <p id="fail-msg">Couldn’t start the 3D viewer in this browser.</p>
       <p>
         <a id="fail-glb" href="#" download>Download GLB</a>
-        ·
-        <a id="fail-usdz" href="#" download>Download USDZ</a>
       </p>
     </div>
     <script type="importmap">
@@ -81,7 +79,6 @@
 
       const params = new URLSearchParams(location.search)
       const src = params.get('src') || ''
-      const iosSrc = params.get('ios') || ''
       const poster = params.get('poster') || ''
       const stage = document.getElementById('stage')
       const status = document.getElementById('status')
@@ -96,7 +93,8 @@
         hideStatus()
         fail.hidden = false
         fail.style.display = 'grid'
-        document.getElementById('fail-msg').textContent = message || 'Couldn’t start the 3D viewer in this browser.'
+        document.getElementById('fail-msg').textContent =
+          message || 'Couldn’t start the 3D viewer in this browser.'
         const posterEl = document.getElementById('fail-poster')
         if (poster) {
           posterEl.src = poster
@@ -105,15 +103,10 @@
           posterEl.hidden = true
         }
         const glb = document.getElementById('fail-glb')
-        const usdz = document.getElementById('fail-usdz')
         if (src) {
           glb.href = src
           glb.hidden = false
         } else glb.hidden = true
-        if (iosSrc) {
-          usdz.href = iosSrc
-          usdz.hidden = false
-        } else usdz.hidden = true
       }
 
       if (!src) {
@@ -123,7 +116,12 @@
 
       let renderer
       try {
-        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'default' })
+        renderer = new THREE.WebGLRenderer({
+          antialias: true,
+          alpha: false,
+          powerPreference: 'default',
+          failIfMajorPerformanceCaveat: false,
+        })
       } catch (err) {
         showFail('WebGL is unavailable in this tab. Download the model instead.')
         throw err
@@ -132,6 +130,8 @@
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
       renderer.setSize(window.innerWidth, window.innerHeight, false)
       renderer.outputColorSpace = THREE.SRGBColorSpace
+      renderer.toneMapping = THREE.ACESFilmicToneMapping
+      renderer.toneMappingExposure = 1.05
       stage.appendChild(renderer.domElement)
 
       const scene = new THREE.Scene()
@@ -145,13 +145,16 @@
       controls.autoRotate = true
       controls.autoRotateSpeed = 0.6
 
-      scene.add(new THREE.AmbientLight(0xffffff, 0.75))
-      const key = new THREE.DirectionalLight(0xffffff, 1.1)
-      key.position.set(3, 5, 4)
+      scene.add(new THREE.HemisphereLight(0xeef2fa, 0x2a2a2a, 0.95))
+      const key = new THREE.DirectionalLight(0xfff7ee, 0.9)
+      key.position.set(2.5, 4, 3)
       scene.add(key)
-      const fill = new THREE.DirectionalLight(0xffffff, 0.35)
-      fill.position.set(-4, 1, -2)
+      const fill = new THREE.DirectionalLight(0xd4e0f2, 0.42)
+      fill.position.set(-3.5, 1.2, -2)
       scene.add(fill)
+      const rim = new THREE.DirectionalLight(0xffffff, 0.25)
+      rim.position.set(0, 2, -4)
+      scene.add(rim)
 
       const loader = new GLTFLoader()
       loader.load(
@@ -159,6 +162,20 @@
         (gltf) => {
           hideStatus()
           const root = gltf.scene || gltf.scenes[0]
+          root.traverse((obj) => {
+            const mat = obj.material
+            if (!mat) return
+            const mats = Array.isArray(mat) ? mat : [mat]
+            mats.forEach((m) => {
+              if (m.emissive && m.emissiveIntensity != null) {
+                m.emissiveIntensity = Math.min(m.emissiveIntensity, 0.35)
+              }
+              if (m.emissive && m.emissive.isColor) m.emissive.multiplyScalar(0.55)
+              if (m.metalness != null) m.metalness = Math.min(m.metalness, 0.55)
+              if (m.roughness != null) m.roughness = Math.max(m.roughness, 0.32)
+              m.needsUpdate = true
+            })
+          })
           scene.add(root)
 
           const box = new THREE.Box3().setFromObject(root)

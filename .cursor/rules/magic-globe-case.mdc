@@ -11,7 +11,7 @@ alwaysApply: false
 - **May 2019** — first working prototype
 - **Nov 2019** — final version
 - **Dec 2019** — TCC approved
-- TCC PDF in `assets/img/projects/magic-globe/docs/magic-globe-tcc.pdf`
+- TCC PDF in `assets/projects/magic-globe/docs/magic-globe-tcc.pdf`
 
 ## Origin (public narrative)
 
@@ -37,7 +37,7 @@ Authoritative brief for the Featured case `cube` / catalog `magic-globe`. Source
 
 When the user sends media **with context**, that is a **chapter beat**, not a gallery dump.
 
-1. Encode/copy into `assets/img/projects/magic-globe/` (videos under `videos/`, poster still).
+1. Encode/copy into `assets/projects/magic-globe/` (videos under `videos/`, poster still).
 2. **Create or update a `chapters[]` item** on Featured case `cube`: `title` + `body` from the user’s context (EN + PT), `figure` pointing at that asset (image / video / carousel / compare as fits).
 3. Keep chronology from the table below; insert the new beat where it belongs.
 4. Catalog `magic-globe.media` may hold thumbs for the grid/modal. Featured `cube.media` stays empty once chapters carry the evidence (LM pattern).
@@ -119,7 +119,7 @@ Use this arc for chapters / Evolution; prefer *thinking* beats over title lists.
 - **v2.1** — side-ops tests (slow-mo + normal)
 - Root `media/`: iPad-control, robotics-fair-solve, scrambling-&-solving, slow-solve, etc.
 
-### Wired site assets (`assets/img/projects/magic-globe/`)
+### Wired site assets (`assets/projects/magic-globe/`)
 
 | Asset | Path | Role |
 |-------|------|------|

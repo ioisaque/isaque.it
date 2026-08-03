@@ -54,8 +54,8 @@
         },
         "figure": {
           "type": "video",
-          "src": "assets/img/projects/magic-globe/videos/robotics-fair-solve.mp4",
-          "poster": "assets/img/projects/magic-globe/robotics-fair-solve.jpg",
+          "src": "assets/projects/magic-globe/videos/robotics-fair-solve.mp4",
+          "poster": "assets/projects/magic-globe/robotics-fair-solve.jpg",
           "caption": {
             "en": "Prototype solving on the fair floor — the first time the loop had to perform for strangers.",
             "pt": "Protótipo resolvendo no chão da feira — a primeira vez que o loop teve que performar para estranhos."
@@ -73,8 +73,8 @@
         },
         "figure": {
           "type": "video",
-          "src": "assets/img/projects/magic-globe/videos/teacher-vs-robot.mp4",
-          "poster": "assets/img/projects/magic-globe/teacher-vs-robot.jpg",
+          "src": "assets/projects/magic-globe/videos/teacher-vs-robot.mp4",
+          "poster": "assets/projects/magic-globe/teacher-vs-robot.jpg",
           "caption": {
             "en": "Filipe pretends the cube is done. The machine disagrees — and wins.",
             "pt": "Filipe finge que o cubo está pronto. A máquina discorda — e ganha."
@@ -92,7 +92,7 @@
         },
         "figure": {
           "type": "image",
-          "src": "assets/img/projects/magic-globe/structure-3d.jpg",
+          "src": "assets/projects/magic-globe/structure-3d.jpg",
           "caption": {
             "en": "3D structure — spherical frame, six face drives, cube locked at the center.",
             "pt": "Estrutura 3D — armação esférica, seis eixos de face, cubo travado no centro."
@@ -110,8 +110,8 @@
         },
         "figure": {
           "type": "video",
-          "src": "assets/img/projects/magic-globe/videos/globe-scramble-solve.mp4",
-          "poster": "assets/img/projects/magic-globe/globe-scramble-solve.jpg",
+          "src": "assets/projects/magic-globe/videos/globe-scramble-solve.mp4",
+          "poster": "assets/projects/magic-globe/globe-scramble-solve.jpg",
           "caption": {
             "en": "Hands on the new globe — scramble, solve, prove the structure.",
             "pt": "Mãos no globo novo — embaralha, resolve, prova a estrutura."
@@ -135,7 +135,7 @@
           },
           "items": [
             {
-              "src": "assets/img/projects/magic-globe/python-vision.png",
+              "src": "assets/projects/magic-globe/python-vision.png",
               "label": {
                 "en": "OpenCV + Kociemba algorithm",
                 "pt": "OpenCV + algoritmo de Kociemba"
@@ -147,8 +147,8 @@
             },
             {
               "type": "video",
-              "src": "assets/img/projects/magic-globe/videos/ipad-control.mp4",
-              "poster": "assets/img/projects/magic-globe/ipad-control.jpg",
+              "src": "assets/projects/magic-globe/videos/ipad-control.mp4",
+              "poster": "assets/projects/magic-globe/ipad-control.jpg",
               "label": {
                 "en": "iPad controls",
                 "pt": "Controles no iPad"
@@ -179,8 +179,8 @@
           "items": [
             {
               "type": "video",
-              "src": "assets/img/projects/magic-globe/videos/defense-overnight-rebuild.mp4",
-              "poster": "assets/img/projects/magic-globe/defense-overnight-rebuild.jpg",
+              "src": "assets/projects/magic-globe/videos/defense-overnight-rebuild.mp4",
+              "poster": "assets/projects/magic-globe/defense-overnight-rebuild.jpg",
               "label": {
                 "en": "Overnight",
                 "pt": "Madrugada"
@@ -192,8 +192,8 @@
             },
             {
               "type": "video",
-              "src": "assets/img/projects/magic-globe/videos/defense-day-solve.mp4",
-              "poster": "assets/img/projects/magic-globe/defense-day-solve.jpg",
+              "src": "assets/projects/magic-globe/videos/defense-day-solve.mp4",
+              "poster": "assets/projects/magic-globe/defense-day-solve.jpg",
               "label": {
                 "en": "Defense day",
                 "pt": "Dia da banca"
@@ -224,8 +224,8 @@
           "items": [
             {
               "type": "video",
-              "src": "assets/img/projects/magic-globe/videos/pcb-circuit.mp4",
-              "poster": "assets/img/projects/magic-globe/pcb-circuit.jpg",
+              "src": "assets/projects/magic-globe/videos/pcb-circuit.mp4",
+              "poster": "assets/projects/magic-globe/pcb-circuit.jpg",
               "label": {
                 "en": "Printed PCB",
                 "pt": "PCB impressa"
@@ -237,8 +237,8 @@
             },
             {
               "type": "video",
-              "src": "assets/img/projects/magic-globe/videos/opposite-sides-test.mp4",
-              "poster": "assets/img/projects/magic-globe/opposite-sides-test.jpg",
+              "src": "assets/projects/magic-globe/videos/opposite-sides-test.mp4",
+              "poster": "assets/projects/magic-globe/opposite-sides-test.jpg",
               "label": {
                 "en": "Opposite faces",
                 "pt": "Faces opostas"
@@ -250,8 +250,8 @@
             },
             {
               "type": "video",
-              "src": "assets/img/projects/magic-globe/videos/opposite-sides-slowmo.mp4",
-              "poster": "assets/img/projects/magic-globe/opposite-sides-slowmo.jpg",
+              "src": "assets/projects/magic-globe/videos/opposite-sides-slowmo.mp4",
+              "poster": "assets/projects/magic-globe/opposite-sides-slowmo.jpg",
               "label": {
                 "en": "Slow motion",
                 "pt": "Câmera lenta"
@@ -299,9 +299,8 @@
           "en": "Final version",
           "pt": "Versão final"
         },
-        "href": "assets/img/projects/magic-globe/models/magic-globe.glb",
-        "usdz": "assets/img/projects/magic-globe/models/magic-globe.usdz",
-        "poster": "assets/img/projects/magic-globe/structure-3d.jpg",
+        "href": "assets/projects/magic-globe/models/magic-globe.glb",
+        "poster": "assets/projects/magic-globe/structure-3d.jpg",
         "color": "#33CC66",
         "icon": "final"
       },
@@ -326,8 +325,8 @@
           "en": "Read the thesis",
           "pt": "Ler a monografia"
         },
-        "href": "assets/img/projects/magic-globe/docs/magic-globe-tcc.pdf",
-        "thumb": "assets/img/projects/magic-globe/tcc-cover.jpg",
+        "href": "assets/projects/magic-globe/docs/magic-globe-tcc.pdf",
+        "thumb": "assets/projects/magic-globe/tcc-cover.jpg",
         "color": "#EB681A",
         "icon": "doc"
       }
@@ -418,7 +417,7 @@
         },
         "figure": {
           "type": "image",
-          "src": "assets/img/projects/miodelivery/painel-producao.png",
+          "src": "assets/projects/miodelivery/painel-producao.png",
           "caption": {
             "en": "CorelDRAW sketch — 30-minute slots, quantities, order counts, and blink/alarm for new work.",
             "pt": "Sketch no CorelDRAW — slots de 30 minutos, quantidades, contagem de pedidos e pisca/alarme para trabalho novo."
@@ -442,7 +441,7 @@
           },
           "items": [
             {
-              "src": "assets/img/projects/miodelivery/h-sistemas-erp-hires.png",
+              "src": "assets/projects/miodelivery/h-sistemas-erp-hires.png",
               "label": {
                 "en": "Early ERP",
                 "pt": "ERP antigo"
@@ -453,7 +452,7 @@
               }
             },
             {
-              "src": "assets/img/projects/miodelivery/lm-shopping-pos.png",
+              "src": "assets/projects/miodelivery/lm-shopping-pos.png",
               "type": "image",
               "label": {
                 "en": "LM Shopping — Ipatinga",
@@ -465,7 +464,7 @@
               }
             },
             {
-              "src": "assets/img/projects/miodelivery/modern-dashboard.png",
+              "src": "assets/projects/miodelivery/modern-dashboard.png",
               "label": {
                 "en": "Dashboard",
                 "pt": "Dashboard"
@@ -497,14 +496,14 @@
           },
           "items": [
             {
-              "src": "assets/img/projects/miodelivery/ops-dual-screens.jpg",
+              "src": "assets/projects/miodelivery/ops-dual-screens.jpg",
               "alt": {
                 "en": "IdeYou on desk — kitchen production board on the monitor and analytics on the laptop",
                 "pt": "IdeYou na mesa — painel de produção no monitor e analytics no notebook"
               }
             },
             {
-              "src": "assets/img/projects/miodelivery/modern-kitchen.png",
+              "src": "assets/projects/miodelivery/modern-kitchen.png",
               "alt": {
                 "en": "Kitchen production panel with timed order cards",
                 "pt": "Painel de produção da cozinha com cards por horário"
@@ -524,8 +523,8 @@
             },
             "figure": {
               "type": "video",
-              "src": "assets/img/projects/miodelivery/videos/lm-system-2020.mp4",
-              "poster": "assets/img/projects/miodelivery/videos/lm-system-2020-poster.jpg",
+              "src": "assets/projects/miodelivery/videos/lm-system-2020.mp4",
+              "poster": "assets/projects/miodelivery/videos/lm-system-2020-poster.jpg",
               "caption": {
                 "en": "Working on the LM Salgados system — late 2020.",
                 "pt": "Trabalhando no sistema da LM Salgados — fim de 2020."
@@ -549,7 +548,7 @@
               },
               "items": [
                 {
-                  "src": "assets/img/projects/miodelivery/modern-orders-all.png",
+                  "src": "assets/projects/miodelivery/modern-orders-all.png",
                   "label": {
                     "en": "All stores",
                     "pt": "Todas as lojas"
@@ -560,7 +559,7 @@
                   }
                 },
                 {
-                  "src": "assets/img/projects/miodelivery/modern-orders-fritos.png",
+                  "src": "assets/projects/miodelivery/modern-orders-fritos.png",
                   "label": {
                     "en": "Fried",
                     "pt": "Fritos"
@@ -571,7 +570,7 @@
                   }
                 },
                 {
-                  "src": "assets/img/projects/miodelivery/modern-orders-combo.png",
+                  "src": "assets/projects/miodelivery/modern-orders-combo.png",
                   "label": {
                     "en": "Combos",
                     "pt": "Combos"
@@ -582,7 +581,7 @@
                   }
                 },
                 {
-                  "src": "assets/img/projects/miodelivery/modern-orders-doces.png",
+                  "src": "assets/projects/miodelivery/modern-orders-doces.png",
                   "label": {
                     "en": "Sweets",
                     "pt": "Doces"
@@ -593,7 +592,7 @@
                   }
                 },
                 {
-                  "src": "assets/img/projects/miodelivery/modern-order-detail.png",
+                  "src": "assets/projects/miodelivery/modern-order-detail.png",
                   "label": {
                     "en": "Order detail",
                     "pt": "Detalhe do pedido"
@@ -617,8 +616,8 @@
             },
             "figure": {
               "type": "video",
-              "src": "assets/img/projects/miodelivery/videos/ideyouprint-laptop.mp4",
-              "poster": "assets/img/projects/miodelivery/ideyouprint-laptop.png",
+              "src": "assets/projects/miodelivery/videos/ideyouprint-laptop.mp4",
+              "poster": "assets/projects/miodelivery/ideyouprint-laptop.png",
               "caption": {
                 "en": "IdeYouPrint on the client laptop — API in, delivery receipts out, no browser click.",
                 "pt": "IdeYouPrint no notebook do cliente — API entra, recibo do entregador sai, sem clique no navegador."
@@ -643,7 +642,7 @@
               },
               "items": [
                 {
-                  "src": "assets/img/projects/miodelivery/modern-menu-tv-categories.png",
+                  "src": "assets/projects/miodelivery/modern-menu-tv-categories.png",
                   "label": {
                     "en": "TV categories",
                     "pt": "Categorias na TV"
@@ -654,7 +653,7 @@
                   }
                 },
                 {
-                  "src": "assets/img/projects/miodelivery/modern-menu-tv.png",
+                  "src": "assets/projects/miodelivery/modern-menu-tv.png",
                   "label": {
                     "en": "TV menu",
                     "pt": "Cardápio TV"
@@ -666,8 +665,8 @@
                 },
                 {
                   "type": "video",
-                  "src": "assets/img/projects/miodelivery/videos/menu-tv-rochas.mp4",
-                  "poster": "assets/img/projects/miodelivery/modern-menu-tv-rochas.png",
+                  "src": "assets/projects/miodelivery/videos/menu-tv-rochas.mp4",
+                  "poster": "assets/projects/miodelivery/modern-menu-tv-rochas.png",
                   "label": {
                     "en": "TV live · Rocha's",
                     "pt": "TV ao vivo · Rocha's"
@@ -679,8 +678,8 @@
                 },
                 {
                   "type": "video",
-                  "src": "assets/img/projects/miodelivery/videos/menu-tv-parrilla.mp4",
-                  "poster": "assets/img/projects/miodelivery/modern-menu-tv-parrilla.png",
+                  "src": "assets/projects/miodelivery/videos/menu-tv-parrilla.mp4",
+                  "poster": "assets/projects/miodelivery/modern-menu-tv-parrilla.png",
                   "label": {
                     "en": "TV live · Zé Barbudo",
                     "pt": "TV ao vivo · Zé Barbudo"
@@ -711,8 +710,8 @@
               "items": [
                 {
                   "type": "video",
-                  "src": "assets/img/projects/miodelivery/videos/table-totem.mp4",
-                  "poster": "assets/img/projects/miodelivery/modern-table-totem.png",
+                  "src": "assets/projects/miodelivery/videos/table-totem.mp4",
+                  "poster": "assets/projects/miodelivery/modern-table-totem.png",
                   "label": {
                     "en": "RFID cube",
                     "pt": "Cubo RFID"
@@ -723,7 +722,7 @@
                   }
                 },
                 {
-                  "src": "assets/img/projects/miodelivery/modern-comanda.png",
+                  "src": "assets/projects/miodelivery/modern-comanda.png",
                   "label": {
                     "en": "QR on tickets",
                     "pt": "QR na comanda"
@@ -755,7 +754,7 @@
           },
           "items": [
             {
-              "src": "assets/img/projects/miodelivery/modern-products-list.png",
+              "src": "assets/projects/miodelivery/modern-products-list.png",
               "label": {
                 "en": "Product listing",
                 "pt": "Listagem de produtos"
@@ -766,7 +765,7 @@
               }
             },
             {
-              "src": "assets/img/projects/miodelivery/modern-product-edit.png",
+              "src": "assets/projects/miodelivery/modern-product-edit.png",
               "label": {
                 "en": "Combo edit",
                 "pt": "Edição de combo"
@@ -777,7 +776,7 @@
               }
             },
             {
-              "src": "assets/img/projects/miodelivery/modern-menu-pdf.png",
+              "src": "assets/projects/miodelivery/modern-menu-pdf.png",
               "label": {
                 "en": "PDF menu",
                 "pt": "Cardápio PDF"
@@ -807,7 +806,7 @@
           },
           "items": [
             {
-              "src": "assets/img/projects/miodelivery/modern-stores.png",
+              "src": "assets/projects/miodelivery/modern-stores.png",
               "label": {
                 "en": "Active stores",
                 "pt": "Lojas ativas"
@@ -818,7 +817,7 @@
               }
             },
             {
-              "src": "assets/img/projects/miodelivery/modern-report-orders.png",
+              "src": "assets/projects/miodelivery/modern-report-orders.png",
               "label": {
                 "en": "Orders report",
                 "pt": "Relatório de pedidos"
@@ -829,7 +828,7 @@
               }
             },
             {
-              "src": "assets/img/projects/miodelivery/modern-report-sales.png",
+              "src": "assets/projects/miodelivery/modern-report-sales.png",
               "label": {
                 "en": "Sales by category",
                 "pt": "Vendas por categoria"
@@ -840,7 +839,7 @@
               }
             },
             {
-              "src": "assets/img/projects/miodelivery/modern-report-overview.png",
+              "src": "assets/projects/miodelivery/modern-report-overview.png",
               "label": {
                 "en": "Manager overview",
                 "pt": "Visão do gestor"
@@ -864,7 +863,7 @@
         },
         "figure": {
           "type": "image",
-          "src": "assets/img/projects/miodelivery/print-it-before-ui-after.png",
+          "src": "assets/projects/miodelivery/print-it-before-ui-after.png",
           "caption": {
             "en": "Old comanda → print.it UI → new comanda — the full print leap in one frame.",
             "pt": "Comanda antiga → UI do print.it → comanda nova — o salto completo da impressão num só quadro."
@@ -1004,7 +1003,7 @@
           },
           "items": [
             {
-              "src": "assets/img/projects/sistema-isaque/integrations.png",
+              "src": "assets/projects/sistema-isaque/integrations.png",
               "label": {
                 "en": "Asaas + Mercado Pago",
                 "pt": "Asaas + Mercado Pago"
@@ -1015,7 +1014,7 @@
               }
             },
             {
-              "src": "assets/img/projects/sistema-isaque/integrations-notify.png",
+              "src": "assets/projects/sistema-isaque/integrations-notify.png",
               "label": {
                 "en": "notify.it wired in",
                 "pt": "notify.it ligado"
@@ -1026,7 +1025,7 @@
               }
             },
             {
-              "src": "assets/img/projects/sistema-isaque/settings-contracts.png",
+              "src": "assets/projects/sistema-isaque/settings-contracts.png",
               "label": {
                 "en": "Contract states",
                 "pt": "Estados de contrato"
@@ -1056,7 +1055,7 @@
           },
           "items": [
             {
-              "src": "assets/img/projects/cliente-isaque/service-detail.png",
+              "src": "assets/projects/cliente-isaque/service-detail.png",
               "label": {
                 "en": "Active service",
                 "pt": "Serviço ativo"
@@ -1067,7 +1066,7 @@
               }
             },
             {
-              "src": "assets/img/projects/cliente-isaque/contract-details.png",
+              "src": "assets/projects/cliente-isaque/contract-details.png",
               "label": {
                 "en": "Contract + invoices",
                 "pt": "Contrato + faturas"
@@ -1078,7 +1077,7 @@
               }
             },
             {
-              "src": "assets/img/projects/cliente-isaque/location-and-home.png",
+              "src": "assets/projects/cliente-isaque/location-and-home.png",
               "label": {
                 "en": "Presence + home",
                 "pt": "Presença + início"
@@ -1108,7 +1107,7 @@
           },
           "items": [
             {
-              "src": "assets/img/projects/cliente-isaque/contrato-pdf.png",
+              "src": "assets/projects/cliente-isaque/contrato-pdf.png",
               "label": {
                 "en": "Contract",
                 "pt": "Contrato"
@@ -1119,7 +1118,7 @@
               }
             },
             {
-              "src": "assets/img/projects/cliente-isaque/nfse.png",
+              "src": "assets/projects/cliente-isaque/nfse.png",
               "label": {
                 "en": "NFS-e",
                 "pt": "NFS-e"

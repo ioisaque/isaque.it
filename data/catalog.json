@@ -27,7 +27,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/magic-globe/structure-3d.jpg",
+        "src": "assets/projects/magic-globe/structure-3d.jpg",
         "alt": {
           "en": "Magic Globe 3D structure — six face drives on a spherical frame holding the cube",
           "pt": "Estrutura 3D do Globo Mágico — seis eixos de face numa armação esférica segurando o cubo"
@@ -35,7 +35,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/magic-globe/python-vision.png",
+        "src": "assets/projects/magic-globe/python-vision.png",
         "alt": {
           "en": "Python OpenCV view — dual cameras, cube net, Computer Vision solve in 1.574 s",
           "pt": "Visão do programa Python/OpenCV — duas câmeras, net do cubo, visão computacional em 1,574 s"
@@ -43,8 +43,8 @@
       },
       {
         "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/globe-scramble-solve.mp4",
-        "poster": "assets/img/projects/magic-globe/globe-scramble-solve.jpg",
+        "src": "assets/projects/magic-globe/videos/globe-scramble-solve.mp4",
+        "poster": "assets/projects/magic-globe/globe-scramble-solve.jpg",
         "alt": {
           "en": "Scrambling and solving on the new Magic Globe structure — the machine that earned the name",
           "pt": "Embaralhando e resolvendo na nova estrutura do Globo Mágico — a máquina que deu nome ao projeto"
@@ -52,8 +52,8 @@
       },
       {
         "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/robotics-fair-solve.mp4",
-        "poster": "assets/img/projects/magic-globe/robotics-fair-solve.jpg",
+        "src": "assets/projects/magic-globe/videos/robotics-fair-solve.mp4",
+        "poster": "assets/projects/magic-globe/robotics-fair-solve.jpg",
         "alt": {
           "en": "Prototype solving the cube at the college robotics fair",
           "pt": "Protótipo resolvendo o cubo na feira de robótica da faculdade"
@@ -61,8 +61,8 @@
       },
       {
         "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/teacher-vs-robot.mp4",
-        "poster": "assets/img/projects/magic-globe/teacher-vs-robot.jpg",
+        "src": "assets/projects/magic-globe/videos/teacher-vs-robot.mp4",
+        "poster": "assets/projects/magic-globe/teacher-vs-robot.jpg",
         "alt": {
           "en": "Prototype vs teacher Filipe — he “solved” it after a few moves; the robot still won",
           "pt": "Protótipo vs professor Filipe — ele “resolveu” com poucos movimentos; o robô ainda ganhou"
@@ -70,8 +70,8 @@
       },
       {
         "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/defense-overnight-rebuild.mp4",
-        "poster": "assets/img/projects/magic-globe/defense-overnight-rebuild.jpg",
+        "src": "assets/projects/magic-globe/videos/defense-overnight-rebuild.mp4",
+        "poster": "assets/projects/magic-globe/defense-overnight-rebuild.jpg",
         "alt": {
           "en": "Overnight rebuild before the defense — Red Bulls while remounting the whole hardware",
           "pt": "Remontagem na madrugada antes da banca — Red Bulls remontando o hardware inteiro"
@@ -79,8 +79,8 @@
       },
       {
         "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/defense-day-solve.mp4",
-        "poster": "assets/img/projects/magic-globe/defense-day-solve.jpg",
+        "src": "assets/projects/magic-globe/videos/defense-day-solve.mp4",
+        "poster": "assets/projects/magic-globe/defense-day-solve.jpg",
         "alt": {
           "en": "Solving on defense day — after rebuilding the hardware overnight for the CS degree presentation",
           "pt": "Resolvendo no dia da banca — depois de remontar o hardware a noite inteira para a defesa do TCC"
@@ -88,8 +88,8 @@
       },
       {
         "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/ipad-control.mp4",
-        "poster": "assets/img/projects/magic-globe/ipad-control.jpg",
+        "src": "assets/projects/magic-globe/videos/ipad-control.mp4",
+        "poster": "assets/projects/magic-globe/ipad-control.jpg",
         "alt": {
           "en": "Testing the prototype web controls on an iPad",
           "pt": "Testando os controles web do protótipo num iPad"
@@ -97,7 +97,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/magic-globe/shot-1.png",
+        "src": "assets/projects/magic-globe/shot-1.png",
         "alt": {
           "en": "Magic Globe screenshot",
           "pt": "Print de Globo Mágico"
@@ -105,8 +105,8 @@
       },
       {
         "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/pcb-circuit.mp4",
-        "poster": "assets/img/projects/magic-globe/pcb-circuit.jpg",
+        "src": "assets/projects/magic-globe/videos/pcb-circuit.mp4",
+        "poster": "assets/projects/magic-globe/pcb-circuit.jpg",
         "alt": {
           "en": "Printed PCB for Magic Globe — circuit beyond the protoboard",
           "pt": "PCB impressa do Globo Mágico — circuito além da protoboard"
@@ -114,8 +114,8 @@
       },
       {
         "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/opposite-sides-test.mp4",
-        "poster": "assets/img/projects/magic-globe/opposite-sides-test.jpg",
+        "src": "assets/projects/magic-globe/videos/opposite-sides-test.mp4",
+        "poster": "assets/projects/magic-globe/opposite-sides-test.jpg",
         "alt": {
           "en": "Opposite faces turning simultaneously on Magic Globe",
           "pt": "Faces opostas girando ao mesmo tempo no Globo Mágico"
@@ -123,8 +123,8 @@
       },
       {
         "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/opposite-sides-slowmo.mp4",
-        "poster": "assets/img/projects/magic-globe/opposite-sides-slowmo.jpg",
+        "src": "assets/projects/magic-globe/videos/opposite-sides-slowmo.mp4",
+        "poster": "assets/projects/magic-globe/opposite-sides-slowmo.jpg",
         "alt": {
           "en": "Slow-motion opposite-face turns on Magic Globe",
           "pt": "Giros de faces opostas em câmera lenta no Globo Mágico"
@@ -189,7 +189,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/ensaio-fotografico/shot-1.png",
+        "src": "assets/projects/ensaio-fotografico/shot-1.png",
         "alt": {
           "en": "Victória's PhotoShoot screenshot",
           "pt": "Print de Ensaio da Victória"
@@ -226,7 +226,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/sistema-isaque/integrations.png",
+        "src": "assets/projects/sistema-isaque/integrations.png",
         "alt": {
           "en": "Asaas and Mercado Pago integrations",
           "pt": "Integrações Asaas e Mercado Pago"
@@ -234,7 +234,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/sistema-isaque/integrations-notify.png",
+        "src": "assets/projects/sistema-isaque/integrations-notify.png",
         "alt": {
           "en": "notify.it beside billing providers",
           "pt": "notify.it ao lado dos provedores de cobrança"
@@ -242,7 +242,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/sistema-isaque/settings-contracts.png",
+        "src": "assets/projects/sistema-isaque/settings-contracts.png",
         "alt": {
           "en": "Contract status and payment method settings",
           "pt": "Settings de status de contrato e métodos de pagamento"
@@ -250,7 +250,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/sistema-isaque/shot-1.png",
+        "src": "assets/projects/sistema-isaque/shot-1.png",
         "alt": {
           "en": "sistema.isaque.it overview",
           "pt": "Visão geral de sistema.isaque.it"
@@ -291,7 +291,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/cti/shot-1.png",
+        "src": "assets/projects/cti/shot-1.png",
         "alt": {
           "en": "CTI Projects screenshot",
           "pt": "Print de Projetos CTI"
@@ -357,7 +357,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/engrenhamais/shot-1.png",
+        "src": "assets/projects/engrenhamais/shot-1.png",
         "alt": {
           "en": "ENGRENHA+ screenshot",
           "pt": "Print de ENGRENHA+"
@@ -392,7 +392,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/api-isaque/shot-1.png",
+        "src": "assets/projects/api-isaque/shot-1.png",
         "alt": {
           "en": "api.isaque.it screenshot",
           "pt": "Print de api.isaque.it"
@@ -426,7 +426,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/planeja-ideyou/shot-1.png",
+        "src": "assets/projects/planeja-ideyou/shot-1.png",
         "alt": {
           "en": "Meu Aurélio screenshot",
           "pt": "Print de Meu Aurélio"
@@ -500,7 +500,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/saint-germain/erp-architecture-map.png",
+        "src": "assets/projects/saint-germain/erp-architecture-map.png",
         "alt": {
           "en": "Hand-drawn ERP map — Tray, Frigos, Cross, Financeiro, RD/Zenvia, and Info Price around the hub",
           "pt": "Mapa de ERP à mão — Tray, Frigos, Cross, Financeiro, RD/Zenvia e Info Price em torno do hub"
@@ -508,7 +508,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/saint-germain/system-three-devices.png",
+        "src": "assets/projects/saint-germain/system-three-devices.png",
         "alt": {
           "en": "Saint Germain system open on three devices — monitor dashboard, MacBook admin, iPad canhoto list with QR",
           "pt": "Sistema Saint Germain aberto em três dispositivos — dashboard no monitor, admin no MacBook, lista de canhotos com QR no iPad"
@@ -516,7 +516,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/saint-germain/howtocut-canhoto.png",
+        "src": "assets/projects/saint-germain/howtocut-canhoto.png",
         "alt": {
           "en": "Tutorial for drivers — how to crop a canhoto photo in WhatsApp before the system",
           "pt": "Tutorial para motoristas — como recortar a foto do canhoto no WhatsApp antes do sistema"
@@ -524,8 +524,8 @@
       },
       {
         "type": "video",
-        "src": "assets/img/projects/saint-germain/videos/whatsapp-canhoto-before.mp4",
-        "poster": "assets/img/projects/saint-germain/videos/whatsapp-canhoto-before-poster.jpg",
+        "src": "assets/projects/saint-germain/videos/whatsapp-canhoto-before.mp4",
+        "poster": "assets/projects/saint-germain/videos/whatsapp-canhoto-before-poster.jpg",
         "alt": {
           "en": "Sending canhoto / ocorrências on WhatsApp before the PWA — worked, but slow",
           "pt": "Envio de canhoto / ocorrências no WhatsApp antes do PWA — funcionava, mas demorava"
@@ -533,7 +533,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/saint-germain/whatsapp-bot-flow.png",
+        "src": "assets/projects/saint-germain/whatsapp-bot-flow.png",
         "alt": {
           "en": "Saint Germain WhatsApp bot flow in Blip Builder",
           "pt": "Fluxo do bot WhatsApp Saint Germain no Blip Builder"
@@ -541,8 +541,8 @@
       },
       {
         "type": "video",
-        "src": "assets/img/projects/saint-germain/videos/pwa-system-demo.mp4",
-        "poster": "assets/img/projects/saint-germain/videos/pwa-system-demo-poster.jpg",
+        "src": "assets/projects/saint-germain/videos/pwa-system-demo.mp4",
+        "poster": "assets/projects/saint-germain/videos/pwa-system-demo-poster.jpg",
         "alt": {
           "en": "Saint Germain PWA — scanning and submitting canhotos in the system",
           "pt": "PWA Saint Germain — escaneando e enviando canhotos no sistema"
@@ -550,7 +550,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/saint-germain/qr-scan-canhoto.png",
+        "src": "assets/projects/saint-germain/qr-scan-canhoto.png",
         "alt": {
           "en": "Phone scanning NF-e QR on a canhoto sheet",
           "pt": "Celular escaneando QR da NF-e na folha de canhotos"
@@ -558,7 +558,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/saint-germain/mail-delivery-notify.png",
+        "src": "assets/projects/saint-germain/mail-delivery-notify.png",
         "alt": {
           "en": "Delivery notification email template for Saint Germain",
           "pt": "Modelo de e-mail de notificação de entrega Saint Germain"
@@ -596,8 +596,8 @@
     "media": [
       {
         "type": "video",
-        "src": "assets/img/projects/integra-foods/videos/promo.mp4",
-        "poster": "assets/img/projects/integra-foods/promo-poster.jpg",
+        "src": "assets/projects/integra-foods/videos/promo.mp4",
+        "poster": "assets/projects/integra-foods/promo-poster.jpg",
         "alt": {
           "en": "Animated explainer made for Integra Foods — one of the brand and growth materials from the early IdeYou engagement",
           "pt": "Filme animado explicativo feito para a Integra Foods — um dos materiais de marca e crescimento do engajamento inicial com a IdeYou"
@@ -631,7 +631,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/cliente-isaque/service-detail.png",
+        "src": "assets/projects/cliente-isaque/service-detail.png",
         "alt": {
           "en": "Active service and billing progress",
           "pt": "Serviço ativo e progresso de faturamento"
@@ -639,7 +639,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/cliente-isaque/contract-details.png",
+        "src": "assets/projects/cliente-isaque/contract-details.png",
         "alt": {
           "en": "Contract details and invoices",
           "pt": "Detalhes do contrato e faturas"
@@ -647,7 +647,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/cliente-isaque/location-and-home.png",
+        "src": "assets/projects/cliente-isaque/location-and-home.png",
         "alt": {
           "en": "Location permission and client home",
           "pt": "Permissão de localização e início do cliente"
@@ -655,7 +655,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/cliente-isaque/contrato-pdf.png",
+        "src": "assets/projects/cliente-isaque/contrato-pdf.png",
         "alt": {
           "en": "Service contract PDF",
           "pt": "PDF do contrato de serviço"
@@ -663,7 +663,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/cliente-isaque/nfse.png",
+        "src": "assets/projects/cliente-isaque/nfse.png",
         "alt": {
           "en": "NFS-e service invoice",
           "pt": "NFS-e de serviço"
@@ -671,7 +671,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/cliente-isaque/shot-1.png",
+        "src": "assets/projects/cliente-isaque/shot-1.png",
         "alt": {
           "en": "cliente.isaque.it overview",
           "pt": "Visão geral de cliente.isaque.it"
@@ -755,7 +755,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/lmsalgados/shot-1.png",
+        "src": "assets/projects/lmsalgados/shot-1.png",
         "alt": {
           "en": "LM Salgados marketing site",
           "pt": "Site de marketing LM Salgados"
@@ -763,7 +763,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/lmsalgados/brand-sheet.png",
+        "src": "assets/projects/lmsalgados/brand-sheet.png",
         "alt": {
           "en": "LM Salgados brand sheet",
           "pt": "Folha de marca LM Salgados"
@@ -799,7 +799,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/miodelivery/print-it-before-ui-after.png",
+        "src": "assets/projects/miodelivery/print-it-before-ui-after.png",
         "alt": {
           "en": "Old comanda, print.it UI, and new comanda side by side",
           "pt": "Comanda antiga, UI do print.it e comanda nova lado a lado"
@@ -807,7 +807,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/miodelivery/print-it-ui.png",
+        "src": "assets/projects/miodelivery/print-it-ui.png",
         "alt": {
           "en": "print.it interface — printer status and receipt preview",
           "pt": "Interface do print.it — status da impressora e pré-visualização da comanda"
@@ -815,7 +815,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/miodelivery/ideyouprint-laptop.png",
+        "src": "assets/projects/miodelivery/ideyouprint-laptop.png",
         "alt": {
           "en": "IdeYouPrint on a client laptop",
           "pt": "IdeYouPrint no notebook do cliente"
@@ -823,7 +823,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/miodelivery/modern-comanda.png",
+        "src": "assets/projects/miodelivery/modern-comanda.png",
         "alt": {
           "en": "Current receipt printed via print.it path",
           "pt": "Comanda atual via print.it"
@@ -831,7 +831,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/projects/miodelivery/comanda-antiga.png",
+        "src": "assets/projects/miodelivery/comanda-antiga.png",
         "alt": {
           "en": "Older IdeYouPrint-era receipt",
           "pt": "Comanda da era IdeYouPrint"
@@ -876,7 +876,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/viaprime/shot-1.png",
+        "src": "assets/projects/viaprime/shot-1.png",
         "alt": {
           "en": "Via Prime screenshot",
           "pt": "Print de Via Prime"
@@ -910,7 +910,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/folhadocomercio/shot-1.png",
+        "src": "assets/projects/folhadocomercio/shot-1.png",
         "alt": {
           "en": "Folha do Comércio screenshot",
           "pt": "Print de Folha do Comércio"
@@ -944,7 +944,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/metasita/shot-1.png",
+        "src": "assets/projects/metasita/shot-1.png",
         "alt": {
           "en": "Metasita screenshot",
           "pt": "Print de Metasita"
@@ -979,7 +979,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/lagoa-silvana/shot-1.png",
+        "src": "assets/projects/lagoa-silvana/shot-1.png",
         "alt": {
           "en": "Parque Lagoa Silvana screenshot",
           "pt": "Print de Parque Lagoa Silvana"
@@ -1014,7 +1014,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/damasceno/shot-1.png",
+        "src": "assets/projects/damasceno/shot-1.png",
         "alt": {
           "en": "Damasceno Imóveis screenshot",
           "pt": "Print de Damasceno Imóveis"
@@ -1048,7 +1048,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/acdn/shot-1.png",
+        "src": "assets/projects/acdn/shot-1.png",
         "alt": {
           "en": "ACDN screenshot",
           "pt": "Print de ACDN"
@@ -1082,7 +1082,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/nina-cordeiro/shot-1.png",
+        "src": "assets/projects/nina-cordeiro/shot-1.png",
         "alt": {
           "en": "Nina Cordeiro Advogados screenshot",
           "pt": "Print de Nina Cordeiro Advogados"
@@ -1115,7 +1115,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/victoriacosta/shot-1.png",
+        "src": "assets/projects/victoriacosta/shot-1.png",
         "alt": {
           "en": "Jardim da Vitória screenshot",
           "pt": "Print de Jardim da Vitória"
@@ -1149,7 +1149,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/lbrecords/shot-1.png",
+        "src": "assets/projects/lbrecords/shot-1.png",
         "alt": {
           "en": "Lucas Bitencourt Records screenshot",
           "pt": "Print de Lucas Bitencourt Records"
@@ -1183,7 +1183,7 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/vipproducoes/shot-1.png",
+        "src": "assets/projects/vipproducoes/shot-1.png",
         "alt": {
           "en": "VIP Produções screenshot",
           "pt": "Print de VIP Produções"

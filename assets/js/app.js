@@ -494,11 +494,9 @@ function resumeSiteWebgl() {
 
 function modelViewerFrameUrl(item) {
   const absSrc = new URL(item.src, window.location.href).href
-  const absIos = item.iosSrc ? new URL(item.iosSrc, window.location.href).href : ''
   const poster = item.poster ? new URL(item.poster, window.location.href).href : ''
   const url = new URL('assets/model-viewer.html', window.location.href)
   url.searchParams.set('src', absSrc)
-  if (absIos) url.searchParams.set('ios', absIos)
   if (poster) url.searchParams.set('poster', poster)
   return url.href
 }
@@ -553,12 +551,8 @@ function createMediaLightbox() {
       stage.innerHTML = `<iframe class="media-lightbox__pdf" src="${escapeAttr(item.src)}" title="${escapeAttr(item.title || 'PDF')}"></iframe>`
     } else if (isModel) {
       pauseSiteWebgl()
-      if (stage._modelFrameUrl) {
-        URL.revokeObjectURL(stage._modelFrameUrl)
-        stage._modelFrameUrl = ''
-      }
       const frameUrl = modelViewerFrameUrl(item)
-      stage.innerHTML = `<iframe class="media-lightbox__model-frame" src="${escapeAttr(frameUrl)}" title="${escapeAttr(item.title || '3D model')}" allow="fullscreen" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>`
+      stage.innerHTML = `<iframe class="media-lightbox__model-frame" src="${escapeAttr(frameUrl)}" title="${escapeAttr(item.title || '3D model')}" allow="fullscreen; xr-spatial-tracking" loading="eager"></iframe>`
     } else if (isVideo) {
       resumeSiteWebgl()
       stage.innerHTML = `<video src="${escapeAttr(item.src)}"${item.poster ? ` poster="${escapeAttr(item.poster)}"` : ''} controls playsinline autoplay></video>`
@@ -587,14 +581,6 @@ function createMediaLightbox() {
     })
     stage.querySelectorAll('iframe').forEach((frame) => {
       frame.src = 'about:blank'
-    })
-    if (stage._modelFrameUrl) {
-      URL.revokeObjectURL(stage._modelFrameUrl)
-      stage._modelFrameUrl = ''
-    }
-    stage.querySelectorAll('model-viewer').forEach((mv) => {
-      mv.removeAttribute('src')
-      mv.removeAttribute('ios-src')
     })
     root.classList.remove('is-open', 'media-lightbox--pdf', 'media-lightbox--model')
     root.setAttribute('aria-hidden', 'true')
