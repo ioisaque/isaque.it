@@ -130,5 +130,33 @@
       "scan-it",
       "print-it"
     ]
+  },
+  {
+    "id": "dublin",
+    "era": "platform",
+    "years": "2026",
+    "title": {
+      "en": "New challenges",
+      "pt": "Novos desafios"
+    },
+    "headline": {
+      "en": "I'm moving to Dublin — and I'm ready for what comes next.",
+      "pt": "Estou me mudando para Dublin — e pronto para o que vem."
+    },
+    "body": {
+      "en": "Twelve years of shipping. One real pause. One decision that redraws the map.",
+      "pt": "Doze anos entregando. Uma pausa de verdade. Uma decisão que redesenha o mapa."
+    },
+    "context": {
+      "en": [
+        "For years every trip abroad still came with work — another project, another better version of something already live. I called it drive. At New Year in New York City, turning into 2026, I finally switched everything off. No inbox. No deploy. Just the city — and a question I couldn't dodge: if I already know I want to live closer to the world I've only visited, what am I waiting for? So I'm not waiting. I'm moving to Dublin, Ireland.",
+        "I don't have the next title locked in. I have something better: a foundation solid as a rock. I'm ready to be tested through everything life throws at me. I hunger for the next challenge. If you're looking for someone who shows up with every tool in the belt — I'm your guy."
+      ],
+      "pt": [
+        "Por anos, cada viagem ainda vinha com trabalho — outro projeto, outra versão melhor do que já rodava. Eu chamava isso de fome. No Ano-Novo em Nova York, virando 2026, eu finalmente desliguei tudo. Sem inbox. Sem deploy. Só a cidade — e uma pergunta que não deu para evitar: se eu já sei que quero viver mais perto do mundo que só visitei, o que estou esperando? Então não estou mais esperando. Estou me mudando para Dublin, Irlanda.",
+        "Não tenho o próximo cargo travado. Tenho algo melhor: uma base sólida como pedra. Estou pronto para ser testado por tudo que a vida jogar no caminho. Tenho fome do próximo desafio. Se você procura alguém que chega com todas as ferramentas no cinto — sou eu."
+      ]
+    },
+    "projects": []
   }
 ]

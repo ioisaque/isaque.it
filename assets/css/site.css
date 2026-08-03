@@ -2055,22 +2055,52 @@ a.case__timeline-card:hover .case__timeline-what {
 
 .timeline__item {
   display: grid;
-  grid-template-columns: 1.25rem 1fr;
-  gap: var(--space-5);
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: var(--space-5);
+  align-items: stretch;
+}
+
+.timeline__body {
+  grid-row: 1;
+  padding-bottom: var(--space-8);
+  max-width: 34rem;
 }
 
 .timeline__rail {
   position: relative;
+  grid-row: 1;
+  grid-column: 2;
   display: flex;
   justify-content: center;
+  align-self: stretch;
+  width: 1.25rem;
+  min-height: 100%;
+}
+
+.timeline__item--left .timeline__body {
+  grid-column: 1;
+  justify-self: end;
+  text-align: end;
+}
+
+.timeline__item--right .timeline__body {
+  grid-column: 3;
+  justify-self: start;
+  text-align: start;
+}
+
+.timeline__item--left .timeline__chips {
+  justify-content: flex-end;
 }
 
 .timeline__rail::before {
   content: '';
   position: absolute;
-  top: 0.45rem;
-  bottom: -0.45rem;
+  top: 0.55rem;
+  bottom: 0;
+  left: 50%;
   width: 1px;
+  transform: translateX(-50%);
   background: var(--line-strong);
 }
 
@@ -2081,6 +2111,7 @@ a.case__timeline-card:hover .case__timeline-what {
 .timeline__dot {
   position: relative;
   z-index: 1;
+  flex: none;
   width: 0.65rem;
   height: 0.65rem;
   margin-top: 0.35rem;
@@ -2109,10 +2140,6 @@ a.case__timeline-card:hover .case__timeline-what {
   --era-color: #0076f3;
 }
 
-.timeline__body {
-  padding-bottom: var(--space-8);
-}
-
 .timeline__years {
   margin: 0 0 var(--space-2);
   color: var(--ink-tertiary);
@@ -2131,7 +2158,6 @@ a.case__timeline-card:hover .case__timeline-what {
 
 .timeline__headline {
   margin: var(--space-2) 0 0;
-  max-width: 36rem;
   color: var(--ink);
   font-size: 1.05rem;
   font-weight: 500;
@@ -2139,16 +2165,18 @@ a.case__timeline-card:hover .case__timeline-what {
 
 .timeline__lead {
   margin: var(--space-3) 0 0;
-  max-width: 34rem;
   color: var(--ink-secondary);
 }
 
 .timeline__context {
   margin: var(--space-3) 0 0;
-  max-width: 38rem;
   color: var(--ink-secondary);
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.timeline__context + .timeline__context {
+  margin-top: var(--space-4);
 }
 
 .timeline__chips {
@@ -2179,6 +2207,50 @@ a.case__timeline-card:hover .case__timeline-what {
   border-color: var(--era-color, var(--ink));
   background: color-mix(in srgb, var(--era-color, var(--ink)) 10%, transparent);
   color: var(--ink);
+}
+
+.timeline__story {
+  display: inline-flex;
+  margin-top: var(--space-4);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  color: var(--ink-secondary);
+}
+
+.timeline__story:hover {
+  color: var(--ink);
+}
+
+.timeline__invite {
+  margin-top: var(--space-5);
+}
+
+.timeline__item--left .timeline__invite {
+  margin-inline-start: auto;
+}
+
+@media (max-width: 800px) {
+  .timeline__item {
+    grid-template-columns: auto 1fr;
+    column-gap: var(--space-4);
+  }
+
+  .timeline__rail {
+    grid-column: 1;
+  }
+
+  .timeline__item--left .timeline__body,
+  .timeline__item--right .timeline__body {
+    grid-column: 2;
+    justify-self: start;
+    text-align: start;
+    max-width: none;
+  }
+
+  .timeline__item--left .timeline__chips {
+    justify-content: flex-start;
+  }
 }
 
 .tech {
@@ -3498,124 +3570,7 @@ a.case__timeline-card:hover .case__timeline-what {
   }
 }
 
-/* —— Journey + Stories (homepage surface) —— */
-.journey .eyebrow::before {
-  background: var(--cube-yellow);
-}
-
-.journey__body {
-  margin-top: var(--space-4);
-  font-size: 1.05rem;
-}
-
-.journey__eras {
-  display: grid;
-  gap: var(--space-5);
-  margin: var(--space-8) 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.journey__era {
-  position: relative;
-  padding: var(--space-6) var(--space-5);
-  border: 1px solid var(--line);
-  border-radius: 1rem;
-  background: color-mix(in srgb, var(--bg-elevated) 88%, transparent);
-  cursor: default;
-  outline: none;
-  transition:
-    transform 0.35s var(--ease),
-    border-color 0.35s linear,
-    background-color 0.35s linear,
-    color 0.35s linear;
-}
-
-.journey__era:hover,
-.journey__era:focus-visible {
-  transform: translateY(-4px);
-  background-color: var(--wash-color);
-  border-color: transparent;
-  color: #fff;
-}
-
-.journey__era.is-wash-ink-dark:hover,
-.journey__era.is-wash-ink-dark:focus-visible {
-  color: #0a0a0a;
-}
-
-.journey__era:hover .journey__era-years,
-.journey__era:hover .journey__era-body,
-.journey__era:focus-visible .journey__era-years,
-.journey__era:focus-visible .journey__era-body {
-  color: inherit;
-  opacity: 0.88;
-}
-
-.journey__era-years {
-  margin: 0 0 var(--space-2);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-tertiary);
-  transition: color 0.35s linear, opacity 0.35s linear;
-}
-
-.journey__era-title {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-}
-
-.journey__era-headline {
-  margin: var(--space-3) 0 0;
-  font-size: 1.05rem;
-  font-weight: 600;
-}
-
-.journey__era-body {
-  margin: var(--space-3) 0 0;
-  color: var(--ink-secondary);
-  max-width: 36rem;
-  transition: color 0.35s linear, opacity 0.35s linear;
-}
-
-.journey__era-link {
-  display: inline-flex;
-  margin-top: var(--space-5);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
-  color: inherit;
-}
-
-.journey__closing {
-  margin: var(--space-8) 0 0;
-  max-width: 32rem;
-  color: var(--ink-secondary);
-  font-size: 1.1rem;
-}
-
-@media (min-width: 900px) {
-  .journey__eras {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: var(--space-4);
-  }
-
-  .journey__era {
-    min-height: 22rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .journey__era-link {
-    margin-top: auto;
-  }
-}
-
+/* —— Stories (homepage surface) —— */
 .stories .eyebrow::before {
   background: var(--cube-red);
 }
@@ -3834,7 +3789,6 @@ a.case__timeline-card:hover .case__timeline-what {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .journey__era,
   .story-teaser,
   .story-teaser__logo {
     transition: none;

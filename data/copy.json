@@ -1,7 +1,7 @@
 {
   "en": {
     "nav": {
-      "journey": "Journey",
+      "timeline": "Evolution",
       "stories": "Stories",
       "work": "Work",
       "contact": "Contact",
@@ -102,7 +102,9 @@
     "timeline": {
       "eyebrow": "Path",
       "title": "Evolution.",
-      "lead": "Milestones of thinking — with enough context to follow the path, not a list of job titles."
+      "lead": "Milestones of thinking — with enough context to follow the path, not a list of job titles.",
+      "writeStory": "Write the Story",
+      "whatsappMessage": "I read your story and I want to talk more"
     },
     "tech": {
       "eyebrow": "Tools",
@@ -379,7 +381,7 @@
   },
   "pt": {
     "nav": {
-      "journey": "Jornada",
+      "timeline": "Evolução",
       "stories": "Histórias",
       "work": "Trabalho",
       "contact": "Contato",
@@ -480,7 +482,9 @@
     "timeline": {
       "eyebrow": "Trajetória",
       "title": "Evolução.",
-      "lead": "Marcos de pensamento — com contexto suficiente para acompanhar o caminho, não uma lista de cargos."
+      "lead": "Marcos de pensamento — com contexto suficiente para acompanhar o caminho, não uma lista de cargos.",
+      "writeStory": "Escreva a História",
+      "whatsappMessage": "Li sua história e quero conversar mais"
     },
     "tech": {
       "eyebrow": "Ferramentas",

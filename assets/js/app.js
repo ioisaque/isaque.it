@@ -92,7 +92,7 @@ function applyI18n() {
   if (pageMode === 'case') {
     renderCasePage()
   } else {
-    renderJourney()
+    renderMilestones()
     renderStories()
     renderCatalog()
   }
@@ -774,37 +774,6 @@ function caseGalleryMarkup(project, labels) {
   `
 }
 
-function renderJourney() {
-  const root = document.getElementById('journey-eras')
-  if (!root) return
-  root.innerHTML = milestones
-    .map((item) => {
-      const era = item.era || item.id
-      const color = ERA_COLORS[era] || '#0076f3'
-      const inkDark = /^#ffd22b$/i.test(color) ? ' is-wash-ink-dark' : ''
-      const caseLink =
-        era === 'hardware'
-          ? casePageHref('cube')
-          : era === 'ideyou'
-            ? casePageHref('miodelivery')
-            : era === 'platform'
-              ? casePageHref('platform')
-              : ''
-      const cta = caseLink
-        ? `<a class="journey__era-link" href="${escapeAttr(caseLink)}">${escapeHtml(copy[locale].stories?.cta || 'Read the story')}</a>`
-        : ''
-      return `
-      <li class="journey__era reveal${inkDark}" data-era="${escapeAttr(era)}" style="--wash-color:${escapeAttr(color)}" tabindex="0">
-        <p class="journey__era-years">${escapeHtml(item.years)}</p>
-        <h3 class="journey__era-title">${escapeHtml(item.title[locale])}</h3>
-        <p class="journey__era-headline">${escapeHtml(item.headline?.[locale] || '')}</p>
-        <p class="journey__era-body">${escapeHtml(item.body[locale])}</p>
-        ${cta}
-      </li>`
-    })
-    .join('')
-}
-
 function platformLogoMarkup(logo, i, className) {
   const bare = logo.bare ? ` ${className}--bare` : ''
   const n = `${className} ${className}--${i + 1}${bare}`
@@ -1375,11 +1344,33 @@ function renderPrinciples() {
     .join('')
 }
 
+function timelineContextMarkup(context) {
+  const raw = context?.[locale]
+  if (!raw) return ''
+  const paragraphs = Array.isArray(raw) ? raw : [raw]
+  return paragraphs
+    .filter(Boolean)
+    .map((p) => `<p class="timeline__context">${escapeHtml(p)}</p>`)
+    .join('')
+}
+
 function renderMilestones() {
   const root = document.getElementById('timeline-list')
   if (!root) return
+  const storyCta = copy[locale].stories?.cta || 'Read the story'
+  const writeStory = copy[locale].timeline?.writeStory || 'Write the Story'
+  const whatsappMessage =
+    copy[locale].timeline?.whatsappMessage || 'I read your story and I want to talk more'
+  const whatsappHref = `https://wa.me/447443695748?text=${encodeURIComponent(whatsappMessage)}`
+  const caseByMilestone = {
+    hardware: 'cube',
+    ideyou: 'miodelivery',
+    platform: 'platform',
+  }
   root.innerHTML = milestones
-    .map((item) => {
+    .map((item, index) => {
+      const era = item.era || item.id
+      const side = index % 2 === 0 ? 'left' : 'right'
       const chips = (item.projects || [])
         .map((id) => {
           const project = catalogById(id)
@@ -1387,18 +1378,25 @@ function renderMilestones() {
           return `<li><a class="timeline__chip" href="#project-${escapeAttr(id)}">${escapeHtml(project.title[locale])}</a></li>`
         })
         .join('')
+      let story = ''
+      if (item.id === 'dublin') {
+        story = `<a class="btn btn--primary timeline__invite" href="${escapeAttr(whatsappHref)}" target="_blank" rel="noopener noreferrer">${escapeHtml(writeStory)}</a>`
+      } else if (caseByMilestone[item.id]) {
+        story = `<a class="timeline__story" href="${escapeAttr(casePageHref(caseByMilestone[item.id]))}">${escapeHtml(storyCta)}</a>`
+      }
 
       return `
-      <li class="timeline__item reveal" data-era="${escapeAttr(item.era || item.id)}">
-        <div class="timeline__rail" aria-hidden="true"><span class="timeline__dot"></span></div>
+      <li class="timeline__item timeline__item--${side} reveal" data-era="${escapeAttr(era)}">
         <div class="timeline__body">
           <p class="timeline__years">${escapeHtml(item.years)}</p>
           <h3>${escapeHtml(item.title[locale])}</h3>
           ${item.headline ? `<p class="timeline__headline">${escapeHtml(item.headline[locale])}</p>` : ''}
           <p class="timeline__lead">${escapeHtml(item.body[locale])}</p>
-          ${item.context ? `<p class="timeline__context">${escapeHtml(item.context[locale])}</p>` : ''}
+          ${item.context ? timelineContextMarkup(item.context) : ''}
           ${chips ? `<ul class="timeline__chips">${chips}</ul>` : ''}
+          ${story}
         </div>
+        <div class="timeline__rail" aria-hidden="true"><span class="timeline__dot"></span></div>
       </li>
     `
     })
