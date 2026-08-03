@@ -8,6 +8,9 @@ let catalogFilter = 'all'
 let projectModal = null
 let modalTrigger = null
 let carouselIndex = 0
+let assetBase = ''
+let pageMode = 'home'
+let pageCaseId = ''
 
 const ERA_ORDER = ['design', 'hardware', 'ideyou', 'teaching', 'platform']
 const ERA_COLORS = {
@@ -17,12 +20,41 @@ const ERA_COLORS = {
   teaching: '#9900cc',
   platform: '#0076f3',
 }
+const ACCENT_COLORS = {
+  yellow: '#ffd22b',
+  green: '#33cc66',
+  coral: '#ff5356',
+  red: '#f72529',
+  blue: '#0e34c7',
+  orange: '#eb681a',
+}
 const LIGHT_ACCENTS = new Set(['yellow', 'green', 'orange'])
+const STORY_ORDER = ['cube', 'miodelivery', 'platform']
+const PLATFORM_LOGOS = [
+  { src: 'assets/img/logos/scan-it.png', label: 'scan.it' },
+  { src: 'assets/img/logos/block.png', label: 'isaque.it' },
+  { src: 'assets/img/logos/sistema.png', label: 'sistema' },
+  { src: 'assets/img/logos/notify-it.png', label: 'notify.it' },
+  { src: 'assets/img/logos/barcode-it.png', label: 'barcode.it' },
+  { src: 'assets/img/logos/print-it.png', label: 'print.it' },
+]
 
 function detectLocale() {
   const stored = localStorage.getItem('isaque-locale')
   if (stored === 'en' || stored === 'pt') return stored
   return navigator.language.toLowerCase().startsWith('pt') ? 'pt' : 'en'
+}
+
+function resolveAsset(path) {
+  if (!path) return ''
+  if (/^(https?:|data:|blob:|\/\/)/i.test(path)) return path
+  const base = assetBase.replace(/\/$/, '')
+  const rel = String(path).replace(/^\.\//, '').replace(/^\//, '')
+  return base ? `${base}/${rel}` : rel
+}
+
+function casePageHref(caseId) {
+  return resolveAsset(`cases/${caseId}/`)
 }
 
 function getPath(obj, path) {
@@ -48,24 +80,18 @@ function applyI18n() {
   document.getElementById('lang-en')?.setAttribute('aria-pressed', String(locale === 'en'))
   document.getElementById('lang-pt')?.setAttribute('aria-pressed', String(locale === 'pt'))
 
-  renderDomains()
-  renderProjects()
-  renderCatalog()
-  renderPrinciples()
-  renderMilestones()
-  renderTech()
+  if (pageMode === 'case') {
+    renderCasePage()
+  } else {
+    renderJourney()
+    renderStories()
+    renderCatalog()
+  }
   initReveal()
   if (projectModal?.isOpen()) {
     const id = projectModal.currentId()
     if (id) projectModal.open(id, { skipHash: true })
   }
-}
-
-function renderDomains() {
-  const root = document.getElementById('think-domains')
-  if (!root) return
-  const domains = copy[locale].think.domains
-  root.innerHTML = `<ul>${domains.map((d) => `<li>${escapeHtml(d)}</li>`).join('')}</ul>`
 }
 
 function highlightLogosMarkup(logos, ddClass) {
@@ -182,8 +208,8 @@ function caseHighlightsMarkup(project) {
 
 function localizedSrc(src) {
   if (!src) return ''
-  if (typeof src === 'string') return src
-  return src[locale] || src.en || ''
+  const raw = typeof src === 'string' ? src : src[locale] || src.en || ''
+  return resolveAsset(raw)
 }
 
 function figureMediaMarkup(item, caption, opts = {}) {
@@ -495,7 +521,7 @@ function resumeSiteWebgl() {
 function modelViewerFrameUrl(item) {
   const absSrc = new URL(item.src, window.location.href).href
   const poster = item.poster ? new URL(item.poster, window.location.href).href : ''
-  const url = new URL('assets/model-viewer.html', window.location.href)
+  const url = new URL(resolveAsset('assets/model-viewer.html'), window.location.href)
   url.searchParams.set('src', absSrc)
   if (poster) url.searchParams.set('poster', poster)
   return url.href
@@ -705,30 +731,12 @@ function chapterListItemMarkup(ch, liClass, figureClass) {
 function caseChaptersMarkup(project, labels) {
   const chapters = Array.isArray(project.chapters) ? project.chapters : []
   if (!chapters.length) return ''
-  const previewAt = 4
-  const head = chapters.slice(0, previewAt)
-  const rest = chapters.slice(previewAt)
-  const headItems = head
-    .map((ch) => chapterListItemMarkup(ch, 'case__chapter reveal', 'case__chapter-figure'))
-    .join('')
-  let more = ''
-  if (rest.length) {
-    const moreId = `case-chapters-more-${escapeAttr(project.id)}`
-    const label = labels.readMore || 'Continue the story'
-    const meta = chaptersMoreMeta(labels.readMoreMeta, rest.length)
-    more = `
-      ${chaptersMoreButtonMarkup('case__chapters-more', moreId, label, meta, 'reveal')}
-      <ol id="${moreId}" class="case__chapter-list case__chapter-list--more" hidden>
-        ${rest.map((ch) => chapterListItemMarkup(ch, 'case__chapter reveal', 'case__chapter-figure')).join('')}
-      </ol>`
-  }
   return `
     <div class="case__chapters">
       <p class="case__chapters-label reveal">${escapeHtml(labels.chapters || 'The story')}</p>
       <ol class="case__chapter-list">
-        ${headItems}
+        ${chapters.map((ch) => chapterListItemMarkup(ch, 'case__chapter reveal', 'case__chapter-figure')).join('')}
       </ol>
-      ${more}
     </div>
   `
 }
@@ -757,78 +765,195 @@ function caseGalleryMarkup(project, labels) {
   `
 }
 
-function renderProjects() {
-  const root = document.getElementById('work-cases')
+function renderJourney() {
+  const root = document.getElementById('journey-eras')
   if (!root) return
-  const labels = copy[locale].work.labels
-  const total = String(projects.length).padStart(2, '0')
-
-  root.innerHTML = projects
-    .map((project, index) => {
-      const n = String(index + 1).padStart(2, '0')
-      const isCube = project.id === 'cube'
-      const isDeep = Boolean(project.chapters?.length || project.highlights?.length || project.timeline?.length)
-      const links = []
-      if (project.links?.live) {
-        links.push(
-          `<a class="btn btn--ghost" href="${escapeAttr(project.links.live)}" target="_blank" rel="noopener noreferrer">${escapeHtml(labels.live)}</a>`,
-        )
-      }
-      if (project.links?.repo) {
-        links.push(
-          `<a class="btn btn--text" href="${escapeAttr(project.links.repo)}" target="_blank" rel="noopener noreferrer">${escapeHtml(labels.repo)}</a>`,
-        )
-      }
-      if (project.links?.docs) {
-        const docsLabel =
-          project.linkLabels?.docs?.[locale] || copy[locale].catalog.docs || 'PDF'
-        links.push(
-          `<a class="btn btn--text" href="${escapeAttr(project.links.docs)}" target="_blank" rel="noopener noreferrer">${escapeHtml(docsLabel)}</a>`,
-        )
-      }
-
-      const embed = isCube
-        ? `<div class="rubik-embed" aria-hidden="true">
-            <div class="rubik-stage" id="rubik-stage" data-cube-mount></div>
-          </div>`
+  root.innerHTML = milestones
+    .map((item) => {
+      const era = item.era || item.id
+      const color = ERA_COLORS[era] || '#0076f3'
+      const inkDark = /^#ffd22b$/i.test(color) ? ' is-wash-ink-dark' : ''
+      const caseLink =
+        era === 'hardware'
+          ? casePageHref('cube')
+          : era === 'ideyou'
+            ? casePageHref('miodelivery')
+            : era === 'platform'
+              ? casePageHref('platform')
+              : ''
+      const cta = caseLink
+        ? `<a class="journey__era-link" href="${escapeAttr(caseLink)}">${escapeHtml(copy[locale].stories?.cta || 'Read the story')}</a>`
         : ''
-
       return `
-        <article class="case case--${escapeAttr(project.accent)}${isCube ? ' case--cube' : ''}${isDeep ? ' case--deep' : ''}" id="case-${escapeAttr(project.id)}">
-          ${embed}
-          <div class="container case__inner">
-            <header class="case__intro reveal">
-              <span class="case__accent bg-accent-${escapeAttr(project.accent)}" aria-hidden="true"></span>
-              <p class="case__index">${n} / ${total}</p>
-              ${
-                project.titleLogo?.src
-                  ? `<h3 class="case__title case__title--logo">
-                      <img class="case__title-logo" src="${escapeAttr(localizedSrc(project.titleLogo.src))}" alt="${escapeAttr(project.titleLogo.alt?.[locale] || project.titleLogo.alt?.en || project.title[locale])}" />
-                      <span class="visually-hidden">${escapeHtml(project.title[locale])}</span>
-                    </h3>`
-                  : `<h3 class="case__title">${escapeHtml(project.title[locale])}</h3>`
-              }
-              <p class="case__subtitle">${escapeHtml(project.subtitle[locale])}</p>
-            </header>
-            <div class="case__grid">
-              <article class="case__block reveal"><h4>${escapeHtml(labels.problem)}</h4><p>${escapeHtml(project.problem[locale])}</p></article>
-              <article class="case__block reveal"><h4>${escapeHtml(labels.difficulty)}</h4><p>${escapeHtml(project.difficulty[locale])}</p></article>
-              <article class="case__block reveal"><h4>${escapeHtml(labels.simplification)}</h4><p>${escapeHtml(project.simplification[locale])}</p></article>
-              <article class="case__block reveal"><h4>${escapeHtml(labels.change)}</h4><p>${escapeHtml(project.change[locale])}</p></article>
-            </div>
-            ${caseHighlightsMarkup(project)}
-            ${caseGalleryMarkup(project, labels)}
-            ${caseChaptersMarkup(project, labels)}
-            ${links.length ? `<div class="case__links reveal">${links.join('')}</div>` : ''}
-          </div>
-        </article>
-      `
+      <li class="journey__era reveal${inkDark}" data-era="${escapeAttr(era)}" style="--wash-color:${escapeAttr(color)}" tabindex="0">
+        <p class="journey__era-years">${escapeHtml(item.years)}</p>
+        <h3 class="journey__era-title">${escapeHtml(item.title[locale])}</h3>
+        <p class="journey__era-headline">${escapeHtml(item.headline?.[locale] || '')}</p>
+        <p class="journey__era-body">${escapeHtml(item.body[locale])}</p>
+        ${cta}
+      </li>`
     })
     .join('')
+}
 
+function platformLogoMarkup(logo, i, className) {
+  const bare = logo.bare ? ` ${className}--bare` : ''
+  const n = `${className} ${className}--${i + 1}${bare}`
+  if (logo.wordmark && logo.srcLight) {
+    return `<span class="wordmark ${n} ${className}--wordmark" aria-hidden="true">
+      <img class="wordmark__dark" src="${escapeAttr(resolveAsset(logo.src))}" alt="" loading="lazy">
+      <img class="wordmark__light" src="${escapeAttr(resolveAsset(logo.srcLight))}" alt="" loading="lazy">
+    </span>`
+  }
+  return `<img class="${n}" src="${escapeAttr(resolveAsset(logo.src))}" alt="" loading="lazy">`
+}
+
+function storyVisualMarkup(project) {
+  if (project.id === 'cube') {
+    return `<div class="story-teaser__visual story-teaser__visual--cube">
+      <div class="rubik-stage" id="story-rubik-stage" data-cube-mount aria-hidden="true"></div>
+    </div>`
+  }
+  if (project.id === 'miodelivery') {
+    return `<div class="story-teaser__visual story-teaser__visual--mio" aria-hidden="true">
+      <img src="${escapeAttr(resolveAsset('assets/projects/miodelivery/modern-kitchen.png'))}" alt="" loading="lazy">
+    </div>`
+  }
+  if (project.id === 'platform') {
+    return `<div class="story-teaser__visual story-teaser__visual--platform" aria-hidden="true">
+      ${PLATFORM_LOGOS.map((logo, i) => platformLogoMarkup(logo, i, 'story-teaser__logo')).join('')}
+    </div>`
+  }
+  return ''
+}
+
+function renderStories() {
+  const root = document.getElementById('stories-list')
+  if (!root) return
+  const hooks = copy[locale].stories?.items || {}
+  const cta = copy[locale].stories?.cta || 'Read the story'
+  root.innerHTML = STORY_ORDER.map((id, index) => {
+    const project = caseById(id)
+    if (!project) return ''
+    const color = ACCENT_COLORS[project.accent] || ERA_COLORS.platform
+    const inkDark = /^#ffd22b$/i.test(color) ? ' is-wash-ink-dark' : ''
+    const hook = hooks[id]?.hook || project.subtitle[locale]
+    const copyBlock = `
+            <div class="story-teaser__copy">
+              <p class="story-teaser__index">${String(index + 1).padStart(2, '0')} / ${String(STORY_ORDER.length).padStart(2, '0')}</p>
+              <h3 class="story-teaser__title">${escapeHtml(project.title[locale])}</h3>
+              <p class="story-teaser__hook">${escapeHtml(hook)}</p>
+              <span class="story-teaser__cta">${escapeHtml(cta)}</span>
+            </div>`
+    const href = casePageHref(id)
+    const visual = storyVisualMarkup(project)
+    // Cube stays outside the link so drag/orbit still works
+    if (id === 'cube') {
+      return `
+      <article class="story-teaser story-teaser--${escapeAttr(id)} reveal${inkDark}" style="--wash-color:${escapeAttr(color)}">
+        <div class="container story-teaser__inner">
+          <a class="story-teaser__hit" href="${escapeAttr(href)}">${copyBlock}</a>
+          ${visual}
+        </div>
+      </article>`
+    }
+    return `
+      <article class="story-teaser story-teaser--${escapeAttr(id)} reveal${inkDark}" style="--wash-color:${escapeAttr(color)}">
+        <a class="story-teaser__hit" href="${escapeAttr(href)}">
+          <div class="container story-teaser__inner">
+            ${copyBlock}
+            ${visual}
+          </div>
+        </a>
+      </article>`
+  }).join('')
+  mountStoryRubik()
+}
+
+function caseNarrativeMarkup(project, labels) {
+  const links = []
+  if (project.links?.live) {
+    links.push(
+      `<a class="btn btn--ghost" href="${escapeAttr(project.links.live)}" target="_blank" rel="noopener noreferrer">${escapeHtml(labels.live)}</a>`,
+    )
+  }
+  if (project.links?.repo) {
+    links.push(
+      `<a class="btn btn--text" href="${escapeAttr(project.links.repo)}" target="_blank" rel="noopener noreferrer">${escapeHtml(labels.repo)}</a>`,
+    )
+  }
+  if (project.links?.docs) {
+    const docsLabel = project.linkLabels?.docs?.[locale] || copy[locale].catalog.docs || 'PDF'
+    links.push(
+      `<a class="btn btn--text" href="${escapeAttr(resolveAsset(project.links.docs))}" target="_blank" rel="noopener noreferrer">${escapeHtml(docsLabel)}</a>`,
+    )
+  }
+  return `
+    <div class="case__grid">
+      <article class="case__block reveal"><h4>${escapeHtml(labels.problem)}</h4><p>${escapeHtml(project.problem[locale])}</p></article>
+      <article class="case__block reveal"><h4>${escapeHtml(labels.difficulty)}</h4><p>${escapeHtml(project.difficulty[locale])}</p></article>
+      <article class="case__block reveal"><h4>${escapeHtml(labels.simplification)}</h4><p>${escapeHtml(project.simplification[locale])}</p></article>
+      <article class="case__block reveal"><h4>${escapeHtml(labels.change)}</h4><p>${escapeHtml(project.change[locale])}</p></article>
+    </div>
+    ${caseHighlightsMarkup(project)}
+    ${caseGalleryMarkup(project, labels)}
+    ${caseChaptersMarkup(project, labels)}
+    ${links.length ? `<div class="case__links reveal">${links.join('')}</div>` : ''}
+  `
+}
+
+function renderCasePage() {
+  const root = document.getElementById('case-root')
+  if (!root) return
+  const project = caseById(pageCaseId)
+  if (!project) {
+    root.innerHTML = `<p class="container">Case not found.</p>`
+    return
+  }
+  const labels = copy[locale].work.labels
+  document.title = `${project.title[locale]} — isaque.it`
+  const titleBlock = project.titleLogo?.src
+    ? `<h1 class="case-page__title case-page__title--logo">
+        <img class="case__title-logo" src="${escapeAttr(localizedSrc(project.titleLogo.src))}" alt="${escapeAttr(project.titleLogo.alt?.[locale] || project.titleLogo.alt?.en || project.title[locale])}" />
+        <span class="visually-hidden">${escapeHtml(project.title[locale])}</span>
+      </h1>`
+    : `<h1 class="case-page__title">${escapeHtml(project.title[locale])}</h1>`
+
+  let heroExtra = ''
+  if (project.id === 'cube') {
+    heroExtra = `<div class="rubik-embed case-page__rubik" aria-hidden="true">
+      <div class="rubik-stage" id="rubik-stage" data-cube-mount></div>
+    </div>`
+  } else if (project.id === 'platform') {
+    heroExtra = `<div class="case-page__constellation" aria-hidden="true">
+      ${PLATFORM_LOGOS.map((logo, i) => platformLogoMarkup(logo, i, 'case-page__constellation-logo')).join('')}
+    </div>`
+  } else if (project.id === 'miodelivery') {
+    heroExtra = `<div class="case-page__mio-hero" aria-hidden="true">
+      <img src="${escapeAttr(resolveAsset('assets/projects/miodelivery/modern-kitchen.png'))}" alt="" loading="lazy">
+    </div>`
+  }
+
+  root.innerHTML = `
+    <article class="case case--${escapeAttr(project.accent)} case--deep case-page case-page--${escapeAttr(project.id)}" id="case-${escapeAttr(project.id)}">
+      ${heroExtra}
+      <div class="container case__inner">
+        <header class="case__intro case-page__intro reveal">
+          <span class="case__accent bg-accent-${escapeAttr(project.accent)}" aria-hidden="true"></span>
+          ${titleBlock}
+          <p class="case__subtitle">${escapeHtml(project.subtitle[locale])}</p>
+        </header>
+        ${caseNarrativeMarkup(project, labels)}
+      </div>
+    </article>
+  `
   bindChapterCarousels(root)
   bindChapterReadMore(root)
-  mountRubik()
+  if (project.id === 'cube') mountRubik()
+}
+
+function renderProjects() {
+  /* Featured cases moved to /cases/{id}/ — homepage uses renderStories() */
 }
 
 function monogram(title) {
@@ -840,6 +965,25 @@ function monogram(title) {
   if (parts.length === 0) return '?'
   if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase()
   return (parts[0][0] + parts[1][0]).toUpperCase()
+}
+
+function catalogMarkMarkup(item, title) {
+  if (item.logo && item.logoLight) {
+    return `<span class="wordmark catalog-card__wordmark" aria-hidden="true">
+      <img class="wordmark__dark" src="${escapeAttr(resolveAsset(item.logo))}" alt="" loading="lazy" onerror="this.closest('.catalog-card__wordmark')?.remove()">
+      <img class="wordmark__light" src="${escapeAttr(resolveAsset(item.logoLight))}" alt="" loading="lazy" onerror="this.remove()">
+    </span>`
+  }
+  if (item.logo) {
+    const bg = item.logoBg || '#0a0a0a'
+    // Letterbox only when the plate isn't already a dark full-bleed square
+    const pad = item.logoBg && !/^#0a0a0a$/i.test(item.logoBg) ? ' is-padded' : ''
+    return `<span class="catalog-card__mark catalog-card__mark--icon${pad}" style="--mark-bg:${escapeAttr(bg)}" aria-hidden="true">
+      <img src="${escapeAttr(resolveAsset(item.logo))}" alt="" loading="lazy" onerror="this.closest('.catalog-card__mark')?.remove()">
+    </span>`
+  }
+  const monoLight = !LIGHT_ACCENTS.has(item.accent) ? ' is-light' : ''
+  return `<span class="catalog-card__mono bg-accent-${escapeAttr(item.accent)}${monoLight}" aria-hidden="true">${escapeHtml(monogram(title))}</span>`
 }
 
 function catalogById(id) {
@@ -989,37 +1133,13 @@ function createProjectModal() {
 
     const chapters =
       isCase && Array.isArray(study.chapters) && study.chapters.length
-        ? (() => {
-            const previewAt = 4
-            const head = study.chapters.slice(0, previewAt)
-            const rest = study.chapters.slice(previewAt)
-            const headItems = head
-              .map((ch) => chapterListItemMarkup(ch, 'modal__chapter', 'modal__chapter-figure'))
-              .join('')
-            let more = ''
-            if (rest.length) {
-              const moreId = `modal-chapters-more-${escapeAttr(item.id)}`
-              const moreLabel =
-                labels.modal.readMore || workLabels.readMore || 'Continue the story'
-              const moreMeta = chaptersMoreMeta(
-                labels.modal.readMoreMeta || workLabels.readMoreMeta,
-                rest.length,
-              )
-              more = `
-          ${chaptersMoreButtonMarkup('modal__chapters-more', moreId, moreLabel, moreMeta)}
-          <ol id="${moreId}" class="modal__chapter-list modal__chapter-list--more" hidden>
-            ${rest.map((ch) => chapterListItemMarkup(ch, 'modal__chapter', 'modal__chapter-figure')).join('')}
-          </ol>`
-            }
-            return `
+        ? `
       <div class="modal__chapters">
         <p class="modal__section-label">${escapeHtml(labels.modal.chapters || workLabels.chapters || 'The story')}</p>
         <ol class="modal__chapter-list">
-          ${headItems}
+          ${study.chapters.map((ch) => chapterListItemMarkup(ch, 'modal__chapter', 'modal__chapter-figure')).join('')}
         </ol>
-        ${more}
       </div>`
-          })()
         : ''
 
     const caseBlocks = isCase
@@ -1033,7 +1153,7 @@ function createProjectModal() {
       : ''
 
     body.innerHTML = `
-      <h2 class="modal__title" id="modal-title">${escapeHtml(title)}</h2>
+      <h2 class="modal__title${item.pinnedEnd ? ' user_coder' : ''}" id="modal-title">${escapeHtml(title)}</h2>
       <p class="modal__desc">${escapeHtml(summary)}</p>
       ${detail ? `<p class="modal__detail">${escapeHtml(detail)}</p>` : ''}
       ${caseBlocks}
@@ -1159,15 +1279,18 @@ function renderCatalog() {
       const pinnedTop = Boolean(item.pinnedTop)
       const pinned = pinnedEnd || pinnedTop
       const hidden = !pinned && catalogFilter !== 'all' && item.era !== catalogFilter
-      const monoLight = !LIGHT_ACCENTS.has(item.accent) ? ' is-light' : ''
       const badge = item.caseId
-        ? `<button type="button" class="catalog-card__badge" data-open-project="${escapeAttr(item.id)}">${escapeHtml(labels.caseStudy)}</button>`
+        ? `<a class="catalog-card__badge" href="${escapeAttr(casePageHref(item.caseId))}">${escapeHtml(labels.caseStudy)}</a>`
         : ''
+      const hasWordmark = Boolean(item.logo && item.logoLight)
+      const titleEl = hasWordmark
+        ? `<h3 class="visually-hidden">${escapeHtml(title)}</h3>`
+        : `<h3 class="catalog-card__title${pinnedEnd ? ' user_coder' : ''}">${escapeHtml(title)}</h3>`
 
       const links = []
       if (item.caseId) {
         links.push(
-          `<button type="button" data-open-project="${escapeAttr(item.id)}">${escapeHtml(labels.viewCase)}</button>`,
+          `<a href="${escapeAttr(casePageHref(item.caseId))}">${escapeHtml(labels.viewCase)}</a>`,
         )
       }
       if (item.links?.live) {
@@ -1184,10 +1307,10 @@ function renderCatalog() {
       }
 
       return `
-        <article class="catalog-card reveal${pinnedEnd ? ' catalog-card--classified' : ''}${pinnedTop ? ' catalog-card--pinned' : ''}" id="catalog-${escapeAttr(item.id)}" data-era="${escapeAttr(item.era)}" data-project-id="${escapeAttr(item.id)}" tabindex="0" role="button" aria-label="${escapeAttr(title)}"${hidden ? ' hidden' : ''}>
-          <div class="catalog-card__top">
-            <span class="catalog-card__mono bg-accent-${escapeAttr(item.accent)}${monoLight}" aria-hidden="true">${escapeHtml(monogram(title))}${item.logo ? `<img class="catalog-card__logo${item.logoBg ? ' catalog-card__logo--boxed' : ''}" src="${escapeAttr(item.logo)}" alt="" loading="lazy"${item.logoBg ? ` style="background:${escapeAttr(item.logoBg)}"` : ''} onerror="this.remove()">` : ''}</span>
-            <h3 class="catalog-card__title${pinnedEnd ? ' user_coder' : ''}">${escapeHtml(title)}</h3>
+        <article class="catalog-card reveal${pinnedEnd ? ' catalog-card--classified' : ''}${pinnedTop ? ' catalog-card--pinned' : ''}" id="catalog-${escapeAttr(item.id)}" data-era="${escapeAttr(item.era)}" data-project-id="${escapeAttr(item.id)}"${item.caseId ? ` data-case-id="${escapeAttr(item.caseId)}"` : ''} tabindex="0" role="button" aria-label="${escapeAttr(title)}"${hidden ? ' hidden' : ''}>
+          <div class="catalog-card__top${hasWordmark ? ' catalog-card__top--wordmark' : ''}">
+            ${catalogMarkMarkup(item, title)}
+            ${titleEl}
             ${badge}
           </div>
           <p class="catalog-card__desc">${escapeHtml(item.summary[locale])}</p>
@@ -1202,17 +1325,17 @@ function renderCatalog() {
 
   grid.querySelectorAll('.catalog-card').forEach((card) => {
     const id = card.dataset.projectId
-    const open = (trigger) => projectModal?.open(id, { trigger })
+    const caseId = card.dataset.caseId
+    const open = (trigger) => {
+      if (caseId) {
+        window.location.href = casePageHref(caseId)
+        return
+      }
+      projectModal?.open(id, { trigger })
+    }
 
     card.addEventListener('click', (e) => {
       if (e.target.closest('a')) return
-      const openBtn = e.target.closest('[data-open-project]')
-      if (openBtn) {
-        e.preventDefault()
-        e.stopPropagation()
-        open(openBtn)
-        return
-      }
       open(card)
     })
 
@@ -1394,6 +1517,12 @@ function mountRubik() {
   window.IsaqueCube.mountSolver(stage)
 }
 
+function mountStoryRubik() {
+  const stage = document.getElementById('story-rubik-stage')
+  if (!stage || !window.IsaqueCube?.mountSolver) return
+  window.IsaqueCube.mountSolver(stage)
+}
+
 function mountHeroCube() {
   const el = document.getElementById('hero-cube')
   if (!el || !window.IsaqueCube?.mountHero) return
@@ -1401,12 +1530,16 @@ function mountHeroCube() {
 }
 
 async function loadJson(path) {
-  const res = await fetch(path)
+  const res = await fetch(resolveAsset(path))
   if (!res.ok) throw new Error(`Failed to load ${path}`)
   return res.json()
 }
 
 async function boot() {
+  assetBase = document.body.dataset.base || ''
+  pageCaseId = document.body.dataset.caseId || ''
+  pageMode = pageCaseId ? 'case' : 'home'
+
   locale = detectLocale()
   ;[copy, projects, catalog, principles, milestones] = await Promise.all([
     loadJson('data/copy.json'),
@@ -1419,11 +1552,17 @@ async function boot() {
   const year = document.getElementById('year')
   if (year) year.textContent = String(new Date().getFullYear())
 
-  projectModal = createProjectModal()
   bindMediaLightbox()
-  mountHeroCube()
   initNav()
   initLang()
+
+  if (pageMode === 'case') {
+    applyI18n()
+    return
+  }
+
+  projectModal = createProjectModal()
+  mountHeroCube()
   applyI18n()
   openProjectFromHash()
   window.addEventListener('hashchange', () => {

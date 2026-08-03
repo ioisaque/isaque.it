@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Isaque Costa">
+  <title>isaque.it platform — isaque.it</title>
+  <meta name="description" content="isaque.it platform — admin, API, portal, and tools on one spine.">
+  <link rel="apple-touch-icon" href="https://cdn.isaque.it/assets/icons/apple-icon-180.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="https://cdn.isaque.it/assets/icons/favicon-64.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+<body data-case-id="platform" data-base="../..">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../../">
+        <img src="../../assets/img/brand/cube.svg" alt="" width="22" height="25">
+        <span>isaque.it</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="site-header__links" id="nav-links">
+          <li><a href="../../#journey" data-i18n="nav.journey">Journey</a></li>
+          <li><a href="../../#stories" data-i18n="nav.stories">Stories</a></li>
+          <li><a href="../../#catalog" data-i18n="nav.work">Work</a></li>
+          <li><a href="../../#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <div class="lang-toggle" role="group" data-i18n-aria="a11y.lang" aria-label="Language">
+          <button type="button" id="lang-en" class="is-active" aria-pressed="true">EN</button>
+          <button type="button" id="lang-pt" aria-pressed="false">PT</button>
+        </div>
+        <button type="button" class="site-header__menu" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" data-i18n-aria="a11y.menuOpen" aria-label="Open menu">
+          <span class="burger" aria-hidden="true"><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <div class="case-page__bar container">
+      <a class="case-page__back" href="../../#stories" data-i18n="nav.back">Back to portfolio</a>
+    </div>
+    <div id="case-root"></div>
+  </main>
+  <p class="contact__foot case-page__foot container">© <span id="year"></span> isaque.it</p>
+  <script type="module" src="../../assets/js/case-page.js"></script>
+</body>
+</html>

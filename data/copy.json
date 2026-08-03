@@ -1,11 +1,12 @@
 {
   "en": {
     "nav": {
-      "think": "How I think",
+      "journey": "Journey",
+      "stories": "Stories",
       "work": "Work",
-      "principles": "Principles",
-      "timeline": "Evolution",
-      "contact": "Contact"
+      "contact": "Contact",
+      "home": "Home",
+      "back": "Back to portfolio"
     },
     "hero": {
       "eyebrow": "Software Engineer",
@@ -18,19 +19,29 @@
       "languages": "Fluent in Portuguese and English — studying Spanish and Italian.",
       "cta": "Explore my work"
     },
-    "think": {
+    "journey": {
       "eyebrow": "How I think",
-      "title": "Complexity, simplified.",
+      "title": "What shaped the work.",
       "lead": "Simple isn't easy. That's why I love to build it.",
-      "body": "I turn complicated systems into simple experiences. Not because complexity looks impressive — because simplicity is valuable.",
-      "domains": [
-        "Architecture",
-        "Products",
-        "Interfaces",
-        "Automation",
-        "Scalability"
-      ],
-      "closing": "The work begins where things feel tangled. It ends when the next step feels inevitable."
+      "body": "Five eras. One through-line: find structure under noise, then make the next step feel inevitable.",
+      "closing": "The surface is here. The deep stories live in the case studies below."
+    },
+    "stories": {
+      "eyebrow": "Deep dives",
+      "title": "Stories worth to unfold.",
+      "lead": "Three projects that hold the thinking. Hover to feel the accent — click to go inside.",
+      "cta": "Read the story",
+      "items": {
+        "cube": {
+          "hook": "Chaos became a solvable state — hardware, vision, and motion in one loop."
+        },
+        "miodelivery": {
+          "hook": "Peak-hour food operations forced products that had to stay simple under pressure."
+        },
+        "platform": {
+          "hook": "Fragments under one roof — admin, API, portal, and tools that share a single spine."
+        }
+      }
     },
     "work": {
       "eyebrow": "Case studies",
@@ -56,7 +67,7 @@
     "catalog": {
       "eyebrow": "Archive",
       "title": "Selected projects.",
-      "lead": "Pinned work across five career eras — from client websites to the isaque.it platform. Deep stories stay above in Featured work.",
+      "lead": "Pinned work across five career eras — from client websites to the isaque.it platform. Deep stories live in the case studies.",
       "caseStudy": "Case study",
       "viewCase": "Read case study",
       "live": "Live",
@@ -368,11 +379,12 @@
   },
   "pt": {
     "nav": {
-      "think": "Como penso",
+      "journey": "Jornada",
+      "stories": "Histórias",
       "work": "Trabalho",
-      "principles": "Princípios",
-      "timeline": "Evolução",
-      "contact": "Contato"
+      "contact": "Contato",
+      "home": "Início",
+      "back": "Voltar ao portfólio"
     },
     "hero": {
       "eyebrow": "Engenheiro de Software",
@@ -385,19 +397,29 @@
       "languages": "Fluente em português e inglês — estudando espanhol e italiano.",
       "cta": "Explorar meu trabalho"
     },
-    "think": {
+    "journey": {
       "eyebrow": "Como penso",
-      "title": "Complexidade, simplificada.",
+      "title": "O que moldou o trabalho.",
       "lead": "Simples não é fácil. Por isso eu amo construir.",
-      "body": "Transformo sistemas complicados em experiências simples. Não porque a complexidade impressiona — porque a simplicidade tem valor.",
-      "domains": [
-        "Arquitetura",
-        "Produtos",
-        "Interfaces",
-        "Automação",
-        "Escalabilidade"
-      ],
-      "closing": "O trabalho começa onde as coisas parecem emboladas. Termina quando o próximo passo parece inevitável."
+      "body": "Cinco eras. Um fio: encontrar estrutura sob o ruído e tornar o próximo passo inevitável.",
+      "closing": "A superfície está aqui. As histórias profundas vivem nos estudos de caso abaixo."
+    },
+    "stories": {
+      "eyebrow": "Mergulhos",
+      "title": "Histórias que valem se desdobrar.",
+      "lead": "Três projetos que carregam o pensamento. Passe o mouse para sentir o acento — clique para entrar.",
+      "cta": "Ler a história",
+      "items": {
+        "cube": {
+          "hook": "O caos virou um estado solucionável — hardware, visão e movimento num só loop."
+        },
+        "miodelivery": {
+          "hook": "Operação de comida no horário de pico forçou produtos que tinham que permanecer simples sob pressão."
+        },
+        "platform": {
+          "hook": "Fragmentos sob o mesmo teto — admin, API, portal e ferramentas na mesma espinha."
+        }
+      }
     },
     "work": {
       "eyebrow": "Estudos de caso",
@@ -423,7 +445,7 @@
     "catalog": {
       "eyebrow": "Arquivo",
       "title": "Projetos selecionados.",
-      "lead": "Trabalho fixado em cinco eras da carreira — de sites de clientes à plataforma isaque.it. As histórias profundas ficam acima, em Trabalho em destaque.",
+      "lead": "Trabalho fixado em cinco eras da carreira — de sites de clientes à plataforma isaque.it. As histórias profundas vivem nos estudos de caso.",
       "caseStudy": "Estudo de caso",
       "viewCase": "Ler estudo de caso",
       "live": "Ao vivo",

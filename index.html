@@ -60,10 +60,9 @@
 
       <nav aria-label="Primary">
         <ul class="site-header__links" id="nav-links">
-          <li><a href="#think" data-i18n="nav.think">How I think</a></li>
-          <li><a href="#work" data-i18n="nav.work">Work</a></li>
-          <li><a href="#principles" data-i18n="nav.principles">Principles</a></li>
-          <li><a href="#timeline" data-i18n="nav.timeline">Evolution</a></li>
+          <li><a href="#journey" data-i18n="nav.journey">Journey</a></li>
+          <li><a href="#stories" data-i18n="nav.stories">Stories</a></li>
+          <li><a href="#catalog" data-i18n="nav.work">Work</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
@@ -105,35 +104,35 @@
           <span class="hero__flags" aria-hidden="true">🇧🇷 🇬🇧 🇪🇸 🇮🇹</span>
           <span data-i18n="hero.languages">Bilingual, studying to become a polyglot.</span>
         </p>
-        <a class="btn btn--primary" href="#work">
+        <a class="btn btn--primary" href="#stories">
           <span data-i18n="hero.cta">Explore my work</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
         </a>
       </div>
     </section>
 
-    <section class="section think" id="think" aria-labelledby="think-title">
+    <section class="section journey" id="journey" aria-labelledby="journey-title">
       <div class="container">
         <header class="reveal">
-          <p class="eyebrow" data-i18n="think.eyebrow">How I think</p>
-          <h2 class="section-title" id="think-title" data-i18n="think.title">Complexity, simplified.</h2>
-          <p class="section-lead think__lead" data-i18n="think.lead">Simple isn't easy. That's why I love to build it.</p>
-          <p class="section-lead think__body" data-i18n="think.body">I turn complicated systems into simple experiences. Not because complexity looks impressive — because simplicity is valuable.</p>
+          <p class="eyebrow" data-i18n="journey.eyebrow">How I think</p>
+          <h2 class="section-title" id="journey-title" data-i18n="journey.title">What shaped the work.</h2>
+          <p class="section-lead" data-i18n="journey.lead">Simple isn't easy. That's why I love to build it.</p>
+          <p class="section-lead journey__body" data-i18n="journey.body">Five eras. One through-line: find structure under noise, then make the next step feel inevitable.</p>
         </header>
-        <div class="think__domains reveal" id="think-domains"></div>
-        <p class="think__closing reveal" data-i18n="think.closing">The work begins where things feel tangled. It ends when the next step feels inevitable.</p>
+        <ol class="journey__eras" id="journey-eras"></ol>
+        <p class="journey__closing reveal" data-i18n="journey.closing">The surface is here. The deep stories live in the case studies below.</p>
       </div>
     </section>
 
-    <section class="section work" id="work" aria-labelledby="work-title">
+    <section class="section stories" id="stories" aria-labelledby="stories-title">
       <div class="container">
-        <header class="work__header reveal">
-          <p class="eyebrow" data-i18n="work.eyebrow">Case studies</p>
-          <h2 class="section-title" id="work-title" data-i18n="work.title">Featured work.</h2>
-          <p class="section-lead" data-i18n="work.lead">Each project is a story of difficulty reduced to clarity.</p>
+        <header class="stories__header reveal">
+          <p class="eyebrow" data-i18n="stories.eyebrow">Deep dives</p>
+          <h2 class="section-title" id="stories-title" data-i18n="stories.title">Stories worth to unfold.</h2>
+          <p class="section-lead" data-i18n="stories.lead">Three projects that hold the thinking. Hover to feel the accent — click to go inside.</p>
         </header>
       </div>
-      <div class="work__cases" id="work-cases"></div>
+      <div class="stories__list" id="stories-list"></div>
     </section>
 
     <section class="section catalog" id="catalog" aria-labelledby="catalog-title">
@@ -145,39 +144,6 @@
         </header>
         <div class="catalog__filters reveal" id="catalog-filters" role="group" aria-label="Filter by era"></div>
         <div class="catalog__grid" id="catalog-grid"></div>
-      </div>
-    </section>
-
-    <section class="section principles" id="principles" aria-labelledby="principles-title">
-      <div class="container">
-        <header class="reveal">
-          <p class="eyebrow" data-i18n="principles.eyebrow">Engineering</p>
-          <h2 class="section-title" id="principles-title" data-i18n="principles.title">Principles.</h2>
-          <p class="section-lead" data-i18n="principles.lead">Not a stack. A standard for how decisions get made.</p>
-        </header>
-        <ol class="principles__list" id="principles-list"></ol>
-      </div>
-    </section>
-
-    <section class="section timeline" id="timeline" aria-labelledby="timeline-title">
-      <div class="container">
-        <header class="reveal">
-          <p class="eyebrow" data-i18n="timeline.eyebrow">Path</p>
-          <h2 class="section-title" id="timeline-title" data-i18n="timeline.title">Evolution.</h2>
-          <p class="section-lead" data-i18n="timeline.lead">Milestones of thinking — not a list of job titles.</p>
-        </header>
-        <ol class="timeline__list" id="timeline-list"></ol>
-      </div>
-    </section>
-
-    <section class="section tech" id="tech" aria-labelledby="tech-title">
-      <div class="container">
-        <header class="reveal">
-          <p class="eyebrow" data-i18n="tech.eyebrow">Tools</p>
-          <h2 class="section-title" id="tech-title" data-i18n="tech.title">Selected technologies.</h2>
-          <p class="section-lead" data-i18n="tech.lead">Chosen after the problem is understood — never before.</p>
-        </header>
-        <div class="tech__list reveal" id="tech-list"></div>
       </div>
     </section>
 

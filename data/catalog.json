@@ -304,8 +304,7 @@
     "era": "platform",
     "accent": "yellow",
     "caseId": "platform",
-    "logo": "assets/img/logos/notify-it.png",
-    "logoBg": "#0a0a0a",
+    "logo": "assets/img/logos/notify-it-dark.png",
     "title": {
       "en": "notify.it",
       "pt": "notify.it"
@@ -323,13 +322,14 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/logos/notify-it.png",
+        "src": "assets/img/logos/notify-it-light.png",
         "alt": {
           "en": "notify.it logo",
           "pt": "Logo notify.it"
         }
       }
-    ]
+    ],
+    "logoLight": "assets/img/logos/notify-it-light.png"
   },
   {
     "id": "engrenhamais",
@@ -443,8 +443,7 @@
     "era": "platform",
     "accent": "orange",
     "caseId": "platform",
-    "logo": "assets/img/logos/barcode-it.png",
-    "logoBg": "#0a0a0a",
+    "logo": "assets/img/logos/barcode-it-dark.png",
     "title": {
       "en": "barcode.it",
       "pt": "barcode.it"
@@ -462,13 +461,14 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/img/logos/barcode-it.png",
+        "src": "assets/img/logos/barcode-it-light.png",
         "alt": {
           "en": "barcode.it logo",
           "pt": "Logo barcode.it"
         }
       }
-    ]
+    ],
+    "logoLight": "assets/img/logos/barcode-it-light.png"
   },
   {
     "id": "saint-germain",
@@ -708,8 +708,7 @@
     "id": "scan-it",
     "era": "platform",
     "accent": "blue",
-    "logo": "assets/img/logos/scan-it.png",
-    "logoBg": "#0a0a0a",
+    "logo": "assets/img/logos/scan-it-dark.png",
     "caseId": "platform",
     "title": {
       "en": "scan.it",
@@ -728,7 +727,8 @@
     "detail": {
       "en": "Focused camera surface for barcode/QR capture used by operational flows. Origin need: drivers scanning signed NF stubs so load data autofills and proof photos stay organized.",
       "pt": "Superfície de câmera focada em captura de código de barras/QR em fluxos operacionais. Necessidade de origem: motoristas escaneando canhotos assinados para autofill da carga e fotos de prova organizadas."
-    }
+    },
+    "logoLight": "assets/img/logos/scan-it-light.png"
   },
   {
     "id": "lmsalgados",
@@ -781,8 +781,7 @@
     "era": "platform",
     "accent": "green",
     "caseId": "platform",
-    "logo": "assets/img/logos/print-it.png",
-    "logoBg": "#0a0a0a",
+    "logo": "assets/img/logos/print-it-dark.png",
     "title": {
       "en": "print.it",
       "pt": "print.it"
@@ -839,7 +838,7 @@
       },
       {
         "type": "image",
-        "src": "assets/img/logos/print-it.png",
+        "src": "assets/img/logos/print-it-light.png",
         "alt": {
           "en": "print.it logo",
           "pt": "Logo print.it"
@@ -849,7 +848,8 @@
     "detail": {
       "en": "print.it is a local microservice for receipt and label printing used by MioDelivery and other systems. For LM Salgados it replaces the older IdeYouPrint, which had tighter limits: scheduled prints, store-side printing, and a cleaner kitchen-ticket layout for kitchen and delivery. See the MioDelivery case for before/after receipts. IdeYouPrint previously ran on the client laptop beside the printer; print.it replaces that path with a local automatic server.",
       "pt": "O print.it é um microserviço local de impressão de recibos e etiquetas usado pelo MioDelivery e outros sistemas. Na LM Salgados substitui o IdeYouPrint antigo, que tinha mais limites: impressão agendada, impressão na loja e comanda mais clara para cozinha e entrega. O case do MioDelivery mostra a comanda antiga e a atual. O IdeYouPrint antes rodava no notebook do cliente ao lado da impressora; o print.it substitui esse caminho por um servidor local automático."
-    }
+    },
+    "logoLight": "assets/img/logos/print-it-light.png"
   },
   {
     "id": "viaprime",
