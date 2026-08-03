@@ -5,7 +5,7 @@ window.IsaqueCube.mountHero = function (container, options) {
   if (!container || container.dataset.heroCubeMounted === '1') return
 
   options = options || {}
-  var photo = options.photo || 'assets/img/profile.png'
+  var photo = options.photo || 'assets/img/profile.avif'
   // Brand cube.svg: top coral, viewer-left green, viewer-right yellow.
   // Idle pose (~rotateY -38) shows up + front + right.
   var faces = options.faces || {
@@ -27,7 +27,7 @@ window.IsaqueCube.mountHero = function (container, options) {
     var face = document.createElement('div')
     face.className = 'hero__cube-face hero__cube-face--' + name
     face.style.backgroundColor = faces[name]
-    // Photo only on the green face (front), clipped to that face.
+    // Photo on green (front); loading label on yellow (right) during boot.
     if (name === 'front') {
       var img = document.createElement('img')
       img.className = 'hero__cube-face-photo'
@@ -35,6 +35,13 @@ window.IsaqueCube.mountHero = function (container, options) {
       img.alt = ''
       img.draggable = false
       face.appendChild(img)
+    }
+    if (name === 'right') {
+      var label = document.createElement('span')
+      label.className = 'hero__cube-face-loading'
+      label.textContent = 'Loading'
+      label.setAttribute('aria-hidden', 'true')
+      face.appendChild(label)
     }
     inner.appendChild(face)
   })

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /portifolio/assets/model-viewer.html
+
+Sitemap: https://isaque.it/portifolio/sitemap.xml

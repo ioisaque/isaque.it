@@ -897,7 +897,11 @@ function renderCasePage() {
     return
   }
   const labels = copy[locale].work.labels
-  document.title = `${project.title[locale]} — isaque.it`
+  const pageTitle =
+    project.id === 'platform' || project.title[locale] === 'isaque.it'
+      ? 'isaque.it platform'
+      : project.title[locale]
+  document.title = `${pageTitle} — isaque.it`
   const titleBlock = project.titleLogo?.src
     ? `<h1 class="case-page__title case-page__title--logo">
         <img class="case__title-logo" src="${escapeAttr(localizedSrc(project.titleLogo.src))}" alt="${escapeAttr(project.titleLogo.alt?.[locale] || project.titleLogo.alt?.en || project.title[locale])}" />
@@ -1562,6 +1566,71 @@ function mountHeroCube() {
   const el = document.getElementById('hero-cube')
   if (!el || !window.IsaqueCube?.mountHero) return
   window.IsaqueCube.mountHero(el)
+  window.dispatchEvent(new Event('resize'))
+}
+
+function clearBootSplash() {
+  document.body.classList.remove('is-booting', 'is-boot-exit')
+  document.getElementById('boot-splash')?.remove()
+  window.dispatchEvent(new Event('resize'))
+}
+
+function finishBootSplash() {
+  const cube = document.getElementById('hero-cube')
+  const scene = cube?.querySelector('.hero__cube-scene')
+  const splash = document.getElementById('boot-splash')
+  if (!document.body.classList.contains('is-booting')) {
+    clearBootSplash()
+    return
+  }
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (!cube || !scene || reduceMotion) {
+    splash?.classList.add('is-done')
+    window.setTimeout(clearBootSplash, 220)
+    return
+  }
+
+  // FLIP the scene (inside perspective), not the cube shell — avoids face gaps
+  const first = scene.getBoundingClientRect()
+  document.body.classList.remove('is-booting')
+  document.body.classList.add('is-boot-exit')
+  splash?.setAttribute('aria-busy', 'false')
+  splash?.classList.add('is-done')
+  window.dispatchEvent(new Event('resize'))
+
+  const last = scene.getBoundingClientRect()
+  const dx = first.left - last.left
+  const dy = first.top - last.top
+  const sx = first.width / Math.max(last.width, 1)
+  const sy = first.height / Math.max(last.height, 1)
+
+  scene.style.transformOrigin = 'top left'
+  scene.style.transition = 'none'
+  scene.style.transform = `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})`
+  cube.style.opacity = '1'
+  void scene.offsetWidth
+  scene.style.transition = 'transform 1s cubic-bezier(0.22, 1, 0.36, 1)'
+  scene.style.transform = 'none'
+  cube.style.transition = 'opacity 1s cubic-bezier(0.22, 1, 0.36, 1)'
+  cube.style.opacity = ''
+
+  let settled = false
+  const settle = () => {
+    if (settled) return
+    settled = true
+    scene.style.transition = ''
+    scene.style.transform = ''
+    scene.style.transformOrigin = ''
+    cube.style.transition = ''
+    cube.style.opacity = ''
+    clearBootSplash()
+  }
+
+  scene.addEventListener('transitionend', (event) => {
+    if (event.propertyName === 'transform') settle()
+  })
+  window.setTimeout(settle, 1100)
 }
 
 async function loadJson(path) {
@@ -1576,13 +1645,35 @@ async function boot() {
   pageMode = pageCaseId ? 'case' : 'home'
 
   locale = detectLocale()
+
+  if (pageMode === 'home') mountHeroCube()
+
+  const minSplash =
+    pageMode === 'home' && document.body.classList.contains('is-booting')
+      ? new Promise((resolve) => window.setTimeout(resolve, 850))
+      : Promise.resolve()
+
   ;[copy, projects, catalog, principles, milestones] = await Promise.all([
     loadJson('data/copy.json'),
     loadJson('data/projects.json'),
     loadJson('data/catalog.json'),
     loadJson('data/principles.json'),
     loadJson('data/milestones.json'),
+    minSplash,
   ])
+
+  if (pageMode === 'home') {
+    const photo = document.querySelector('#hero-cube .hero__cube-face-photo')
+    if (photo && !photo.complete) {
+      await Promise.race([
+        new Promise((resolve) => {
+          photo.addEventListener('load', resolve, { once: true })
+          photo.addEventListener('error', resolve, { once: true })
+        }),
+        new Promise((resolve) => window.setTimeout(resolve, 1200)),
+      ])
+    }
+  }
 
   const year = document.getElementById('year')
   if (year) year.textContent = String(new Date().getFullYear())
@@ -1593,19 +1684,30 @@ async function boot() {
 
   if (pageMode === 'case') {
     applyI18n()
+    clearBootSplash()
     return
   }
 
   projectModal = createProjectModal()
-  mountHeroCube()
+  if (!document.getElementById('hero-cube')?.dataset.heroCubeMounted) mountHeroCube()
   applyI18n()
   openProjectFromHash()
   window.addEventListener('hashchange', () => {
     if (location.hash.startsWith('#project-')) openProjectFromHash()
     else projectModal?.close({ skipHash: true })
   })
+
+  requestAnimationFrame(() => finishBootSplash())
 }
 
 boot().catch((err) => {
   console.error(err)
+  clearBootSplash()
 })
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    const swPath = document.body.dataset.caseId ? '../../sw.js' : './sw.js'
+    navigator.serviceWorker.register(swPath).catch(() => {})
+  })
+}

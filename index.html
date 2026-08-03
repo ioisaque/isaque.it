@@ -6,20 +6,33 @@
   <meta name="theme-color" content="#0a0a0a">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Isaque Costa">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="isaque.it">
 
   <title>isaque.it — Complexity, simplified.</title>
   <meta name="description" content="Simple isn't easy. That's why I love to build it. Complexity, simplified. — Isaque Costa.">
+  <link rel="canonical" href="https://isaque.it/portifolio/">
 
+  <meta property="og:site_name" content="isaque.it">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="isaque.it — Complexity, simplified.">
   <meta property="og:description" content="Simple isn't easy. That's why I love to build it.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://isaque.it/portifolio/">
-  <meta property="og:image" content="https://cdn.isaque.it/assets/icons/favicon-196.png">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://isaque.it/portifolio/assets/img/og/home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="isaque.it — Complexity, simplified.">
+  <meta name="twitter:description" content="Simple isn't easy. That's why I love to build it.">
+  <meta name="twitter:image" content="https://isaque.it/portifolio/assets/img/og/home.jpg">
 
-  <link rel="apple-touch-icon" href="https://cdn.isaque.it/assets/icons/apple-icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/img/icons/apple-touch-180.png">
   <link rel="icon" type="image/png" sizes="64x64" href="https://cdn.isaque.it/assets/icons/favicon-64.png">
-  <link rel="icon" type="image/png" sizes="196x196" href="https://cdn.isaque.it/assets/icons/favicon-196.png">
+  <link rel="icon" type="image/png" sizes="196x196" href="assets/img/icons/favicon-196.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,32 +43,74 @@
   <link rel="stylesheet" href="assets/css/site.css">
   <link rel="stylesheet" href="assets/cube/cube.css">
   <link rel="stylesheet" href="assets/cube/hero.css">
+  <style>
+    html { background: #0a0a0a; }
+    @media (prefers-color-scheme: light) {
+      html { background: #f7f7f5; }
+    }
+    body.is-booting { overflow: hidden; }
+    body.is-booting .site-header,
+    body.is-booting .skip-link,
+    body.is-booting .hero__content,
+    body.is-booting #main > :not(#top) {
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+    .boot-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: #0a0a0a;
+      pointer-events: none;
+    }
+    @media (prefers-color-scheme: light) {
+      .boot-splash { background: #f7f7f5; }
+    }
+  </style>
 
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Isaque Costa",
-      "url": "https://isaque.it",
-      "jobTitle": "Software Engineer",
-      "description": "Simple isn't easy. That's why I love to build it. Complexity, simplified.",
-      "sameAs": [
-        "https://github.com/ioisaque",
-        "https://linkedin.com/in/ioisaque/",
-        "https://www.instagram.com/ioisaque"
-      ],
-      "email": "costa@isaque.it"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "isaque.it",
+          "url": "https://isaque.it/portifolio/",
+          "description": "Simple isn't easy. That's why I love to build it. Complexity, simplified.",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://isaque.it/#person" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://isaque.it/#person",
+          "name": "Isaque Costa",
+          "url": "https://isaque.it",
+          "jobTitle": "Software Engineer",
+          "description": "Simple isn't easy. That's why I love to build it. Complexity, simplified.",
+          "sameAs": [
+            "https://github.com/ioisaque",
+            "https://linkedin.com/in/ioisaque/",
+            "https://www.instagram.com/ioisaque"
+          ],
+          "email": "costa@isaque.it"
+        }
+      ]
     }
   </script>
 </head>
-<body>
+<body class="is-booting">
+  <div class="boot-splash" id="boot-splash" aria-live="polite" aria-busy="true" aria-label="Loading"></div>
+
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
   <header class="site-header" id="site-header">
     <div class="container site-header__inner">
       <a class="site-header__brand" href="#top">
-        <img src="assets/img/brand/cube.svg" alt="" width="22" height="25">
-        <span>isaque.it</span>
+        <span class="wordmark site-header__logo" aria-hidden="true">
+          <img class="wordmark__dark" src="assets/img/brand/logo-dark.svg" alt="" width="289" height="96" onerror="this.closest('.site-header__brand').classList.add('is-fallback')">
+          <img class="wordmark__light" src="assets/img/brand/logo-light.svg" alt="" width="289" height="96" onerror="this.closest('.site-header__brand').classList.add('is-fallback')">
+        </span>
+        <span class="site-header__brand-text">isaque.it</span>
       </a>
 
       <nav class="site-header__nav" aria-label="Primary">

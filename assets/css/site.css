@@ -2,7 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  height: var(--nav-h);
+  box-sizing: border-box;
+  height: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+  padding-top: env(safe-area-inset-top, 0px);
   overflow: visible;
   border-bottom: 1px solid transparent;
   background: transparent;
@@ -14,10 +16,16 @@
 .site-header::before {
   content: '';
   position: absolute;
-  inset: 0;
-  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  margin-top: calc(-1 * env(safe-area-inset-top, 0px));
+  height: calc(100% + env(safe-area-inset-top, 0px));
   background: transparent;
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   opacity: 0;
   transition:
     opacity 0.3s var(--ease),
@@ -27,6 +35,9 @@
 
 .site-header.is-scrolled {
   border-bottom-color: var(--line);
+  background: var(--nav-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .site-header.is-scrolled::before {
@@ -37,6 +48,8 @@
 .site-header.is-menu-open {
   border-bottom-color: var(--line);
   background: var(--bg);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .site-header.is-menu-open::before {
@@ -45,27 +58,124 @@
 
 .site-header__inner {
   position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: var(--nav-h);
   gap: var(--space-4);
+  overflow: visible;
 }
 
 .site-header__brand {
   position: relative;
   z-index: 50;
   display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
+  align-items: flex-start;
+  align-self: flex-start;
+  padding-top: 0.65rem;
   text-decoration: none;
+  overflow: visible;
+  transition: padding-top 0.35s var(--ease);
 }
 
-.site-header__brand img {
-  width: 1.35rem;
+.site-header__logo {
+  display: block;
+  height: clamp(4.5rem, 9vw, 6rem);
+  width: auto;
+  transition: height 0.35s var(--ease);
+}
+
+.site-header__logo img {
+  display: block;
+  height: clamp(4.5rem, 9vw, 6rem);
+  width: auto;
+  transition: height 0.35s var(--ease);
+}
+
+.site-header.is-scrolled .site-header__brand {
+  align-self: center;
+  align-items: center;
+  padding-top: 0;
+}
+
+.site-header.is-scrolled .site-header__logo,
+.site-header.is-scrolled .site-header__logo img {
+  height: 2.4rem;
+}
+
+@media (max-width: 719px) {
+  .site-header {
+    height: auto;
+    min-height: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+  }
+
+  .site-header__inner {
+    height: auto;
+    min-height: var(--nav-h);
+    align-items: center;
+    padding-block: 0.45rem;
+  }
+
+  .site-header__brand {
+    align-self: center;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .site-header__drawer {
+    padding-top: calc(5.4rem + env(safe-area-inset-top, 0px) + var(--space-6));
+  }
+
+  .site-header.is-scrolled {
+    height: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+    min-height: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+  }
+
+  .site-header.is-scrolled .site-header__inner {
+    height: var(--nav-h);
+    min-height: var(--nav-h);
+    padding-block: 0;
+  }
+
+  .site-header.is-scrolled .site-header__drawer {
+    padding-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px) + var(--space-6));
+  }
+}
+
+@media (min-width: 900px) {
+  .site-header__logo,
+  .site-header__logo img {
+    height: clamp(5.5rem, 8.5vw, 7.25rem);
+  }
+}
+
+.site-header__brand-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.site-header__brand.is-fallback .site-header__logo {
+  display: none;
+}
+
+.site-header__brand.is-fallback .site-header__brand-text {
+  position: static;
+  width: auto;
   height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
 }
 
 .site-header__nav {
@@ -202,7 +312,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
-  padding: calc(var(--nav-h) + var(--space-6)) var(--space-5) var(--space-6);
+  padding: calc(var(--nav-h) + env(safe-area-inset-top, 0px) + var(--space-6)) var(--space-5)
+    calc(var(--space-6) + env(safe-area-inset-bottom, 0px));
   background: var(--bg);
   transform: translateY(-0.5rem);
   opacity: 0;
@@ -242,6 +353,54 @@
   margin-top: auto;
 }
 
+@media (max-width: 899px) {
+  .site-header {
+    background: var(--nav-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom-color: var(--line);
+  }
+
+  .site-header::before {
+    background: var(--nav-bg);
+    opacity: 1;
+  }
+
+  .site-header.is-menu-open {
+    background: var(--bg);
+  }
+
+  .site-header.is-menu-open::before {
+    opacity: 0;
+  }
+}
+
+@media (display-mode: standalone), (display-mode: fullscreen) {
+  .site-header,
+  .site-header.is-scrolled {
+    background: var(--bg);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom-color: var(--line);
+  }
+
+  .site-header::before,
+  .site-header.is-scrolled::before {
+    background: var(--bg);
+    opacity: 1;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .site-header.is-menu-open {
+    background: var(--bg);
+  }
+
+  .site-header.is-menu-open::before {
+    opacity: 0;
+  }
+}
+
 @media (min-width: 900px) {
   .site-header__nav {
     display: flex;
@@ -253,11 +412,16 @@
 
   .site-header.is-menu-open {
     background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     border-bottom-color: transparent;
   }
 
   .site-header.is-menu-open.is-scrolled {
     border-bottom-color: var(--line);
+    background: var(--nav-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
   }
 
   .site-header.is-menu-open.is-scrolled::before {
@@ -297,7 +461,7 @@
   position: relative;
   display: grid;
   align-items: end;
-  min-height: calc(100svh - var(--nav-h));
+  min-height: calc(100svh - var(--nav-h) - env(safe-area-inset-top, 0px));
   padding-block: clamp(4rem, 12vh, 8rem) clamp(4rem, 10vh, 7rem);
   overflow: hidden;
 }
@@ -3982,7 +4146,7 @@ a.case__timeline-card:hover .case__timeline-what {
 
 /* —— Dedicated case pages —— */
 .case-page__bar {
-  padding-top: calc(var(--nav-h) + var(--space-5));
+  padding-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px) + var(--space-5));
   padding-bottom: var(--space-4);
 }
 
@@ -4089,4 +4253,12 @@ a.case__timeline-card:hover .case__timeline-what {
 .case-page--miodelivery .case__inner,
 .case-page--platform .case__inner {
   padding-bottom: var(--space-9);
+}
+
+.case-page__lead {
+  margin: 0.75rem 0 0;
+  max-width: 40ch;
+  opacity: 0.8;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }

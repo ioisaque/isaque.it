@@ -28,7 +28,8 @@
       ]
     },
     "projects": [
-      "im-root"
+      "im-root",
+      "block"
     ]
   },
   {
@@ -63,7 +64,9 @@
     },
     "projects": [
       "vipproducoes",
-      "lmsalgados",
+      "metasita",
+      "acdn",
+      "lbrecords",
       "folhadocomercio"
     ]
   },
@@ -163,6 +166,9 @@
       ]
     },
     "projects": [
+      "planeja-ideyou",
+      "ensaio-fotografico",
+      "victoriacosta",
       "cti"
     ]
   },

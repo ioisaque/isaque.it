@@ -120,7 +120,7 @@
   }
 
   .hero__content {
-    padding-top: min(16rem, 58vw);
+    padding-top: min(17.25rem, 62vw);
     /* Let touches in the empty padding area reach the cube behind it */
     pointer-events: none;
   }
@@ -133,5 +133,155 @@
 @media (prefers-reduced-motion: reduce) {
   .hero__cube-scene {
     animation: none;
+  }
+}
+
+/* —— Boot splash → hero handoff —— */
+body.is-booting {
+  overflow: hidden;
+}
+
+body.is-booting .site-header,
+body.is-booting .skip-link,
+body.is-booting .hero__content,
+body.is-booting #main > :not(#top) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.is-booting .hero {
+  min-height: 100svh;
+}
+
+body.is-booting .hero__cube-scene {
+  animation: none;
+}
+
+/* Exact final size per breakpoint — centered in the viewport */
+body.is-booting .hero__cube {
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: min(24rem, 34vw);
+  height: min(24rem, 34vw);
+  margin: auto;
+  translate: none;
+  opacity: 1;
+  pointer-events: none;
+  cursor: default;
+}
+
+@media (min-width: 720px) and (max-width: 1366px) {
+  body.is-booting .hero__cube {
+    width: min(18rem, 30vw);
+    height: min(18rem, 30vw);
+  }
+}
+
+@media (min-width: 1367px) {
+  body.is-booting .hero__cube {
+    width: min(26rem, 32vw);
+    height: min(26rem, 32vw);
+  }
+}
+
+@media (max-width: 719px) {
+  body.is-booting .hero__cube {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: min(14rem, 62vw);
+    height: min(14rem, 62vw);
+    margin: auto;
+    translate: none;
+  }
+}
+
+.boot-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--bg, #0a0a0a);
+  pointer-events: none;
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.65s;
+}
+
+.hero__cube-face-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  color: rgba(10, 10, 10, 0.72);
+  font-family: var(--font-sans, 'Instrument Sans', system-ui, sans-serif);
+  font-size: clamp(0.65rem, 2.4vw, 0.95rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+body.is-booting .hero__cube-face-loading {
+  display: flex;
+  animation: boot-label-pulse 1.6s ease-in-out infinite;
+}
+
+body.is-boot-exit .hero__cube-face-loading {
+  display: flex;
+  opacity: 0;
+  animation: none;
+  transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes boot-label-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.boot-splash.is-done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.is-boot-exit .site-header,
+body.is-boot-exit .hero__content {
+  opacity: 1;
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.12s;
+}
+
+body.is-boot-exit #main > :not(#top) {
+  opacity: 0;
+}
+
+body.is-boot-exit .hero__cube-scene {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.is-booting .hero__cube-face-loading {
+    animation: none;
+    opacity: 0.75;
+  }
+
+  .boot-splash,
+  body.is-boot-exit .hero__cube-face-loading,
+  body.is-boot-exit .site-header,
+  body.is-boot-exit .hero__content {
+    transition-duration: 0.2s;
   }
 }
