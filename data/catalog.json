@@ -1,5 +1,205 @@
 [
   {
+    "id": "magic-globe",
+    "era": "hardware",
+    "accent": "yellow",
+    "logo": "https://isaque.it/cubo/assets/media/cubomagico-64.png",
+    "caseId": "cube",
+    "title": {
+      "en": "Magic Globe",
+      "pt": "Globo Mágico"
+    },
+    "summary": {
+      "en": "Open-source Rubik’s Cube robot solver with web control — solves in under 2 seconds.",
+      "pt": "Robô resolvedor de Cubo Mágico open-source com controle web — solves em menos de 2 segundos."
+    },
+    "language": "JavaScript",
+    "tech": [
+      "HTML",
+      "JavaScript",
+      "Python",
+      "C++"
+    ],
+    "links": {
+      "live": "https://isaque.it/cubo/",
+      "repo": "https://github.com/ioisaque/magic-globe"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/magic-globe/structure-3d.jpg",
+        "alt": {
+          "en": "Magic Globe 3D structure — six face drives on a spherical frame holding the cube",
+          "pt": "Estrutura 3D do Globo Mágico — seis eixos de face numa armação esférica segurando o cubo"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/magic-globe/python-vision.png",
+        "alt": {
+          "en": "Python OpenCV view — dual cameras, cube net, Computer Vision solve in 1.574 s",
+          "pt": "Visão do programa Python/OpenCV — duas câmeras, net do cubo, visão computacional em 1,574 s"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/globe-scramble-solve.mp4",
+        "poster": "assets/img/projects/magic-globe/globe-scramble-solve.jpg",
+        "alt": {
+          "en": "Scrambling and solving on the new Magic Globe structure — the machine that earned the name",
+          "pt": "Embaralhando e resolvendo na nova estrutura do Globo Mágico — a máquina que deu nome ao projeto"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/robotics-fair-solve.mp4",
+        "poster": "assets/img/projects/magic-globe/robotics-fair-solve.jpg",
+        "alt": {
+          "en": "Prototype solving the cube at the college robotics fair",
+          "pt": "Protótipo resolvendo o cubo na feira de robótica da faculdade"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/teacher-vs-robot.mp4",
+        "poster": "assets/img/projects/magic-globe/teacher-vs-robot.jpg",
+        "alt": {
+          "en": "Prototype vs teacher Filipe — he “solved” it after a few moves; the robot still won",
+          "pt": "Protótipo vs professor Filipe — ele “resolveu” com poucos movimentos; o robô ainda ganhou"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/defense-overnight-rebuild.mp4",
+        "poster": "assets/img/projects/magic-globe/defense-overnight-rebuild.jpg",
+        "alt": {
+          "en": "Overnight rebuild before the defense — Red Bulls while remounting the whole hardware",
+          "pt": "Remontagem na madrugada antes da banca — Red Bulls remontando o hardware inteiro"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/defense-day-solve.mp4",
+        "poster": "assets/img/projects/magic-globe/defense-day-solve.jpg",
+        "alt": {
+          "en": "Solving on defense day — after rebuilding the hardware overnight for the CS degree presentation",
+          "pt": "Resolvendo no dia da banca — depois de remontar o hardware a noite inteira para a defesa do TCC"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/ipad-control.mp4",
+        "poster": "assets/img/projects/magic-globe/ipad-control.jpg",
+        "alt": {
+          "en": "Testing the prototype web controls on an iPad",
+          "pt": "Testando os controles web do protótipo num iPad"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/magic-globe/shot-1.png",
+        "alt": {
+          "en": "Magic Globe screenshot",
+          "pt": "Print de Globo Mágico"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/pcb-circuit.mp4",
+        "poster": "assets/img/projects/magic-globe/pcb-circuit.jpg",
+        "alt": {
+          "en": "Printed PCB for Magic Globe — circuit beyond the protoboard",
+          "pt": "PCB impressa do Globo Mágico — circuito além da protoboard"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/opposite-sides-test.mp4",
+        "poster": "assets/img/projects/magic-globe/opposite-sides-test.jpg",
+        "alt": {
+          "en": "Opposite faces turning simultaneously on Magic Globe",
+          "pt": "Faces opostas girando ao mesmo tempo no Globo Mágico"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/magic-globe/videos/opposite-sides-slowmo.mp4",
+        "poster": "assets/img/projects/magic-globe/opposite-sides-slowmo.jpg",
+        "alt": {
+          "en": "Slow-motion opposite-face turns on Magic Globe",
+          "pt": "Giros de faces opostas em câmera lenta no Globo Mágico"
+        }
+      }
+    ],
+    "pinnedTop": true,
+    "pinOrder": 1
+  },
+  {
+    "id": "miodelivery",
+    "era": "ideyou",
+    "accent": "green",
+    "caseId": "miodelivery",
+    "title": {
+      "en": "MioDelivery",
+      "pt": "MioDelivery"
+    },
+    "summary": {
+      "en": "Born with LM Salgados — now a multi-store MioDelivery with kitchen panel, order ops, and print.it.",
+      "pt": "Nasceu com a LM Salgados — hoje MioDelivery multi-loja com painel de cozinha, operação de pedidos e print.it."
+    },
+    "language": "PHP",
+    "tech": [
+      "PHP",
+      "React",
+      "NestJS",
+      "MySQL"
+    ],
+    "detail": {
+      "en": "Long partnership from 2017: shouted kitchen quantities → production board → multi-unit ERP → PWA → today’s dashboard, versatile kitchen panel, filtered order listings, and thermal receipts via print.it (replacing IdeYouPrint at LM). Origin screens and diagrams sit next to current product UI. Product types (simple, combo, sizes, add-ons), auto PDF menus, and animated TV menus are part of the same ops surface. Multi-store setup and reports work grouped or per unit for a diversified managerial view.",
+      "pt": "Parceria longa desde 2017: gritos na cozinha → painel de produção → ERP multiunidade → PWA → dashboard de hoje, painel de cozinha versátil, listagens filtradas e comandas via print.it (no lugar do IdeYouPrint na LM). Telas de origem e diagramas ao lado da UI atual do produto. Tipos de produto (simples, combo, tamanhos, adicional), cardápio PDF automático e cardápio animado para TV fazem parte da mesma superfície operacional. Cadastro multi-loja e relatórios funcionam agrupados ou por unidade para uma visão gerencial diversificada."
+    },
+    "media": [],
+    "logo": "assets/img/logos/lmsalgados.png",
+    "logoBg": "#0a0a0a",
+    "pinnedTop": true,
+    "pinOrder": 2
+  },
+  {
+    "id": "ensaio-fotografico",
+    "era": "design",
+    "accent": "yellow",
+    "logo": "https://isaque.it/ensaio-fotografico/assets/icon.avif",
+    "title": {
+      "en": "Victória's PhotoShoot",
+      "pt": "Ensaio da Victória"
+    },
+    "summary": {
+      "en": "PWA photo essay for the big screen on event day — speed, filters, and pre-organized looks.",
+      "pt": "PWA de ensaio fotográfico para o telão no dia do evento — velocidade, filtros e looks pré-organizados."
+    },
+    "language": "JavaScript",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://isaque.it/ensaio-fotografico/"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/ensaio-fotografico/shot-1.png",
+        "alt": {
+          "en": "Victória's PhotoShoot screenshot",
+          "pt": "Print de Ensaio da Victória"
+        }
+      }
+    ],
+    "pinnedTop": true,
+    "pinOrder": 3
+  },
+  {
     "id": "sistema-isaque",
     "era": "platform",
     "accent": "coral",
@@ -60,7 +260,110 @@
     "detail": {
       "en": "Internal operations surface for the isaque.it platform: sync payment providers, configure contract states and payment methods, and keep mail/push wired through notify.it — the operator side of the same system clients see in the portal.",
       "pt": "Superfície de operação interna da plataforma isaque.it: sincronizar provedores de pagamento, configurar estados de contrato e métodos, e manter mail/push via notify.it — o lado do operador do mesmo sistema que o cliente vê no portal."
-    }
+    },
+    "pinnedTop": true,
+    "pinOrder": 4
+  },
+  {
+    "id": "cti",
+    "era": "teaching",
+    "accent": "blue",
+    "logo": "https://isaque.it/cti/logo.png",
+    "title": {
+      "en": "CTI Projects",
+      "pt": "Projetos CTI"
+    },
+    "summary": {
+      "en": "Public hub of student projects from the Technical Computing course I coordinate (since Feb 2026) and teach.",
+      "pt": "Hub público de projetos dos alunos do curso técnico de Informática que coordeno (desde fev/2026) e leciono."
+    },
+    "language": "PHP",
+    "tech": [
+      "PHP",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://isaque.it/cti",
+      "repo": "https://github.com/ioisaque/cti"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/cti/shot-1.png",
+        "alt": {
+          "en": "CTI Projects screenshot",
+          "pt": "Print de Projetos CTI"
+        }
+      }
+    ]
+  },
+  {
+    "id": "notify-it",
+    "era": "platform",
+    "accent": "yellow",
+    "caseId": "platform",
+    "logo": "assets/img/logos/notify-it.png",
+    "logoBg": "#0a0a0a",
+    "title": {
+      "en": "notify.it",
+      "pt": "notify.it"
+    },
+    "summary": {
+      "en": "Push and email microservice — the platform’s mail carrier.",
+      "pt": "Microserviço de push e e-mail — o carteiro da plataforma."
+    },
+    "language": "TypeScript",
+    "tech": [
+      "NestJS",
+      "web-push",
+      "nodemailer"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/logos/notify-it.png",
+        "alt": {
+          "en": "notify.it logo",
+          "pt": "Logo notify.it"
+        }
+      }
+    ]
+  },
+  {
+    "id": "engrenhamais",
+    "era": "design",
+    "accent": "red",
+    "logo": "https://engrenhamais.com.br/assets/icons/favicon-32.png",
+    "logoBg": "#ffffff",
+    "title": {
+      "en": "ENGRENHA+",
+      "pt": "ENGRENHA+"
+    },
+    "summary": {
+      "en": "Most recent institutional client — hydroelectric / industry consultancy site with light/dark craft.",
+      "pt": "Cliente institucional mais recente — site de consultoria hidrelétrica/indústria com craft light/dark."
+    },
+    "language": "PHP",
+    "tech": [
+      "PHP",
+      "HTML",
+      "CSS"
+    ],
+    "links": {
+      "live": "https://engrenhamais.com.br"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/engrenhamais/shot-1.png",
+        "alt": {
+          "en": "ENGRENHA+ screenshot",
+          "pt": "Print de ENGRENHA+"
+        }
+      }
+    ]
   },
   {
     "id": "api-isaque",
@@ -93,6 +396,211 @@
         "alt": {
           "en": "api.isaque.it screenshot",
           "pt": "Print de api.isaque.it"
+        }
+      }
+    ]
+  },
+  {
+    "id": "planeja-ideyou",
+    "era": "teaching",
+    "accent": "blue",
+    "logo": "https://isaque.it/meuaurelio.com.br/assets/images/aurelio-white.png",
+    "logoBg": "#012060",
+    "title": {
+      "en": "Meu Aurélio",
+      "pt": "Meu Aurélio"
+    },
+    "summary": {
+      "en": "Lesson plans to school-standard PDF with QR-linked materials — built in 2023 at Escola João Paulo II.",
+      "pt": "Planos de aula em PDF no padrão da escola com materiais em QR — feito em 2023 na Escola João Paulo II."
+    },
+    "language": "PHP",
+    "tech": [
+      "PHP",
+      "MySQL"
+    ],
+    "links": {
+      "live": "https://isaque.it/meuaurelio.com.br/",
+      "repo": "https://github.com/ioisaque/planeja-ideyou"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/planeja-ideyou/shot-1.png",
+        "alt": {
+          "en": "Meu Aurélio screenshot",
+          "pt": "Print de Meu Aurélio"
+        }
+      }
+    ],
+    "detail": {
+      "en": "Teachers fill fields → auto-formatted PDF; history in Local Storage. Unlimited activities with title + link become QR codes on print so supervisors open materials by scanning — less paper, no long URLs.",
+      "pt": "O professor preenche campos → PDF formatado; histórico no Local Storage. Atividades ilimitadas com título + link viram QR na impressão para a coordenação abrir materiais no scan — menos papel, sem URL longa."
+    }
+  },
+  {
+    "id": "barcode-it",
+    "era": "platform",
+    "accent": "orange",
+    "caseId": "platform",
+    "logo": "assets/img/logos/barcode-it.png",
+    "logoBg": "#0a0a0a",
+    "title": {
+      "en": "barcode.it",
+      "pt": "barcode.it"
+    },
+    "summary": {
+      "en": "QR and linear barcode PNG generation API.",
+      "pt": "API de geração de QR e códigos de barras lineares em PNG."
+    },
+    "language": "TypeScript",
+    "tech": [
+      "NestJS",
+      "bwip-js",
+      "sharp"
+    ],
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/logos/barcode-it.png",
+        "alt": {
+          "en": "barcode.it logo",
+          "pt": "Logo barcode.it"
+        }
+      }
+    ]
+  },
+  {
+    "id": "saint-germain",
+    "era": "ideyou",
+    "accent": "coral",
+    "logo": "assets/img/logos/saint-germain.png",
+    "logoBg": "#ffffff",
+    "title": {
+      "en": "Saint Germain",
+      "pt": "Saint Germain"
+    },
+    "summary": {
+      "en": "Logistics ERP at the center — Tray, Frigos, Cross, finance — plus a PWA that finally made canhoto proofs fast.",
+      "pt": "ERP de logística no centro — Tray, Frigos, Cross, financeiro — e um PWA que finalmente deixou os canhotos rápidos."
+    },
+    "language": "JavaScript",
+    "tech": [
+      "PWA",
+      "ERP",
+      "Tray",
+      "Blip",
+      "QR",
+      "APIs"
+    ],
+    "detail": {
+      "en": "Saint Germain moves restaurant supplies across trucks and trailers. On paper the real shape of the business was an ERP hub: Tray for orders and split payments (PIX, boleto, cards), Frigos for fulfillment and invoicing XML, Cross for delivery tracking back into Tray, Financeiro for releasing and approving splits, plus RD Station / Zenvia for CRM and bots, and Info Price for pricing research. That map is the complexity. At the edge, 100+ drivers still proved each signed canhoto by photographing a full control sheet and cropping stubs in WhatsApp — it worked, but it was slow. A Blip bot came first; the PWA cut submit time with QR autofill (nf, fornecedor, série…), organized proof photos for staff review, and cleared the path to pay drivers. scan.it carries that camera/QR lineage forward. The same surface ran across desk and field — dashboard on a monitor, admin on a laptop, canhoto list with QR on an iPad.",
+      "pt": "A Saint Germain move insumos de restaurante em caminhões e carretas. No papel, o formato real do negócio era um hub de ERP: Tray para pedidos e splits de pagamento (PIX, boleto, cartão), Frigos para fulfillment e XML de faturamento, Cross para rastreio de volta na Tray, Financeiro para liberar e aprovar splits, além de RD Station / Zenvia para CRM e bots, e Info Price para pesquisa de preço. Esse mapa é a complexidade. Na ponta, 100+ motoristas ainda comprovavam cada canhoto assinado fotografando a folha de controle e recortando no WhatsApp — funcionava, mas demorava. Veio um bot Blip; o PWA cortou o tempo de envio com QR autofill (nf, fornecedor, série…), organizou as fotos de prova para revisão e abriu o caminho para pagar os motoristas. O scan.it carrega essa linhagem de câmera/QR adiante. A mesma superfície rodava na mesa e na rua — dashboard no monitor, admin no notebook, lista de canhotos com QR no iPad."
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/saint-germain/erp-architecture-map.png",
+        "alt": {
+          "en": "Hand-drawn ERP map — Tray, Frigos, Cross, Financeiro, RD/Zenvia, and Info Price around the hub",
+          "pt": "Mapa de ERP à mão — Tray, Frigos, Cross, Financeiro, RD/Zenvia e Info Price em torno do hub"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/saint-germain/system-three-devices.png",
+        "alt": {
+          "en": "Saint Germain system open on three devices — monitor dashboard, MacBook admin, iPad canhoto list with QR",
+          "pt": "Sistema Saint Germain aberto em três dispositivos — dashboard no monitor, admin no MacBook, lista de canhotos com QR no iPad"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/saint-germain/howtocut-canhoto.png",
+        "alt": {
+          "en": "Tutorial for drivers — how to crop a canhoto photo in WhatsApp before the system",
+          "pt": "Tutorial para motoristas — como recortar a foto do canhoto no WhatsApp antes do sistema"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/saint-germain/videos/whatsapp-canhoto-before.mp4",
+        "poster": "assets/img/projects/saint-germain/videos/whatsapp-canhoto-before-poster.jpg",
+        "alt": {
+          "en": "Sending canhoto / ocorrências on WhatsApp before the PWA — worked, but slow",
+          "pt": "Envio de canhoto / ocorrências no WhatsApp antes do PWA — funcionava, mas demorava"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/saint-germain/whatsapp-bot-flow.png",
+        "alt": {
+          "en": "Saint Germain WhatsApp bot flow in Blip Builder",
+          "pt": "Fluxo do bot WhatsApp Saint Germain no Blip Builder"
+        }
+      },
+      {
+        "type": "video",
+        "src": "assets/img/projects/saint-germain/videos/pwa-system-demo.mp4",
+        "poster": "assets/img/projects/saint-germain/videos/pwa-system-demo-poster.jpg",
+        "alt": {
+          "en": "Saint Germain PWA — scanning and submitting canhotos in the system",
+          "pt": "PWA Saint Germain — escaneando e enviando canhotos no sistema"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/saint-germain/qr-scan-canhoto.png",
+        "alt": {
+          "en": "Phone scanning NF-e QR on a canhoto sheet",
+          "pt": "Celular escaneando QR da NF-e na folha de canhotos"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/saint-germain/mail-delivery-notify.png",
+        "alt": {
+          "en": "Delivery notification email template for Saint Germain",
+          "pt": "Modelo de e-mail de notificação de entrega Saint Germain"
+        }
+      }
+    ]
+  },
+  {
+    "id": "integra-foods",
+    "era": "ideyou",
+    "accent": "green",
+    "logo": "assets/img/logos/integra-foods.png",
+    "logoBg": "#ffffff",
+    "title": {
+      "en": "Integra Foods",
+      "pt": "Integra Foods"
+    },
+    "summary": {
+      "en": "São Paulo food distributor — WhatsApp bot, landing pages, commerce, ads, and brand film as the op grew toward a full ERP.",
+      "pt": "Distribuidora de alimentos em São Paulo — bot no WhatsApp, landing pages, e-commerce, ads e filme de marca enquanto a operação crescia rumo a um ERP completo."
+    },
+    "language": "Web",
+    "tech": [
+      "WhatsApp bot",
+      "Landing pages",
+      "E-commerce",
+      "Ads",
+      "Motion",
+      "Branding"
+    ],
+    "detail": {
+      "en": "Integra Foods started around 2020–2021 with founders who were already clients on other businesses — including Saint Germain and Spa Água Santa. The bet in São Paulo was a distributor bridging industry and restaurants: early volume to win the market, thin margins on purpose. IdeYou worked with them from that early phase — WhatsApp bot for service, landing pages, e-commerce setup, ads, graphic work, video edit, an animated explainer of how the company worked, and branding materials. As the company grew, so did the scope: talks toward a full ERP to unify operations, with room later for partner integrations. The motion film in this card is one piece of that relationship, not the whole story.",
+      "pt": "A Integra Foods começou por volta de 2020–2021 com empresários que já eram clientes em outros negócios — inclusive Saint Germain e Spa Água Santa. A aposta em São Paulo era uma distribuidora ponte entre indústria e restaurantes: volume cedo para conquistar mercado, margens finas de propósito. A IdeYou entrou nessa fase inicial — bot de atendimento no WhatsApp, landing pages, montagem de e-commerce, anúncios, peças gráficas, edição de vídeo, um filme animado explicando a empresa e materiais de branding. Conforme a empresa crescia, o escopo também: conversas rumo a um ERP completo para unificar a operação, com espaço depois para integrações de parceiros. O filme de motion neste card é um pedaço dessa relação, não a história inteira."
+    },
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/img/projects/integra-foods/videos/promo.mp4",
+        "poster": "assets/img/projects/integra-foods/promo-poster.jpg",
+        "alt": {
+          "en": "Animated explainer made for Integra Foods — one of the brand and growth materials from the early IdeYou engagement",
+          "pt": "Filme animado explicativo feito para a Integra Foods — um dos materiais de marca e crescimento do engajamento inicial com a IdeYou"
         }
       }
     ]
@@ -176,68 +684,97 @@
     }
   },
   {
-    "id": "notify-it",
-    "era": "platform",
-    "accent": "yellow",
-    "caseId": "platform",
-    "logo": "assets/img/logos/notify-it.png",
-    "logoBg": "#0a0a0a",
+    "id": "spa-agua-santa",
+    "era": "ideyou",
+    "accent": "green",
+    "logo": "assets/img/logos/spa-agua-santa.png",
+    "logoBg": "#ffffff",
     "title": {
-      "en": "notify.it",
-      "pt": "notify.it"
+      "en": "Spa Água Santa",
+      "pt": "Spa Água Santa"
     },
     "summary": {
-      "en": "Push and email microservice — the platform’s mail carrier.",
-      "pt": "Microserviço de push e e-mail — o carteiro da plataforma."
+      "en": "Wellness client in the IdeYou circle — Saúde e bem estar. More story coming.",
+      "pt": "Cliente de bem-estar no círculo IdeYou — Saúde e bem estar. Mais história a caminho."
     },
-    "language": "TypeScript",
+    "language": "Web",
     "tech": [
-      "NestJS",
-      "web-push",
-      "nodemailer"
-    ],
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/img/logos/notify-it.png",
-        "alt": {
-          "en": "notify.it logo",
-          "pt": "Logo notify.it"
-        }
-      }
+      "HTML",
+      "CSS",
+      "JavaScript"
     ]
   },
   {
-    "id": "barcode-it",
+    "id": "scan-it",
     "era": "platform",
-    "accent": "orange",
-    "caseId": "platform",
-    "logo": "assets/img/logos/barcode-it.png",
+    "accent": "blue",
+    "logo": "assets/img/logos/scan-it.png",
     "logoBg": "#0a0a0a",
+    "caseId": "platform",
     "title": {
-      "en": "barcode.it",
-      "pt": "barcode.it"
+      "en": "scan.it",
+      "pt": "scan.it"
     },
     "summary": {
-      "en": "QR and linear barcode PNG generation API.",
-      "pt": "API de geração de QR e códigos de barras lineares em PNG."
+      "en": "Barcode and QR camera UI microservice — born from logistics canhoto scanning at Saint Germain.",
+      "pt": "Microserviço de UI de câmera para código de barras e QR — nascido do scan de canhotos na Saint Germain."
     },
     "language": "TypeScript",
     "tech": [
-      "NestJS",
-      "bwip-js",
-      "sharp"
+      "TypeScript",
+      "Camera API",
+      "QR"
     ],
+    "detail": {
+      "en": "Focused camera surface for barcode/QR capture used by operational flows. Origin need: drivers scanning signed NF stubs so load data autofills and proof photos stay organized.",
+      "pt": "Superfície de câmera focada em captura de código de barras/QR em fluxos operacionais. Necessidade de origem: motoristas escaneando canhotos assinados para autofill da carga e fotos de prova organizadas."
+    }
+  },
+  {
+    "id": "lmsalgados",
+    "era": "design",
+    "accent": "orange",
+    "logo": "assets/img/logos/lmsalgados.png",
+    "title": {
+      "en": "LM Salgados",
+      "pt": "LM Salgados"
+    },
+    "summary": {
+      "en": "Institutional marketing site: company intro, store routing, and talent acquisition — separate from the MioDelivery ERP case.",
+      "pt": "Site institucional de marketing: empresa, roteamento por loja e talent acquisition — separado do case ERP MioDelivery."
+    },
+    "language": "HTML",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://lmsalgados.com.br"
+    },
     "media": [
       {
         "type": "image",
-        "src": "assets/img/logos/barcode-it.png",
+        "src": "assets/img/projects/lmsalgados/shot-1.png",
         "alt": {
-          "en": "barcode.it logo",
-          "pt": "Logo barcode.it"
+          "en": "LM Salgados marketing site",
+          "pt": "Site de marketing LM Salgados"
+        }
+      },
+      {
+        "type": "image",
+        "src": "assets/img/projects/lmsalgados/brand-sheet.png",
+        "alt": {
+          "en": "LM Salgados brand sheet",
+          "pt": "Folha de marca LM Salgados"
         }
       }
-    ]
+    ],
+    "logoBg": "#0a0a0a",
+    "detail": {
+      "en": "Public marketing site for the brand. The long operational partnership — kitchen board, multi-unit ERP, PWA, and productization as MioDelivery — is told in the MioDelivery case study.",
+      "pt": "Site público de marketing da marca. A parceria operacional longa — painel de cozinha, ERP multiunidade, PWA e productização como MioDelivery — está no case do MioDelivery."
+    }
   },
   {
     "id": "print-it",
@@ -260,6 +797,14 @@
       "NestJS"
     ],
     "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/miodelivery/print-it-before-ui-after.png",
+        "alt": {
+          "en": "Old comanda, print.it UI, and new comanda side by side",
+          "pt": "Comanda antiga, UI do print.it e comanda nova lado a lado"
+        }
+      },
       {
         "type": "image",
         "src": "assets/img/projects/miodelivery/print-it-ui.png",
@@ -307,181 +852,34 @@
     }
   },
   {
-    "id": "engrenhamais",
-    "era": "design",
-    "accent": "red",
-    "logo": "https://engrenhamais.com.br/assets/icons/favicon-32.png",
-    "logoBg": "#ffffff",
+    "id": "viaprime",
+    "era": "ideyou",
+    "accent": "blue",
+    "logo": "assets/img/logos/viaprime.png",
     "title": {
-      "en": "ENGRENHA+",
-      "pt": "ENGRENHA+"
+      "en": "Via Prime",
+      "pt": "Via Prime"
     },
     "summary": {
-      "en": "Industrial consultancy site for refractory and energy solutions.",
-      "pt": "Site de consultoria industrial para soluções refratárias e de energia."
+      "en": "React Native gym app (schedules, booking, workout sheets) — Vale Telecom 2018; status unknown since.",
+      "pt": "App de academia em React Native (horários, reserva, fichas) — Vale Telecom 2018; status desconhecido desde então."
     },
-    "language": "PHP",
+    "language": "Mobile",
     "tech": [
-      "PHP",
-      "HTML",
-      "CSS"
+      "React Native",
+      "iOS",
+      "Android"
     ],
     "links": {
-      "live": "https://engrenhamais.com.br"
+      "live": "https://www.instagram.com/viaprimefabri/"
     },
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/engrenhamais/shot-1.png",
+        "src": "assets/img/projects/viaprime/shot-1.png",
         "alt": {
-          "en": "ENGRENHA+ screenshot",
-          "pt": "Print de ENGRENHA+"
-        }
-      }
-    ]
-  },
-  {
-    "id": "lmsalgados",
-    "era": "design",
-    "accent": "orange",
-    "logo": "assets/img/logos/lmsalgados.png",
-    "title": {
-      "en": "LM Salgados",
-      "pt": "LM Salgados"
-    },
-    "summary": {
-      "en": "Marketing site for LM Salgados — a long-term food brand client since 2017.",
-      "pt": "Site de marketing da LM Salgados — cliente de marca food desde 2017."
-    },
-    "language": "HTML",
-    "tech": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "links": {
-      "live": "https://lmsalgados.com.br"
-    },
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/img/projects/lmsalgados/shot-1.png",
-        "alt": {
-          "en": "LM Salgados marketing site",
-          "pt": "Site de marketing LM Salgados"
-        }
-      },
-      {
-        "type": "image",
-        "src": "assets/img/projects/lmsalgados/brand-sheet.png",
-        "alt": {
-          "en": "LM Salgados brand sheet",
-          "pt": "Folha de marca LM Salgados"
-        }
-      }
-    ],
-    "logoBg": "#0a0a0a",
-    "detail": {
-      "en": "Public marketing site for the brand. The long operational partnership — kitchen board, multi-unit ERP, PWA, and productization as MioDelivery — is told in the MioDelivery case study.",
-      "pt": "Site público de marketing da marca. A parceria operacional longa — painel de cozinha, ERP multiunidade, PWA e productização como MioDelivery — está no case do MioDelivery."
-    }
-  },
-  {
-    "id": "vipproducoes",
-    "era": "design",
-    "accent": "coral",
-    "logo": "https://isaque.it/vipproducoes.com.br/img/logo_sm.png",
-    "logoBg": "#0a0a0a",
-    "title": {
-      "en": "VIP Produções",
-      "pt": "VIP Produções"
-    },
-    "summary": {
-      "en": "Site for an events company — DJ, stage structure, and photo booth.",
-      "pt": "Site para uma empresa de eventos — DJ, estrutura e cabine fotográfica."
-    },
-    "language": "HTML",
-    "tech": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "links": {
-      "live": "https://isaque.it/vipproducoes.com.br/"
-    },
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/img/projects/vipproducoes/shot-1.png",
-        "alt": {
-          "en": "VIP Produções screenshot",
-          "pt": "Print de VIP Produções"
-        }
-      }
-    ]
-  },
-  {
-    "id": "victoriacosta",
-    "era": "design",
-    "accent": "green",
-    "logo": "assets/img/logos/victoriacosta.png",
-    "title": {
-      "en": "Jardim da Victória",
-      "pt": "Jardim da Victória"
-    },
-    "summary": {
-      "en": "Digital birthday invitation with RSVP, gift list, and photo album — adaptable to any event.",
-      "pt": "Convite de aniversário digital com RSVP, lista de presentes e álbum de fotos — adaptável a outros eventos."
-    },
-    "language": "HTML",
-    "tech": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "links": {
-      "live": "https://isaque.it/victoriacosta.com.br/"
-    },
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/img/projects/victoriacosta/shot-1.png",
-        "alt": {
-          "en": "Jardim da Victória screenshot",
-          "pt": "Print de Jardim da Victória"
-        }
-      }
-    ]
-  },
-  {
-    "id": "ensaio-fotografico",
-    "era": "design",
-    "accent": "yellow",
-    "logo": "https://isaque.it/ensaio-fotografico/assets/icon.avif",
-    "title": {
-      "en": "Victória's PhotoShoot",
-      "pt": "Ensaio da Victória"
-    },
-    "summary": {
-      "en": "Web app that plays the debutante's photo shoot on the venue's big screen during the event.",
-      "pt": "App web que exibe o ensaio fotográfico da debutante no telão durante o evento."
-    },
-    "language": "JavaScript",
-    "tech": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "links": {
-      "live": "https://isaque.it/ensaio-fotografico/"
-    },
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/img/projects/ensaio-fotografico/shot-1.png",
-        "alt": {
-          "en": "Victória's PhotoShoot screenshot",
-          "pt": "Print de Ensaio da Victória"
+          "en": "Via Prime screenshot",
+          "pt": "Print de Via Prime"
         }
       }
     ]
@@ -531,8 +929,8 @@
       "pt": "Metasita"
     },
     "summary": {
-      "en": "Steelworkers' union site — built on WordPress in 2018 while working at Vale Telecom.",
-      "pt": "Site do sindicato dos metalúrgicos — feito em WordPress em 2018, na época da Vale Telecom."
+      "en": "Steelworkers' union site — WordPress portal from Vale Telecom 2018; still online on the core structure I shipped.",
+      "pt": "Site do sindicato dos metalúrgicos — portal WordPress da Vale Telecom 2018; ainda no ar na estrutura-base que entreguei."
     },
     "language": "PHP",
     "tech": [
@@ -555,40 +953,6 @@
     ]
   },
   {
-    "id": "lbrecords",
-    "era": "design",
-    "accent": "blue",
-    "logo": "https://isaque.it/lbrecords.com/_img/logo_nova.png",
-    "logoBg": "#0a0a0a",
-    "title": {
-      "en": "Lucas Bitencourt Records",
-      "pt": "Lucas Bitencourt Records"
-    },
-    "summary": {
-      "en": "Music studio site built alongside a friend while teaching him how to create websites.",
-      "pt": "Site de estúdio musical construído junto com um amigo enquanto o ensinava a criar sites."
-    },
-    "language": "HTML",
-    "tech": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "links": {
-      "live": "https://isaque.it/lbrecords.com/"
-    },
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/img/projects/lbrecords/shot-1.png",
-        "alt": {
-          "en": "Lucas Bitencourt Records screenshot",
-          "pt": "Print de Lucas Bitencourt Records"
-        }
-      }
-    ]
-  },
-  {
     "id": "lagoa-silvana",
     "era": "design",
     "accent": "green",
@@ -599,8 +963,8 @@
       "pt": "Parque Lagoa Silvana"
     },
     "summary": {
-      "en": "Marketing site for a high-end condominium by Lagoa Silvana — leisure club, 24h security, and privileged lake views.",
-      "pt": "Site institucional de condomínio de alto padrão na Lagoa Silvana — clube de lazer, segurança 24h e vista privilegiada da lagoa."
+      "en": "High-end condo marketing near Lagoa Silvana — I also shot the on-site photos used in the site.",
+      "pt": "Marketing de condomínio alto padrão perto da Lagoa Silvana — também fotografei as fotos usadas no site."
     },
     "language": "PHP",
     "tech": [
@@ -634,8 +998,8 @@
       "pt": "Damasceno Imóveis"
     },
     "summary": {
-      "en": "Real estate site for buying and renting properties in Coronel Fabriciano and the surrounding region.",
-      "pt": "Site de imobiliária para compra e aluguel de imóveis em Coronel Fabriciano e região."
+      "en": "Real-estate site + API sync for an existing listings system — Vale Telecom 2018 (initial version).",
+      "pt": "Site imobiliário + sync via API com sistema de anúncios existente — Vale Telecom 2018 (versão inicial)."
     },
     "language": "PHP",
     "tech": [
@@ -669,8 +1033,8 @@
       "pt": "ACDN"
     },
     "summary": {
-      "en": "WordPress site for the Association for Children with Neurological Disorders.",
-      "pt": "Site em WordPress da Associação da Criança com Distúrbios Neurológicos."
+      "en": "Pro bono WordPress site for a children’s neurological association — Vale Telecom support, 2018.",
+      "pt": "Site WordPress pro bono para associação de crianças com transtornos neurológicos — apoio Vale Telecom, 2018."
     },
     "language": "PHP",
     "tech": [
@@ -727,257 +1091,130 @@
     ]
   },
   {
-    "id": "magic-globe",
-    "era": "hardware",
-    "accent": "yellow",
-    "logo": "https://isaque.it/cubo/assets/media/cubomagico-64.png",
-    "caseId": "cube",
-    "title": {
-      "en": "Magic Globe",
-      "pt": "Globo Mágico"
-    },
-    "summary": {
-      "en": "Open-source Rubik’s Cube robot solver with web control — solves in under 2 seconds.",
-      "pt": "Robô resolvedor de Cubo Mágico open-source com controle web — solves em menos de 2 segundos."
-    },
-    "language": "JavaScript",
-    "tech": [
-      "HTML",
-      "JavaScript",
-      "Python",
-      "C++"
-    ],
-    "links": {
-      "repo": "https://github.com/ioisaque/magic-globe"
-    },
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/img/projects/magic-globe/structure-3d.jpg",
-        "alt": {
-          "en": "Magic Globe 3D structure — six steppers on a spherical frame holding the cube",
-          "pt": "Estrutura 3D do Globo Mágico — seis motores numa armação esférica segurando o cubo"
-        }
-      },
-      {
-        "type": "image",
-        "src": "assets/img/projects/magic-globe/python-vision.png",
-        "alt": {
-          "en": "Python OpenCV view — dual cameras, cube net, solved in 1.574 s",
-          "pt": "Visão do programa Python/OpenCV — duas câmeras, net do cubo, resolvido em 1,574 s"
-        }
-      },
-      {
-        "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/globe-scramble-solve.mp4",
-        "poster": "assets/img/projects/magic-globe/globe-scramble-solve.jpg",
-        "alt": {
-          "en": "Scrambling and solving on the new Magic Globe structure — the machine that earned the name",
-          "pt": "Embaralhando e resolvendo na nova estrutura do Globo Mágico — a máquina que deu nome ao projeto"
-        }
-      },
-      {
-        "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/robotics-fair-solve.mp4",
-        "poster": "assets/img/projects/magic-globe/robotics-fair-solve.jpg",
-        "alt": {
-          "en": "Prototype solving the cube at the college robotics fair",
-          "pt": "Protótipo resolvendo o cubo na feira de robótica da faculdade"
-        }
-      },
-      {
-        "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/teacher-vs-robot.mp4",
-        "poster": "assets/img/projects/magic-globe/teacher-vs-robot.jpg",
-        "alt": {
-          "en": "Prototype vs teacher Filipe — he “solved” it after a few moves; the robot still won",
-          "pt": "Protótipo vs professor Filipe — ele “resolveu” com poucos movimentos; o robô ainda ganhou"
-        }
-      },
-      {
-        "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/defense-day-solve.mp4",
-        "poster": "assets/img/projects/magic-globe/defense-day-solve.jpg",
-        "alt": {
-          "en": "Solving on defense day — after rebuilding the hardware overnight for the CS degree presentation",
-          "pt": "Resolvendo no dia da banca — depois de remontar o hardware a noite inteira para a defesa do TCC"
-        }
-      },
-      {
-        "type": "video",
-        "src": "assets/img/projects/magic-globe/videos/ipad-control.mp4",
-        "poster": "assets/img/projects/magic-globe/ipad-control.jpg",
-        "alt": {
-          "en": "Testing the prototype web controls on an iPad",
-          "pt": "Testando os controles web do protótipo num iPad"
-        }
-      },
-      {
-        "type": "image",
-        "src": "assets/img/projects/magic-globe/shot-1.png",
-        "alt": {
-          "en": "Magic Globe screenshot",
-          "pt": "Print de Globo Mágico"
-        }
-      }
-    ]
-  },
-  {
-    "id": "miodelivery",
-    "era": "ideyou",
+    "id": "victoriacosta",
+    "era": "design",
     "accent": "green",
-    "caseId": "miodelivery",
+    "logo": "assets/img/logos/victoriacosta.png",
     "title": {
-      "en": "MioDelivery",
-      "pt": "MioDelivery"
+      "en": "Jardim da Vitória",
+      "pt": "Jardim da Vitória"
     },
     "summary": {
-      "en": "Born with LM Salgados — now a multi-store MioDelivery with kitchen panel, order ops, and print.it.",
-      "pt": "Nasceu com a LM Salgados — hoje MioDelivery multi-loja com painel de cozinha, operação de pedidos e print.it."
+      "en": "Reusable digital invite — RSVP, gift list, and Pix — born as a 15th, ready for weddings and more.",
+      "pt": "Convite digital reutilizável — RSVP, lista de presentes e Pix — nasceu num 15 anos, serve casamentos e mais."
     },
-    "language": "PHP",
+    "language": "HTML",
     "tech": [
-      "PHP",
-      "React",
-      "NestJS",
-      "MySQL"
-    ],
-    "links": {
-      "live": "https://ideyou.com.br"
-    },
-    "detail": {
-      "en": "Long partnership from 2017: shouted kitchen quantities → production board → multi-unit ERP → PWA → today’s dashboard, versatile kitchen panel, filtered order listings, and thermal receipts via print.it (replacing IdeYouPrint at LM). Origin screens and diagrams sit next to current product UI. Product types (simple, combo, sizes, add-ons), auto PDF menus, and animated TV menus are part of the same ops surface. Multi-store setup and reports work grouped or per unit for a diversified managerial view.",
-      "pt": "Parceria longa desde 2017: gritos na cozinha → painel de produção → ERP multiunidade → PWA → dashboard de hoje, painel de cozinha versátil, listagens filtradas e comandas via print.it (no lugar do IdeYouPrint na LM). Telas de origem e diagramas ao lado da UI atual do produto. Tipos de produto (simples, combo, tamanhos, adicional), cardápio PDF automático e cardápio animado para TV fazem parte da mesma superfície operacional. Cadastro multi-loja e relatórios funcionam agrupados ou por unidade para uma visão gerencial diversificada."
-    },
-    "media": [],
-    "logo": "assets/img/logos/lmsalgados.png",
-    "logoBg": "#0a0a0a",
-    "linkLabels": {
-      "live": {
-        "en": "IdeYou",
-        "pt": "IdeYou"
-      }
-    }
-  },
-  {
-    "id": "telecom-erp",
-    "era": "ideyou",
-    "accent": "coral",
-    "title": {
-      "en": "Telecom ERP",
-      "pt": "Telecom ERP"
-    },
-    "summary": {
-      "en": "Enterprise billing, boletos, and commercial operations for telecom.",
-      "pt": "Faturamento empresarial, boletos e operação comercial para telecom."
-    },
-    "language": "PHP",
-    "tech": [
-      "PHP",
-      "MySQL",
-      "JavaScript"
-    ]
-  },
-  {
-    "id": "planeja-ideyou",
-    "era": "ideyou",
-    "accent": "blue",
-    "logo": "https://isaque.it/meuaurelio.com.br/assets/images/aurelio-white.png",
-    "logoBg": "#012060",
-    "title": {
-      "en": "Aurélio",
-      "pt": "Aurélio"
-    },
-    "summary": {
-      "en": "BNCC-aligned lesson plan builder with print-ready output for teachers.",
-      "pt": "Construtor de planos de aula alinhado à BNCC com saída pronta para impressão."
-    },
-    "language": "PHP",
-    "tech": [
-      "PHP",
-      "MySQL"
-    ],
-    "links": {
-      "live": "https://isaque.it/meuaurelio.com.br/",
-      "repo": "https://github.com/ioisaque/planeja-ideyou"
-    },
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/img/projects/planeja-ideyou/shot-1.png",
-        "alt": {
-          "en": "Aurélio screenshot",
-          "pt": "Print de Aurélio"
-        }
-      }
-    ]
-  },
-  {
-    "id": "viaprime",
-    "era": "ideyou",
-    "accent": "blue",
-    "logo": "assets/img/logos/viaprime.png",
-    "title": {
-      "en": "Via Prime Fabri",
-      "pt": "Via Prime Fabri"
-    },
-    "summary": {
-      "en": "iOS and Android app for class scheduling and workout tracking.",
-      "pt": "Aplicativo iOS e Android para agendamento de aulas e controle de treinos."
-    },
-    "language": "Mobile",
-    "tech": [
-      "iOS",
-      "Android"
-    ],
-    "links": {
-      "live": "https://www.instagram.com/viaprimefabri/"
-    },
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/img/projects/viaprime/shot-1.png",
-        "alt": {
-          "en": "Via Prime Fabri screenshot",
-          "pt": "Print de Via Prime Fabri"
-        }
-      }
-    ]
-  },
-  {
-    "id": "cti",
-    "era": "teaching",
-    "accent": "blue",
-    "logo": "https://isaque.it/cti/logo.png",
-    "title": {
-      "en": "CTI Projects",
-      "pt": "Projetos CTI"
-    },
-    "summary": {
-      "en": "Portfolio of projects built in the technical course I coordinated and taught.",
-      "pt": "Portfólio de projetos desenvolvidos no curso técnico que coordenei e lecionei."
-    },
-    "language": "PHP",
-    "tech": [
-      "PHP",
       "HTML",
       "CSS",
       "JavaScript"
     ],
     "links": {
-      "live": "https://isaque.it/cti",
-      "repo": "https://github.com/ioisaque/cti"
+      "live": "https://isaque.it/victoriacosta.com.br/"
     },
     "media": [
       {
         "type": "image",
-        "src": "assets/img/projects/cti/shot-1.png",
+        "src": "assets/img/projects/victoriacosta/shot-1.png",
         "alt": {
-          "en": "CTI Projects screenshot",
-          "pt": "Print de Projetos CTI"
+          "en": "Jardim da Vitória screenshot",
+          "pt": "Print de Jardim da Vitória"
         }
       }
     ]
+  },
+  {
+    "id": "lbrecords",
+    "era": "design",
+    "accent": "blue",
+    "logo": "https://isaque.it/lbrecords.com/_img/logo_nova.png",
+    "logoBg": "#0a0a0a",
+    "title": {
+      "en": "Lucas Bitencourt Records",
+      "pt": "Lucas Bitencourt Records"
+    },
+    "summary": {
+      "en": "Music studio site built alongside a friend while teaching him how to create websites.",
+      "pt": "Site de estúdio musical construído junto com um amigo enquanto o ensinava a criar sites."
+    },
+    "language": "HTML",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://isaque.it/lbrecords.com/"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/lbrecords/shot-1.png",
+        "alt": {
+          "en": "Lucas Bitencourt Records screenshot",
+          "pt": "Print de Lucas Bitencourt Records"
+        }
+      }
+    ]
+  },
+  {
+    "id": "vipproducoes",
+    "era": "design",
+    "accent": "coral",
+    "logo": "https://isaque.it/vipproducoes.com.br/img/logo_sm.png",
+    "logoBg": "#0a0a0a",
+    "title": {
+      "en": "VIP Produções",
+      "pt": "VIP Produções"
+    },
+    "summary": {
+      "en": "Events company site from adolescence — sound, lighting, structure; striking entertainment identity.",
+      "pt": "Site de eventos desde a adolescência — som, luz, estrutura; identidade de entretenimento com peso visual."
+    },
+    "language": "HTML",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "live": "https://isaque.it/vipproducoes.com.br/"
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/img/projects/vipproducoes/shot-1.png",
+        "alt": {
+          "en": "VIP Produções screenshot",
+          "pt": "Print de VIP Produções"
+        }
+      }
+    ]
+  },
+  {
+    "id": "im-root",
+    "era": "design",
+    "accent": "orange",
+    "title": {
+      "en": "I'm root",
+      "pt": "I'm root"
+    },
+    "summary": {
+      "en": "2014 personal site — early Linux/networks identity on Wix, before the later craft stack.",
+      "pt": "Site pessoal de 2014 — identidade Linux/redes no Wix, antes do stack de craft posterior."
+    },
+    "language": "Web",
+    "tech": [
+      "Wix"
+    ],
+    "links": {
+      "live": "https://ubuntu12.wixsite.com/root"
+    },
+    "detail": {
+      "en": "Early public presence while studying networks — a snapshot of the “I'm root” phase, not a modern product page.",
+      "pt": "Presença pública cedo, ainda nos estudos de redes — um retrato da fase “I'm root”, não uma página de produto moderna."
+    },
+    "logo": "assets/img/logos/im-root.png"
   },
   {
     "id": "block",

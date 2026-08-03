@@ -9,48 +9,77 @@ Use this when writing or editing Evolution, catalog, case studies, or hero stats
 
 ## Identity
 
-- Name: Isaque Costa · Software Engineer · he/him
-- Brand / company: isaque.it · IdeYou (IT services / products)
+- Name: Isaque Costa · Software Engineer · he/him · born **1998**
+- Brand / company: **isaque.it** (primary). IdeYou was the formative multi-service team (~2020–transition); never ship the ASR typo `isaac.it`.
+- Brand meanings: Isaque + **IT** + **`.it`** (Italy / Italian heritage).
 - Based: **Dublin, Ireland** (site truth). Brazilian origin. GitHub may still say Italy — ignore for site copy.
 - Languages: fluent Portuguese and English; studying Spanish and Italian.
 - Scale claims on site: 100+ projects delivered, 12+ years of experience (hero).
+- Early craft: age **15** designer; **2013** Warface (Lua) + HTML/CSS/PHP/MySQL + dentist clinic system. **I'm root** site (2014): https://ubuntu12.wixsite.com/root
 
 ## Five eras (canonical ids)
 
-Use these ids everywhere (`milestones`, `catalog`, filters):
+Use these ids everywhere (`milestones`, `catalog`, filters). Exact year bands may shift once the full project→year list lands — do not invent.
 
 | id | Years | Color | Thinking arc |
 |----|-------|-------|--------------|
 | `design` | 2012–2016 | `#F5617F` | Craft and intention — first professional sites for local businesses |
-| `hardware` | 2016–2019 | `#FFD22B` | Chaos → structure — SENAI / degree, mechatronics, Magic Globe robot |
-| `ideyou` | 2019–2023 | `#FF5356` | Real operational noise — IdeYou food-tech, ERP, education products |
-| `teaching` | 2023–2025 | `#9900CC` | Teaching clarified models — CS teaching, school IT, CTI hub |
+| `hardware` | 2016–2019 | `#FFD22B` | Chaos → structure — SENAI networks + Faculdade Única / Magic Globe |
+| `ideyou` | 2019–2023 | `#FF5356` | Real operational noise — IdeYou food-tech, logistics, multi-service clients |
+| `teaching` | 2023–2026 | `#9900CC` | Teaching clarified models — CS teaching, school IT, CTI hub + coordination |
 | `platform` | 2025–now | `#0076F3` | Fragments → platform — admin, API, client portal under isaque.it |
 
 ## Era stories (facts to keep)
 
-**design** — Visual design and front-end for clinics, food brands, small businesses (e.g. ENGRENHA+, LM Salgados). Typography, trust on screen, every pixel earning its place.
+**design** — Visual design and front-end for clinics, food brands, small businesses. **Vale Telecom 2018** cluster (still under design era until years list): Folha do Comércio, Metasita, Lagoa Silvana, Damasceno, ACDN, Nina Cordeiro, Via Prime. Engrenha+ = most recent institutional client (craft bar: SEO, responsive, light/dark). VIP Produções = adolescence client. Jardim da Vitória (Pix/RSVP). Victoria’s Photo Shoot PWA.
 
-**hardware** — Bachelor’s / SENAI: 3D printing, CNC, Arduino, vision, mechatronics. Magic Globe / Globo Mágico: Rubik’s Cube robot, web/iPad control, sub-2s solves; open-source angle via `magic-globe`. Metaphor for the whole career: find structure under noise.
+**hardware** — SENAI = **Computer Networks** técnico (DNS/DHCP/servers) — mechatronics was interest, not the course. Bachelor’s = **Faculdade Única** / Magic Globe. Magic Globe dates: **Dec 2018** bet → first prototype **May 2019** → final **Nov 2019** → TCC approved **Dec 2019** (PDF in assets). EN "Magic Globe" / PT "Globo Mágico"; Live `https://isaque.it/cubo/`. Metaphor: find structure under noise.
 
-**ideyou** — IdeYou (from ~2019): beyond pages into platforms. MioDelivery grew from the **LM Salgados** partnership (first major software client since 2017 — factory + multi-store system under early placeholder brand Hi sistemas, kitchen production panel from a CorelDRAW sketch, pandemic ordering stages, first production PWA) and still runs for a few hand-picked food clients that prioritize quality over quantity. Telecom ERP (billing, boletos, operations). Aurélio / planeja-ideyou (BNCC lesson plans). LinkedIn: Full Stack at IdeYou; tools that had to work every peak hour.
+**ideyou** — Pandemic 2020 origin with friend **Tainan** (Warface 2013): closed WhatsApp quality group → ~5 → informal company (not incorporated). Multi-service: web, bots, ads, graphic, video, branding. Large client circle includes **Integra Foods** (~2020/2021 SP distributor industry↔restaurants; WhatsApp bot, LPs, e-commerce, ads, graphic, video/explainer, branding; ERP talks as scope grew — founders already clients via Saint Germain / Spa Água Santa circle), **Saint Germain**, **Spa Água Santa**. Partnership ended over quality/reputation vs sales expectations; transitioned brand to **isaque.it** (evolution, not revenge rebrand). Public site: lead with evolution/values — do not put cast drama on the portfolio. MioDelivery (LM Salgados since 2017). Saint Germain delivery control (canhoto/PWA, scan.it lineage). Meu Aurélio (2023, João Paulo II — prefer **teaching** era in catalog).
 
-**teaching** — CS teaching while building school relationships (networks, IT services, custom systems). CTI as student/project hub. Explaining forced clearer design.
+**teaching** — CS teaching while building school relationships. **Meu Aurélio** (2023): lesson-plan PDF + QR materials. **CTI**: Coordinator of Technical Computing at Escola João Paulo II **since Feb 2026**, and still teacher. CTI Projects = public hub of student work.
 
-**platform** — Convergence under isaque.it: sistema (admin SPA), api (NestJS/Prisma), cliente (portal), notify.it, barcode.it. Same care as early design sites, at platform scale.
+**platform** — Convergence under isaque.it: sistema, api, cliente, notify.it, barcode.it, **scan.it**, print.it. Same care as early design sites, at platform scale.
 
 ## Canonical project map (era → catalog ids)
 
-- **design:** `engrenhamais`, `lmsalgados`, `vipproducoes`, `victoriacosta`, `ensaio-fotografico`, `folhadocomercio`, `metasita`, `lbrecords`, `lagoa-silvana`, `damasceno`, `acdn`, `nina-cordeiro`
-- **hardware:** `magic-globe` (case: `cube`) — single unified entry: EN "Magic Globe", PT "Globo Mágico"; tech HTML, JS, Python, C++
-- **ideyou:** `miodelivery` (case: `miodelivery`), `telecom-erp`, `planeja-ideyou`, `viaprime`
-- **teaching:** `cti` — "CTI Projects" / "Projetos CTI", portfolio of projects from the technical course Isaque coordinated and taught
-- **platform:** `sistema-isaque`, `api-isaque`, `cliente-isaque`, `notify-it`, `barcode-it`, `print-it` (case: `platform`) — listed first in `catalog.json` so they appear together at the top of the Selected projects grid
+- **design:** `im-root`, `engrenhamais`, `lmsalgados`, `vipproducoes`, `victoriacosta`, `ensaio-fotografico`, `folhadocomercio`, `metasita`, `lbrecords`, `lagoa-silvana`, `damasceno`, `acdn`, `nina-cordeiro`
+- **hardware:** `magic-globe` (case: `cube`) — EN "Magic Globe", PT "Globo Mágico"; tech HTML, JS, Python, C++
+- **ideyou:** `miodelivery` (case: `miodelivery`), `saint-germain`, `integra-foods`, `spa-agua-santa`, `viaprime` — **no `telecom-erp`**
+- **teaching:** `planeja-ideyou` (title **Meu Aurélio**), `cti` — "CTI Projects" / "Projetos CTI"
+- **platform:** `sistema-isaque`, `api-isaque`, `cliente-isaque`, `notify-it`, `barcode-it`, `scan-it`, `print-it` (case: `platform`)
+
+Catalog grid: **pinned top** — Magic Globe, MioDelivery, Victória's PhotoShoot, sistema.isaque.it (ecosystem face) — then **newest → oldest**, with platform microservices scrambled so they are not adjacent; `block` at the end.
 
 Case study ids in `projects.json`: `cube`, `miodelivery`, `platform` only.
 
+## Catalog titles (canonical spelling)
+
+| id | Title |
+|----|-------|
+| `victoriacosta` | Jardim da Vitória |
+| `metasita` | Metasita |
+| `planeja-ideyou` | Meu Aurélio |
+| `viaprime` | Via Prime |
+| `vipproducoes` | VIP Produções |
+| `saint-germain` | Saint Germain |
+| `integra-foods` | Integra Foods |
+| `spa-agua-santa` | Spa Água Santa |
+| `scan-it` | scan.it |
+| `magic-globe` / case `cube` | Magic Globe / Globo Mágico |
+
+## Saint Germain / scan.it (brief)
+
+- Ops shape: **ERP hub** (Tray orders/payments, Frigos fulfillment, Cross tracking, Financeiro splits, RD/Zenvia, Info Price) — hand-drawn architecture map in catalog media.
+- Delivery edge for **100+ drivers**: signed NF **canhotos** → scan → QR autofill → proof photo → staff review → pay drivers.
+- **Before:** WhatsApp send of canhoto/ocorrências (worked but slow); drivers **cropped** each stub themselves (tutorial still).
+- Evolution: **WhatsApp bot (Blip)** → **PWA**.
+- **scan.it** = barcode/QR camera UI microservice — origin need from this logistics work.
+
 ## Notable public links
 
-- Portfolio / tools: https://isaque.it · https://ideyou.com.br · https://sistema.isaque.it · https://isaque.it/meuaurelio.com.br/
+- Portfolio / tools: https://isaque.it · https://sistema.isaque.it · https://isaque.it/meuaurelio.com.br/ · https://isaque.it/cubo/
 - GitHub: https://github.com/ioisaque · https://github.com/ioisaque/magic-globe · https://github.com/ioisaque/cti · https://github.com/ioisaque/planeja-ideyou
 - Contact: costa@isaque.it
+- Historical I'm root (2014): https://ubuntu12.wixsite.com/root
+- IdeYou.com.br may still exist historically — do not sell as current Live for MioDelivery.

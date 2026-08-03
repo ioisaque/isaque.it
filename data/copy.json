@@ -62,7 +62,7 @@
       "live": "Live",
       "repo": "Repo",
       "liveSite": "Live site",
-      "docs": "Old receipt (PDF)",
+      "docs": "PDF",
       "filters": {
         "all": "All",
         "design": "Design",
@@ -429,7 +429,7 @@
       "live": "Ao vivo",
       "repo": "Repo",
       "liveSite": "Site ao vivo",
-      "docs": "Recibo antigo (PDF)",
+      "docs": "PDF",
       "filters": {
         "all": "Todos",
         "design": "Design",

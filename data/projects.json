@@ -4,16 +4,16 @@
     "accent": "yellow",
     "embed": "https://isaque.it/cubo/",
     "title": {
-      "en": "Rubik's Cube solver",
-      "pt": "Resolvedor de Cubo Mágico"
+      "en": "Magic Globe",
+      "pt": "Globo Mágico"
     },
     "subtitle": {
-      "en": "From a fair prototype to the machine that earned the degree — and the name.",
-      "pt": "Do protótipo na feira à máquina que fechou o diploma — e ganhou o nome."
+      "en": "A Rubik's Cube Solver Machine — a challenge I took seriously. Told ya, Filipe.",
+      "pt": "Uma máquina resolvedora de Cubo Mágico — um desafio que eu levei a sério. Te falei, Filipe."
     },
     "problem": {
-      "en": "A scrambled cube looks random. Solving it by hand is slow, and teaching a machine to do it means bridging vision, kinematics, timing, and a human-facing interface — all at once.",
-      "pt": "Um cubo embaralhado parece aleatório. Resolvê-lo à mão é lento, e ensinar uma máquina a fazê-lo exige unir visão, cinemática, timing e uma interface humana — ao mesmo tempo."
+      "en": "My professor — and boss at Vale Telecom — Filipe Costa is a Rubik’s Cube fan who wanted to see a solving machine live. His way of getting one built was to challenge me. I took it seriously: not a toy demo, but a real machine that could take any scramble and solve it.",
+      "pt": "Meu professor — e chefe na Vale Telecom — Filipe Costa é fã de Cubo Mágico e queria ver uma máquina resolvedora ao vivo. O jeito dele conseguir uma foi me desafiar. Eu levei a sério: não um demo de brinquedo, e sim uma máquina de verdade que pegasse qualquer embaralhamento e resolvesse."
     },
     "difficulty": {
       "en": "The hard part was never “turning faces.” It was coordinating software, electronics, and physical motion so the system felt inevitable — a clear path from scrambled state to solved state.",
@@ -28,60 +28,19 @@
       "pt": "O que parecia um brinquedo virou prova de um modo de pensar: encontrar a estrutura sob o ruído e torná-la simples de agir. Esse mesmo pensamento atravessa produtos, arquitetura e interfaces."
     },
     "links": {
+      "live": "https://isaque.it/cubo/",
       "repo": "https://github.com/ioisaque/magic-globe"
     },
     "media": [],
-    "highlights": [
-      {
-        "label": {
-          "en": "Fair",
-          "pt": "Feira"
-        },
-        "value": {
-          "en": "June 2019",
-          "pt": "Junho 2019"
-        }
-      },
-      {
-        "label": {
-          "en": "Solve",
-          "pt": "Solve"
-        },
-        "value": {
-          "en": "~1.5 s",
-          "pt": "~1,5 s"
-        }
-      },
-      {
-        "label": {
-          "en": "Defense",
-          "pt": "Banca"
-        },
-        "value": {
-          "en": "10 Dec 2019",
-          "pt": "10 Dez 2019"
-        }
-      },
-      {
-        "label": {
-          "en": "Stack",
-          "pt": "Stack"
-        },
-        "value": {
-          "en": "Vision → Kociemba → motors",
-          "pt": "Visão → Kociemba → motores"
-        }
-      }
-    ],
     "chapters": [
       {
         "title": {
-          "en": "A machine for any scramble",
-          "pt": "Uma máquina para qualquer embaralhamento"
+          "en": "The challenge that started it",
+          "pt": "O desafio que começou tudo"
         },
         "body": {
-          "en": "The brief was a course challenge that refused to stay theoretical: build something that can take a scrambled 3×3 and finish it — vision, planning, and physical motion in one loop. I studied how other solvers were built, including Flatland’s sub-second reference, then started from one stepper and grew the board until six motors, a serious PSU, and an Arduino MEGA WiFi could hold a full face-turn cycle.",
-          "pt": "O brief era um desafio de curso que se recusou a ficar teórico: construir algo que pegasse um 3×3 embaralhado e terminasse — visão, planejamento e movimento físico num só loop. Estudei como outros resolvedores eram feitos, inclusive a referência sub-segundo do Flatland, e parti de um stepper até a placa aguentar seis motores, uma fonte de verdade e um Arduino MEGA WiFi no ciclo completo de giro de face."
+          "en": "Filipe threw down the gauntlet; I treated it like a course that refused to stay theoretical. Build something that can take a scrambled 3×3 and solve it — computer vision, planning, and physical motion in one loop. I studied how other solvers were built, including Flatland’s sub-second reference, then started from a single drive axis and grew the board until six face drives, a serious PSU, and an Arduino MEGA WiFi could hold a full face-turn cycle.",
+          "pt": "O Filipe lançou o desafio; eu tratei como um curso que se recusou a ficar teórico. Construir algo que pegasse um 3×3 embaralhado e resolvesse — visão computacional, planejamento e movimento físico num só loop. Estudei como outros resolvedores eram feitos, inclusive a referência sub-segundo do Flatland, e parti de um único eixo de acionamento até a placa aguentar seis eixos de face, uma fonte de verdade e um Arduino MEGA WiFi no ciclo completo de giro de face."
         }
       },
       {
@@ -90,8 +49,8 @@
           "pt": "Primeiro protótipo funcional — feira de robótica"
         },
         "body": {
-          "en": "June 2019: the first functional build hit the college robotics fair. Flatland-like frame, printed parts, cameras, and a scramble→solve loop that actually ran in front of people. It spanned almost the whole CS curriculum in one stand — and it was loud enough that the room noticed.",
-          "pt": "Junho de 2019: o primeiro build funcional chegou na feira de robótica da faculdade. Estrutura no estilo Flatland, peças impressas, câmeras e um loop embaralhar→resolver que de fato rodava na frente das pessoas. Quase o currículo inteiro de CS num estande — e alto o bastante para a sala perceber."
+          "en": "End of May 2019: the first functional build was ready. June: it hit the college robotics fair. Flatland-like frame, printed parts, cameras, and a scramble→solve loop that actually ran in front of people. It spanned almost the whole CS curriculum in one stand — and it was loud enough that the room noticed.",
+          "pt": "Final de maio de 2019: o primeiro build funcional ficou pronto. Junho: chegou na feira de robótica da faculdade. Estrutura no estilo Flatland, peças impressas, câmeras e um loop embaralhar→resolver que de fato rodava na frente das pessoas. Quase o currículo inteiro de CS num estande — e alto o bastante para a sala perceber."
         },
         "figure": {
           "type": "video",
@@ -109,8 +68,8 @@
           "pt": "Professor Filipe vs o robô"
         },
         "body": {
-          "en": "At the stand, professor Filipe Costa “raced” the prototype. A few twists, a victory declaration — soft cheat, full swagger. The robot still finished for real. Affectionate roast, permanent clip.",
-          "pt": "No estande, o professor Filipe Costa “correu” contra o protótipo. Poucos giros, declaração de vitória — trapaça leve, swagger total. O robô ainda terminou de verdade. Roast carinhoso, clipe permanente."
+          "en": "Same Filipe who challenged me — professor, Vale Telecom boss, cube fan — “raced” the prototype at the stand. A few twists, a victory declaration — soft cheat, full swagger. The robot still solved for real. Told ya. Affectionate roast, permanent clip.",
+          "pt": "O mesmo Filipe que me desafiou — professor, chefe na Vale Telecom, fã de cubo — “correu” contra o protótipo no estande. Poucos giros, declaração de vitória — trapaça leve, swagger total. O robô ainda resolveu de verdade. Te falei. Roast carinhoso, clipe permanente."
         },
         "figure": {
           "type": "video",
@@ -128,15 +87,15 @@
           "pt": "Limites do Flatland → redesenhar a estrutura"
         },
         "body": {
-          "en": "After the fair, the diagnosis was clear: a Flatland-like base meant camera burden, print warp, and sightlines that fought the read. The next machine had to center six motors on the faces, keep two cameras able to see all 54 stickers, and light the cube evenly. That geometry is what became the globe.",
-          "pt": "Depois da feira, o diagnóstico era claro: base estilo Flatland significava carga de câmeras, empeno de impressão e ângulos que lutavam contra a leitura. A próxima máquina tinha que centrar seis motores nas faces, deixar duas câmeras verem as 54 adesivos e iluminar o cubo de forma uniforme. Essa geometria é o que virou o globo."
+          "en": "After the fair, the diagnosis was clear: a Flatland-like base meant camera burden, print warp, and sightlines that fought the read. The next machine had to center six drives on the faces, keep two cameras able to see all 54 stickers, and light the cube evenly. That geometry is what became the globe.",
+          "pt": "Depois da feira, o diagnóstico era claro: base estilo Flatland significava carga de câmeras, empeno de impressão e ângulos que lutavam contra a leitura. A próxima máquina tinha que centrar seis eixos nas faces, deixar duas câmeras verem as 54 adesivos e iluminar o cubo de forma uniforme. Essa geometria é o que virou o globo."
         },
         "figure": {
           "type": "image",
           "src": "assets/img/projects/magic-globe/structure-3d.jpg",
           "caption": {
-            "en": "3D structure — spherical frame, six steppers, cube locked at the center.",
-            "pt": "Estrutura 3D — armação esférica, seis steppers, cubo travado no centro."
+            "en": "3D structure — spherical frame, six face drives, cube locked at the center.",
+            "pt": "Estrutura 3D — armação esférica, seis eixos de face, cubo travado no centro."
           }
         }
       },
@@ -146,8 +105,8 @@
           "pt": "Este é o Globo Mágico — daí o nome"
         },
         "body": {
-          "en": "Scramble and solve on the new structure while testing whether the redesign actually held. Six face-centered motors, room for the dual-camera read, LED rings killing the shadows — this is the machine that earned the name Magic Globe / Globo Mágico.",
-          "pt": "Embaralhar e resolver na estrutura nova, testando se o redesenho realmente sustentava. Seis motores centrados nas faces, espaço para a leitura com duas câmeras, anéis de LED matando sombra — esta é a máquina que ganhou o nome Magic Globe / Globo Mágico."
+          "en": "Scramble and solve on the new structure while testing whether the redesign actually held. Six face-centered drives, room for the dual-camera read, LED rings killing the shadows — this is the machine that earned the name Magic Globe / Globo Mágico.",
+          "pt": "Embaralhar e resolver na estrutura nova, testando se o redesenho realmente sustentava. Seis eixos centrados nas faces, espaço para a leitura com duas câmeras, anéis de LED matando sombra — esta é a máquina que ganhou o nome Magic Globe / Globo Mágico."
         },
         "figure": {
           "type": "video",
@@ -165,21 +124,21 @@
           "pt": "Perceber, planejar, girar — o stack completo"
         },
         "body": {
-          "en": "Two cameras feed OpenCV; HSV detection builds the URFDLB state; Kociemba returns the move string; Arduino MEGA drives six NEMA 17s through A4988s. On the human side, a web UI (Chrome Cube Lab lineage) on iPad/PC hides the machinery behind scramble and solve. Wired UI mark: solved in 1.574 s.",
-          "pt": "Duas câmeras alimentam o OpenCV; detecção HSV monta o estado URFDLB; Kociemba devolve a string de movimentos; o Arduino MEGA comanda seis NEMA 17 via A4988. Do lado humano, a UI web (linhagem Chrome Cube Lab) no iPad/PC esconde a maquinaria atrás de embaralhar e resolver. Marca na UI: resolvido em 1,574 s."
+          "en": "Two cameras feed OpenCV; HSV detection builds the URFDLB state; the Kociemba algorithm returns the move string; Arduino MEGA drives six face axes through A4988 drivers. On the human side, a web UI (Chrome Cube Lab lineage) on iPad/PC hides the machinery behind scramble and solve. Wired UI mark: solved in 1.574 s.",
+          "pt": "Duas câmeras alimentam o OpenCV; detecção HSV monta o estado URFDLB; o algoritmo de Kociemba devolve a string de movimentos; o Arduino MEGA comanda seis eixos de face via drivers A4988. Do lado humano, a UI web (linhagem Chrome Cube Lab) no iPad/PC esconde a maquinaria atrás de embaralhar e resolver. Marca na UI: resolvido em 1,574 s."
         },
         "figure": {
           "type": "carousel",
           "caption": {
-            "en": "Vision console at 1.574 s — and the same control surface on an iPad.",
-            "pt": "Console de visão a 1,574 s — e a mesma superfície de controle num iPad."
+            "en": "Computer Vision console at 1.574 s — and the same control surface on an iPad.",
+            "pt": "Console de visão computacional a 1,574 s — e a mesma superfície de controle num iPad."
           },
           "items": [
             {
               "src": "assets/img/projects/magic-globe/python-vision.png",
               "label": {
-                "en": "OpenCV + Kociemba",
-                "pt": "OpenCV + Kociemba"
+                "en": "OpenCV + Kociemba algorithm",
+                "pt": "OpenCV + algoritmo de Kociemba"
               },
               "alt": {
                 "en": "Python OpenCV dual-camera UI — cube net and solved in 1.574 s",
@@ -212,14 +171,165 @@
           "pt": "Na noite anterior à apresentação para professores e banca do bacharelado em Ciência da Computação, a placa de circuito morreu. Cada minuto até a defesa foi remontar o hardware inteiro. Caos. Red Bull. Respirando vermelho. Depois a máquina resolveu no dia que fechou o diploma — TCC aprovado em 10/12/2019, Faculdade Única de Ipatinga."
         },
         "figure": {
-          "type": "video",
-          "src": "assets/img/projects/magic-globe/videos/defense-day-solve.mp4",
-          "poster": "assets/img/projects/magic-globe/defense-day-solve.jpg",
+          "type": "carousel",
           "caption": {
-            "en": "Solve on defense day — after an all-night hardware rebuild.",
-            "pt": "Solve no dia da banca — depois de remontar o hardware a noite inteira."
-          }
+            "en": "Overnight rebuild on Red Bulls — then the solve that closed the degree.",
+            "pt": "Remontagem na madrugada a base de Red Bull — depois o solve que fechou o diploma."
+          },
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/img/projects/magic-globe/videos/defense-overnight-rebuild.mp4",
+              "poster": "assets/img/projects/magic-globe/defense-overnight-rebuild.jpg",
+              "label": {
+                "en": "Overnight",
+                "pt": "Madrugada"
+              },
+              "alt": {
+                "en": "All-night hardware rebuild before the CS defense — Red Bulls, chaos, breathing red",
+                "pt": "Remontagem do hardware a noite inteira antes da banca — Red Bull, caos, respirando vermelho"
+              }
+            },
+            {
+              "type": "video",
+              "src": "assets/img/projects/magic-globe/videos/defense-day-solve.mp4",
+              "poster": "assets/img/projects/magic-globe/defense-day-solve.jpg",
+              "label": {
+                "en": "Defense day",
+                "pt": "Dia da banca"
+              },
+              "alt": {
+                "en": "Solve on defense day — after the overnight rebuild",
+                "pt": "Solve no dia da banca — depois da remontagem na madrugada"
+              }
+            }
+          ]
         }
+      },
+      {
+        "title": {
+          "en": "Still building — slowly, on free time",
+          "pt": "Ainda construindo — devagar, no tempo livre"
+        },
+        "body": {
+          "en": "I’m still developing Magic Globe in my free time, without spending much — so it moves slowly, and it keeps moving. A printed PCB is replacing the protoboard. A 24V+ supply is meant to give more torque and precision on each face turn. Software work toward opposite faces turning at the same time — two moves in one beat, roughly half the solve time under optimal conditions — is part of that same quiet line of progress.",
+          "pt": "Ainda desenvolvo o Globo Mágico no tempo livre, sem gastar muito — por isso vai mais devagar, e não para. Uma PCB impressa vai no lugar da protoboard. Uma fonte 24V+ para mais torque e precisão em cada giro de face. O software para girar faces opostas ao mesmo tempo — dois movimentos num só tempo, cerca de metade do solve em condições ótimas — faz parte dessa mesma linha quieta de progresso."
+        },
+        "figure": {
+          "type": "carousel",
+          "caption": {
+            "en": "Ongoing work: printed PCB, opposite-face turns in real time and slow motion.",
+            "pt": "Trabalho em andamento: PCB impressa, giros de faces opostas em tempo real e câmera lenta."
+          },
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/img/projects/magic-globe/videos/pcb-circuit.mp4",
+              "poster": "assets/img/projects/magic-globe/pcb-circuit.jpg",
+              "label": {
+                "en": "Printed PCB",
+                "pt": "PCB impressa"
+              },
+              "alt": {
+                "en": "Printed circuit board for Magic Globe — replacing protoboard wiring",
+                "pt": "Placa de circuito impressa do Globo Mágico — no lugar da protoboard"
+              }
+            },
+            {
+              "type": "video",
+              "src": "assets/img/projects/magic-globe/videos/opposite-sides-test.mp4",
+              "poster": "assets/img/projects/magic-globe/opposite-sides-test.jpg",
+              "label": {
+                "en": "Opposite faces",
+                "pt": "Faces opostas"
+              },
+              "alt": {
+                "en": "Opposite faces turning at the same time — two moves in one beat",
+                "pt": "Faces opostas girando ao mesmo tempo — dois movimentos num só tempo"
+              }
+            },
+            {
+              "type": "video",
+              "src": "assets/img/projects/magic-globe/videos/opposite-sides-slowmo.mp4",
+              "poster": "assets/img/projects/magic-globe/opposite-sides-slowmo.jpg",
+              "label": {
+                "en": "Slow motion",
+                "pt": "Câmera lenta"
+              },
+              "alt": {
+                "en": "Slow-motion test of simultaneous opposite-face turns",
+                "pt": "Teste em câmera lenta dos giros simultâneos de faces opostas"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "when": {
+          "en": "Dec 2018",
+          "pt": "Dez 2018"
+        },
+        "what": {
+          "en": "The bet",
+          "pt": "A aposta"
+        },
+        "color": "#FF5356",
+        "icon": "bet"
+      },
+      {
+        "when": {
+          "en": "May 2019",
+          "pt": "Mai 2019"
+        },
+        "what": {
+          "en": "First working prototype",
+          "pt": "Primeiro protótipo funcional"
+        },
+        "color": "#FFD000",
+        "icon": "prototype"
+      },
+      {
+        "when": {
+          "en": "Nov 2019",
+          "pt": "Nov 2019"
+        },
+        "what": {
+          "en": "Final version",
+          "pt": "Versão final"
+        },
+        "href": "assets/img/projects/magic-globe/models/magic-globe.glb",
+        "usdz": "assets/img/projects/magic-globe/models/magic-globe.usdz",
+        "poster": "assets/img/projects/magic-globe/structure-3d.jpg",
+        "color": "#33CC66",
+        "icon": "final"
+      },
+      {
+        "when": {
+          "en": "Dec 2019",
+          "pt": "Dez 2019"
+        },
+        "what": {
+          "en": "TCC approved",
+          "pt": "TCC aprovado"
+        },
+        "color": "#0E34C7",
+        "icon": "approved"
+      },
+      {
+        "when": {
+          "en": "TCC",
+          "pt": "TCC"
+        },
+        "what": {
+          "en": "Read the thesis",
+          "pt": "Ler a monografia"
+        },
+        "href": "assets/img/projects/magic-globe/docs/magic-globe-tcc.pdf",
+        "thumb": "assets/img/projects/magic-globe/tcc-cover.jpg",
+        "color": "#EB681A",
+        "icon": "doc"
       }
     ]
   },
@@ -321,14 +431,14 @@
           "pt": "Do PDV básico a um ERP multiunidade"
         },
         "body": {
-          "en": "The first counter tools prioritized function over polish. As needs piled up, the software matured into a full multi-unit system — early brand Hi sistemas, a placeholder name I threw up quickly just to plant a flag. It covered orders, clients, products, stores, and users so factory and shops shared one platform in real time. That same stack kept evolving: today’s home surface is a multi-store dashboard with live metrics and shortcuts into kitchen, queue, tables, and menu; the production board became a filterable station panel for real benches. LM grew from two stores and a factory to seven stores across four cities — including a larger bakery unit — and every expansion brought new ops complexity we turned into software that still fit the floor. Still running for a few hand-picked clients that, like me, prioritize quality over quantity — productized as MioDelivery.",
-          "pt": "As primeiras ferramentas de balcão priorizaram função sobre polish. Conforme as necessidades cresciam, o software amadureceu num sistema multiunidade completo — marca inicial Hi sistemas, um nome placeholder que eu criei no pulo só para demarcar terreno. Cobria pedidos, clientes, produtos, lojas e usuários para fábrica e lojas compartilharem uma plataforma em tempo real. Esse mesmo stack continuou evoluindo: a superfície inicial de hoje é um dashboard multi-loja com métricas ao vivo e atalhos para cozinha, fila, mesas e cardápio; o painel de produção virou um painel filtrável por bancada. A LM saiu de duas lojas e uma fábrica para sete lojas em quatro cidades — inclusive uma unidade maior com padaria — e cada expansão trouxe nova complexidade operacional que transformamos em software que ainda cabia no chão de loja. Ainda roda para poucos clientes selecionados que, como eu, priorizam qualidade sobre quantidade — productizado como MioDelivery."
+          "en": "The first counter tools prioritized function over polish. As needs piled up, the software matured into a full multi-unit system — early brand Hi sistemas, a placeholder name I threw up quickly just to plant a flag. It covered orders, clients, products, stores, and users so factory and shops shared one platform in real time. That same stack kept evolving: today’s home surface is a multi-store dashboard with live metrics and shortcuts into kitchen, queue, tables, and menu; the production board became a filterable station panel for real benches. LM grew from two stores and a factory to seven stores across four cities — including a larger bakery unit — and every expansion brought new ops complexity we turned into software that still fit the floor. Still running for a few hand-picked clients that, like me, prioritize quality over quantity — productized as MioDelivery. That stack had to work on a real counter — like the LM unit in the Ipatinga shopping food court, with the dashboard open beside the thermal printer.",
+          "pt": "As primeiras ferramentas de balcão priorizaram função sobre polish. Conforme as necessidades cresciam, o software amadureceu num sistema multiunidade completo — marca inicial Hi sistemas, um nome placeholder que eu criei no pulo só para demarcar terreno. Cobria pedidos, clientes, produtos, lojas e usuários para fábrica e lojas compartilharem uma plataforma em tempo real. Esse mesmo stack continuou evoluindo: a superfície inicial de hoje é um dashboard multi-loja com métricas ao vivo e atalhos para cozinha, fila, mesas e cardápio; o painel de produção virou um painel filtrável por bancada. A LM saiu de duas lojas e uma fábrica para sete lojas em quatro cidades — inclusive uma unidade maior com padaria — e cada expansão trouxe nova complexidade operacional que transformamos em software que ainda cabia no chão de loja. Ainda roda para poucos clientes selecionados que, como eu, priorizam qualidade sobre quantidade — productizado como MioDelivery. Esse stack tinha que funcionar num caixa de verdade — como a unidade da LM no shopping de Ipatinga, com o dashboard aberto ao lado da impressora térmica."
         },
         "figure": {
           "type": "carousel",
           "caption": {
-            "en": "Early Hi sistemas → today’s multi-store dashboard — same ops lineage, not product or report screens.",
-            "pt": "Hi sistemas antigo → dashboard multi-loja de hoje — a mesma linhagem operacional, sem telas de produto ou relatório."
+            "en": "Early Hi sistemas → today’s multi-store dashboard — same ops lineage, not product or report screens. Live on the floor at LM Shopping, Ipatinga.",
+            "pt": "Hi sistemas antigo → dashboard multi-loja de hoje — a mesma linhagem operacional, sem telas de produto ou relatório. Ao vivo no caixa da LM Shopping, Ipatinga."
           },
           "items": [
             {
@@ -340,6 +450,18 @@
               "alt": {
                 "en": "Early Hi sistemas ERP — orders and kitchen-facing ops for LM Salgados",
                 "pt": "ERP Hi sistemas antigo — pedidos e operação para a LM Salgados"
+              }
+            },
+            {
+              "src": "assets/img/projects/miodelivery/lm-shopping-pos.png",
+              "type": "image",
+              "label": {
+                "en": "LM Shopping — Ipatinga",
+                "pt": "LM Shopping — Ipatinga"
+              },
+              "alt": {
+                "en": "MioDelivery / IdeYou open at the LM Salgados counter in the Ipatinga shopping food court — dashboard, keyboard, thermal printer",
+                "pt": "MioDelivery / IdeYou aberto no caixa da LM Salgados no shopping de Ipatinga — dashboard, teclado, impressora térmica"
               }
             },
             {
@@ -391,6 +513,25 @@
           ]
         },
         "steps": [
+          {
+            "title": {
+              "en": "Building under the boom — 2020",
+              "pt": "Construindo no boom — 2020"
+            },
+            "body": {
+              "en": "While LM’s delivery demand exploded, I was deep in the system — the same year the ops stack had to grow with the kitchen, not after it. This clip from late 2020 captured that stretch of work; it also traveled far on social media that year.",
+              "pt": "Enquanto o delivery da LM explodia, eu estava dentro do sistema — no mesmo ano em que o stack operacional tinha que crescer com a cozinha, não depois. Este clipe do fim de 2020 captura esse trecho de trabalho; também rodou bastante nas redes naquele ano."
+            },
+            "figure": {
+              "type": "video",
+              "src": "assets/img/projects/miodelivery/videos/lm-system-2020.mp4",
+              "poster": "assets/img/projects/miodelivery/videos/lm-system-2020-poster.jpg",
+              "caption": {
+                "en": "Working on the LM Salgados system — late 2020.",
+                "pt": "Trabalhando no sistema da LM Salgados — fim de 2020."
+              }
+            }
+          },
           {
             "title": {
               "en": "Isolation → online ordering + the order list",
@@ -718,15 +859,19 @@
           "pt": "print.it — o último salto na impressão"
         },
         "body": {
-          "en": "The latest innovation on this line is print.it: a local automatic print server that replaced IdeYouPrint at LM with fewer limits. Built in Go — with help from Cursor — it sits on the network, talks to the printer, and can preview text, files, barcodes, and QR — the same print path other systems can use. What began as a Python workaround beside a laptop is now a product surface of its own.",
-          "pt": "A última inovação nessa linha é o print.it: servidor local de impressão automática que na LM substituiu o IdeYouPrint com menos limites. Feito em Go — com ajuda do Cursor — fica na rede, fala com a impressora e pode pré-visualizar texto, arquivo, código de barras e QR — o mesmo caminho de impressão que outros sistemas podem usar. O que começou como um workaround em Python ao lado de um notebook hoje é uma superfície de produto própria."
+          "en": "print.it is the latest leap on this line: a local automatic print server in Go that replaced IdeYouPrint at LM. Left to right: the old IdeYouPrint-era kitchen ticket, the print.it control surface on the network (preview text, files, barcodes, QR — then print), and the clearer ticket layout that comes out today. Same print path other systems can use; what began as a Python workaround beside a laptop is now its own product surface.",
+          "pt": "O print.it é o último salto nessa linha: servidor local de impressão automática em Go que na LM substituiu o IdeYouPrint. Da esquerda para a direita: a comanda antiga da era IdeYouPrint, a superfície do print.it na rede (pré-visualiza texto, arquivo, código de barras, QR — e imprime) e a comanda mais clara que sai hoje. O mesmo caminho de impressão que outros sistemas podem usar; o que começou como workaround em Python ao lado de um notebook hoje é superfície de produto própria."
         },
         "figure": {
           "type": "image",
-          "src": "assets/img/projects/miodelivery/print-it-ui.png",
+          "src": "assets/img/projects/miodelivery/print-it-before-ui-after.png",
           "caption": {
-            "en": "print.it — local Go server, live printer, and preview for text, files, barcodes, and QR.",
-            "pt": "print.it — servidor local em Go, impressora ao vivo e pré-visualização de texto, arquivo, código de barras e QR."
+            "en": "Old comanda → print.it UI → new comanda — the full print leap in one frame.",
+            "pt": "Comanda antiga → UI do print.it → comanda nova — o salto completo da impressão num só quadro."
+          },
+          "alt": {
+            "en": "Three panels: old IdeYouPrint receipt, print.it Go server UI with live preview, and the new clearer kitchen ticket",
+            "pt": "Três painéis: comanda antiga IdeYouPrint, UI do servidor print.it em Go com pré-visualização, e a comanda nova mais clara"
           }
         }
       }
@@ -768,8 +913,8 @@
       "pt": "Unificá-los sem criar um monólito mais pesado exigiu limites claros: uma API, superfícies distintas, identidade compartilhada e serviços invisíveis até serem necessários."
     },
     "simplification": {
-      "en": "I shaped a platform: admin SPA, client portal, NestJS API, and focused services for push and barcodes. Each surface does one job. The whole feels like one product.",
-      "pt": "Modelei uma plataforma: SPA admin, portal do cliente, API NestJS e serviços focados para push e códigos de barras. Cada superfície faz um trabalho. O conjunto parece um produto."
+      "en": "I shaped a platform: admin SPA, client portal, NestJS API, and focused services for push, barcodes, scan, and print. Each surface does one job. The whole feels like one product.",
+      "pt": "Modelei uma plataforma: SPA admin, portal do cliente, API NestJS e serviços focados para push, códigos de barras, scan e impressão. Cada superfície faz um trabalho. O conjunto parece um produto."
     },
     "change": {
       "en": "Operations stopped fragmenting across tools. Clients and operators share one language. Complexity moved behind a calm interface — where it belongs.",

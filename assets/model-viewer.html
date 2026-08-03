@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D viewer</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #0a0a0a;
+        overflow: hidden;
+        font-family: system-ui, sans-serif;
+      }
+      #stage {
+        position: absolute;
+        inset: 0;
+      }
+      #stage canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      #status,
+      #fail {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-content: center;
+        gap: 0.75rem;
+        margin: 0;
+        padding: 1.5rem;
+        color: rgba(255, 255, 255, 0.78);
+        text-align: center;
+        pointer-events: none;
+      }
+      #fail {
+        display: none;
+        pointer-events: auto;
+        background: #0a0a0a;
+      }
+      #fail img {
+        display: block;
+        width: min(100%, 28rem);
+        max-height: 55vh;
+        margin: 0 auto;
+        object-fit: contain;
+        border-radius: 0.75rem;
+      }
+      #fail a {
+        color: #fff;
+        text-underline-offset: 0.15em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stage"></div>
+    <p id="status">Loading 3D model…</p>
+    <div id="fail" hidden>
+      <img id="fail-poster" alt="" />
+      <p id="fail-msg">Couldn’t start the 3D viewer in this browser.</p>
+      <p>
+        <a id="fail-glb" href="#" download>Download GLB</a>
+        ·
+        <a id="fail-usdz" href="#" download>Download USDZ</a>
+      </p>
+    </div>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module">
+      import * as THREE from 'three'
+      import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+      import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+
+      const params = new URLSearchParams(location.search)
+      const src = params.get('src') || ''
+      const iosSrc = params.get('ios') || ''
+      const poster = params.get('poster') || ''
+      const stage = document.getElementById('stage')
+      const status = document.getElementById('status')
+      const fail = document.getElementById('fail')
+
+      function hideStatus() {
+        status.hidden = true
+        status.style.display = 'none'
+      }
+
+      function showFail(message) {
+        hideStatus()
+        fail.hidden = false
+        fail.style.display = 'grid'
+        document.getElementById('fail-msg').textContent = message || 'Couldn’t start the 3D viewer in this browser.'
+        const posterEl = document.getElementById('fail-poster')
+        if (poster) {
+          posterEl.src = poster
+          posterEl.hidden = false
+        } else {
+          posterEl.hidden = true
+        }
+        const glb = document.getElementById('fail-glb')
+        const usdz = document.getElementById('fail-usdz')
+        if (src) {
+          glb.href = src
+          glb.hidden = false
+        } else glb.hidden = true
+        if (iosSrc) {
+          usdz.href = iosSrc
+          usdz.hidden = false
+        } else usdz.hidden = true
+      }
+
+      if (!src) {
+        showFail('Missing model file.')
+        throw new Error('missing src')
+      }
+
+      let renderer
+      try {
+        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'default' })
+      } catch (err) {
+        showFail('WebGL is unavailable in this tab. Download the model instead.')
+        throw err
+      }
+
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
+      renderer.setSize(window.innerWidth, window.innerHeight, false)
+      renderer.outputColorSpace = THREE.SRGBColorSpace
+      stage.appendChild(renderer.domElement)
+
+      const scene = new THREE.Scene()
+      scene.background = new THREE.Color(0x0a0a0a)
+
+      const camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.01, 2000)
+      camera.position.set(1.6, 1.1, 2.2)
+
+      const controls = new OrbitControls(camera, renderer.domElement)
+      controls.enableDamping = true
+      controls.autoRotate = true
+      controls.autoRotateSpeed = 0.6
+
+      scene.add(new THREE.AmbientLight(0xffffff, 0.75))
+      const key = new THREE.DirectionalLight(0xffffff, 1.1)
+      key.position.set(3, 5, 4)
+      scene.add(key)
+      const fill = new THREE.DirectionalLight(0xffffff, 0.35)
+      fill.position.set(-4, 1, -2)
+      scene.add(fill)
+
+      const loader = new GLTFLoader()
+      loader.load(
+        src,
+        (gltf) => {
+          hideStatus()
+          const root = gltf.scene || gltf.scenes[0]
+          scene.add(root)
+
+          const box = new THREE.Box3().setFromObject(root)
+          const size = box.getSize(new THREE.Vector3())
+          const center = box.getCenter(new THREE.Vector3())
+          root.position.sub(center)
+
+          const maxDim = Math.max(size.x, size.y, size.z) || 1
+          const fit = 1.7
+          camera.position.set(maxDim * fit * 0.85, maxDim * fit * 0.55, maxDim * fit)
+          controls.target.set(0, 0, 0)
+          controls.update()
+        },
+        undefined,
+        () => {
+          showFail('Couldn’t load the 3D file. Try downloading it.')
+        },
+      )
+
+      function onResize() {
+        const w = window.innerWidth
+        const h = window.innerHeight
+        camera.aspect = w / Math.max(h, 1)
+        camera.updateProjectionMatrix()
+        renderer.setSize(w, h, false)
+      }
+      window.addEventListener('resize', onResize)
+
+      let dead = false
+      renderer.domElement.addEventListener('webglcontextlost', (e) => {
+        e.preventDefault()
+        dead = true
+        showFail('WebGL context was lost. Download the model or reopen the viewer.')
+      })
+
+      function tick() {
+        if (dead) return
+        requestAnimationFrame(tick)
+        controls.update()
+        renderer.render(scene, camera)
+      }
+      tick()
+    </script>
+  </body>
+</html>

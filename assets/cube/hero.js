@@ -5,15 +5,16 @@ window.IsaqueCube.mountHero = function (container, options) {
   if (!container || container.dataset.heroCubeMounted === '1') return
 
   options = options || {}
-  var photo = options.photo || 'assets/img/profile/profile-alpha.png'
-  // One transparent photo over the brand colors (cdn.isaque.it/id)
+  var photo = options.photo || 'assets/img/profile.png'
+  // Brand cube.svg: top coral, viewer-left green, viewer-right yellow.
+  // Idle pose (~rotateY -38) shows up + front + right.
   var faces = options.faces || {
-    up: '#FFD22B',
+    up: '#FF5356',
     down: '#FFFFFF',
-    front: '#F72529',
-    back: '#33CC66',
-    left: '#0E34C7',
-    right: '#EB681A',
+    front: '#33CC66',
+    back: '#FFD000',
+    left: '#FFD000',
+    right: '#FFD000',
   }
 
   var order = ['up', 'down', 'front', 'back', 'left', 'right']
@@ -26,7 +27,8 @@ window.IsaqueCube.mountHero = function (container, options) {
     var face = document.createElement('div')
     face.className = 'hero__cube-face hero__cube-face--' + name
     face.style.backgroundColor = faces[name]
-    face.style.backgroundImage = 'url("' + photo + '")'
+    // Photo only on the green face (front).
+    if (name === 'front') face.style.backgroundImage = 'url("' + photo + '")'
     inner.appendChild(face)
   })
 
@@ -41,35 +43,52 @@ window.IsaqueCube.mountHero = function (container, options) {
   syncHalf()
   window.addEventListener('resize', syncHalf)
 
-  // Rotation is JS-driven so drag and auto-spin share one transform.
+  // Logo-like isometric (top / green / yellow) — barely alive, never full spin.
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  var rotX = -18
-  var rotY = -32
+  var HOME_X = -22
+  var HOME_Y = -38
+  var AMP_X = 2.4
+  var AMP_Y = 4.5
+  var BREATHE_MS = 7200
+  var RETURN_SPEED = 3.2
+  var DRAG_MAX_X = 12
+  var DRAG_MAX_Y = 14
+  var rotX = HOME_X
+  var rotY = HOME_Y
   var dragging = false
   var lastX = 0
   var lastY = 0
-  var velocityY = 0
-  var AUTO_SPIN = 12 // deg per second
-  var DRAG_FACTOR = 0.45
+  var DRAG_FACTOR = 0.28
+  var startTime = null
   var lastTime = null
 
   function render() {
     inner.style.transform = 'rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg)'
   }
 
+  function clamp(v, min, max) {
+    return v < min ? min : v > max ? max : v
+  }
+
   function tick(now) {
+    if (startTime === null) startTime = now
     if (lastTime === null) lastTime = now
-    var dt = (now - lastTime) / 1000
+    var dt = Math.min(0.05, (now - lastTime) / 1000)
     lastTime = now
+    var t = (now - startTime) / BREATHE_MS
 
     if (!dragging) {
-      if (Math.abs(velocityY) > 1) {
-        // Inertia from the last drag, easing back into the idle spin
-        rotY += velocityY * dt
-        velocityY *= 0.94
-      } else if (!reduceMotion) {
-        rotY += AUTO_SPIN * dt
+      var targetX = HOME_X
+      var targetY = HOME_Y
+      if (!reduceMotion) {
+        var wave = Math.sin(t * Math.PI * 2)
+        var wave2 = Math.sin(t * Math.PI * 2 * 0.73 + 1.1)
+        targetX = HOME_X + wave2 * AMP_X
+        targetY = HOME_Y + wave * AMP_Y
       }
+      var ease = Math.min(1, RETURN_SPEED * dt)
+      rotX += (targetX - rotX) * ease
+      rotY += (targetY - rotY) * ease
       render()
     }
 
@@ -78,7 +97,6 @@ window.IsaqueCube.mountHero = function (container, options) {
 
   container.addEventListener('pointerdown', function (e) {
     dragging = true
-    velocityY = 0
     lastX = e.clientX
     lastY = e.clientY
     container.classList.add('is-dragging')
@@ -91,11 +109,8 @@ window.IsaqueCube.mountHero = function (container, options) {
     var dy = e.clientY - lastY
     lastX = e.clientX
     lastY = e.clientY
-    rotY += dx * DRAG_FACTOR
-    rotX -= dy * DRAG_FACTOR
-    if (rotX > 80) rotX = 80
-    if (rotX < -80) rotX = -80
-    velocityY = dx * DRAG_FACTOR * 60
+    rotY = clamp(rotY + dx * DRAG_FACTOR, HOME_Y - DRAG_MAX_Y, HOME_Y + DRAG_MAX_Y)
+    rotX = clamp(rotX - dy * DRAG_FACTOR, HOME_X - DRAG_MAX_X, HOME_X + DRAG_MAX_X)
     render()
   })
 

@@ -31,6 +31,7 @@ Do not use legacy aliases `craft` or `products` in new data.
   embed?: string
   title / subtitle / problem / difficulty / simplification / change: { en, pt }
   highlights?: { label: {en,pt}; value: {en,pt} }[]  // optional credibility strip
+  timeline?: { when: {en,pt}; what: {en,pt}; href?: string; thumb?: string }[]  // chronological line (Magic Globe)
   chapters?: {
     title: {en,pt}
     body: {en,pt}
@@ -79,13 +80,19 @@ DOM anchor on Featured work: `#case-{id}` (page section). Catalog navigation use
   accent: "yellow" | "green" | "coral" | "red" | "blue" | "orange"
   logo?: string // project logo/favicon URL; falls back to monogram if missing or broken
   logoBg?: string // CSS color behind the logo (for light/white logos), e.g. "#0a0a0a"
-  pinnedEnd?: boolean // always rendered last in the grid, regardless of array edits / filters
+  pinnedTop?: boolean // Mag Globe / Mio / PhotoShoot / sistema ecosystem — stays at top
+  pinOrder?: number // order among pinnedTop items (1 = first)
+  pinnedEnd?: boolean // always rendered last in the grid (e.g. block), regardless of filters
   linkLabels?: { live?: {en,pt}; repo?: {en,pt} } // override Live/Repo link text
-  media?: { type: "image" | "video"; src: string; alt?: { en, pt } }[]
+  media?: { type: "image" | "video"; src: string; poster?: string; alt?: { en, pt } }[]
 }
 ```
 
+Grid order at runtime: `pinnedTop` (by `pinOrder`) → remaining catalog array order (newest → oldest, platform microservices scrambled so they are not adjacent) → `pinnedEnd`.
+
 Visual identity: era color (CSS) + accent + real project logo (favicon) when available, monogram from title as fallback — not a shared generic CDN icon for every card.
+
+Canonical catalog map and titles live in `career-context.mdc` (includes `saint-germain`, `spa-agua-santa`, `scan-it`, `im-root`; no `telecom-erp`).
 
 Opening a catalog card sets `#project-{id}` and opens the detail modal. Items with `caseId` get the larger case modal (carousel + narrative from `projects.json`). Card footer Live/Repo remain direct external links.
 

@@ -16,12 +16,14 @@
       "pt": "Tipografia, layout e confiança na tela — a primeira lição de que cada pixel precisa merecer seu lugar."
     },
     "context": {
-      "en": "I started in visual design and front-end craft: dental clinics, food brands, and small companies that needed a presence people could trust. Every layout had to feel intentional — color, type, and structure working together so a local client could look professional online. That discipline never left; it still shapes how I build products.",
-      "pt": "Comecei no design visual e no front-end: clínicas, marcas de comida e pequenos negócios que precisavam de presença confiável. Cada layout tinha que parecer intencional — cor, tipografia e estrutura juntos para o cliente local parecer profissional. Essa disciplina nunca saiu; ainda molda como construo produtos."
+      "en": "I started in visual design and front-end craft — and by 2013–2014 was already shipping sites and systems (including the I'm root experiments). Local businesses needed presence people could trust. Every layout had to feel intentional. That discipline never left. The Vale Telecom 2018 wave (newspaper, portals, condo, real estate, association sites) still sits in this craft arc until the full year map lands.",
+      "pt": "Comecei no design visual e no front-end — e em 2013–2014 já entregava sites e sistemas (incluindo os experimentos I'm root). Negócios locais precisavam de presença confiável. Cada layout tinha que parecer intencional. Essa disciplina nunca saiu. A onda Vale Telecom 2018 (jornal, portais, condomínio, imobiliária, associação) ainda vive neste arco de ofício até o mapa completo de anos chegar."
     },
     "projects": [
+      "im-root",
       "engrenhamais",
-      "lmsalgados"
+      "lmsalgados",
+      "vipproducoes"
     ]
   },
   {
@@ -33,16 +35,16 @@
       "pt": "O caos encontrou estrutura"
     },
     "headline": {
-      "en": "Robotics, vision, and the Magic Globe.",
-      "pt": "Robótica, visão e o Globo Mágico."
+      "en": "Robotics, computer vision, and the Magic Globe.",
+      "pt": "Robótica, visão computacional e o Globo Mágico."
     },
     "body": {
-      "en": "Hardware, vision, and a Rubik’s Cube robot. Apparent randomness became a solvable state — the metaphor for everything that followed.",
-      "pt": "Hardware, visão e um robô de Cubo Mágico. A aleatoriedade aparente virou um estado solucionável — a metáfora de tudo o que veio depois."
+      "en": "Hardware, computer vision, and a Rubik’s Cube robot. Apparent randomness became a solvable state — the metaphor for everything that followed.",
+      "pt": "Hardware, visão computacional e um robô de Cubo Mágico. A aleatoriedade aparente virou um estado solucionável — a metáfora de tudo o que veio depois."
     },
     "context": {
-      "en": "During my degree and technical training at SENAI I went deep into hardware: 3D printing, CNC, Arduino, computer vision, mechatronics. The Magic Globe — a Rubik’s Cube solving robot controlled from the web — proved I could bridge software, electronics, and physical motion. A scrambled cube looks like noise until you model the state; that lesson became how I approach every tangled system.",
-      "pt": "Na graduação e no SENAI fui fundo em hardware: impressão 3D, CNC, Arduino, visão computacional, mecatrônica. O Globo Mágico — um robô de Cubo Mágico controlado pela web — mostrou que eu conseguia unir software, eletrônica e movimento físico. Um cubo embaralhado parece ruído até você modelar o estado; essa lição virou como abordo todo sistema embolado."
+      "en": "At SENAI I trained in Computer Networks (DNS, DHCP, servers) — mechatronics stayed a side interest. At Faculdade Única the Magic Globe became the degree project: Feb 2019 start, first prototype by end of May, final machine in November, defense on 10 Dec 2019. A scrambled cube looks like noise until you model the state; that lesson became how I approach every tangled system.",
+      "pt": "No SENAI formei em Redes de Computadores (DNS, DHCP, servidores) — mecatrônica ficou como interesse paralelo. Na Faculdade Única o Globo Mágico virou o TCC: início em fev/2019, primeiro protótipo no fim de maio, máquina final em novembro, banca em 10 dez 2019. Um cubo embaralhado parece ruído até você modelar o estado; essa lição virou como abordo todo sistema embolado."
     },
     "projects": [
       "magic-globe"
@@ -57,28 +59,27 @@
       "pt": "Produtos absorveram o ruído real"
     },
     "headline": {
-      "en": "Food-tech and enterprise systems at IdeYou.",
-      "pt": "Food-tech e sistemas empresariais na IdeYou."
+      "en": "Real clients, real peak hours — then isaque.it.",
+      "pt": "Clientes reais, horário de pico — depois isaque.it."
     },
     "body": {
       "en": "Complexity stopped being theoretical — it had peak hours, billing deadlines, and consequences for real operators.",
       "pt": "A complexidade deixou de ser teórica — tinha horário de pico, prazo de boleto e consequência para quem opera de verdade."
     },
     "context": {
-      "en": "The seed was earlier: from 2017, LM Salgados — first major client, still a partner — pulled me into real food ops (factory + shops, kitchen boards, then a production PWA). At IdeYou that stack matured into MioDelivery for a few hand-picked food clients that prioritize quality over quantity, alongside a telecom ERP that had to handle boletos every day and Aurélio for BNCC lesson planning. Long-term clients, messy workflows, systems that had to stay calm under pressure — that is where simplification earned its keep.",
-      "pt": "A semente veio antes: desde 2017, a LM Salgados — primeiro grande cliente, ainda parceiro — me puxou para operação real de comida (fábrica + lojas, painéis de cozinha, depois um PWA em produção). Na IdeYou esse stack amadureceu no MioDelivery para poucos clientes food selecionados que priorizam qualidade sobre quantidade, ao lado de um ERP de telecom que precisava bancar boletos todo dia e do Aurélio para planejamento BNCC. Clientes de longo prazo, fluxos bagunçados, sistemas que precisam ficar calmos sob pressão — aí a simplificação mostrou valor."
+      "en": "In the 2020 pandemic a closed WhatsApp group of trusted pros became an informal multi-service team (web, bots, marketing, design). That era absorbed LM Salgados into MioDelivery, Saint Germain logistics canhotos, and other SP-circle clients. IdeYou was formative — and taught that reputation beats overselling. The brand evolved into isaque.it: personal name, IT, and Italian heritage.",
+      "pt": "Na pandemia de 2020 um grupo fechado de profissionais de confiança virou um time multi-serviço informal (web, bots, marketing, design). Essa era absorveu a LM Salgados no MioDelivery, canhotos da Saint Germain e outros clientes do círculo SP. A IdeYou foi formativa — e ensinou que reputação vence overselling. A marca evoluiu para isaque.it: nome, IT e herança italiana."
     },
     "projects": [
       "miodelivery",
-      "lmsalgados",
-      "telecom-erp",
-      "planeja-ideyou"
+      "saint-germain",
+      "spa-agua-santa"
     ]
   },
   {
     "id": "teaching",
     "era": "teaching",
-    "years": "2023–2025",
+    "years": "2023–2026",
     "title": {
       "en": "Teaching clarified thinking",
       "pt": "Ensinar esclareceu o pensamento"
@@ -92,10 +93,11 @@
       "pt": "Se uma ideia não dava para ensinar com clareza, não estava desenhada com clareza."
     },
     "context": {
-      "en": "Teaching computer science forced sharper models and better language. At the same time, relationships with schools opened work in networks, infrastructure, and custom systems. CTI became a hub where student projects and real delivery lived side by side — proof that clarity scales from classroom to contract.",
-      "pt": "Ensinar ciência da computação exigiu modelos mais nítidos e linguagem melhor. Ao mesmo tempo, relações com escolas abriram trabalho em redes, infraestrutura e sistemas sob medida. O CTI virou um hub onde projetos de alunos e entregas reais conviviam — prova de que clareza escala da sala de aula ao contrato."
+      "en": "Teaching computer science forced sharper models. Meu Aurélio (2023) turned lesson plans into school-standard PDFs with QR materials. Since February 2026 I coordinate the Technical Computing course at Escola João Paulo II while still teaching — CTI is the public hub where student projects live.",
+      "pt": "Ensinar ciência da computação exigiu modelos mais nítidos. O Meu Aurélio (2023) transformou planos de aula em PDFs no padrão da escola com materiais em QR. Desde fevereiro de 2026 coordeno o curso técnico de Informática na Escola João Paulo II e continuo lecionando — o CTI é o hub público onde os projetos dos alunos vivem."
     },
     "projects": [
+      "planeja-ideyou",
       "cti"
     ]
   },
@@ -116,8 +118,8 @@
       "pt": "Ferramentas separadas convergiram: superfícies calmas, identidade compartilhada, complexidade atrás de limites intencionais."
     },
     "context": {
-      "en": "Admin SPA, client portal, NestJS API, push notifications, barcode services — pieces that used to live alone now form one platform. Built with the same attention to detail I learned on dentist websites a decade ago, now applied to architecture that has to stay coherent as it grows. Based in Dublin, still shipping under isaque.it.",
-      "pt": "SPA admin, portal do cliente, API NestJS, notificações push, serviços de código de barras — peças que viviam sozinhas agora formam uma plataforma. Com a mesma atenção ao detalhe que aprendi em sites de dentista há uma década, agora aplicada a uma arquitetura que precisa continuar coerente ao crescer. Em Dublin, seguindo entregando sob isaque.it."
+      "en": "Admin SPA, client portal, NestJS API, push, barcodes, scan.it, print.it — pieces that used to live alone now form one platform under isaque.it. Same attention to detail as early craft sites, now at architecture scale. Based in Dublin.",
+      "pt": "SPA admin, portal do cliente, API NestJS, push, códigos de barras, scan.it, print.it — peças que viviam sozinhas agora formam uma plataforma sob isaque.it. A mesma atenção ao detalhe dos primeiros sites, agora em escala de arquitetura. Em Dublin."
     },
     "projects": [
       "sistema-isaque",
@@ -125,6 +127,7 @@
       "cliente-isaque",
       "notify-it",
       "barcode-it",
+      "scan-it",
       "print-it"
     ]
   }

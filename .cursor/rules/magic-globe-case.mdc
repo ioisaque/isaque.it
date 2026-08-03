@@ -4,6 +4,31 @@ globs: data/catalog.json,data/projects.json,data/copy.json,data/milestones.json
 alwaysApply: false
 ---
 
+
+## Chronology (public timeline)
+
+- **Dec 2018** — the bet
+- **May 2019** — first working prototype
+- **Nov 2019** — final version
+- **Dec 2019** — TCC approved
+- TCC PDF in `assets/img/projects/magic-globe/docs/magic-globe-tcc.pdf`
+
+## Origin (public narrative)
+
+- Challenge from **Filipe Costa**: professor **and** Isaque’s boss at **Vale Telecom**; Rubik’s Cube fan who wanted to see a solving machine live.
+- His method: challenge Isaque. Isaque took it seriously.
+- Subtitle tone: “A Rubik's Cube Solver Machine — a challenge I took seriously. Told ya, Filipe.”
+- Fair roast of Filipe allowed; Isaque-only voice for the build story.
+
+## Public copy bans (site)
+
+- Never write bare **Vision** — always **Computer Vision** / **visão computacional**.
+- Write **Kociemba algorithm** / **algoritmo de Kociemba**, not bare Kociemba in highlights.
+- Never write **motors**, **step motors**, **steppers**, or **NEMA 17** on the public site. Prefer **face drives**, **eixos de face**, **control**, **motion**.
+- Agent-only hardware notes below may keep part numbers; do not ship them in `projects.json` / `catalog.json` / milestones.
+
+
+
 # Magic Globe (Globo Mágico) — Rubik’s Cube solver
 
 Authoritative brief for the Featured case `cube` / catalog `magic-globe`. Sources: TCC PDF *MAGIC GLOBE - A RUBIK’S CUBE SOLVER MACHINE* (Faculdade Única de Ipatinga, 2019) + defense PPT — **facts and dates only**. Do not invent beyond this and career-context. Media folders under `Documents/_MagicGlobe/media/` (v1.0, v2.0, v2.1) are local archives for enrichment — not yet wired to the site unless copied into `assets/`.
@@ -29,6 +54,7 @@ When the user sends media **with context**, that is a **chapter beat**, not a ga
 | 05 | Testing the new structure — **hence the name** Magic Globe | `globe-scramble-solve.mp4` |
 | 06 | Full stack — vision + iPad/web UI (~1.574 s) | carousel: `python-vision.png` + `ipad-control.mp4` |
 | 07 | Defense day — board died night before; Red Bull rebuild; solve for judges (10 Dec 2019) | `defense-day-solve.mp4` |
+| 08 | Still building (free time, low budget) — PCB, 24V+, opposite-face turns | carousel: pcb-circuit + opposite-sides-test + opposite-sides-slowmo |
 
 ## Defense day (story beat)
 

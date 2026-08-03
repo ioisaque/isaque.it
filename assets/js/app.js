@@ -90,7 +90,79 @@ function highlightValueMarkup(h, ddClass) {
   return escapeHtml(value)
 }
 
+function caseTimelineIcon(icon) {
+  const icons = {
+    bet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.1 4.3 4.7.7-3.4 3.3.8 4.7L12 13.8 7.8 16l.8-4.7L5.2 8l4.7-.7L12 3z"/></svg>',
+    prototype:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.1-3.1a1 1 0 0 0 0-1.4L19.2 3.2a1 1 0 0 0-1.4 0z"/><path d="m12.5 8.5-8.2 8.2a2.1 2.1 0 0 0-.5 1l-.6 2.7 2.7-.6a2.1 2.1 0 0 0 1-.5l8.2-8.2"/><path d="m5 19 2.2-.4"/></svg>',
+    final:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 7.5v9L12 21l7.5-4.5v-9L12 3z"/><path d="M12 12 4.5 7.5M12 12l7.5-4.5M12 12v9"/></svg>',
+    approved:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12.5 11 14.5 15.5 10"/><path d="M14 3h-4l-1 2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3l-1-2z"/></svg>',
+    doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>',
+  }
+  return icons[icon] || icons.doc
+}
+
+function caseTimelineMarkup(project, className = 'case__timeline') {
+  const items = Array.isArray(project.timeline) ? project.timeline : []
+  if (!items.length) return ''
+  const palette = ['#FF5356', '#FFD000', '#33CC66', '#0E34C7', '#EB681A']
+  return `
+    <ol class="${className} reveal" style="--timeline-count:${items.length}">
+      ${items
+        .map((node, index) => {
+          const when = node.when?.[locale] || node.when?.en || ''
+          const what = node.what?.[locale] || node.what?.en || ''
+          const href = localizedSrc(node.href)
+          const usdz = localizedSrc(node.usdz)
+          const thumb = localizedSrc(node.thumb)
+          const poster = localizedSrc(node.poster) || thumb
+          const color = node.color || palette[index % palette.length]
+          const icon = node.icon || (href ? 'doc' : ['bet', 'prototype', 'final', 'approved'][index] || 'doc')
+          const openLabel = what || when || 'PDF'
+          const isPdf = href && /\.pdf($|\?)/i.test(href)
+          const isModel =
+            (href && /\.(glb|gltf|usdz)($|\?)/i.test(href)) ||
+            (usdz && /\.usdz($|\?)/i.test(usdz))
+          const modelSrc =
+            (href && /\.(glb|gltf)($|\?)/i.test(href) && href) ||
+            (usdz && /\.(glb|gltf)($|\?)/i.test(usdz) && usdz) ||
+            href ||
+            usdz ||
+            ''
+          const iosSrc = (usdz && /\.usdz($|\?)/i.test(usdz) && usdz) || (href && /\.usdz($|\?)/i.test(href) && href) || ''
+          const media = thumb
+            ? `<img class="${className}-thumb" src="${escapeAttr(thumb)}" alt="" loading="lazy">`
+            : `<span class="${className}-icon" aria-hidden="true">${caseTimelineIcon(icon)}</span>`
+          const inner = `
+          <span class="${className}-media">${media}</span>
+          <span class="${className}-when">${escapeHtml(when)}</span>
+          <span class="${className}-what">${escapeHtml(openLabel)}${href && !isPdf && !isModel ? ' <span aria-hidden="true">↗</span>' : ''}</span>`
+          let card = `<div class="${className}-card">${inner}</div>`
+          if (href || isModel) {
+            if (isPdf) {
+              card = `<a class="${className}-card" href="${escapeAttr(href)}" data-media-open data-media-src="${escapeAttr(href)}" data-media-type="pdf" data-media-title="${escapeAttr(openLabel)}">${inner}</a>`
+            } else if (isModel) {
+              card = `<a class="${className}-card" href="${escapeAttr(iosSrc || modelSrc)}" data-media-open data-media-src="${escapeAttr(modelSrc)}" data-media-type="model"${iosSrc ? ` data-media-ios-src="${escapeAttr(iosSrc)}"` : ''}${poster ? ` data-media-poster="${escapeAttr(poster)}"` : ''} data-media-title="${escapeAttr(openLabel)}">${inner}</a>`
+            } else {
+              card = `<a class="${className}-card" href="${escapeAttr(href)}" target="_blank" rel="noopener noreferrer">${inner}</a>`
+            }
+          }
+          return `
+        <li class="${className}-node" style="--node-color:${escapeAttr(color)}">
+          <span class="${className}-dot" aria-hidden="true"></span>
+          ${card}
+        </li>`
+        })
+        .join('')}
+    </ol>
+  `
+}
+
 function caseHighlightsMarkup(project) {
+  const timeline = caseTimelineMarkup(project, 'case__timeline')
+  if (timeline) return timeline
   const items = Array.isArray(project.highlights) ? project.highlights : []
   if (!items.length) return ''
   return `
@@ -406,9 +478,29 @@ function mediaItemFromEl(el) {
     src: el.dataset.mediaSrc || '',
     type: el.dataset.mediaType || 'image',
     poster: el.dataset.mediaPoster || '',
+    iosSrc: el.dataset.mediaIosSrc || '',
     title: el.dataset.mediaTitle || '',
     desc: el.dataset.mediaDesc || '',
   }
+}
+
+function pauseSiteWebgl() {
+  if (window.cube) window.cube.paused = true
+}
+
+function resumeSiteWebgl() {
+  if (window.cube) window.cube.paused = false
+}
+
+function modelViewerFrameUrl(item) {
+  const absSrc = new URL(item.src, window.location.href).href
+  const absIos = item.iosSrc ? new URL(item.iosSrc, window.location.href).href : ''
+  const poster = item.poster ? new URL(item.poster, window.location.href).href : ''
+  const url = new URL('assets/model-viewer.html', window.location.href)
+  url.searchParams.set('src', absSrc)
+  if (absIos) url.searchParams.set('ios', absIos)
+  if (poster) url.searchParams.set('poster', poster)
+  return url.href
 }
 
 function createMediaLightbox() {
@@ -451,9 +543,29 @@ function createMediaLightbox() {
     const item = items[index]
     if (!item) return
     const isVideo = item.type === 'video'
-    stage.innerHTML = isVideo
-      ? `<video src="${escapeAttr(item.src)}"${item.poster ? ` poster="${escapeAttr(item.poster)}"` : ''} controls playsinline autoplay></video>`
-      : `<img src="${escapeAttr(item.src)}" alt="${escapeAttr(item.title || item.desc || '')}">`
+    const isPdf = item.type === 'pdf' || /\.pdf($|\?)/i.test(item.src || '')
+    const isModel =
+      item.type === 'model' || /\.(glb|gltf|usdz)($|\?)/i.test(item.src || '') || Boolean(item.iosSrc)
+    root.classList.toggle('media-lightbox--pdf', isPdf)
+    root.classList.toggle('media-lightbox--model', isModel)
+    if (isPdf) {
+      resumeSiteWebgl()
+      stage.innerHTML = `<iframe class="media-lightbox__pdf" src="${escapeAttr(item.src)}" title="${escapeAttr(item.title || 'PDF')}"></iframe>`
+    } else if (isModel) {
+      pauseSiteWebgl()
+      if (stage._modelFrameUrl) {
+        URL.revokeObjectURL(stage._modelFrameUrl)
+        stage._modelFrameUrl = ''
+      }
+      const frameUrl = modelViewerFrameUrl(item)
+      stage.innerHTML = `<iframe class="media-lightbox__model-frame" src="${escapeAttr(frameUrl)}" title="${escapeAttr(item.title || '3D model')}" allow="fullscreen" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>`
+    } else if (isVideo) {
+      resumeSiteWebgl()
+      stage.innerHTML = `<video src="${escapeAttr(item.src)}"${item.poster ? ` poster="${escapeAttr(item.poster)}"` : ''} controls playsinline autoplay></video>`
+    } else {
+      resumeSiteWebgl()
+      stage.innerHTML = `<img src="${escapeAttr(item.src)}" alt="${escapeAttr(item.title || item.desc || '')}">`
+    }
     titleEl.textContent = item.title || ''
     titleEl.hidden = !item.title
     descEl.textContent = item.desc || ''
@@ -473,10 +585,22 @@ function createMediaLightbox() {
       v.removeAttribute('src')
       v.load()
     })
-    root.classList.remove('is-open')
+    stage.querySelectorAll('iframe').forEach((frame) => {
+      frame.src = 'about:blank'
+    })
+    if (stage._modelFrameUrl) {
+      URL.revokeObjectURL(stage._modelFrameUrl)
+      stage._modelFrameUrl = ''
+    }
+    stage.querySelectorAll('model-viewer').forEach((mv) => {
+      mv.removeAttribute('src')
+      mv.removeAttribute('ios-src')
+    })
+    root.classList.remove('is-open', 'media-lightbox--pdf', 'media-lightbox--model')
     root.setAttribute('aria-hidden', 'true')
     document.body.style.overflow = ''
     items = []
+    resumeSiteWebgl()
     if (lastFocus?.focus) lastFocus.focus()
     lastFocus = null
   }
@@ -657,7 +781,7 @@ function renderProjects() {
     .map((project, index) => {
       const n = String(index + 1).padStart(2, '0')
       const isCube = project.id === 'cube'
-      const isDeep = Boolean(project.chapters?.length || project.highlights?.length)
+      const isDeep = Boolean(project.chapters?.length || project.highlights?.length || project.timeline?.length)
       const links = []
       if (project.links?.live) {
         links.push(
@@ -670,7 +794,8 @@ function renderProjects() {
         )
       }
       if (project.links?.docs) {
-        const docsLabel = copy[locale].catalog.docs || 'PDF'
+        const docsLabel =
+          project.linkLabels?.docs?.[locale] || copy[locale].catalog.docs || 'PDF'
         links.push(
           `<a class="btn btn--text" href="${escapeAttr(project.links.docs)}" target="_blank" rel="noopener noreferrer">${escapeHtml(docsLabel)}</a>`,
         )
@@ -753,7 +878,9 @@ function mediaMarkup(entry) {
     if (/youtube\.com|youtu\.be|vimeo\.com/i.test(src)) {
       return `<iframe src="${escapeAttr(src)}" title="${escapeAttr(alt || 'Video')}" allowfullscreen loading="lazy"></iframe>`
     }
-    return `<video src="${escapeAttr(src)}" controls playsinline></video>`
+    const posterSrc = localizedSrc(entry.poster)
+    const poster = posterSrc ? ` poster="${escapeAttr(posterSrc)}"` : ''
+    return `<video src="${escapeAttr(src)}"${poster} controls playsinline preload="metadata"></video>`
   }
   const diagram = entry.type === 'diagram' || /\.svg$/i.test(src)
   return `<img src="${escapeAttr(src)}" alt="${escapeAttr(alt)}" loading="lazy"${diagram ? ' class="is-diagram"' : ''}>`
@@ -857,8 +984,10 @@ function createProjectModal() {
     const tech = (item.tech || []).map((t) => `<li>${escapeHtml(t)}</li>`).join('')
 
     const highlights =
-      isCase && Array.isArray(study.highlights) && study.highlights.length
-        ? `
+      isCase && Array.isArray(study.timeline) && study.timeline.length
+        ? caseTimelineMarkup(study, 'modal__timeline')
+        : isCase && Array.isArray(study.highlights) && study.highlights.length
+          ? `
       <dl class="modal__highlights">
         ${study.highlights
           .map(
@@ -870,7 +999,7 @@ function createProjectModal() {
           )
           .join('')}
       </dl>`
-        : ''
+          : ''
 
     const chapters =
       isCase && Array.isArray(study.chapters) && study.chapters.length
@@ -1028,15 +1157,21 @@ function renderCatalog() {
     })
   })
 
-  const ordered = [
-    ...catalog.filter((item) => !item.pinnedEnd),
-    ...catalog.filter((item) => item.pinnedEnd),
-  ]
+  const pinTop = catalog
+    .filter((item) => item.pinnedTop)
+    .sort((a, b) => (a.pinOrder || 0) - (b.pinOrder || 0))
+  const pinTopIds = new Set(pinTop.map((item) => item.id))
+  const pinEnd = catalog.filter((item) => item.pinnedEnd)
+  const pinEndIds = new Set(pinEnd.map((item) => item.id))
+  const middle = catalog.filter((item) => !pinTopIds.has(item.id) && !pinEndIds.has(item.id))
+  const ordered = [...pinTop, ...middle, ...pinEnd]
 
   grid.innerHTML = ordered
     .map((item) => {
       const title = item.title[locale]
-      const pinned = Boolean(item.pinnedEnd)
+      const pinnedEnd = Boolean(item.pinnedEnd)
+      const pinnedTop = Boolean(item.pinnedTop)
+      const pinned = pinnedEnd || pinnedTop
       const hidden = !pinned && catalogFilter !== 'all' && item.era !== catalogFilter
       const monoLight = !LIGHT_ACCENTS.has(item.accent) ? ' is-light' : ''
       const badge = item.caseId
@@ -1063,10 +1198,10 @@ function renderCatalog() {
       }
 
       return `
-        <article class="catalog-card reveal${pinned ? ' catalog-card--classified' : ''}" id="catalog-${escapeAttr(item.id)}" data-era="${escapeAttr(item.era)}" data-project-id="${escapeAttr(item.id)}" tabindex="0" role="button" aria-label="${escapeAttr(title)}"${hidden ? ' hidden' : ''}>
+        <article class="catalog-card reveal${pinnedEnd ? ' catalog-card--classified' : ''}${pinnedTop ? ' catalog-card--pinned' : ''}" id="catalog-${escapeAttr(item.id)}" data-era="${escapeAttr(item.era)}" data-project-id="${escapeAttr(item.id)}" tabindex="0" role="button" aria-label="${escapeAttr(title)}"${hidden ? ' hidden' : ''}>
           <div class="catalog-card__top">
             <span class="catalog-card__mono bg-accent-${escapeAttr(item.accent)}${monoLight}" aria-hidden="true">${escapeHtml(monogram(title))}${item.logo ? `<img class="catalog-card__logo${item.logoBg ? ' catalog-card__logo--boxed' : ''}" src="${escapeAttr(item.logo)}" alt="" loading="lazy"${item.logoBg ? ` style="background:${escapeAttr(item.logoBg)}"` : ''} onerror="this.remove()">` : ''}</span>
-            <h3 class="catalog-card__title${pinned ? ' user_coder' : ''}">${escapeHtml(title)}</h3>
+            <h3 class="catalog-card__title${pinnedEnd ? ' user_coder' : ''}">${escapeHtml(title)}</h3>
             ${badge}
           </div>
           <p class="catalog-card__desc">${escapeHtml(item.summary[locale])}</p>
