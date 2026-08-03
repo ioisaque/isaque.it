@@ -2664,6 +2664,10 @@ a.case__timeline-card:hover .case__timeline-what {
   filter: brightness(0) invert(1);
 }
 
+.tech-badge__icon--dark {
+  filter: brightness(0);
+}
+
 .contact {
   border-top: 1px solid var(--line);
   padding-bottom: var(--space-9);

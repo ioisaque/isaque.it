@@ -1425,12 +1425,17 @@ function renderMilestones() {
 }
 
 function techIconMarkup(item) {
+  const logo = item.logo || 'white'
+  // Monochrome SVG: white ink → invert to white; dark/custom ink → keep black silhouette
+  const toneClass =
+    logo === 'white' ? ' tech-badge__icon--invert' : ' tech-badge__icon--dark'
+
   if (item.icon) {
-    return `<img class="tech-badge__icon tech-badge__icon--invert" src="${escapeAttr(item.icon)}" alt="" width="16" height="16" loading="lazy" onerror="this.remove()">`
+    return `<img class="tech-badge__icon${toneClass}" src="${escapeAttr(item.icon)}" alt="" width="16" height="16" loading="lazy" onerror="this.remove()">`
   }
   if (!item.slug) return ''
 
-  // Prefer jsDelivr simple-icons SVGs (monochrome + invert) — more reliable than colored CDN.
+  // Prefer jsDelivr simple-icons SVGs (monochrome) — more reliable than colored CDN.
   const fileBySlug = {
     css: 'css',
     cursor: 'cursor',
@@ -1450,7 +1455,7 @@ function techIconMarkup(item) {
   const file = fileBySlug[item.slug] || item.slug
   const ver = verBySlug[item.slug] || 13
   const src = `https://cdn.jsdelivr.net/npm/simple-icons@${ver}/icons/${file}.svg`
-  return `<img class="tech-badge__icon tech-badge__icon--invert" src="${escapeAttr(src)}" alt="" width="16" height="16" loading="lazy" onerror="this.remove()">`
+  return `<img class="tech-badge__icon${toneClass}" src="${escapeAttr(src)}" alt="" width="16" height="16" loading="lazy" onerror="this.remove()">`
 }
 
 function renderTech() {
