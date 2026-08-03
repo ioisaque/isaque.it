@@ -38,6 +38,15 @@ const PLATFORM_LOGOS = [
   { src: 'assets/img/logos/barcode-it.png', label: 'barcode.it' },
   { src: 'assets/img/logos/print-it.png', label: 'print.it' },
 ]
+const MIO_STATUS_ICONS = [
+  { src: 'assets/projects/miodelivery/status-icons/recebido.svg', label: 'Recebido' },
+  { src: 'assets/projects/miodelivery/status-icons/pronto.svg', label: 'Pronto' },
+  { src: 'assets/projects/miodelivery/status-icons/agendado.svg', label: 'Agendado' },
+  { src: 'assets/projects/miodelivery/status-icons/cozinha.svg', label: 'Cozinha' },
+  { src: 'assets/projects/miodelivery/status-icons/cancelado.svg', label: 'Cancelado' },
+  { src: 'assets/projects/miodelivery/status-icons/finalizado.svg', label: 'Finalizado' },
+  { src: 'assets/projects/miodelivery/status-icons/delivery.svg', label: 'Delivery' },
+]
 
 function detectLocale() {
   const stored = localStorage.getItem('isaque-locale')
@@ -816,7 +825,7 @@ function storyVisualMarkup(project) {
   }
   if (project.id === 'miodelivery') {
     return `<div class="story-teaser__visual story-teaser__visual--mio" aria-hidden="true">
-      <img src="${escapeAttr(resolveAsset('assets/projects/miodelivery/modern-kitchen.png'))}" alt="" loading="lazy">
+      ${MIO_STATUS_ICONS.map((logo, i) => platformLogoMarkup(logo, i, 'story-teaser__logo')).join('')}
     </div>`
   }
   if (project.id === 'platform') {
@@ -929,8 +938,8 @@ function renderCasePage() {
       ${PLATFORM_LOGOS.map((logo, i) => platformLogoMarkup(logo, i, 'case-page__constellation-logo')).join('')}
     </div>`
   } else if (project.id === 'miodelivery') {
-    heroExtra = `<div class="case-page__mio-hero" aria-hidden="true">
-      <img src="${escapeAttr(resolveAsset('assets/projects/miodelivery/modern-kitchen.png'))}" alt="" loading="lazy">
+    heroExtra = `<div class="case-page__constellation case-page__mio-constellation" aria-hidden="true">
+      ${MIO_STATUS_ICONS.map((logo, i) => platformLogoMarkup(logo, i, 'case-page__constellation-logo')).join('')}
     </div>`
   }
 

@@ -3731,26 +3731,15 @@ a.case__timeline-card:hover .case__timeline-what {
 }
 
 .story-teaser__visual--mio {
-  overflow: hidden;
-  border-radius: 1rem;
-}
-
-.story-teaser__visual--mio img {
-  width: 100%;
-  max-width: 28rem;
-  height: auto;
-  object-fit: cover;
-  border-radius: 1rem;
-  transform: scale(1.02);
-  transition: transform 0.7s var(--ease);
-}
-
-.story-teaser:hover .story-teaser__visual--mio img,
-.story-teaser:focus-within .story-teaser__visual--mio img {
-  transform: scale(1.06);
+  position: relative;
+  width: min(100%, 28rem);
+  height: 16rem;
+  margin-inline: auto;
+  overflow: visible;
 }
 
 .story-teaser__visual--platform {
+  position: relative;
   width: min(100%, 28rem);
   height: 16rem;
   margin-inline: auto;
@@ -3809,6 +3798,14 @@ a.case__timeline-card:hover .case__timeline-what {
 .story-teaser__logo--4 { bottom: 12%; left: 4%; }
 .story-teaser__logo--5 { bottom: 4%; right: 10%; }
 .story-teaser__logo--6 { top: 42%; right: 2%; }
+.story-teaser__logo--7 { top: 18%; left: 48%; }
+
+.story-teaser__visual--mio .story-teaser__logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  padding: 0.7rem;
+  box-sizing: border-box;
+}
 
 .story-teaser:hover .story-teaser__logo--1 { transform: translate(-6px, -10px) rotate(-6deg); }
 .story-teaser:hover .story-teaser__logo--2 { transform: translate(8px, -8px) rotate(5deg); }
@@ -3816,6 +3813,7 @@ a.case__timeline-card:hover .case__timeline-what {
 .story-teaser:hover .story-teaser__logo--4 { transform: translate(-10px, 8px) rotate(4deg); }
 .story-teaser:hover .story-teaser__logo--5 { transform: translate(6px, 10px) rotate(-4deg); }
 .story-teaser:hover .story-teaser__logo--6 { transform: translate(10px, -4px) rotate(7deg); }
+.story-teaser:hover .story-teaser__logo--7 { transform: translate(-4px, 8px) rotate(-5deg); }
 
 @media (min-width: 900px) {
   .story-teaser__inner {
@@ -3838,7 +3836,6 @@ a.case__timeline-card:hover .case__timeline-what {
 @media (prefers-reduced-motion: reduce) {
   .journey__era,
   .story-teaser,
-  .story-teaser__visual--mio img,
   .story-teaser__logo {
     transition: none;
   }
@@ -3881,18 +3878,11 @@ a.case__timeline-card:hover .case__timeline-what {
   margin-top: var(--space-4);
 }
 
-.case-page__mio-hero {
-  max-width: min(100%, 64rem);
-  margin: var(--space-6) auto 0;
-  padding-inline: var(--space-4);
-}
-
-.case-page__mio-hero img {
-  display: block;
-  width: 100%;
-  border-radius: 1rem;
-  object-fit: cover;
-  max-height: min(52vh, 28rem);
+.case-page__mio-constellation .case-page__constellation-logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  padding: 0.85rem;
+  box-sizing: border-box;
 }
 
 .case-page__constellation {
@@ -3954,6 +3944,7 @@ a.case__timeline-card:hover .case__timeline-what {
 .case-page__constellation-logo--4 { bottom: 8%; left: 6%; }
 .case-page__constellation-logo--5 { bottom: 0; right: 12%; }
 .case-page__constellation-logo--6 { top: 38%; right: 4%; }
+.case-page__constellation-logo--7 { top: 14%; left: 42%; }
 
 .case-page--cube .case__inner,
 .case-page--miodelivery .case__inner,
